@@ -34,7 +34,7 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Helper Functions*)
 
 
@@ -45,13 +45,13 @@ GetFullGraph[graph_] := Graph[
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Group Elements and Vertex Positions*)
 
 
 InterpretGroupElementString[str_, rules_] := NCExpand@ToExpression@StringReplace[
 	str,
-	Join[{RegularExpression["\\^([\-0-9]+)"]->"^($1)","*"->"**"}, (#[[1]] -> ToString[#[[2]]])&/@ rules]
+	Join[{RegularExpression["\\^([\\-0-9]+)"]->"^($1)","*"->"**"}, (#[[1]] -> ToString[#[[2]]])&/@ rules]
 ];
 
 
@@ -66,8 +66,8 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 	{P,Q,R} = Switch[OptionValue[Orientation],
 		"Default",{
 			PDPoint[{0,0}],
-			PDPoint[\[Sqrt]((Cos[\[Pi] (1/p+1/q)]+Cos[\[Pi]/r])/(Cos[\[Pi] (1/p-1/q)]+Cos[\[Pi]/r]))*{1,0}],
-			PDPoint[\[Sqrt]((Cos[\[Pi] (1/p+1/r)]+Cos[\[Pi]/q])/(Cos[\[Pi] (1/p-1/r)]+Cos[\[Pi]/q]))*{Cos[Pi/p],Sin[Pi/p]}]
+			PDPoint[\[Sqrt]((Cos[\[Pi] * (1/p+1/q)]+Cos[\[Pi]/r])/(Cos[\[Pi] * (1/p-1/q)]+Cos[\[Pi]/r])){1,0}],
+			PDPoint[\[Sqrt]((Cos[\[Pi] * (1/p+1/r)]+Cos[\[Pi]/q])/(Cos[\[Pi] * (1/p-1/r)]+Cos[\[Pi]/q])){Cos[Pi/p],Sin[Pi/p]}]
 		}
 	];
 	
@@ -160,7 +160,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Package Footer*)
 
 
