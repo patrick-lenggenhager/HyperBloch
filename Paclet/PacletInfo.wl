@@ -3,7 +3,7 @@
 PacletObject[
   <|
     "Name" -> "PatrickMLenggenhager/HyperBloch",
-    "Description" -> "Import HyperCells output and define hyperbolic Bloch Hamiltonians.",
+    "Description" -> "Import HyperCells output and define hyperbolic Bloch Hamiltonians",
     "Creator" -> "Patrick M. Lenggenhager",
     "License" -> "BSD Three Clause License",
     "PublisherID" -> "PatrickMLenggenhager",

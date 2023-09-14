@@ -7,9 +7,10 @@
 BeginPackage["PatrickMLenggenhager`HyperBloch`"];
 
 
+GetFullGraph;
 GetSitePosition;
 ImportCellGraphString;
-GetFullGraph;
+ImportModelGraphString;
 
 
 Begin["`Private`"];
@@ -124,7 +125,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 				{i, 1, Length[face[[1]]]}
 			]
 		],
-		{face, ToExpression@faces}
+		{face, ToExpression[faces][[center]]}
 	];
 	
 	(* algebra *)
@@ -154,6 +155,70 @@ ImportCellGraphString[str_, qname_]:=Module[{
 		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
 		"EdgeTranslations" -> etransls,
 		"BoundaryEdges" -> boundary,
+		"TranslationGenerators" -> \[CapitalGamma]gens,
+		"Faces" -> faces
+	|>
+]
+
+
+(* ::Subsection:: *)
+(*ImportModelGraph*)
+
+
+ImportModelGraphString[str_, qname_]:=Module[{
+		tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces,
+		rels, center, vlbls, vcoords
+	},
+	{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
+		StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+	
+	(* info *)
+	tg = ToExpression@tg; (* triangle group signature *)
+	{rels, center} = StringTrim[#, {"{", "}"}]&/@ StringSplit[specs, "},"];
+	rels = StringSplit[rels, ", "]; (* cell relators *)
+	center = ToExpression@center; (* cell center *)
+	
+	(* algebra *)
+	\[CapitalGamma]gens = "(" <> # <> ")" &/@(AssociationThread@@(StringTrim[StringSplit[StringTrim[#, {"{", "}"}], ","], " "]&/@StringSplit[\[CapitalGamma]gens, " -> "]));
+	TD\[CapitalGamma] = StringTrim[StringSplit[StringTrim[TD\[CapitalGamma], {"{", "}"}], ","], " "];
+	
+	(* graph *)
+	vertices = ToExpression@vertices;
+	edges = DirectedEdge[vertices[[#1]], vertices[[#2]], #3]&@@@ToExpression[edges];
+	faces = Table[
+		Graph[
+			Table[
+				If[(edges[[face[[2,i]]]][[;;2]]/.DirectedEdge -> List) ==
+						vertices[[face[[1, {i, Mod[i+1, Length[face[[1]]], 1]}]]]],
+					edges[[face[[2,i]]]],
+					edges[[face[[2,i]]]][[{2,1,3}]]
+				],
+				{i, 1, Length[face[[1]]]}
+			]
+		],
+		{face, ToExpression[faces]}
+	];
+	
+	(* vertex labels and coordinates *)
+	vlbls = (StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	
+	vcoords = Table[
+		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]]], Model->PoincareDisk][[1]],
+		{i, Length[vertices]}
+	];
+	
+	(* edge translations *)
+	etransls = StringTrim[StringSplit[StringTrim[etransls,{"{", "}"}], ","], " "];
+	
+	<|
+		"TriangleGroup" -> tg,
+		"QuotientGroup" -> qname,
+		"Genus" -> ToExpression@StringReplace[qname,RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
+		"Graph" -> Graph[vertices, edges, VertexCoordinates -> vcoords],
+		"UndirectedGraph"->UndirectedGraph@Graph[vertices, edges, VertexCoordinates -> vcoords],
+		"FullGraph" -> GetFullGraph@Graph[vertices, edges, VertexCoordinates -> vcoords],
+		"VertexLabels" -> vlbls,
+		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
+		"EdgeTranslations" -> etransls,
 		"TranslationGenerators" -> \[CapitalGamma]gens,
 		"Faces" -> faces
 	|>
