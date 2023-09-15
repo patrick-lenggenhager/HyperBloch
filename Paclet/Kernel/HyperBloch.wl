@@ -100,9 +100,9 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 
 ImportCellGraphString[str_, qname_]:=Module[{
 		tg, specs, rels, center, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vlbls, vcoords,
-		vertices, edges, etransls, faces, boundary
+		vertices, edges, etransls, facesstr, faces, boundary
 	},
-	{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vertices, edges, etransls, faces, boundary} =
+	{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vertices, edges, etransls, facesstr, boundary} =
 		StringSplit[StringReplace[str,{"["->"{","]"->"}"}],"\n"];
 
 	(* info *)
@@ -117,15 +117,14 @@ ImportCellGraphString[str_, qname_]:=Module[{
 	faces = Table[
 		Graph[
 			Table[
-				If[(edges[[face[[2,i]]]][[;;2]]/.DirectedEdge -> List) ==
-						vertices[[face[[1, {i, Mod[i+1, Length[face[[1]]], 1]}]]]],
-					edges[[face[[2,i]]]],
-					edges[[face[[2,i]]]][[{2,1,3}]]
+				If[e[[2]] == 1,
+					edges[[e[[1]]]],
+					edges[[e[[1]]]][[{2, 1, 3}]]
 				],
-				{i, 1, Length[face[[1]]]}
+				{e, face}
 			]
 		],
-		{face, ToExpression[faces][[center]]}
+		{c, 1, 3}, {face, ToExpression[facesstr][[c]]}
 	];
 	
 	(* algebra *)
@@ -156,7 +155,8 @@ ImportCellGraphString[str_, qname_]:=Module[{
 		"EdgeTranslations" -> etransls,
 		"BoundaryEdges" -> boundary,
 		"TranslationGenerators" -> \[CapitalGamma]gens,
-		"Faces" -> faces
+		"Faces" -> faces[[center]],
+		"AllFaces" -> faces
 	|>
 ]
 
@@ -188,12 +188,11 @@ ImportModelGraphString[str_, qname_]:=Module[{
 	faces = Table[
 		Graph[
 			Table[
-				If[(edges[[face[[2,i]]]][[;;2]]/.DirectedEdge -> List) ==
-						vertices[[face[[1, {i, Mod[i+1, Length[face[[1]]], 1]}]]]],
-					edges[[face[[2,i]]]],
-					edges[[face[[2,i]]]][[{2,1,3}]]
+				If[e[[2]] == 1,
+					edges[[e[[1]]]],
+					edges[[e[[1]]]][[{2, 1, 3}]]
 				],
-				{i, 1, Length[face[[1]]]}
+				{e, face}
 			]
 		],
 		{face, ToExpression[faces]}
