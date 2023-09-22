@@ -256,7 +256,6 @@ ImportModelGraphString[str_, qname_]:=Module[{
 (*Triangle Tessellations*)
 
 
-(* ::Code::Initialization:: *)
 (* Tomas' code *)
 ClearAll[GetTriangleTessellation];
 Options[GetTriangleTessellation]={ColorBoundary->RGBColor[{0,0,0,0}],ColorFill->LightGray,LineThickness->0.00125};
@@ -386,11 +385,10 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
-(* ::Code::Initialization:: *)
 GetSchwarzTriangle[tg_, g_] := LToGraphics[
 	LPolygon[GetSitePosition[tg, #, g]&/@{1, 2, 3}],
 	Model -> PoincareDisk
@@ -416,7 +414,6 @@ ResolveTranslation[transl_, gens_] := StringReplace[transl,
 ]
 
 
-(* ::Code::Initialization:: *)
 ResolveEdge[cgraph_, edge_] := Module[{\[Gamma], v1, v2},
 	If[MemberQ[EdgeList@cgraph["Graph"], edge],
 		(* edge with default orientation *)
@@ -499,7 +496,6 @@ LToGraphics[
 (*Cell Boundary*)
 
 
-(* ::Code::Initialization:: *)
 GetCellBoundary[cgraph_] := {
 	#[[4]],
 	LToGraphics[LLine[{
@@ -566,7 +562,7 @@ Options[ShowCellSchwarzTriangles] = {
 };
 ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := Show[
 	Graphics[{
-			ShowSchwarzTriangle[cgraph["TriangleGroup"], #]&
+			GetSchwarzTriangle[cgraph["TriangleGroup"], #]&
 			/@cgraph["SchwarzTriangleLabels"][[OptionValue[TriangleRange]]]
 		},
 		Sequence@@FilterRules[{opts}, Options[Graphics]]
@@ -591,12 +587,12 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 		(* edges *)
 		Graphics[{
 			{OptionValue[IntraCellEdgeStyle],
-				Table[ShowEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
+				Table[GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
 					{edge, intracedges}
 				]
 			},
 			{OptionValue[InterCellEdgeStyle],
-				Table[ShowEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
+				Table[GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
 					{edge, intercedges}
 				]
 			}
@@ -641,7 +637,7 @@ FullForm]\),
 	}];
 	
 	(* get cell boundary *)
-	gcellbd = GetGCellBoundary[cgraph];
+	gcellbd = GetCellBoundary[cgraph];
 	
 	(* graphics *)
 	Graphics[{
@@ -756,11 +752,11 @@ Show[
 If[OptionValue[ShowTriangleTessellation],ShowTriangles[dgraph["TriangleGroup"]],{}],
 Graphics[{
 If[OptionValue[ShowIntraCellEdges],
-{OptionValue[IntraCellEdgeStyle],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],ShowEdge[dgraph["TriangleGroup"],ResolveDGraphEdge[dgraph,cgraph,edge]]},{edge,intracedges}]},{}],
+{OptionValue[IntraCellEdgeStyle],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],GetEdge[dgraph["TriangleGroup"],ResolveDGraphEdge[dgraph,cgraph,edge]]},{edge,intracedges}]},{}],
 If[OptionValue[ShowInterCellEdges],
-{OptionValue[InterCellEdgeStyle],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],ShowEdge[dgraph["TriangleGroup"],ResolveDGraphEdge[dgraph,cgraph,edge]]},{edge,intercedges}],
+{OptionValue[InterCellEdgeStyle],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],GetEdge[dgraph["TriangleGroup"],ResolveDGraphEdge[dgraph,cgraph,edge]]},{edge,intercedges}],
 OptionValue[ConjugateEdgeStyle],
-If[OptionValue[ShowConjugateEdges],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],ShowEdge[dgraph["TriangleGroup"],ResolveDGraphConjEdge[dgraph,cgraph,edge]]},{edge,intercedges}],{}]
+If[OptionValue[ShowConjugateEdges],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],GetEdge[dgraph["TriangleGroup"],ResolveDGraphConjEdge[dgraph,cgraph,edge]]},{edge,intercedges}],{}]
 },{}]
 }/.Line[a_]:>Line[Re@a]],
 Graph[dgraph["Graph"],Sequence@@FilterRules[{opts},Options[Graph]],VertexStyle->If[OptionValue[VertexStyleFunction]===Automatic,OptionValue[CellVertexStyle],#->OptionValue[VertexStyleFunction][#]&/@VertexList@dgraph["Graph"]],VertexSize->OptionValue[CellVertexSize],VertexLabels->If[OptionValue[ShowLabels],"Name",None],EdgeStyle->Opacity[0]],
