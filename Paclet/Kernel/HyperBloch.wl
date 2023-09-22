@@ -8,6 +8,7 @@ BeginPackage["PatrickMLenggenhager`HyperBloch`"];
 
 
 GetFullGraph;
+GetUndirectedGraph;
 GetSitePosition;
 
 ImportCellGraphString;
@@ -32,6 +33,7 @@ ShowCellGraphFlattened;
 ShowCellBoundary;
 
 VisualizeCellGraph;
+VisualizeModelGraph;
 
 
 Begin["`Private`"];
@@ -56,7 +58,7 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Helper Functions*)
 
 
@@ -64,6 +66,13 @@ GetFullGraph[graph_] := Graph[
 	VertexList@graph,
 	EdgeList@DirectedGraph[EdgeList@graph /. DirectedEdge -> UndirectedEdge],
 	Sequence@@AbsoluteOptions[graph]
+]
+
+
+GetUndirectedGraph[graph_] := Graph[
+	VertexList@graph,
+	EdgeList@Graph[EdgeList@graph /. DirectedEdge -> UndirectedEdge],
+	Sequence@@DeleteCases[AbsoluteOptions[graph],EdgeShapeFunction->_]
 ]
 
 
@@ -115,7 +124,7 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Cell Graphs*)
 
 
@@ -140,7 +149,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 			Table[
 				If[e[[2]] == 1,
 					edges[[e[[1]]]],
-					edges[[e[[1]]]][[{2, 1, 3}]]
+					DirectedEdge[edges[[e[[1]], 2]], edges[[e[[1]], 1]], -edges[[e[[1]], 3]]]
 				],
 				{e, face}
 			]
@@ -185,13 +194,13 @@ ImportCellGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*ImportModelGraph*)
 
 
 ImportModelGraphString[str_, qname_]:=Module[{
 		tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces,
-		rels, center, vlbls, vcoords
+		rels, center, vlbls, vcoords, graph
 	},
 	{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
 		StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
@@ -214,7 +223,7 @@ ImportModelGraphString[str_, qname_]:=Module[{
 			Table[
 				If[e[[2]] == 1,
 					edges[[e[[1]]]],
-					edges[[e[[1]]]][[{2, 1, 3}]]
+					DirectedEdge[edges[[e[[1]], 2]], edges[[e[[1]], 1]], -edges[[e[[1]], 3]]]
 				],
 				{e, face}
 			]
@@ -232,13 +241,16 @@ ImportModelGraphString[str_, qname_]:=Module[{
 	(* edge translations *)
 	etransls = StringTrim[StringSplit[StringTrim[etransls,{"{", "}"}], ","], " "];
 	
+	(* graph *)
+	graph = Graph[vertices, edges, VertexCoordinates -> vcoords];
+	
 	<|
 		"TriangleGroup" -> tg,
 		"QuotientGroup" -> qname,
 		"Genus" -> ToExpression@StringReplace[qname,RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
-		"Graph" -> Graph[vertices, edges, VertexCoordinates -> vcoords],
-		"UndirectedGraph"->UndirectedGraph@Graph[vertices, edges, VertexCoordinates -> vcoords],
-		"FullGraph" -> GetFullGraph@Graph[vertices, edges, VertexCoordinates -> vcoords],
+		"Graph" -> graph,
+		"UndirectedGraph"->GetUndirectedGraph@graph,
+		"FullGraph" -> GetFullGraph@graph,
 		"VertexLabels" -> vlbls,
 		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
 		"EdgeTranslations" -> etransls,
@@ -385,7 +397,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -449,7 +461,7 @@ GetCellGraphEdge[cgraph_, edge_] := GetEdge[
 
 
 ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
-	If[MemberQ[EdgeList@cgraph["Graph"], edge],
+	If[NumericQ@edge[[3]] && edge[[3]] > 0 || ListQ@edge[[3]] && edge[[3, 1]] > 0,
 		(* edge with default orientation *)
 		\[Gamma] = ResolveTranslation[
 			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge][[1, 1]]]],
@@ -460,7 +472,9 @@ ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
 		v2 = ResolveVertex[cgraph, edge[[2]]];,
 		(* edge with inverted orientation *)
 		\[Gamma] = "(" <> ResolveTranslation[
-			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge[[{2, 1, 3}]]][[1, 1]]]],
+			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"],
+				DirectedEdge[edge[[2]], edge[[1]], -edge[[3]]]	
+			][[1, 1]]]],
 			cgraph["TranslationGenerators"]
 		] <> ")^(-1)";
 	
@@ -514,8 +528,9 @@ GetCellBoundary[cgraph_] := {
 
 
 Options[ShowCellGraph] = {
-	CellVertexStyle -> Directive[Black, EdgeForm[None]],
+	CellVertexStyle -> {Black, AbsolutePointSize[5]},
 	ShowVertexLabels -> True,
+	EdgeArrowSize -> .015,
 	ShowIntraCellEdges -> True,
 	ShowInterCellEdges -> True,
 	IntraCellEdgeStyle -> Blue,
@@ -532,26 +547,31 @@ ShowStringCharacters->True,
 NumberMarks->True],
 FullForm]\),"$1","$3"],StandardForm],"*"->""}];
 	
-	Graph[
-		cgraph["Graph"],
-		Sequence@@FilterRules[{opts}, Options[Graph]],
-		
-		(* default options for vertices *)
-		VertexSize -> AbsolutePointSize[0.2],
-		VertexStyle -> OptionValue[CellVertexStyle],
-		VertexLabels -> If[OptionValue[ShowVertexLabels], "Name", None],
-		
-		(* default options for edges *)
-		EdgeLabels -> If[OptionValue[ShowEdgeTranslations],
-			Thread[EdgeList@cgraph["Graph"] -> format\[Gamma]/@cgraph["EdgeTranslations"]][[
-				Position[cgraph["EdgeTranslations"],#][[1, 1]]&/@Select[cgraph["EdgeTranslations"], #!="1"&]
-			]], None],
-		EdgeStyle -> Thread[EdgeList@cgraph["Graph"] -> (If[#=="1",
-			If[OptionValue[ShowIntraCellEdges], OptionValue[IntraCellEdgeStyle], Opacity[0]],
-			If[OptionValue[ShowInterCellEdges], OptionValue[InterCellEdgeStyle], Opacity[0]]]&/@cgraph["EdgeTranslations"])
+	Show[
+		Graph[
+			cgraph["Graph"],
+			Sequence@@FilterRules[{opts}, Options[Graph]],
+			
+			(* default options for vertices *)
+			VertexSize -> 0,
+			VertexStyle -> Directive[EdgeForm[Opacity[0]],FaceForm[Opacity[0]]],
+			VertexLabels -> If[OptionValue[ShowVertexLabels], "Name", None],
+			
+			(* default options for edges *)
+			EdgeLabels -> If[OptionValue[ShowEdgeTranslations],
+				Thread[EdgeList@cgraph["Graph"] -> format\[Gamma]/@cgraph["EdgeTranslations"]][[
+					Position[cgraph["EdgeTranslations"],#][[1, 1]]&/@Select[cgraph["EdgeTranslations"], #!="1"&]
+				]], None],
+			EdgeStyle -> Thread[EdgeList@cgraph["Graph"] -> (If[#=="1",
+				If[OptionValue[ShowIntraCellEdges], OptionValue[IntraCellEdgeStyle], Opacity[0]],
+				If[OptionValue[ShowInterCellEdges], OptionValue[InterCellEdgeStyle], Opacity[0]]]&/@cgraph["EdgeTranslations"])
+			],
+			EdgeShapeFunction -> GraphElementData[{"FilledArcArrow", "ArrowSize" -> OptionValue[EdgeArrowSize]}],
+			Sequence@@FilterRules[{opts}, Options[Graph]]
 		],
-		EdgeShapeFunction -> GraphElementData[{"FilledArcArrow", "ArrowSize" -> .01}],
-		Sequence@@FilterRules[{opts}, Options[Graph]]
+		Graphics[{Sequence@@OptionValue[CellVertexStyle],
+			Point/@(VertexCoordinates/.AbsoluteOptions[cgraph["Graph"]])
+		}]
 	]
 ]
 
@@ -571,8 +591,10 @@ ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles,
 
 
 Options[ShowCellGraphFlattened] = {	
-	CellVertexStyle -> Directive[Black, EdgeForm[None]],
+	CellVertexStyle -> {Black, AbsolutePointSize[5]},
 	ShowVertexLabels -> True,
+	EdgeArrowSize -> .015,
+	CellEdgeStyle -> {Arrowheads[{{Small,0.5}}]},
 	ShowIntraCellEdges -> True,
 	ShowInterCellEdges -> True,
 	IntraCellEdgeStyle -> Blue,
@@ -585,14 +607,14 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 	
 	Show[
 		(* edges *)
-		Graphics[{
+		Graphics[{Sequence@@OptionValue[CellEdgeStyle],
 			{OptionValue[IntraCellEdgeStyle],
-				Table[GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
+				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
 					{edge, intracedges}
 				]
 			},
 			{OptionValue[InterCellEdgeStyle],
-				Table[GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
+				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
 					{edge, intercedges}
 				]
 			}
@@ -600,11 +622,14 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 		(* vertices *)
 		Graph[cgraph["Graph"],
 			Sequence@@FilterRules[{opts}, Options[Graph]],
-			VertexStyle -> OptionValue[CellVertexStyle],
-			VertexSize -> AbsolutePointSize[0.2],
+			VertexSize -> 0,
+			VertexStyle -> Directive[EdgeForm[Opacity[0]],FaceForm[Opacity[0]]],
 			VertexLabels -> If[OptionValue[ShowVertexLabels], "Name", None],
 			EdgeStyle -> Opacity[0]
 		],
+		Graphics[{Sequence@@OptionValue[CellVertexStyle],
+			Point/@(VertexCoordinates/.AbsoluteOptions[cgraph["Graph"]])
+		}],
 		Sequence@@FilterRules[{opts}, {ImageSize}]
 	]
 ]
@@ -720,48 +745,41 @@ VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangl
 
 
 (* ::Subsubsection:: *)
-(*Model Cell Graph*)
+(*Model Graph*)
 
 
-ResolveDGraphEdge[dgraph_,cgraph_,edge_]:=Module[{\[Gamma],v1,v2},
-\[Gamma]=ResolveTranslation[dgraph["EdgeTranslations"][[Position[EdgeList@dgraph["Graph"],edge][[1,1]]]],cgraph["TranslationGenerators"]];
-
-v1=ResolveVertex[dgraph,edge[[1]]];
-v2=ResolveVertex[dgraph,edge[[2]]];
-
-{v1,{v2[[1]],v2[[2]]<>"*"<>\[Gamma]}}
-]
-ResolveDGraphConjEdge[dgraph_,cgraph_,edge_]:=Module[{\[Gamma],v1,v2},
-\[Gamma]=ResolveTranslation[dgraph["EdgeTranslations"][[Position[EdgeList@dgraph["Graph"],edge][[1,1]]]],cgraph["TranslationGenerators"]];
-
-v1=ResolveVertex[dgraph,edge[[2]]];
-v2=ResolveVertex[dgraph,edge[[1]]];
-
-{v1,{v2[[1]],v2[[2]]<>"*("<>\[Gamma]<>")^-1"}}
-]
-
-
-(* ::Input::Initialization:: *)
-ClearAll[VisualizeDGraphEdges]
-Options[VisualizeDGraphEdges]={ShowLabels->False,CellVertexStyle->Directive[Black,EdgeForm[None]],CellVertexSize->AbsolutePointSize[0.2],ShowIntraCellEdges->True,ShowInterCellEdges->True,IntraCellEdgeStyle->Directive[Blue,AbsoluteThickness[1]],InterCellEdgeStyle->Directive[Red,AbsoluteThickness[1]],ShowCellBoundary->True,ShowConjugateEdges->False,ConjugateEdgeStyle->Dashed,ShowTriangleTessellation->True,EdgeStyleFunction->({}&),VertexStyleFunction->Automatic};
-VisualizeDGraphEdges[dgraph_,cgraph_,opts:OptionsPattern[{VisualizeDGraphEdges,Graph,GCellBoundary}]]:=Module[{intracedges,intercedges,inve},
-intracedges=Select[Transpose[{EdgeList@dgraph["Graph"],dgraph["EdgeTranslations"]}],#[[2]]=="1"&][[;;,1]];
-intercedges=Select[Transpose[{EdgeList@dgraph["Graph"],dgraph["EdgeTranslations"]}],#[[2]]!="1"&][[;;,1]];
-
-Show[
-If[OptionValue[ShowTriangleTessellation],ShowTriangles[dgraph["TriangleGroup"]],{}],
-Graphics[{
-If[OptionValue[ShowIntraCellEdges],
-{OptionValue[IntraCellEdgeStyle],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],GetEdge[dgraph["TriangleGroup"],ResolveDGraphEdge[dgraph,cgraph,edge]]},{edge,intracedges}]},{}],
-If[OptionValue[ShowInterCellEdges],
-{OptionValue[InterCellEdgeStyle],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],GetEdge[dgraph["TriangleGroup"],ResolveDGraphEdge[dgraph,cgraph,edge]]},{edge,intercedges}],
-OptionValue[ConjugateEdgeStyle],
-If[OptionValue[ShowConjugateEdges],Table[{Sequence[OptionValue[EdgeStyleFunction][edge]],GetEdge[dgraph["TriangleGroup"],ResolveDGraphConjEdge[dgraph,cgraph,edge]]},{edge,intercedges}],{}]
-},{}]
-}/.Line[a_]:>Line[Re@a]],
-Graph[dgraph["Graph"],Sequence@@FilterRules[{opts},Options[Graph]],VertexStyle->If[OptionValue[VertexStyleFunction]===Automatic,OptionValue[CellVertexStyle],#->OptionValue[VertexStyleFunction][#]&/@VertexList@dgraph["Graph"]],VertexSize->OptionValue[CellVertexSize],VertexLabels->If[OptionValue[ShowLabels],"Name",None],EdgeStyle->Opacity[0]],
-If[OptionValue[ShowCellBoundary],GCellBoundary[cgraph,Sequence@@FilterRules[{opts},Options[GCellBoundary]],ShowEdgeIdentification->True,CellBoundaryStyle->{AbsoluteThickness[2],Opacity[0.5]}],{}],
-ImageSize->500]
+Options[VisualizeModelGraph] = {
+	Elements -> <|
+		ShowCellGraphFlattened -> {}
+	|>,
+	CellGraph -> None
+};
+VisualizeModelGraph[mgraph_, opts:OptionsPattern[{VisualizeModelGraph, ShowTriangles, GetTriangleTessellation, Graphics, Rasterize}]] := Module[{
+		sel = KeySelect[MemberQ[{
+			ShowCellSchwarzTriangles,
+			ShowCellGraph,
+			ShowCellGraphFlattened
+		}, #]&]
+	},
+	
+	Show[
+		ShowTriangles[mgraph["TriangleGroup"],
+			Sequence@@FilterRules[{opts},Join@@(Options/@{
+				ShowTriangles,
+				GetTriangleTessellation,
+				Graphics,
+				Rasterize
+			})]
+		],
+		If[MemberQ[Keys@OptionValue[Elements], ShowCellBoundary] &&
+				Not[OptionValue[CellGraph] === None],
+			ShowCellBoundary[OptionValue[CellGraph],
+				Sequence@@(OptionValue[Elements][ShowCellBoundary])
+			],
+		{}],
+		KeyValueMap[#1[mgraph, Sequence@@#2]&, sel[OptionValue[Elements]]],
+		Sequence@@FilterRules[{opts}, {ImageSize}]
+	]
 ]
 
 
