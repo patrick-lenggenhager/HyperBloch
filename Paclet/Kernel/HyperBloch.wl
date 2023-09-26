@@ -397,7 +397,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -498,10 +498,13 @@ ResolveFace[cgraph_, face_] := Module[{\[Gamma] = "1", re},
 		{e, EdgeList[face]}
 	]
 ]
-GetCellGraphFace[cgraph_, face_] :=
-LToGraphics[
-	LPolygon[GetSitePosition[cgraph["TriangleGroup"], #[[1,1]], #[[1,2]]]&/@ResolveFace[cgraph, face]],
-	Model -> PoincareDisk
+GetCellGraphFace[cgraph_, face_] := GetCellGraphFace[cgraph, face] = Module[{
+		pos = GetSitePosition[cgraph["TriangleGroup"], #[[1,1]], #[[1,2]]]&/@ResolveFace[cgraph, face]
+	},
+	{
+		LToGraphics[LPolygon[pos], Model -> PoincareDisk],
+		Arrow@LToGraphics[LLine[{pos[[#]], pos[[Mod[# + 1, Length@pos, 1]]]}], Model -> PoincareDisk]&/@Range[1, Length@pos ]
+	}
 ]
 (*GetEdge[cgraph["TriangleGroup"], #]&/@ResolveFace[cgraph, face]*)
 
@@ -523,7 +526,7 @@ GetCellBoundary[cgraph_] := {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph*)
 
 
@@ -535,7 +538,8 @@ Options[ShowCellGraph] = {
 	ShowInterCellEdges -> True,
 	IntraCellEdgeStyle -> Blue,
 	InterCellEdgeStyle -> Red,
-	ShowEdgeTranslations -> False
+	ShowEdgeTranslations -> False,
+	EdgeFilter -> (#&)
 };
 ShowCellGraph[cgraph_, opts:OptionsPattern[{ShowCellGraph, Graph}]] := Module[
 	{format\[Gamma]},
@@ -559,12 +563,15 @@ FullForm]\),"$1","$3"],StandardForm],"*"->""}];
 			
 			(* default options for edges *)
 			EdgeLabels -> If[OptionValue[ShowEdgeTranslations],
-				Thread[EdgeList@cgraph["Graph"] -> format\[Gamma]/@cgraph["EdgeTranslations"]][[
+				Select[Thread[EdgeList@cgraph["Graph"] -> format\[Gamma]/@cgraph["EdgeTranslations"]][[
 					Position[cgraph["EdgeTranslations"],#][[1, 1]]&/@Select[cgraph["EdgeTranslations"], #!="1"&]
-				]], None],
-			EdgeStyle -> Thread[EdgeList@cgraph["Graph"] -> (If[#=="1",
+				]], OptionValue[EdgeFilter][#[[1]]]&], None],
+			EdgeStyle -> Join[
+				Select[Thread[EdgeList@cgraph["Graph"] -> (If[#=="1",
 				If[OptionValue[ShowIntraCellEdges], OptionValue[IntraCellEdgeStyle], Opacity[0]],
 				If[OptionValue[ShowInterCellEdges], OptionValue[InterCellEdgeStyle], Opacity[0]]]&/@cgraph["EdgeTranslations"])
+			], OptionValue[EdgeFilter][#[[1]]]&],
+				Select[Thread[EdgeList@cgraph["Graph"] -> Opacity[0]], Not@OptionValue[EdgeFilter][#[[1]]]&]
 			],
 			EdgeShapeFunction -> GraphElementData[{"FilledArcArrow", "ArrowSize" -> OptionValue[EdgeArrowSize]}],
 			Sequence@@FilterRules[{opts}, Options[Graph]]
@@ -598,12 +605,13 @@ Options[ShowCellGraphFlattened] = {
 	ShowIntraCellEdges -> True,
 	ShowInterCellEdges -> True,
 	IntraCellEdgeStyle -> Blue,
-	InterCellEdgeStyle -> Red
+	InterCellEdgeStyle -> Red,
+	EdgeFilter -> (#&)
 };
 ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Graphics, Graph}]] := Module[
 	{intracedges, intercedges},
-	intracedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], #[[2]]=="1"&][[;;,1]];
-	intercedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], #[[2]]!="1"&][[;;,1]];
+	intracedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], OptionValue[EdgeFilter][#[[1]]]&&#[[2]]=="1"&][[;;,1]];
+	intercedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], OptionValue[EdgeFilter][#[[1]]]&&#[[2]]!="1"&][[;;,1]];
 	
 	Show[
 		(* edges *)
