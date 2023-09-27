@@ -58,7 +58,7 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Helper Functions*)
 
 
@@ -76,7 +76,13 @@ GetUndirectedGraph[graph_] := Graph[
 ]
 
 
-(* ::Subsection::Closed:: *)
+CyclicallyPermuteList[list_, n_] := Permute[list, PermutationPower[Cycles[{Range[Length[list]]}], n]]
+
+
+CyclicallyPermuteFaceEdges[face_, n_]:=Graph[VertexList[face], CyclicallyPermuteList[EdgeList[face], n], Sequence@@AbsoluteOptions[face]]
+
+
+(* ::Subsection:: *)
 (*Group Elements and Vertex Positions*)
 
 
@@ -87,19 +93,23 @@ InterpretGroupElementString[str_, rules_] := NCExpand@ToExpression@StringReplace
 
 
 (* Author: Tomas Bzdusek *)
-Options[GetSitePosition] = {Orientation->"Default"};
+Options[GetSitePosition] = {Orientation -> "Default", Center -> 3};
 GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 	{p, q, r, P, Q, R, ops, triangle, op, i, rules},
 	(* triangle group signature *)
-	{r, q, p} = tg;
+	{r, q, p} = Sort[tg];
 	
 	(* position of sites of fundamental triangle *)
-	{P,Q,R} = Switch[OptionValue[Orientation],
-		"Default",{
-			PDPoint[{0,0}],
-			PDPoint[\[Sqrt]((Cos[\[Pi] * (1/p+1/q)]+Cos[\[Pi]/r])/(Cos[\[Pi] * (1/p-1/q)]+Cos[\[Pi]/r])){1,0}],
-			PDPoint[\[Sqrt]((Cos[\[Pi] * (1/p+1/r)]+Cos[\[Pi]/q])/(Cos[\[Pi] * (1/p-1/r)]+Cos[\[Pi]/q])){Cos[Pi/p],Sin[Pi/p]}]
-		}
+	{R, Q, P} = Switch[OptionValue[Orientation],
+		"Default", Block[{pp, qq, rr, pts}, 
+			{rr, qq, pp} = CyclicallyPermuteList[{r, q, p}, Mod[-OptionValue[Center], 3]];
+			pts = {
+				PDPoint[\[Sqrt]((Cos[\[Pi] * (1/pp+1/rr)]+Cos[\[Pi]/qq])/(Cos[\[Pi] * (1/pp-1/rr)]+Cos[\[Pi]/qq])){Cos[Pi/pp], Sin[Pi/pp]}],
+				PDPoint[\[Sqrt]((Cos[\[Pi] * (1/pp+1/qq)]+Cos[\[Pi]/rr])/(Cos[\[Pi] * (1/pp-1/qq)]+Cos[\[Pi]/rr])){1,0}],
+				PDPoint[{0,0}]
+			};
+			CyclicallyPermuteList[pts, -Mod[-OptionValue[Center], 3]]
+		]
 	];
 	
 	Block[{x, y, z, a, b, c},
@@ -173,7 +183,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 	
 	(* coordinates *)
 	vcoords = Table[
-		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]]], Model->PoincareDisk][[1]],
+		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], Center -> center], Model->PoincareDisk][[1]],
 		{i, Length[vertices]}
 	];
 	
@@ -234,7 +244,7 @@ ImportModelGraphString[str_, qname_]:=Module[{
 	(* vertex labels and coordinates *)
 	vlbls = (StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	
 	vcoords = Table[
-		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]]], Model->PoincareDisk][[1]],
+		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], Center -> center], Model->PoincareDisk][[1]],
 		{i, Length[vertices]}
 	];
 	
@@ -246,6 +256,7 @@ ImportModelGraphString[str_, qname_]:=Module[{
 	
 	<|
 		"TriangleGroup" -> tg,
+		"CellCenter" -> center,
 		"QuotientGroup" -> qname,
 		"Genus" -> ToExpression@StringReplace[qname,RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
 		"Graph" -> graph,
@@ -264,7 +275,7 @@ ImportModelGraphString[str_, qname_]:=Module[{
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Triangle Tessellations*)
 
 
@@ -367,14 +378,15 @@ Show[{triangles,boundaries}, PlotRange->{{-1,1}, {-1,1}}, AspectRatio->Automatic
 ClearAll[ShowTriangles]
 Options[ShowTriangles] = {
 	RasterizeGraphics -> True,
-	NumberOfGenerations -> 2
+	NumberOfGenerations -> 2,
+	Center -> 3
 };
 ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetTriangleTessellation}]] := ShowTriangles[tg, opts] = Graphics[
 	{
 		If[OptionValue[RasterizeGraphics],
 			Inset[Rasterize[
 					Show[
-						GetTriangleTessellation[tg, OptionValue[NumberOfGenerations],
+						GetTriangleTessellation[CyclicallyPermuteList[Sort@tg, Mod[-OptionValue[Center], 3]], OptionValue[NumberOfGenerations],
 							Sequence@@FilterRules[{opts}, Options[GetTriangleTessellation]]
 						],
 						Sequence@@FilterRules[{opts}, {ImageSize, PlotRange}],
@@ -385,7 +397,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 					ImageSize -> 500
 				], Scaled[{0.5,0.5}], Scaled[{0.5,0.5}], Scaled[1]
 			],
-			GetTriangleTessellation[tg, OptionValue[NumberOfGenerations],
+			GetTriangleTessellation[CyclicallyPermuteList[Sort@tg, Mod[-OptionValue[Center], 3]], OptionValue[NumberOfGenerations],
 				Sequence@@FilterRules[{opts}, Options[GetTriangleTessellation]]
 			][[1]]
 		],
@@ -397,20 +409,20 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
-GetSchwarzTriangle[tg_, g_] := LToGraphics[
-	LPolygon[GetSitePosition[tg, #, g]&/@{1, 2, 3}],
+GetSchwarzTriangle[tg_, g_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
+	LPolygon[GetSitePosition[tg, #, g, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]&/@{1, 2, 3}],
 	Model -> PoincareDisk
 ]
-GetVertex[tg_, v_] := LToGraphics[
-	GetSitePosition[tg, v[[1]], v[[2]]],
+GetVertex[tg_, v_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
+	GetSitePosition[tg, v[[1]], v[[2]], Sequence@@FilterRules[{opts}, Options[GetSitePosition]]],
 	Model -> PoincareDisk
 ]
-GetEdge[tg_, e_] := LToGraphics[
-	LLine[GetSitePosition[tg, #[[1]], #[[2]]]&/@e],
+GetEdge[tg_, e_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
+	LLine[GetSitePosition[tg, #[[1]], #[[2]], Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]&/@e],
 	Model -> PoincareDisk
 ]
 
@@ -452,11 +464,13 @@ ResolveEdge[cgraph_, edge_] := Module[{\[Gamma], v1, v2},
 
 GetCellGraphVertex[cgraph_, vertex_] := GetVertex[
 	cgraph["TriangleGroup"],
-	ResolveVertex[cgraph, vertex]
+	ResolveVertex[cgraph, vertex],
+	Center -> cgraph["CellCenter"]
 ]
 GetCellGraphEdge[cgraph_, edge_] := GetEdge[
 	cgraph["TriangleGroup"],
-	ResolveEdge[cgraph, edge]
+	ResolveEdge[cgraph, edge],
+	Center -> cgraph["CellCenter"]
 ]
 
 
@@ -486,7 +500,8 @@ ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
 ]
 GetTranslatedCellGraphEdge[cgraph_, edge_, \[Gamma]_] := GetEdge[
 	cgraph["TriangleGroup"],
-	ResolveTranslatedEdge[cgraph, edge, ResolveTranslation[\[Gamma], cgraph["TranslationGenerators"]]][[1]]
+	ResolveTranslatedEdge[cgraph, edge, ResolveTranslation[\[Gamma], cgraph["TranslationGenerators"]]][[1]],
+	Center -> cgraph["CellCenter"]
 ]
 
 
@@ -498,29 +513,48 @@ ResolveFace[cgraph_, face_] := Module[{\[Gamma] = "1", re},
 		{e, EdgeList[face]}
 	]
 ]
-GetCellGraphFace[cgraph_, face_] := GetCellGraphFace[cgraph, face] = Module[{
-		pos = GetSitePosition[cgraph["TriangleGroup"], #[[1,1]], #[[1,2]]]&/@ResolveFace[cgraph, face]
+Options[GetCellGraphFace] = {
+	StartingVertex -> "LowestSchwarzTriangleIndex"
+};
+GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgraph, face, opts] = Module[{
+		pos, index
 	},
+	index = If[ListQ@OptionValue[StartingVertex],
+		Switch[OptionValue[StartingVertex][[1]],
+		"Index", OptionValue[StartingVertex][[2]],
+		"VertexCriterion", FirstPosition[EdgeList[face][[;;,1]], Select[EdgeList[face][[;;,1]], OptionValue[StartingVertex][[2]]]][[1]],
+		"EdgeCriterion", FirstPosition[EdgeList[face], Select[EdgeList[face], OptionValue[StartingVertex][[2]]]][[1]],
+		"VertexPattern", FirstPosition[EdgeList[face][[;;,1]], OptionValue[StartingVertex][[2]]][[1]],
+		"EdgePattern", FirstPosition[EdgeList[face], OptionValue[StartingVertex][[2]]][[1]],
+		_, 1
+		],
+		Switch[OptionValue[StartingVertex],
+		"LowestSchwarzTriangleIndex", FirstPosition[EdgeList[face][[;;,1]], Min[EdgeList[face][[;;, 1, 2]]]][[1]],
+		_, 1
+		]
+	];
+	pos = GetSitePosition[cgraph["TriangleGroup"], #[[1,1]], #[[1,2]], Center -> cgraph["CellCenter"]]&/@
+		ResolveFace[cgraph, CyclicallyPermuteFaceEdges[face, -(index-1)]];
 	{
 		LToGraphics[LPolygon[pos], Model -> PoincareDisk],
 		Arrow@LToGraphics[LLine[{pos[[#]], pos[[Mod[# + 1, Length@pos, 1]]]}], Model -> PoincareDisk]&/@Range[1, Length@pos ]
 	}
 ]
-(*GetEdge[cgraph["TriangleGroup"], #]&/@ResolveFace[cgraph, face]*)
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Boundary*)
 
 
-GetCellBoundary[cgraph_] := {
+GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 	#[[4]],
 	LToGraphics[LLine[{
-		GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[1, 1]], #[[1]]],
-		GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[2, 1]], #[[2]]]
+		GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[1, 1]], #[[1]], Center -> cgraph["CellCenter"]],
+		GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[2, 1]], #[[2]], Center -> cgraph["CellCenter"]]
 	}], Model -> PoincareDisk],
 	LToGraphics[GetSitePosition[cgraph["TriangleGroup"], 3,
-		ResolveTranslation[#[[6]], cgraph["TranslationGenerators"]]
+		ResolveTranslation[#[[6]], cgraph["TranslationGenerators"]],
+		Center -> cgraph["CellCenter"]
 	], Model -> PoincareDisk],
 	#[[6]]
 }&/@cgraph["BoundaryEdges"]
@@ -539,9 +573,9 @@ Options[ShowCellGraph] = {
 	IntraCellEdgeStyle -> Blue,
 	InterCellEdgeStyle -> Red,
 	ShowEdgeTranslations -> False,
-	EdgeFilter -> (#&)
+	EdgeFilter -> (True&)
 };
-ShowCellGraph[cgraph_, opts:OptionsPattern[{ShowCellGraph, Graph}]] := Module[
+ShowCellGraph[cgraph_, opts:OptionsPattern[{ShowCellGraph, Graph}]] := ShowCellGraph[cgraph, opts] = Module[
 	{format\[Gamma]},
 	format\[Gamma][expr_]:=StringReplace[expr,{RegularExpression["g(\\d+)(\\^(\\-?\\d+))?"]->ToString[StringForm[\!\(\*
 TagBox[
@@ -587,9 +621,9 @@ Options[ShowCellSchwarzTriangles] = {
 	ShowLabels -> False,
 	TriangleRange -> All
 };
-ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := Show[
+ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := ShowCellSchwarzTriangles[cgraph, opts] = Show[
 	Graphics[{
-			GetSchwarzTriangle[cgraph["TriangleGroup"], #]&
+			GetSchwarzTriangle[cgraph["TriangleGroup"], #, Center -> cgraph["CellCenter"]]&
 			/@cgraph["SchwarzTriangleLabels"][[OptionValue[TriangleRange]]]
 		},
 		Sequence@@FilterRules[{opts}, Options[Graphics]]
@@ -606,9 +640,9 @@ Options[ShowCellGraphFlattened] = {
 	ShowInterCellEdges -> True,
 	IntraCellEdgeStyle -> Blue,
 	InterCellEdgeStyle -> Red,
-	EdgeFilter -> (#&)
+	EdgeFilter -> (True&)
 };
-ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Graphics, Graph}]] := Module[
+ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Graphics, Graph}]] := ShowCellGraphFlattened[cgraph, opts] = Module[
 	{intracedges, intercedges},
 	intracedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], OptionValue[EdgeFilter][#[[1]]]&&#[[2]]=="1"&][[;;,1]];
 	intercedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], OptionValue[EdgeFilter][#[[1]]]&&#[[2]]!="1"&][[;;,1]];
@@ -617,12 +651,12 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 		(* edges *)
 		Graphics[{Sequence@@OptionValue[CellEdgeStyle],
 			{OptionValue[IntraCellEdgeStyle],
-				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
+				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph, edge], Center -> cgraph["CellCenter"]],
 					{edge, intracedges}
 				]
 			},
 			{OptionValue[InterCellEdgeStyle],
-				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph,edge]],
+				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph, edge], Center -> cgraph["CellCenter"]],
 					{edge, intercedges}
 				]
 			}
@@ -653,7 +687,7 @@ Options[ShowCellBoundary] = {
 	ShowTranslatedCells -> False,
 	TranslatedCellBoundaryStyle -> {Black, AbsoluteThickness[1]}
 };
-ShowCellBoundary[cgraph_, opts:OptionsPattern[]] := Module[{format\[Gamma], gcellbd},
+ShowCellBoundary[cgraph_, opts:OptionsPattern[]] := ShowCellBoundary[cgraph, opts] = Module[{format\[Gamma], gcellbd},
 	(* translation label formatting *)
 	format\[Gamma][expr_] := StringReplace[expr, {
 		RegularExpression["g(\\d+)(\\^(\\-?\\d+))?"] -> ToString[StringForm[\!\(\*
@@ -688,12 +722,13 @@ FullForm]\),
 			},
 			{{Sequence@@OptionValue[CellBoundaryStyle],
 				LToGraphics[LLine[{
-					GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[1,1]],#[[1]]],
-					GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[2,1]],#[[2]]]
+					GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[1,1]], #[[1]], Center -> cgraph["CellCenter"]],
+					GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[2,1]], #[[2]], Center -> cgraph["CellCenter"]]
 				}]&/@cgraph["BoundaryEdges"], Model -> PoincareDisk]
 			}, With[{
 				pt = LToGraphics[GetSitePosition[cgraph["TriangleGroup"], 3,
-					ResolveTranslation[#[[6]], cgraph["TranslationGenerators"]]],
+					ResolveTranslation[#[[6]], cgraph["TranslationGenerators"]],
+					Center -> cgraph["CellCenter"]],
 					Model->PoincareDisk
 				]},{
 					If[OptionValue[ShowTranslations], pt, {}],
@@ -706,11 +741,13 @@ FullForm]\),
 				LToGraphics[Table[LLine[{
 						GetSitePosition[cgraph["TriangleGroup"],
 							EdgeList[cgraph["Graph"]][[#[[3]]]][[1,1]],
-							#[[1]]<>"*"<>ResolveTranslation[\[Gamma], cgraph["TranslationGenerators"]]
+							#[[1]]<>"*"<>ResolveTranslation[\[Gamma], cgraph["TranslationGenerators"]],
+							Center -> cgraph["CellCenter"]
 						],
 						GetSitePosition[cgraph["TriangleGroup"],
 							EdgeList[cgraph["Graph"]][[#[[3]]]][[2,1]],
-							#[[2]]<>"*"<>ResolveTranslation[\[Gamma],cgraph["TranslationGenerators"]]
+							#[[2]]<>"*"<>ResolveTranslation[\[Gamma],cgraph["TranslationGenerators"]],
+							Center -> cgraph["CellCenter"]
 						]
 					}]&/@cgraph["BoundaryEdges"],
 					{\[Gamma], cgraph["BoundaryEdges"][[;;,6]]}],
@@ -738,7 +775,7 @@ VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangl
 	},
 	
 	Show[
-		ShowTriangles[cgraph["TriangleGroup"],
+		ShowTriangles[cgraph["TriangleGroup"], Center -> cgraph["CellCenter"],
 			Sequence@@FilterRules[{opts},Join@@(Options/@{
 				ShowTriangles,
 				GetTriangleTessellation,
@@ -771,7 +808,7 @@ VisualizeModelGraph[mgraph_, opts:OptionsPattern[{VisualizeModelGraph, ShowTrian
 	},
 	
 	Show[
-		ShowTriangles[mgraph["TriangleGroup"],
+		ShowTriangles[mgraph["TriangleGroup"], Center -> mgraph["CellCenter"],
 			Sequence@@FilterRules[{opts},Join@@(Options/@{
 				ShowTriangles,
 				GetTriangleTessellation,
