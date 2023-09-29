@@ -13,6 +13,7 @@ GetSitePosition;
 
 ImportCellGraphString;
 ImportModelGraphString;
+ImportSupercellModelGraphString;
 
 GetTriangleTessellation;
 ShowTriangles;
@@ -58,7 +59,7 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Helper Functions*)
 
 
@@ -82,7 +83,7 @@ CyclicallyPermuteList[list_, n_] := Permute[list, PermutationPower[Cycles[{Range
 CyclicallyPermuteFaceEdges[face_, n_]:=Graph[VertexList[face], CyclicallyPermuteList[EdgeList[face], n], Sequence@@AbsoluteOptions[face]]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Group Elements and Vertex Positions*)
 
 
@@ -134,7 +135,7 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Cell Graphs*)
 
 
@@ -204,8 +205,8 @@ ImportCellGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
-(*ImportModelGraph*)
+(* ::Subsection::Closed:: *)
+(*Import of Model Graphs*)
 
 
 ImportModelGraphString[str_, qname_]:=Module[{
@@ -272,10 +273,89 @@ ImportModelGraphString[str_, qname_]:=Module[{
 
 
 (* ::Subsection:: *)
+(*Import of Supercell Model Graphs*)
+
+
+ImportSupercellModelGraphString[str_, qpc_, qsc_]:=Module[{
+		tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw,
+		model, vertices, vertexpos, edges, etransls, faces,
+		rels0, rels, center, vlbls, vcoords, graph
+	},
+	{tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
+		StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+	
+	(* info *)
+	tg = ToExpression@tg; (* triangle group signature *)
+	{rels0, rels, center} = StringTrim[#, {"{", "}"}]&/@ StringSplit[specs, "},"];
+	rels0 = StringSplit[rels0, ", "]; (* primitive cell relators *)
+	rels = StringSplit[rels, ", "]; (* supercell relators *)
+	center = ToExpression@center; (* cell center *)
+	
+	(* algebra *)
+	\[CapitalGamma]0gens = "(" <> # <> ")" &/@(AssociationThread@@(StringTrim[StringSplit[StringTrim[#, {"{", "}"}], ","], " "]&/@StringSplit[\[CapitalGamma]0gens, " -> "]));
+	TD\[CapitalGamma]0 = StringTrim[StringSplit[StringTrim[TD\[CapitalGamma]0, {"{", "}"}], ","], " "];
+	\[CapitalGamma]gens = "(" <> # <> ")" &/@(AssociationThread@@(StringTrim[StringSplit[StringTrim[#, {"{", "}"}], ","], " "]&/@StringSplit[\[CapitalGamma]gens, " -> "]));
+	\[CapitalGamma]\[CapitalGamma]0 = "(" <> # <> ")" &/@(AssociationThread@@(StringTrim[StringSplit[StringTrim[#, {"{", "}"}], ","], " "]&/@StringSplit[\[CapitalGamma]\[CapitalGamma]0, " -> "]));
+	T\[CapitalGamma]0\[CapitalGamma] = StringTrim[StringSplit[StringTrim[T\[CapitalGamma]0\[CapitalGamma], {"{", "}"}], ","], " "];
+	TD\[CapitalGamma] = StringTrim[StringSplit[StringTrim[TD\[CapitalGamma], {"{", "}"}], ","], " "];
+	
+	(* graph *)
+	vertices = ToExpression@vertices;
+	vertexpos = StringTrim[StringSplit[StringTrim[vertexpos, {"{", "}"}], ","], " "];
+	edges = DirectedEdge[vertices[[#1]], vertices[[#2]], #3]&@@@ToExpression[edges];
+	faces = Table[
+		Graph[
+			Table[
+				If[e[[2]] == 1,
+					edges[[e[[1]]]],
+					DirectedEdge[edges[[e[[1]], 2]], edges[[e[[1]], 1]], -edges[[e[[1]], 3]]]
+				],
+				{e, face}
+			]
+		],
+		{face, ToExpression[faces]}
+	];
+	
+	(* vertex labels and coordinates *)
+	vlbls = vertexpos;(*(StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	*)
+	vcoords = Table[
+		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], Center -> center], Model->PoincareDisk][[1]],
+		{i, Length[vertices]}
+	];
+	
+	(* edge translations *)
+	etransls = StringTrim[StringSplit[StringTrim[etransls,{"{", "}"}], ","], " "];
+	
+	(* graph *)
+	graph = Graph[vertices, edges, VertexCoordinates -> vcoords];
+	
+	<|
+		"TriangleGroup" -> tg,
+		"CellCenter" -> center,
+		"PCQuotientGroup" -> qpc,
+		"QuotientGroup" -> qsc,
+		"PCGenus" -> ToExpression@StringReplace[qpc, RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
+		"Genus" -> ToExpression@StringReplace[qsc, RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
+		"Graph" -> graph,
+		"UndirectedGraph"->GetUndirectedGraph@graph,
+		"FullGraph" -> GetFullGraph@graph,
+		"VertexLabels" -> vlbls,
+		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
+		"EdgeTranslations" -> etransls,
+		"PCTranslationGenerators" -> \[CapitalGamma]0gens,
+		"TranslationGenerators" -> \[CapitalGamma]gens,
+		"TranslationGroupEmbedding" -> \[CapitalGamma]\[CapitalGamma]0,
+		"InternalSupercellTranslations" -> T\[CapitalGamma]0\[CapitalGamma],
+		"Faces" -> faces
+	|>
+]
+
+
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Triangle Tessellations*)
 
 
@@ -409,7 +489,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -542,7 +622,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Boundary*)
 
 
@@ -560,7 +640,7 @@ GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph*)
 
 
