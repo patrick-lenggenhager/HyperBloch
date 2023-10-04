@@ -1,3 +1,4 @@
+(* ::Package:: *)
 
 (* : Mathematica Version : 4.0 *)
 
@@ -26,7 +27,7 @@
 
 (*: Requirements : None.*)
 
-BeginPackage["L2Primitives`"]; 
+BeginPackage["PatrickMLenggenhager`HyperBloch`L2Primitives`"]; 
 
    (* globals *)
 KleinDisk;
@@ -121,7 +122,7 @@ Options[LToGraphics] = {Model -> KleinDisk, PlotPoints -> 40};
 err = 0.001
 
     (* Euclidean norm of a vector *)
-norm[vect_List] := N[Sqrt[vect.vect]]
+norm[vect_List] := N[Sqrt[vect . vect]]
     (* returns unit vector *)
 normalize[vect_List] := If[norm[vect] == 0, 0, vect/norm[vect]]
 
@@ -131,23 +132,23 @@ LPointToH[LPoint[x_]] := Append[x, 1]
 hToLPoint[x_List] := LPoint[Drop[x, -1]/Last[x]]
 
     (* Minkowskian scalar product in  proj. coordinates *)
-minDot[x_List, y_List] := (x {1, 1, -1}).y
+minDot[x_List, y_List] := (x {1, 1, -1}) . y
 
     (* center of circle given by 3 points *)
 CCC[c_List, p1_List, p2_List] := 
   Module[{h},                  
-    h = N[normalize[((p2 - c).(p2 - p1))(p1 - c) + 
-                    ((p1 - c).(p1 - p2))(p2 - c)]];
-    (p1 + p2)/2 + ((c - p1).(-c + p2))/(2(-c + p2).h)h
+    h = N[normalize[((p2 - c) . (p2 - p1))(p1 - c) + 
+                    ((p1 - c) . (p1 - p2))(p2 - c)]];
+    (p1 + p2)/2 + ((c - p1) . (-c + p2))/(2(-c + p2) . h)h
     ]
 
     (* Transformations between various models  *)
-kleinToPoincare[x_List] := N[x/(1 + Sqrt[1 - x.x])] 
-poincareToKlein[x_List] := N[(2x)/(1 + x.x)]
+kleinToPoincare[x_List] := N[x/(1 + Sqrt[1 - x . x])] 
+poincareToKlein[x_List] := N[(2x)/(1 + x . x)]
 halfPlaneToPoincare[x_List] := 
-  N[Composition[{Re[#], Im[#]}&, ((I - #)/(I + #))&, (#.{1, I})&][x]]
+  N[Composition[{Re[#], Im[#]}&, ((I - #)/(I + #))&, (# . {1, I})&][x]]
 poincareToHalfPlane[x_List] := 
-  N[Composition[{Re[#],Im[#]}&, I((1 - #)/(1 + #))&, (#.{1, I})&][x]]
+  N[Composition[{Re[#],Im[#]}&, I((1 - #)/(1 + #))&, (# . {1, I})&][x]]
 
      (* LPoints in various models *)
 PDPoint[{x_, y_}] :=
@@ -169,8 +170,8 @@ L2Reflection[a_LPoint][x_LPoint] :=
     a1 = LPointToH[a];
     mat = 
       IdentityMatrix[3] -
-      (2/minDot[a1, a1])Map[List,a1].{a1}.DiagonalMatrix[{1, 1, -1}];
-    hToLPoint[mat.LPointToH[x]]
+      (2/minDot[a1, a1])Map[List,a1] . {a1} . DiagonalMatrix[{1, 1, -1}];
+    hToLPoint[mat . LPointToH[x]]
   ]
 
 L2Reflection[LLine[{a_LPoint, b_LPoint}]][x_LPoint] :=
@@ -178,7 +179,7 @@ L2Reflection[LLine[{a_LPoint, b_LPoint}]][x_LPoint] :=
     ab = Cross[LPointToH[a], LPointToH[b]];
     If[ab[[3]] == 0,
       (* If ab contains the origin the reflection is euclidean *)
-      LPoint[((2 x1.y1)/(y1.y1))y1 - x1],
+      LPoint[((2 x1 . y1)/(y1 . y1))y1 - x1],
       L2Reflection[
          hToLPoint[Cross[ab, Cross[LPointToH[x], ab {1, 1, -1}]]]
       ][x]
@@ -198,7 +199,7 @@ L2Translation[a_LPoint, b_LPoint][c_LPoint] :=
 L2Rotation[a_LPoint, \[Theta]_][x_LPoint] :=                 
   Composition[
       L2Translation[LPoint[{0, 0}], a][#] &,
-      LPoint[{{Cos[\[Theta]], Sin[\[Theta]]},{-Sin[\[Theta]],Cos[\[Theta]]}}.(#[[1]])] &,
+      LPoint[{{Cos[\[Theta]], Sin[\[Theta]]},{-Sin[\[Theta]],Cos[\[Theta]]}} . (#[[1]])] &,
       L2Translation[a, LPoint[{0, 0}]][#] &
       ][x]
 
@@ -240,11 +241,11 @@ makeArc[a_LPoint, b_LPoint, opts___] :=
     (* arc is almost straight or straight-return line segment *)
        {a1, b1},
     (* otherwise- calculate the centre, radius and angle of the arc *)
-       c = CCC[a1,b1,If[model === PoincareDisk,a1/(a1.a1),a1{1, -1}]];
+       c = CCC[a1,b1,If[model === PoincareDisk,a1/(a1 . a1),a1{1, -1}]];
        r = norm[c - a1];
-       angle = ArcCos[((a1 - c).(b1 - c))/(r^2)];
+       angle = ArcCos[((a1 - c) . (b1 - c))/(r^2)];
        e1 = normalize[a1 - c];
-       e2 = normalize[r^2(b1 - c)-((b1 - c).(a1 - c))(a1 - c)];
+       e2 = normalize[r^2(b1 - c)-((b1 - c) . (a1 - c))(a1 - c)];
        Table[c + r( e1 Cos[\[Phi]]+e2 Sin[\[Phi]]), 
              {\[Phi], 0, angle, angle/plotPoints}]                      
       ] (* If *)

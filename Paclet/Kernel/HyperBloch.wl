@@ -47,7 +47,7 @@ Begin["`Private`"];
 Print["HyperBloch - Version 0.0.1\nMain author: Patrick M. Lenggenhager\n\nThis package loads the following dependencies:\n\t- L2Primitives by Srdjan Vukmirovic\n\t- NCAlgebra by J. William Helton and Mauricio de Oliveira"];
 
 
-Get["L2Primitives.m"];
+Get["PatrickMLenggenhager`HyperBloch`L2Primitives`"];
 
 
 Quiet@Get["NCAlgebra`"];
@@ -59,7 +59,7 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Helper Functions*)
 
 
@@ -83,7 +83,7 @@ CyclicallyPermuteList[list_, n_] := Permute[list, PermutationPower[Cycles[{Range
 CyclicallyPermuteFaceEdges[face_, n_]:=Graph[VertexList[face], CyclicallyPermuteList[EdgeList[face], n], Sequence@@AbsoluteOptions[face]]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Group Elements and Vertex Positions*)
 
 
@@ -135,7 +135,7 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Cell Graphs*)
 
 
@@ -205,7 +205,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Model Graphs*)
 
 
@@ -355,7 +355,7 @@ ImportSupercellModelGraphString[str_, qpc_, qsc_]:=Module[{
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Triangle Tessellations*)
 
 
@@ -380,8 +380,8 @@ temp2,TempLen,boundaries,ToFill,triangles,absolut
 
 (* Some analytic results for the initial triangle. *)
 P=PDPoint[{0,0}];
-Q=PDPoint[Sqrt[(Cos[\[Pi] (1/p+1/q)]+Cos[\[Pi]/r])/(Cos[\[Pi] (1/p-1/q)]+Cos[\[Pi]/r])]*{1,0}];
-R=PDPoint[Sqrt[(Cos[\[Pi] (1/p+1/r)]+Cos[\[Pi]/q])/(Cos[\[Pi] (1/p-1/r)]+Cos[\[Pi]/q])]*{Cos[Pi/p],Sin[Pi/p]}];
+Q=PDPoint[Sqrt[(Cos[\[Pi] * (1/p+1/q)]+Cos[\[Pi]/r])/(Cos[\[Pi] * (1/p-1/q)]+Cos[\[Pi]/r])]*{1,0}];
+R=PDPoint[Sqrt[(Cos[\[Pi] * (1/p+1/r)]+Cos[\[Pi]/q])/(Cos[\[Pi] * (1/p-1/r)]+Cos[\[Pi]/q])]*{Cos[Pi/p],Sin[Pi/p]}];
 
 
 
@@ -489,7 +489,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -622,7 +622,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Boundary*)
 
 
@@ -640,7 +640,7 @@ GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph*)
 
 
