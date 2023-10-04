@@ -36,6 +36,9 @@ ShowCellBoundary;
 VisualizeCellGraph;
 VisualizeModelGraph;
 
+ModelGraphHamiltonianExpression;
+ModelGraphHamiltonian;
+
 
 Begin["`Private`"];
 
@@ -59,7 +62,7 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Helper Functions*)
 
 
@@ -83,7 +86,7 @@ CyclicallyPermuteList[list_, n_] := Permute[list, PermutationPower[Cycles[{Range
 CyclicallyPermuteFaceEdges[face_, n_]:=Graph[VertexList[face], CyclicallyPermuteList[EdgeList[face], n], Sequence@@AbsoluteOptions[face]]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Group Elements and Vertex Positions*)
 
 
@@ -135,7 +138,7 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Cell Graphs*)
 
 
@@ -205,7 +208,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Model Graphs*)
 
 
@@ -272,7 +275,7 @@ ImportModelGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Supercell Model Graphs*)
 
 
@@ -351,11 +354,11 @@ ImportSupercellModelGraphString[str_, qpc_, qsc_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Triangle Tessellations*)
 
 
@@ -489,7 +492,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -622,7 +625,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Boundary*)
 
 
@@ -640,7 +643,7 @@ GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph*)
 
 
@@ -869,7 +872,7 @@ VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangl
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Model Graph*)
 
 
@@ -904,6 +907,104 @@ VisualizeModelGraph[mgraph_, opts:OptionsPattern[{VisualizeModelGraph, ShowTrian
 		{}],
 		KeyValueMap[#1[mgraph, Sequence@@#2]&, sel[OptionValue[Elements]]],
 		Sequence@@FilterRules[{opts}, {ImageSize}]
+	]
+]
+
+
+(* ::Subsection:: *)
+(*Construct Bloch Hamiltonians*)
+
+
+MakeHermitian[H_] := H + ConjugateTranspose@H
+
+
+ZeroMatrix[n_] := ConstantArray[0, {n, n}]
+
+
+Options[ModelGraphHamiltonianExpression] = {
+	PCModel -> None
+};
+ModelGraphHamiltonianExpression[model_, Norb_, onsite_, hoppings_, k_Symbol,
+	OptionsPattern[ModelGraphHamiltonianExpression]] :=
+Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
+	(* dimension of Abelian Brillouin zone *)
+	dimk = 2*model["Genus"];
+	
+	(* extract vertices *)
+	verts = VertexList@model["Graph"];
+	Nverts = Length@verts;
+	
+	(* extract edges *)
+	edges = Transpose[{
+		EdgeList@model["Graph"],
+		ToExpression@StringReplace[#, RegularExpression["g(\\d+)"] -> "(E^(\[ImaginaryI] " <> ToString[k] <> "[$1]))"]&/@
+			model["EdgeTranslations"]
+	}];
+	
+	(* mapping to primitive cell *)
+	If[OptionValue[PCModel] === None,
+		PCVertex[pcvertex_] := pcvertex;
+		PCEdge[pcedge_] := pcedge;,
+		PCVertex[scvertex_] := scvertex[[{1,2}]];
+		PCEdge[scedge_] := scedge[[0]][
+			VertexList[OptionValue[PCModel]["Graph"]][[scedge[[3,1]]]],
+			VertexList[OptionValue[PCModel]["Graph"]][[scedge[[3,2]]]],
+			scedge[[3,3]]
+		];
+	];
+	
+	Simplify[If[Norb === 1,
+		MakeHermitian@Total[Normal@SparseArray[{
+			{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1, 1]]} -> hoppings[PCEdge@#1]#2
+		}, Nverts]&@@@edges] + Total[Normal@SparseArray[{
+			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]
+		}, Nverts]&/@verts],
+		MakeHermitian@Total[Normal@SparseArray`SparseBlockMatrix[Join[
+			{{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1,1]]} -> hoppings[PCEdge@#1]#2},
+			Table[{i, i} -> ZeroMatrix[Norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
+		]]&@@@edges] + Normal@SparseArray`SparseBlockMatrix[
+			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]&/@verts
+		]
+	], And@@Table[k[i]\[Element]Reals, {i, 1, dimk}]]
+]
+
+
+Options[ModelGraphHamiltonian] = {
+	Compile -> False,
+	Parameters -> {},
+	PBCCluster -> False
+};
+ModelGraphHamiltonian[model_, Norb_, onsite_, hoppings_,
+	opts:OptionsPattern[{ModelGraphHamiltonianExpression, ModelGraphHamiltonian, Compile}]] :=
+If[OptionValue[PBCCluster],
+	Evaluate[
+		ModelGraphHamiltonianExpression[model, Norb, onsite, hoppings, k,
+			Evaluate@FilterRules[{opts}, Options[ModelGraphHamiltonianExpression]]]/.
+		Join[Table[k[i] -> 0, {i, 1, 2*model["Genus"]}], OptionValue[Parameters]]
+	],
+	If[OptionValue[Compile],
+		Block[{k},
+			Compile[Evaluate@Table[{k[i], _Real}, {i, 1, 2*model["Genus"]}],
+				Evaluate[
+					ModelGraphHamiltonianExpression[model, Norb, onsite, hoppings, k,
+						Evaluate@FilterRules[{opts}, Options[ModelGraphHamiltonianExpression]]
+					]/. OptionValue[Parameters]
+				],
+				Evaluate@FilterRules[{opts}, Options[Compile]]
+			]
+		],
+		Block[{k},
+			Function[Evaluate@Table[Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
+				Evaluate[
+					ModelGraphHamiltonianExpression[model, Norb, onsite, hoppings, k,
+						Evaluate@FilterRules[{opts}, Options[ModelGraphHamiltonianExpression]]]/.
+					Join[
+						Table[k[i] -> Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
+						OptionValue[Parameters]
+					]
+				]
+			]
+		]
 	]
 ]
 
