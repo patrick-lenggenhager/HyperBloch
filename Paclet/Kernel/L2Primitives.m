@@ -148,7 +148,7 @@ poincareToKlein[x_List] := N[(2x)/(1 + x . x)]
 halfPlaneToPoincare[x_List] := 
   N[Composition[{Re[#], Im[#]}&, ((I - #)/(I + #))&, (# . {1, I})&][x]]
 poincareToHalfPlane[x_List] := 
-  N[Composition[{Re[#],Im[#]}&, I((1 - #)/(1 + #))&, (# . {1, I})&][x]]
+  N[Composition[{Re[#],Im[#]}&, I*((1 - #)/(1 + #))&, (# . {1, I})&][x]]
 
      (* LPoints in various models *)
 PDPoint[{x_, y_}] :=
@@ -246,7 +246,7 @@ makeArc[a_LPoint, b_LPoint, opts___] :=
        angle = ArcCos[((a1 - c) . (b1 - c))/(r^2)];
        e1 = normalize[a1 - c];
        e2 = normalize[r^2(b1 - c)-((b1 - c) . (a1 - c))(a1 - c)];
-       Table[c + r( e1 Cos[\[Phi]]+e2 Sin[\[Phi]]), 
+       Table[c + r*( e1 Cos[\[Phi]]+e2 Sin[\[Phi]]), 
              {\[Phi], 0, angle, angle/plotPoints}]                      
       ] (* If *)
    ]
@@ -329,4 +329,3 @@ LToGraphics[LDisk[lCentre_LPoint, r_], opts___] :=
 
 End[]      
 EndPackage[]
-
