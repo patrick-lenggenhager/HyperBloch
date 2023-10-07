@@ -38,7 +38,7 @@ Cell["", "FileManagerTopSpacer",
  CellGroupingRules->{"SectionGrouping", 99},
  TaggingRules->{},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->578595387,ExpressionUUID->"71bdb904-9d65-4fc0-9ee0-0b1bb993ba3b"],
+ CellID->578595387,ExpressionUUID->"6aed1061-7f8a-455f-bd03-9aa191ffa8b7"],
 
 Cell[TextData[Cell[BoxData[
  InterpretationBox[
@@ -65,7 +65,7 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Documentation"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"0b8737e3-a983-43bb-b144-a7d95fa8e1e0"]], \
+   "Text"}]],ExpressionUUID->"24fe4a7c-eee0-4285-8559-773165455808"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -76,7 +76,7 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerDocumentationIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->178445695,ExpressionUUID->"b13809e8-b427-4cc2-b0fd-fe578b4ba2f6"],
+ CellID->178445695,ExpressionUUID->"0f8fc6ba-6e3d-4055-bbd9-2d64f05fd531"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -100,7 +100,7 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->22456668,ExpressionUUID->"a7ca6faf-ed2a-4d16-8493-28b8ea56c2a5"],
+ CellID->22456668,ExpressionUUID->"6b97ef76-82ec-49ab-979b-2d6dfa834dca"],
 
 Cell[CellGroupData[{
 
@@ -128,7 +128,7 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Kernel"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"9ec831a0-2a70-417c-88b0-dec8137ff87b"]], \
+   "Text"}]],ExpressionUUID->"000758f7-579c-4e4d-ac82-7ce6bde93fe9"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
@@ -139,7 +139,7 @@ Cell[TextData[Cell[BoxData[
       TemplateBox[{}, "FileManagerKernelIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->7072344,ExpressionUUID->"c8061776-be00-4381-a544-9e385f7559d2"],
+ CellID->7072344,ExpressionUUID->"4ba5fde8-0edf-495a-b402-f346049149fd"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -163,7 +163,7 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->146061984,ExpressionUUID->"03116c86-3acc-4a74-878f-0064ad0e558b"],
+ CellID->146061984,ExpressionUUID->"c8c83c6b-fc3e-4b8e-973b-2812fc27458a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -187,7 +187,7 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->209391763,ExpressionUUID->"0b277ced-38ad-430b-bbe9-0709244e2c0e"]
+ CellID->209391763,ExpressionUUID->"3e3ececa-adad-416c-8b4f-23d9913ced67"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -212,7 +212,7 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerPacletInfoIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->459546126,ExpressionUUID->"71984887-ab03-4d32-b61b-72657b2d3a56"],
+ CellID->459546126,ExpressionUUID->"ac5ae5af-d4ce-46d5-ba8c-2ee4a0f2688b"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -236,13 +236,13 @@ Cell[BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->337259689,ExpressionUUID->"90d4f441-3f82-4a97-a1d3-e43da4dfb5da"],
+ CellID->337259689,ExpressionUUID->"0d853364-e2a6-4337-b7b5-a1e4d7a2ca31"],
 
 Cell["", "FileManagerBottomSpacer",
  CellGroupingRules->{"SectionGrouping", 100},
  TaggingRules->{},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->769472820,ExpressionUUID->"63a2f3d4-ca3c-4516-a84f-473daf4a59e1"]
+ CellID->769472820,ExpressionUUID->"c733b2bc-88ab-4c81-ab19-bdd1448f0d51"]
 }, Open  ]]
 }, Open  ]],
 
@@ -5016,120 +5016,80 @@ DockedCells->{
   Cell[
    BoxData[
     StyleBox[
-     TagBox[
-      GridBox[{{
-         OverlayBox[{
-           StyleBox[
-            TagBox[
-             DynamicModuleBox[{Typeset`var$$ = False}, 
-              InterpretationBox[
-               StyleBox[
-                PaneSelectorBox[{False -> GridBox[{{
-                    OpenerBox[
-                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
-                    Automatic, AutoAction -> False, ContinuousAction -> 
-                    False], 
-                    StyleBox[
-                    DynamicBox[
-                    ToBoxes[
+     InterpretationBox[
+      StyleBox[
+       PaneSelectorBox[{False -> GridBox[{{
+             OpenerBox[
+              Dynamic[
+               CurrentValue[
+                EvaluationCell[], {TaggingRules, "StripeOpen"}, False]], 
+              Appearance -> Automatic, Enabled -> Automatic, AutoAction -> 
+              False, ContinuousAction -> False], 
+             TagBox[
+              GridBox[{{
+                 StyleBox[
+                  DynamicBox[
+                   ToBoxes[
                     DateString[
                     TimeZoneConvert[
                     DateObject[
-                    3.9054181050572467`17.34424252442809*^9, TimeZone -> 
+                    3.9054186047684651`17.34424257999751*^9, TimeZone -> 
                     0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
                     "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
                     StandardForm], SingleEvaluation -> True, Evaluator -> 
-                    "System"], FontSlant -> Italic, FontColor -> 
-                    GrayLevel[0.5], FontSize -> 0.9 Inherited, StripOnInput -> 
-                    False]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                   "System"], FontSlant -> Italic, FontColor -> 
+                  GrayLevel[0.5], FontSize -> 0.9 Inherited, StripOnInput -> 
+                  False], "\"   \"", 
+                 ItemBox[
+                  StyleBox[
+                   TagBox[
+                    
+                    GridBox[{{
+                    "\"Paclet build completed successfully.\"", "\"\""}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Baseline}}}, 
                     AutoDelete -> False, 
-                    GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
                     GridBoxItemSize -> {
                     "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
-                    BaselinePosition -> {1, 1}], True -> GridBox[{{
-                    OpenerBox[
-                    Dynamic[Typeset`var$$], Appearance -> Automatic, Enabled -> 
-                    Automatic, AutoAction -> False, ContinuousAction -> 
-                    False], 
+                    GridBoxSpacings -> {"Columns" -> {{0.25}}}], "Grid"], 
+                   LineBreakWithin -> Automatic, LineIndent -> 0, 
+                   StripOnInput -> False], ItemSize -> Fit, StripOnInput -> 
+                  False], 
+                 ItemBox[
+                  StyleBox[
+                   TemplateBox[{
+                    ButtonBox[
+                    TagBox[
+                    
+                    PaneSelectorBox[{
+                    False -> 
+                    "\"PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", True -> 
                     StyleBox[
-                    DynamicBox[
-                    ToBoxes[
-                    DateString[
-                    TimeZoneConvert[
-                    DateObject[
-                    3.9054181050572467`17.34424252442809*^9, TimeZone -> 
-                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
-                    "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
-                    StandardForm], SingleEvaluation -> True, Evaluator -> 
-                    "System"], FontSlant -> Italic, FontColor -> 
-                    GrayLevel[0.5], FontSize -> 0.9 Inherited, StripOnInput -> 
-                    False]}, {"", 
-                    PaneBox["\"\"", ImageMargins -> 0]}}, 
-                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
-                    False, GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
-                    BaselinePosition -> {1, 1}]}, 
-                 Dynamic[Typeset`var$$], Alignment -> Automatic, ImageSize -> 
-                 Automatic, ImageMargins -> 0, BaseStyle -> {}, 
-                 DefaultBaseStyle -> "OpenerView", BaselinePosition -> 
-                 Baseline], Deployed -> False, StripOnInput -> False], 
-               OpenerView[{
-                 Style[
-                  Dynamic[
-                   DateString[
-                    TimeZoneConvert[
-                    DateObject[
-                    3.9054181050572467`17.34424252442809*^9, TimeZone -> 
-                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
-                    "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
-                   SingleEvaluation -> True, Evaluator -> "System"], 
-                  FontSlant -> Italic, FontColor -> GrayLevel[0.5], FontSize -> 
-                  0.9 Inherited], ""}, False]], DynamicModuleValues -> 
-              Automatic], Setting[#, {0}]& ], ShowContents -> False, 
-            StripOnInput -> False], 
-           StyleBox[
-            DynamicBox[
-             ToBoxes[
-              DateString[
-               TimeZoneConvert[
-                DateObject[
-                3.9054181050572467`17.34424252442809*^9, TimeZone -> 0]], {
-               "MonthName", " ", "DayShort", ", ", "Year", " ", "Hour12Short",
-                 ":", "Minute", " ", "AMPMLowerCase"}], StandardForm], 
-             SingleEvaluation -> True, Evaluator -> "System"], FontSlant -> 
-            Italic, FontColor -> GrayLevel[0.5], FontSize -> 0.9 Inherited, 
-            StripOnInput -> False]}, Alignment -> {Right, Baseline}], 
-         "\"   \"", 
-         ItemBox[
-          StyleBox[
-          "\"Found 3 potential issues and 4 suggestions\"", LineBreakWithin -> 
-           Automatic, LineIndent -> 0, StripOnInput -> False], ItemSize -> 
-          Fit, StripOnInput -> False], 
-         StyleBox[
-          ActionMenuBox[
-           TemplateBox[{
-             TemplateBox[{
-               TagBox[
-                GridBox[{{
+                    "\"PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "HyperlinkActive", StripOnInput -> False]}, 
+                    Dynamic[
+                    CurrentValue["MouseOver"]], ImageSize -> Automatic, 
+                    FrameMargins -> 0], 
+                    MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
+                    SystemOpen[
+                    File[
+                    "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+build\\"]], Appearance -> None, BaseStyle -> "Hyperlink", Evaluator -> 
+                    Automatic, Method -> "Preemptive"], 
+                    "OEM6eJxFjkELgkAUhNmQCOpXeE/s2i2T6GAQbp16Idv21MXVXfatVP8+\
+laDbzHzMMCWjRS5eiXkjlYzmuRl1GVCQKfI8OCiNnN3KGS0v2FotPI6c/bgO91uAK6EjANto7ABSI/\
+sWOz8k5zoFOH4sukQbWQ+BkBo9wKNX+\
+jla75RsThl2VYVdLSp0RfEvrOMojjaRnVohX41vdq6a5jm7fwFNvUKu"}, 
+                    "ClickToCopyTemplate"], LineBreakWithin -> Automatic, 
+                   LineIndent -> 0, StripOnInput -> False], ItemSize -> Fit, 
+                  StripOnInput -> False], 
+                 StyleBox[
+                  ActionMenuBox[
                    TemplateBox[{
                     TemplateBox[{
-                    PaneBox[
+                    TagBox[
+                    GridBox[{{
                     TemplateBox[{
-                    RGBColor[1., 0.4627450980392157, 0.]}, "HintPodIconHint"],
-                     ImageSize -> {12, 12}, ImageSizeAction -> "ShrinkToFit", 
-                    BaselinePosition -> Scaled[0.1]], 
-                    TemplateBox[{1}, "Spacer1"], 
-                    StyleBox[
-                    "3", FontSize -> 14, FontWeight -> Plain, FontColor -> 
-                    GrayLevel[0.25], FontFamily -> "Source Sans Pro", 
-                    StripOnInput -> False]}, "RowDefault"], 
-                    "\"Potential issues found\""}, "PrettyTooltipTemplate"], 
-                   TemplateBox[{
                     TemplateBox[{
                     PaneBox[
                     TemplateBox[{
@@ -5140,272 +5100,2562 @@ DockedCells->{
                     BaselinePosition -> Scaled[0.1]], 
                     TemplateBox[{1}, "Spacer1"], 
                     StyleBox[
-                    "4", FontSize -> 14, FontWeight -> Plain, FontColor -> 
+                    "1", FontSize -> 14, FontWeight -> Plain, FontColor -> 
                     GrayLevel[0.25], FontFamily -> "Source Sans Pro", 
                     StripOnInput -> False]}, "RowDefault"], 
                     "\"Suggestions found\""}, "PrettyTooltipTemplate"]}}, 
-                 AutoDelete -> False, 
-                 GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-                "Grid"], 
-               GraphicsBox[{
-                 GrayLevel[0.4], 
-                 AbsoluteThickness[2], 
-                 CapForm["Round"], 
-                 LineBox[{{-1, 0}, {0, -1}, {1, 0}}]}, {
-                ImageSize -> {13, 9}, BaselinePosition -> Scaled[0.2], 
-                 ImagePadding -> {{3, 3}, {3, 3}}, AspectRatio -> Full}]}, 
-              "RowDefault"], ImageSize -> {Automatic, 19}, BaselinePosition -> 
-             Baseline, Background -> GrayLevel[1], FrameStyle -> Dynamic[
-               If[
-                CurrentValue["MouseOver"], 
-                Hue[0.55, 0.82, 0.87], 
-                GrayLevel[0.8]]], FrameMargins -> {{4, 4}, {1, 1}}, 
-             Alignment -> {Center, Baseline}}, "Highlighted"], {TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[
-                  0.49019607843137253`, 0.49019607843137253`, 
-                   0.49019607843137253`]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               TemplateBox[{"\"Suspicious use of session symbol \"", 
-                 StyleBox[
-                 "Print", "Program", FontWeight -> Medium, 
-                  ShowStringCharacters -> True, StripOnInput -> False], 
-                 "\".\\!\\(\\*StyleBox[\\\"\\\\\\\" (L50,C1) \\\\\\\"\\\", \
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Grid"], 
+                    GraphicsBox[{
+                    GrayLevel[0.4], 
+                    AbsoluteThickness[2], 
+                    CapForm["Round"], 
+                    LineBox[{{-1, 0}, {0, -1}, {1, 0}}]}, {
+                    ImageSize -> {13, 9}, BaselinePosition -> Scaled[0.2], 
+                    ImagePadding -> {{3, 3}, {3, 3}}, AspectRatio -> Full}]}, 
+                    "RowDefault"], ImageSize -> {Automatic, 19}, 
+                    BaselinePosition -> Baseline, Background -> GrayLevel[1], 
+                    FrameStyle -> Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    Hue[0.55, 0.82, 0.87], 
+                    GrayLevel[0.8]]], FrameMargins -> {{4, 4}, {1, 1}}, 
+                    Alignment -> {Center, Baseline}}, "Highlighted"], {
+                   TemplateBox[{
+                    PaneBox[
+                    TemplateBox[{
+                    RGBColor[
+                    0.49019607843137253`, 0.49019607843137253`, 
+                    0.49019607843137253`]}, "HintPodIconHint"], 
+                    ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
+                    BaselinePosition -> Scaled[0.1]], "\" \"", 
+                    TemplateBox[{"\"Suspicious use of session symbol \"", 
+                    StyleBox[
+                    "Print", "Program", FontWeight -> Medium, 
+                    ShowStringCharacters -> True, StripOnInput -> False], 
+                    "\".\\!\\(\\*StyleBox[\\\"\\\\\\\" (L50,C1) \\\\\\\"\\\", \
 Rule[FontOpacity, 0.65`], Rule[FontSize, Times[0.9`, Inherited]], \
 Rule[PrivateFontOptions, List[Rule[\\\"OperatorSubstitution\\\", False]]], \
 Rule[StripOnInput, False]]\\)\""}, "RowDefault"]}, "RowDefault"] :> 
-            DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Suggestion", "Paclet", 
-                DefinitionNotebookClient`$CurrentNotebook, 
-                "afc8b7b9-d3e7-4d5f-af8a-f8116336e717", 146061984, 
-                "CodeInspectionFileIssue/SuspiciousSessionSymbol", <|
-                "File" -> 
-                 "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+                    DefinitionNotebookClient`WithCurrentNotebook[
+                    EvaluationNotebook[], 
+                    DefinitionNotebookClient`LoadDefinitionNotebook[
+                    "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
+                    DefinitionNotebookClient`PackageScope`setHint[
+                    "Suggestion", "Paclet", 
+                    DefinitionNotebookClient`$CurrentNotebook, 
+                    "639c6657-7776-4980-ba51-c847c2820a48", 146061984, 
+                    "CodeInspectionFileIssue/SuspiciousSessionSymbol", <|
+                    "File" -> 
+                    "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
 Kernel\\HyperBloch.wl", "Editor" -> Automatic, "SourceLineStart" -> 50, 
-                 "SourceColumnStart" -> 1, "SourceLineEnd" -> 50, 
-                 "SourceColumnEnd" -> 6, "Message" -> 
-                 "Suspicious use of session symbol \
+                    "SourceColumnStart" -> 1, "SourceLineEnd" -> 50, 
+                    "SourceColumnEnd" -> 6, "Message" -> 
+                    "Suspicious use of session symbol \
 ``Print``.\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, 0.65`], \
 Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
 List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, False]]\)", 
-                 "SourceInformation" -> 
-                 CodeInspector`InspectionObject[
-                  "SuspiciousSessionSymbol", 
-                   "Suspicious use of session symbol ``Print``.", "Warning", <|
-                   CodeParser`Source -> {{50, 1}, {50, 6}}, ConfidenceLevel -> 
+                    "SourceInformation" -> 
+                    CodeInspector`InspectionObject[
+                    "SuspiciousSessionSymbol", 
+                    "Suspicious use of session symbol ``Print``.", 
+                    "Warning", <|
+                    CodeParser`Source -> {{50, 1}, {50, 6}}, ConfidenceLevel -> 
                     0.55, "File" -> 
                     "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
 Kernel\\HyperBloch.wl", "Editor" -> Automatic|>], "Hash" -> 
-                 1991119325374219651, "Position" -> 
-                 "\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, \
+                    1991119325374219651, "Position" -> 
+                    "\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, \
 0.65`], Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
 List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, \
 False]]\)"|>]; DefinitionNotebookClient`PackageScope`seekAfter[146061984]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[
-                  0.49019607843137253`, 0.49019607843137253`, 
-                   0.49019607843137253`]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"This file has changed since the last paclet build\""}, 
-              "RowDefault"] :> DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Suggestion", "Paclet", 
-                DefinitionNotebookClient`$CurrentNotebook, 
-                "5ec33e28-4f8f-4e7f-8e61-c54cc74539ef", 146061984, 
-                "PacletFileChanged", {"HyperBloch.wl"}]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[146061984]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[
-                  0.49019607843137253`, 0.49019607843137253`, 
-                   0.49019607843137253`]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"This file has changed since the last paclet build\""}, 
-              "RowDefault"] :> DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Suggestion", "Paclet", 
-                DefinitionNotebookClient`$CurrentNotebook, 
-                "d376f8ba-8ae6-46b3-b7f5-787b7f64a642", 209391763, 
-                "PacletFileChanged", {"L2Primitives.m"}]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[209391763]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[
-                  0.49019607843137253`, 0.49019607843137253`, 
-                   0.49019607843137253`]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"New submissions should typically be version 1.0.0\""}, 
-              "RowDefault"] :> DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Suggestion", "Paclet", 
-                DefinitionNotebookClient`$CurrentNotebook, 
-                "120f9ed6-cc35-41ea-a8c7-ee6ffa678201", 459546126, 
-                "InvalidFirstVersion", <|
-                "Current" -> "0.0.1", "Published" -> None, 
-                 "Selection" -> ("Version" -> "0.0.1"), "PublisherID" -> 
-                 "PatrickMLenggenhager", "PacletDirectory" -> 
-                 File["C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet"],
-                  "ResourceName" -> "PatrickMLenggenhager/HyperBloch"|>]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[459546126]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[1., 0.4627450980392157, 0.]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"No repository found at \
-\\\"https://github.com/patrick-lenggenhager/HyperBloch\\\"\""}, "RowDefault"] :> 
-            DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Warning", "Paclet", DefinitionNotebookClient`$CurrentNotebook,
-                 "c688c3b6-d148-4e80-984d-b24d04bb1b5c", 26509271, 
-                "NoGithubRepoFound", {
-                "https://github.com/patrick-lenggenhager/HyperBloch"}]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[26509271]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[1., 0.4627450980392157, 0.]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"Unrecognized license ID; did you mean \
-\\!\\(\\*TemplateBox[List[\\\"\\\\\\\"GD License\\\\\\\"\\\", \
-\\\"https://resources.wolframcloud.com/PacletRepository/licenses/GD\\\"], \
-\\\"HyperlinkURL\\\"]\\)?\""}, "RowDefault"] :> 
-            DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Warning", "Paclet", DefinitionNotebookClient`$CurrentNotebook,
-                 "525e76f2-98f1-4756-b433-d0f019beeda4", 42282576, 
-                "UnknownLicenseID", <|
-                "ID" -> "3-Clause BSD License", "Suggested" -> "GD License", 
-                 "CellStyle" -> "Text", "LicenseLink" -> 
-                 "\!\(\*TemplateBox[List[\"\\\"GD License\\\"\", \
-\"https://resources.wolframcloud.com/PacletRepository/licenses/GD\"], \
-\"HyperlinkURL\"]\)", "CustomActions" -> {
-                   Hyperlink[
-                   "GD License", 
-                    "https://resources.wolframcloud.com/PacletRepository/\
-licenses/GD"]}|>]; DefinitionNotebookClient`PackageScope`seekAfter[42282576]; 
-              Null], TemplateBox[{
-               PaneBox[
-                TemplateBox[{
-                  RGBColor[1., 0.4627450980392157, 0.]}, "HintPodIconHint"], 
-                ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
-                BaselinePosition -> Scaled[0.1]], "\" \"", 
-               "\"Cell not used\""}, "RowDefault"] :> 
-            DefinitionNotebookClient`WithCurrentNotebook[
-              EvaluationNotebook[], 
-              DefinitionNotebookClient`LoadDefinitionNotebook[
-               "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
-              DefinitionNotebookClient`PackageScope`setHint[
-               "Warning", "Paclet", DefinitionNotebookClient`$CurrentNotebook,
-                 "3a66f9d9-2473-492b-a01c-512be60dcd84", 694609509, 
-                "UnableToUseCell", {}]; 
-              DefinitionNotebookClient`PackageScope`seekAfter[694609509]; 
-              Null]}, Appearance -> None], "BoxID" -> "WarningCountButton", 
-          StripOnInput -> False], 
-         TagBox[
-          ButtonBox[
-           TagBox[
-            PaneSelectorBox[{False -> GraphicsBox[{
+                    Null]}, Appearance -> None], "BoxID" -> 
+                  "WarningCountButton", StripOnInput -> False], 
+                 TagBox[
+                  ButtonBox[
+                   TagBox[
+                    PaneSelectorBox[{False -> GraphicsBox[{
+                    GrayLevel[
+                    NCache[
+                    Rational[64, 85], 0.7529411764705882]], 
+                    
+                    PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
+                    0.42426406871192845`}, {0.42426406871192845`, 
+                    0.282842712474619}}], 
+                    
+                    PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                    0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
+                    0.42426406871192845`}}]}, ImageSize -> 18, 
+                    PlotRangePadding -> 0, PlotRange -> 0.7, Background -> 
+                    None], True -> GraphicsBox[{
+                    GrayLevel[
+                    NCache[
+                    Rational[128, 255], 0.5019607843137255]], 
+                    
+                    PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
+                    0.42426406871192845`}, {0.42426406871192845`, 
+                    0.282842712474619}}], 
+                    
+                    PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                    0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
+                    0.42426406871192845`}}]}, ImageSize -> 18, 
+                    PlotRangePadding -> 0, PlotRange -> 0.7, Background -> 
+                    None]}, 
+                    Dynamic[
+                    CurrentValue["MouseOver"]], ImageSize -> Automatic, 
+                    FrameMargins -> 0], 
+                    MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
+                   With[{DefinitionNotebookClient`Stripes`PackagePrivate`nbo$ = 
+                    EvaluationNotebook[]}, 
+                    CurrentValue[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells] = If[
+                    TrueQ[
+                    MemberQ[
+                    CurrentValue["ModifierKeys"], "Control"]], 
+                    DeleteCases[
+                    Flatten[{
+                    CurrentValue[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells]}], 
+                    Cell[
+                    Blank[], "StripeCell", 
+                    BlankNullSequence[]]], 
+                    DeleteCases[
+                    Flatten[{
+                    CurrentValue[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells]}], 
+                    Condition[
+                    Pattern[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                    Blank[Cell]], 
+                    Not[
+                    FreeQ[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                    "a669f16a-0c72-4e77-9f58-654f97b72145"]]]]]], Appearance -> 
+                   None, BoxID -> "a669f16a-0c72-4e77-9f58-654f97b72145", 
+                   Evaluator -> Automatic, Method -> "Preemptive"], 
+                  MouseAppearanceTag["LinkHand"]]}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              "Grid"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+           AutoDelete -> False, 
+           GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+           GridBoxSpacings -> {"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
+           BaselinePosition -> {1, 1}], True -> GridBox[{{
+             OpenerBox[
+              Dynamic[
+               CurrentValue[
+                EvaluationCell[], {TaggingRules, "StripeOpen"}, False]], 
+              Appearance -> Automatic, Enabled -> Automatic, AutoAction -> 
+              False, ContinuousAction -> False], 
+             TagBox[
+              GridBox[{{
+                 StyleBox[
+                  DynamicBox[
+                   ToBoxes[
+                    DateString[
+                    TimeZoneConvert[
+                    DateObject[
+                    3.9054186047684651`17.34424257999751*^9, TimeZone -> 
+                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
+                    "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
+                    StandardForm], SingleEvaluation -> True, Evaluator -> 
+                   "System"], FontSlant -> Italic, FontColor -> 
+                  GrayLevel[0.5], FontSize -> 0.9 Inherited, StripOnInput -> 
+                  False], "\"   \"", 
+                 ItemBox[
+                  StyleBox[
+                   TagBox[
+                    GridBox[{{
+                    "\"Paclet build completed successfully.\"", "\"\""}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Baseline}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.25}}}], "Grid"], 
+                   LineBreakWithin -> Automatic, LineIndent -> 0, 
+                   StripOnInput -> False], ItemSize -> Fit, StripOnInput -> 
+                  False], 
+                 ItemBox[
+                  StyleBox[
+                   TemplateBox[{
+                    ButtonBox[
+                    TagBox[
+                    
+                    PaneSelectorBox[{
+                    False -> 
+                    "\"PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", True -> 
+                    StyleBox[
+                    "\"PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "HyperlinkActive", StripOnInput -> False]}, 
+                    Dynamic[
+                    CurrentValue["MouseOver"]], ImageSize -> Automatic, 
+                    FrameMargins -> 0], 
+                    MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
+                    SystemOpen[
+                    File[
+                    "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+build\\"]], Appearance -> None, BaseStyle -> "Hyperlink", Evaluator -> 
+                    Automatic, Method -> "Preemptive"], 
+                    "OEM6eJxFjkELgkAUhNmQCOpXeE/s2i2T6GAQbp16Idv21MXVXfatVP8+\
+laDbzHzMMCWjRS5eiXkjlYzmuRl1GVCQKfI8OCiNnN3KGS0v2FotPI6c/bgO91uAK6EjANto7ABSI/\
+sWOz8k5zoFOH4sukQbWQ+BkBo9wKNX+\
+jla75RsThl2VYVdLSp0RfEvrOMojjaRnVohX41vdq6a5jm7fwFNvUKu"}, 
+                    "ClickToCopyTemplate"], LineBreakWithin -> Automatic, 
+                   LineIndent -> 0, StripOnInput -> False], ItemSize -> Fit, 
+                  StripOnInput -> False], 
+                 StyleBox[
+                  ActionMenuBox[
+                   TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    GridBox[{{
+                    TemplateBox[{
+                    TemplateBox[{
+                    PaneBox[
+                    TemplateBox[{
+                    RGBColor[
+                    0.49019607843137253`, 0.49019607843137253`, 
+                    0.49019607843137253`]}, "HintPodIconHint"], 
+                    ImageSize -> {12, 12}, ImageSizeAction -> "ShrinkToFit", 
+                    BaselinePosition -> Scaled[0.1]], 
+                    TemplateBox[{1}, "Spacer1"], 
+                    StyleBox[
+                    "1", FontSize -> 14, FontWeight -> Plain, FontColor -> 
+                    GrayLevel[0.25], FontFamily -> "Source Sans Pro", 
+                    StripOnInput -> False]}, "RowDefault"], 
+                    "\"Suggestions found\""}, "PrettyTooltipTemplate"]}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    "Grid"], 
+                    GraphicsBox[{
+                    GrayLevel[0.4], 
+                    AbsoluteThickness[2], 
+                    CapForm["Round"], 
+                    LineBox[{{-1, 0}, {0, -1}, {1, 0}}]}, {
+                    ImageSize -> {13, 9}, BaselinePosition -> Scaled[0.2], 
+                    ImagePadding -> {{3, 3}, {3, 3}}, AspectRatio -> Full}]}, 
+                    "RowDefault"], ImageSize -> {Automatic, 19}, 
+                    BaselinePosition -> Baseline, Background -> GrayLevel[1], 
+                    FrameStyle -> Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    Hue[0.55, 0.82, 0.87], 
+                    GrayLevel[0.8]]], FrameMargins -> {{4, 4}, {1, 1}}, 
+                    Alignment -> {Center, Baseline}}, "Highlighted"], {
+                   TemplateBox[{
+                    PaneBox[
+                    TemplateBox[{
+                    RGBColor[
+                    0.49019607843137253`, 0.49019607843137253`, 
+                    0.49019607843137253`]}, "HintPodIconHint"], 
+                    ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
+                    BaselinePosition -> Scaled[0.1]], "\" \"", 
+                    TemplateBox[{"\"Suspicious use of session symbol \"", 
+                    StyleBox[
+                    "Print", "Program", FontWeight -> Medium, 
+                    ShowStringCharacters -> True, StripOnInput -> False], 
+                    "\".\\!\\(\\*StyleBox[\\\"\\\\\\\" (L50,C1) \\\\\\\"\\\", \
+Rule[FontOpacity, 0.65`], Rule[FontSize, Times[0.9`, Inherited]], \
+Rule[PrivateFontOptions, List[Rule[\\\"OperatorSubstitution\\\", False]]], \
+Rule[StripOnInput, False]]\\)\""}, "RowDefault"]}, "RowDefault"] :> 
+                    DefinitionNotebookClient`WithCurrentNotebook[
+                    EvaluationNotebook[], 
+                    DefinitionNotebookClient`LoadDefinitionNotebook[
+                    "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
+                    DefinitionNotebookClient`PackageScope`setHint[
+                    "Suggestion", "Paclet", 
+                    DefinitionNotebookClient`$CurrentNotebook, 
+                    "639c6657-7776-4980-ba51-c847c2820a48", 146061984, 
+                    "CodeInspectionFileIssue/SuspiciousSessionSymbol", <|
+                    "File" -> 
+                    "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+Kernel\\HyperBloch.wl", "Editor" -> Automatic, "SourceLineStart" -> 50, 
+                    "SourceColumnStart" -> 1, "SourceLineEnd" -> 50, 
+                    "SourceColumnEnd" -> 6, "Message" -> 
+                    "Suspicious use of session symbol \
+``Print``.\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, 0.65`], \
+Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
+List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, False]]\)", 
+                    "SourceInformation" -> 
+                    CodeInspector`InspectionObject[
+                    "SuspiciousSessionSymbol", 
+                    "Suspicious use of session symbol ``Print``.", 
+                    "Warning", <|
+                    CodeParser`Source -> {{50, 1}, {50, 6}}, ConfidenceLevel -> 
+                    0.55, "File" -> 
+                    "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+Kernel\\HyperBloch.wl", "Editor" -> Automatic|>], "Hash" -> 
+                    1991119325374219651, "Position" -> 
+                    "\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, \
+0.65`], Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
+List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, \
+False]]\)"|>]; DefinitionNotebookClient`PackageScope`seekAfter[146061984]; 
+                    Null]}, Appearance -> None], "BoxID" -> 
+                  "WarningCountButton", StripOnInput -> False], 
+                 TagBox[
+                  ButtonBox[
+                   TagBox[
+                    PaneSelectorBox[{False -> GraphicsBox[{
+                    GrayLevel[
+                    NCache[
+                    Rational[64, 85], 0.7529411764705882]], 
+                    
+                    PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
+                    0.42426406871192845`}, {0.42426406871192845`, 
+                    0.282842712474619}}], 
+                    
+                    PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                    0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
+                    0.42426406871192845`}}]}, ImageSize -> 18, 
+                    PlotRangePadding -> 0, PlotRange -> 0.7, Background -> 
+                    None], True -> GraphicsBox[{
+                    GrayLevel[
+                    NCache[
+                    Rational[128, 255], 0.5019607843137255]], 
+                    
+                    PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
+                    0.42426406871192845`}, {0.42426406871192845`, 
+                    0.282842712474619}}], 
+                    
+                    PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                    0.282842712474619, -0.42426406871192845`}, \
+{-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
+                    0.42426406871192845`}}]}, ImageSize -> 18, 
+                    PlotRangePadding -> 0, PlotRange -> 0.7, Background -> 
+                    None]}, 
+                    Dynamic[
+                    CurrentValue["MouseOver"]], ImageSize -> Automatic, 
+                    FrameMargins -> 0], 
+                    MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
+                   With[{DefinitionNotebookClient`Stripes`PackagePrivate`nbo$ = 
+                    EvaluationNotebook[]}, 
+                    CurrentValue[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells] = If[
+                    TrueQ[
+                    MemberQ[
+                    CurrentValue["ModifierKeys"], "Control"]], 
+                    DeleteCases[
+                    Flatten[{
+                    CurrentValue[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells]}], 
+                    Cell[
+                    Blank[], "StripeCell", 
+                    BlankNullSequence[]]], 
+                    DeleteCases[
+                    Flatten[{
+                    CurrentValue[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells]}], 
+                    Condition[
+                    Pattern[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                    Blank[Cell]], 
+                    Not[
+                    FreeQ[
+                    DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                    "a669f16a-0c72-4e77-9f58-654f97b72145"]]]]]], Appearance -> 
+                   None, BoxID -> "a669f16a-0c72-4e77-9f58-654f97b72145", 
+                   Evaluator -> Automatic, Method -> "Preemptive"], 
+                  MouseAppearanceTag["LinkHand"]]}}, 
+               GridBoxAlignment -> {
+                "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, AutoDelete -> 
+               False, GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+              "Grid"]}, {"", 
+             PaneBox[
+              TagBox[
+               GridBox[{{"\"\"", 
+                  StyleBox[
+                   TagBox[
+                    
+                    GridBox[{{
+                    "\"\[FilledVerySmallSquare]\"", "\"Build result: \"", 
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{
+                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], 
+                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PacletArchive\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"C:\\\\Users\\\\pklen\\\\Documents\\\\PhD\\\\HyperBloch\
+\\\\Paclet\\\\build\\\\PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"6.3548969`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PacletArchive\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"C:\\\\Users\\\\pklen\\\\Documents\\\\PhD\\\\HyperBloch\
+\\\\Paclet\\\\build\\\\PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"6.3548969`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"BuildPacletDirectory\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"File", "[", 
+                    
+                    TemplateBox[{
+                    "\"C:\\\\Users\\\\pklen\\\\Documents\\\\PhD\\\\HyperBloch\
+\\\\Paclet\\\\build\\\\PatrickMLenggenhager__HyperBloch\""}, "FileArgument"], 
+                    "]"}], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PacletManifest\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    
+                    DynamicModuleBox[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+                    "InitialData" -> <|"Files" -> {<|"File" -> 
+                    File["Kernel\\HyperBloch.wl"], "Hash" -> 
+                    "3244a27d2ec87efb35502b23ab3ac26203a1739a78cd81b781606966d\
+913636e"|>, <|"File" -> File["Kernel\\L2Primitives.m"], "Hash" -> 
+                    "8c42def110d1e93effb3397424719ff51069a680a3aae706d26e7ae96\
+c0d2d2d"|>}|>, "AllowEmbedding" -> True, "InitialShape" -> 
+                    TypeSystem`PackageScope`HeaderShape[<|{All, All, 
+                    TypeSystem`PackageScope`KeyDummy[0]} -> 
+                    1, {All, All, "File"} -> 1, {All, All, "Hash"} -> 1|>, 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`KeyValueShape[
+                    TypeSystem`PackageScope`AtomShape[56.00000000000001], 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`Limited[
+                    
+                    TypeSystem`PackageScope`RowShape[<|"File" -> 
+                    TypeSystem`PackageScope`AtomShape[60], "Hash" -> 
+                    TypeSystem`PackageScope`AtomShape[560.]|>], 
+                    DirectedInfinity[1], 2, {All, All}]], 2, 
+                    DirectedInfinity[1], {All}]]], 1, 
+                    DirectedInfinity[1], {}]], "InitialType" -> 
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"File", "Hash"}, {
+                    TypeSystem`Atom[File], 
+                    TypeSystem`Atom[String]}], 2], 1], "Meta" -> <||>, 
+                    "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+                    TypeSystem`PackageScope`HeaderShape[<|{All, All, 
+                    TypeSystem`PackageScope`KeyDummy[0]} -> 
+                    1, {All, All, "File"} -> 1, {All, All, "Hash"} -> 1|>, 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`KeyValueShape[
+                    TypeSystem`PackageScope`AtomShape[56.00000000000001], 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`Limited[
+                    
+                    TypeSystem`PackageScope`RowShape[<|"File" -> 
+                    TypeSystem`PackageScope`AtomShape[60], "Hash" -> 
+                    TypeSystem`PackageScope`AtomShape[560.]|>], 
+                    DirectedInfinity[1], 2, {All, All}]], 2, 
+                    DirectedInfinity[1], {All}]]], 1, 
+                    DirectedInfinity[1], {}]], "Type" -> TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"File", "Hash"}, {
+                    TypeSystem`Atom[File], 
+                    TypeSystem`Atom[String]}], 2], 1], "Path" -> {}, 
+                    "DisplayedRowCount" -> 1, "DisplayedColumnCount" -> 2, 
+                    "DataRowCount" -> 1, "DataColumnCount" -> 2, 
+                    "SortPaths" -> {}, "SortDirections" -> {}, 
+                    "HiddenItemsMap" -> Null, "UpdateType" -> 1|>, 
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+                    DynamicModule[{
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+                    Style[
+                    Grid[{{
+                    Item[
+                    Pane[
+                    Annotation[
+                    Mouseover[
+                    
+                    Graphics[{}, ImageSize -> 6, BaselinePosition -> 
+                    Scaled[-0.15]], 
+                    Graphics[{
+                    GrayLevel[0.6], 
+                    
+                    Polygon[{{2^Rational[-1, 2], -2^Rational[-1, 2]}, {
+                    2^Rational[-1, 2], 2^Rational[-1, 2]}, {-2^Rational[-1, 
+                    2], 2^Rational[-1, 2]}, {-2^Rational[-1, 2], -2^
+                    Rational[-1, 2]}}]}, ImageSize -> 6, BaselinePosition -> 
+                    Scaled[-0.15]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, Keys}, "KeyDummy", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, ImageMargins -> {{5, 
+                    3}, {4, 5}}], Background -> GrayLevel[0.95], 
+                    Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["File", 
+                    Style[
+                    "File", FontColor -> RGBColor[0.27450980392156865`, 
+                    0.5372549019607843, 0.792156862745098]]], "LinkHand"], {
+                    "MouseClicked", 1} :> If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    All, All, "File"}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, "File"}, "ColumnHeader", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, ImageMargins -> {{5, 
+                    3}, {4, 5}}], Background -> GrayLevel[0.95], 
+                    Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["Hash", 
+                    Style[
+                    "Hash", FontColor -> RGBColor[0.27450980392156865`, 
+                    0.5372549019607843, 0.792156862745098]]], "LinkHand"], {
+                    "MouseClicked", 1} :> If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    All, All, "Hash"}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, "Hash"}, "ColumnHeader", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, ImageMargins -> {{5, 
+                    3}, {4, 5}}], Background -> GrayLevel[0.95], 
+                    Alignment -> {Left, Baseline}]}, {
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["Files", 
+                    Style[
+                    "Files", FontColor -> RGBColor[0.27450980392156865`, 
+                    0.5372549019607843, 0.792156862745098]]], "LinkHand"], {
+                    "MouseClicked", 1} :> If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Files"]}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"]}, "RowHeader", False], "Mouse"], 
+                    ImageSize -> {{56.00000000000001, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File["Kernel\\HyperBloch.wl"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 1, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "3244a27d2ec87efb35502b23ab3ac26203a1739a78cd81b781606966d\
+913636e", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 1, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File["Kernel\\L2Primitives.m"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 2, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "8c42def110d1e93effb3397424719ff51069a680a3aae706d26e7ae96\
+c0d2d2d", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 2, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}]}}, BaseStyle -> {
+                    ContextMenu -> 
+                    Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger, TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu,
+                     True, TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger = 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                    Block[{TypeSystem`NestedGrid`PackagePrivate`$\
+globalScrollPos = {TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                    
+                    With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem["Show " <> Which[
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem["Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+                    "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, 
+                    Dividers -> All, FrameStyle -> GrayLevel[
+                    0.7490196078431373], Spacings -> {0, 0}, Alignment -> 
+                    Left, BaseStyle -> {FontFamily -> "Source Sans Pro", 
+                    FontSize -> 14, FontWeight -> Plain}], LineBreakWithin -> 
+                    False, ContextMenu -> {}, NumberMarks -> False, 
+                    ShowAutoStyles -> False]], 
+                    TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+                    Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+                    
+                    Module[{
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`datasetData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+                    FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                    TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+                    Not[
+                    FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+                    TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+                    TypeSystem`SparseGrid[
+                    TypeSystem`H["(data no longer present)"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+                    DynamicModuleValues :> {}], 
+                    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+                    TypeSystem`PackageScope`SubViewPathbar[
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+                    Framed[
+                    Dynamic[
+                    Replace[
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+                    Blank[]] -> "", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+                    Blank[]], 
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+                    Blank[]], 
+                    Pattern[
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Blank[]]] :> (
+                    Increment[
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+                    TypeSystem`NestedGrid`PackagePrivate`path$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+                    TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+                    TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+                    TypeSystem`NestedGrid`PackagePrivate`path$, 
+                    TypeSystem`NestedGrid`PackagePrivate`makePathElements]), 
+                    Null :> Spacer[10], Blank[] :> Spacer[10]}], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], 
+                    FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, 
+                    Alignment -> Top, ImageSize -> {Automatic, 15}], FontSize -> 
+                    1], TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$\
+}, 
+                    DynamicWrapperBox[
+                    DynamicBox[
+                    ToBoxes[
+                    Dataset`DatasetContent[
+                    2, "Path" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+                    "Grid" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], 
+                    "State" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    "VPos" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], 
+                    "HPos" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], 
+                    "TopBar" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], 
+                    "BottomBar" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], 
+                    "OutputID" -> Hold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], 
+                    StandardForm], TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+                    MouseAnnotation[]], Initialization :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+                    CreateUUID[]), DynamicModuleValues :> {}, 
+                    BaseStyle -> {LineBreakWithin -> False}, 
+                    UnsavedVariables :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$}], 
+                    Deploy, DefaultBaseStyle -> "Deploy"], 
+                    Dataset`InterpretDataset[1], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"DocumentationBuildResults\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], ButtonFunction :> (
+                    Typeset`open$$ = True), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Documentation build completed successfully.\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.0070904`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], ButtonFunction :> (
+                    Typeset`open$$ = False), Appearance -> None, 
+                    BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Documentation build completed successfully.\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.0070904`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MaximumFileTime\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"\[LeftAssociation]", "\[RightAssociation]"}], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"ProcessedFiles\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"\[LeftAssociation]", "\[RightAssociation]"}], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"FailedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PercentSucceeded\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"Indeterminate", "\"%\"", "percent", 
+                    "\"Percent\""}, "QuantityPostfix", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"ProcessedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"SuccessfulFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"SkippedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"TargetWolframVersionNumber\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["13.2`", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"DocumentationBuild\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], "}"}],
+                     "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"PacletBuild\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                    Short[#, 0.75]& ], 
+                    "OEM6eJztPU1vG0l2ovghkZYs2aOZ3ZkECJfLDZJNpOjDlqzBADLVkkbal\
+TyySrYTRItxqbtIdtTsZrqasrnBAgmQaw7J5pjD/pNFkL0FCLB7SXJM9hDkkj0mt8mrj/\
+4kKXe3PizNNA2YVHfVq1f1Xr2velXVzNHJI/xm03pLaLNIH+\
+yZDrG7NnGwo1smPG7maOnIYgWaBVrY16nTHKelY9yCJ2gC9VSVUIruoV6ng+3+LsEayv1pM09nt/\
+om7ujqgaX1DMKqj3vV84g49P5xv0socV5bXWLW67S4gw1K3Ldz7lvSOSUaAnRIvY6KRwC/\
+D2XuHZNO14CHAkMBOE9nDrFJEDGI6lh2uM3CEaDhNlKkE5/\
+buhau7H5PMCDsVYmWN3uO4w5DRfZIwP1kZ/\
+vQ1s8Bhdc7tmU626Z2RKjVs1WCyjvbm7rTwV2KZuXAQKUvoJ/EZsgzVLaIgftEo/\
+dFEzs9U2UjPmp0Csd2j3jdqDS6XYJtbMLgF55Zpv+mvIkpQU7fIM2xSN/L2+\
+fY6GEYGVpu9ByrAyRWvbelA+K0LQ1VDm0CY+vo5wGgDUNvmR1iOu6A0pJCGKe4337RvQ5uEaT/\
+mMCITcgR82qF2i0e6x1C7TH+\
+mXrqPYGKU0rPtgHwS0CYoOkdGF8Fd3eJ3mozFIqH1htoM0fnGqfUMnoOCZan0we4ZepNXeU8rHwF5J\
+7csXGHEzVPJ/nwMPYt1v7zH35aA4DlLd0GnmF9hvdHn28qlmHZ9rf451837A/459cb9h/\
+zz79tKB97PZ5Cjq13vzD3zG7P8blYvLyvAOqA2CHWNN1sRV9XOFocnwgdp/\
+ibA2y3dJMG2Zh9K2PKWPT3aFxKPrO7cHLetzu389G5HZ1ksiqaqR1i1SBOw1bbMF41VKh9Wq2hCsDZ\
+Ik3cMxz0oeT5PYd0GqZpCVmC8r/\
+5m58FZIdRUz49OXlBgYlOTrpnBjFPTrYstcfYDJ4ctrdOTnZhEtibhqW24QFv9uTktKcbGvsTuqqeH\
+ewTs9UiZhu4zv7yS7/C/\
+OLC4sLSQpfXqnkCiuF0me7fqx1DfwzGqKm7Dq2FYEu5iiqrCyuPHz1ZX11/\
+jfI1WkMTlKiWqVFUriHxq4Ymn/ew6ehO32ci1Dcd/HbHsjs0D+\
+I23Fe31KzkgYGp7JZAE8D0vY5JA8MjZm1hnzT9YgXo7mCZIRKlwh6BmCMOifL9jESGYchlRWxcBtuJ\
+j5DbKgKmYJMxdqvKePLGAoK4EBHEc6htvWEz1WwpbZDiKhOk0SG696wHms8GCXA28O4+\
+aB6QKSCydMokXN6nMgfN+UFIlWjVa2aD/\
+LHVvb0MMMtoYugmObSoLrWtIHBOyXmlhKp9LyaCYlg0tYkQ1S2ZjZDZCClshFJmI3zTbIRL9PWj2iY\
+bazHwYoZYdj99twe8TVTY0UHGg0853OtDX14vj9TQFEOgYbc4RJT70ZWN3aycJgcYJBGhTvpRKwbYx\
+v1VGuKCl8Mu+DzTIKhPAfbrZ4AA0ZgQeA1YncEwuLqrToX33Xg4j+\
+7tmaA4sbGFHdzIzaMiGxtP9jTG5wW52Khwss39kNgmMQIEWHhjQKFdTNvo6cryo0d4eU1bJuqTNdI8\
+XXn8eHH5dHkFn65gdXl1eXEFL62trOO1J6r2ZOl07cnS6uLq+uqqtr60srqySgbb+\
+1C2t78M2Hd0Jq3pQsdr8In6aFkjzaWlRW2JrK+QJrS5sr72aPnR2tJ6s/\
+l4CcDj1SeLeAVjsra4qi2vkjVM1lfVRW0Z/s2j+w3DsN5ss6AEF9bcWJhHU3JcUBt3mYD+\
+bmBk5XAiFfT0axYgITYv1sjPu7xC8wCW/wc9qY6q+0PS3wJu6DNrZUhVMRQjXrH+g41ToL8zCvo+\
+Gy+iAQIjkRc2mdvH712Ap1DKvGCOfmdUwQYoel7IznEFv//0ChGMBWnkWMMUFEQKsNi7+\
+6F8JlktXq95p//yr55C6VkhO4m2ZzZ14CVG5HHPJvIICc+\
+GlvUNcFYoN6KQtPb8acxQZLG6AKoNSi0V6s8EnwHGtCQ8FsDpQeDVSy7wIw+hZE/1LBEpwcW4+\
+BGIgQbcYR7VsjIOvI0KYIPixtg8KgOJjsH2IY4yBxNQkF4+qIBkyqZiNhXvwFQs3MU5CEZT2+/\
+Cgy2ddrmrCqRSrB44YlBoznsqWEG8ABpOMeMhWHKGPYgUKiPLdlgz1G/\
+nPnsmvTDLDL7Y1TWNmMxGogfgUhee9QywMiovuhpYLqwrSo4uxjN2rJ4DftHeVr3uWkl/\
+GK9iF5CFSmNhEytm5fNDi9brPAiRpFo7XbUWPARU83Q6ZCEGXEgObSkWNPCpQYyKd8wK3iJdw+\
+qDSVoUIYYJWuCv/OiJ980NaPhm0RT4rvgGLvO3D6weJdY5OPHgb39u425bV+\
+lgxMILJiilCwI9gBhSsUE0e4V//unnIaj+lCjDs/4+\
+OSeGLPnrDRalOLSMfgvgBGJ58lsEGriEmDziyGND+Yr/\
+LWIVylcXl4oDKEbtWG1dHaB4XbssieBhPC6sI0NXWSzkjAd9FmJVAn8EG7uWoaUQDgOKnRZA2VI06Z\
+oGwjVARc7Gw2Jf0YAN82FAbg0LvE3xWqMiPUURAOa/C0rRd/o3Af2WDSJVCzN2k3/+Z+\
+Oi4B2P9tJJl0rvnK5T2+dQfRebmsFDfTO8334MMjSjpR4flzLC+1Niw2N5LLoWirT93d+yzy837CX+\
++Y8N+0/457830OS+bp6xtiOhU0/9TfGmFeCRM9BHTF6O7zVhUNZi0V1tE/\
+WMr4xjFgAEDZ7QdW6Ogzsej8d6XGfxBe+\
+EjSRTVMk0UzKFlFAPJZ6u72eCu0b9nZJK0vCT7pFweTLJdJFkkiayK5lcizmTTJlkur2SScYU7pZk4\
+jHZr7lkiuXqJJNQXsxdiig/Bp/JqExG3RIZ5S+\
+L5cEhkjx6uyXUUJR5mFkKJ7FWHl86eaHUWy2kxi8UThcu5N1mauZHMKD8W8ZDecgwKV2Vz66aoJPRP\
+KihDYwm0+WXUu8yKbkdkY6UXtz/PVDUtYimURebO7bVaZxa53Hn4/\
+CF7rtHxfGv64S8bKrBXSblHZ2QQ/\
+Ijo6m793iu3lvngJi9cPLiQ8XqdJlG3n7btQllebn0SbyRVX2Yx7beagEVS7T4qq2rLPIw8cKkuEOe\
+0+V40AxMnS8krW6EG/wVmSLiiKbuNv0sfheVwdqPU9X2ttYMoWBTroRdDq/\
+0bCCbT9cxRhBmqZ15lm0ycC3DOsUGUm3LMMAx8ebNNbo+\
+rI1XutOOJqrFZGLoP1syrscsX3cruM3Em2FuLVa4nmRWupWSNafTfYKbwgWp00+\
+TNbcXqJys2TavIxbW+VJ4g8cHSgfYUduJhFGg21MNwwG7BXNzJeBahaNAUDA5js+TEj1xEEKM3h/\
+FqoUNwx+6hFVuWU/MfuKeuFVuqicrsWrRYPYIM2LiyWVVJDKFUk+\
+Sypdcwo4F018S142mySSSoW18Tlg6DguH5J9ZzMab3MG60bPJ89gRPw0AUOIEcoVTEjaeMaJTd83dw\
+xpU345NSHIG5Iv4zMD9gaWbgQAuC3jC/1/\
+YsoWUw5l40iUfAjoB7bRZllieTjI7QG4DrIgMLtYvVGTbxKrNSd/KLG7/\
+eQ8s9RQaUBj6aOxyQAK6IA8/\
+LwcspE1QSW4lE2sLY0CJaeE8b78las8hPLy8miC8HMg2y4LM7zHInNQsRCWbdKzAnrVpNj2G7ngTE7\
+5wmQkfV1syWm93uk7/urVlCmkqzL7ENk8aEzOW2IKyJBNbmdj6ZomtPNa0d8ssWt4iBs+\
+mtz3xxWdvcsGVzMkLMfGAkxdmaj87MoXzm9CG8l2wQsiMC4TU0jgOqNygKjG1iKhCBWZ2D5+\
+l8RCWa9cAJZue72+yBaj77ikX0FlXwVmVLTKUtaaOyDmxKalmLPZ1YLEgmW+ax+QRAkHuKgG8jK/\
+uPl9FTod4N0cFLQZ3EafoqUqfQT5RrG6/\
+6u7TqDpWVTH07qmFbW2QaXIxbVLHkudxuHBjco4KuLDm4zpxic2fYM8/4j1nz9/R67gRa6/\
+XKYJiVz5AQxkhRPhD4C3iU143q8/Im6pC+ObYKyN8PAqp0CrH52YoL7rOSX9ht2+E8lc+Qr5W8Y+\
+ZsUxnB3d0o49mED+kqIqwSauHtuUvorNCfCPX/XDFV/zYHVo8NLBu+sW39HOdZc6J/dR+\
+De9Em3D62v/9L/v8l5++Nhk9qit0ko2f3EZDZ1MFF/DzkQX86+jmzL5ukk2b4DO2dqmbA0d5BRdlo/\
+sXLzzni4VpGc2iZ3klOL1DF0H4594ydyBnIR7nUuL0ui918obHnJLthi2OWFUX+\
+cPcm0vWDe6dDt2tGg+O0+myx3U6UWfLGjzJOVl1N5wfT5/LpZA0ayD5izISkvVW2o6BtZyE/\
+U21Fzi2+SiqsTeZ+Xh15mNCjg5OynScIlgt9ebxpDOY7/JPKQyFJL3WVJbBKZdqP/\
+2HgUqgDW1K5IupwItd9O3fY5KmalpVwzJbxK4ygQGa8ffTtBo9f/DYxmznB+\
+p3Ti3jphKBQih8EDqoQBzhFz1qIebqiWN1N7HNm/\
+BUYS6mKuzgM8KNFw1AAIDfDdSSRcXBIqh36mrMU6BZMqWZbXZ5n3LzXdyfS8b9kqaJpGL91HLAUHfZ\
+VB6kUaIlwXthI27iiHQNrJKY7leHby3zEpXr9WiOa3P81iYeS5E/xvIasXnGF+\
+9CG9Zucc70ODs01mELI/T7sdeF615fg/XjIdv1lmSGwUiz/\
+OLBKQ21TMGV2zNVm3CH7NI5r0nXwpMMaqJEyFAOY+Kxl01dIm0zFamS9/BGU8bjup5M3/\
+Kht8GGSkLimDnOLvxtQ3BtVPYLecMOpumChLWVSlTgeFNidJmRCiStvB4SRokeDBzcIRE8+\
+jd4YPDwQEroAO/BbRqBEJIyMyReEjcIOKxXD6ROe2XjLttkyE9KDZ+\
+oPXFsiZtKyvSjLeFZv5bf8hDl4FHtMvWywJk0qbqWMKSxnQiGtFVcGEVuoXlAEmdCSkxeshz8hJice\
+1n1AsZuChjtMIzSMbefPSjJrW4Bp7zp2jgeqFTGkYA2GRBfhRtL5JgCypoatjV2rnJcr+\
+l6LHWP57jcTzsJx9yjB4KnE4R7JZN69R+7rxMk6oZ3DVUUm8DTFy+\
+AasncvYEoby7yanRENtTMLFtJPSfaS2zr+NQgvmxOzgvuuXcuCrPyBGcPSeSWyNFvu7LLu23JFWL+\
+LQQVcY0RRysSFp7c1vShLx6KOqzPUhxSmT52VUdW/1bNPVpb3A/FztA+IhT6Sa/izG+\
+JB8r9RXYXVXYXVXbPxNf5nolxTwqllkbl2gFMeKBx+hsm5sMCrcpvBaiq4N2ya2u0KhVCpQl+QH/\
+hjlwRsbiwuLi2uL74KLtGKrtGKrtGKrtGKrtGKlPvN63e72Xq/Q6p90v09UHtAL/\
+VO70OOwXmcj32W3eB53/z1z9l//\
+39VV66ZFuM5kTjx9bcbmwf1kSWkjhhh12OkH4u5BavEK1DAurHdLjPTTSiXTmbT++\
+ZGkxRu6ObbJE7X/secHpXtlp226+hGZfTQRk7Tf3t9TP8hxEOuj1k+aiGPHl2y1D7oIbOdLAkbtuQ/\
+XZNXBn0yjKaoAZfgp0BDQqjOT2CxaWVheXXV4ZkEZBspcdmbkjQrpa5d5l7l7l3yd0739WIek5DHJM\
+AeDQl5xvz+Yyob3bRggfK/QiKe+Hth4OTuVGZR2XP4oTCnvln/wL9+z/+\
+qvKTDTQhbcN5NBOx19hlavfDKo09mo1aHgp7GNX7wcZoRGdPyMLz6IMhGpOBmxumr9iLBwPagj2dkf\
+6AKyPRHySw7ufRJ6NFvTw59/tPA+bDVa6/\
+5H5yW5TBtLx0NNMCmRbItMCd1QL3ArO4UZxH04fBG7fRqfKpvBJZ3IjsX4jM7kMOXIcsqsnLkBPdlz\
+1S5fzsX/75W3929vHTgMqZG3ZJdNM9y/jF9SALSi10vTILuMp19m/\
+g1cV36opJZn98PDLTIJDukVlFd9gq+n85YBeZ"}, "ClickToCopyTemplate"]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {Automatic, Automatic, Fit}, 
+                    "Rows" -> {{Automatic}}}], "Grid"], FontColor -> 
+                   GrayLevel[0.5], FontSize -> 12, StripOnInput -> False]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                False, GridBoxDividers -> {
+                 "Columns" -> {{None}}, "RowsIndexed" -> {-1 -> GrayLevel[
+                    Rational[239, 255]]}}, 
+                GridBoxItemSize -> {
+                 "Columns" -> {Automatic, Fit}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {1, {}, 1}, "Rows" -> {1, {}, 2}}], "Grid"], 
+              ImageMargins -> 0]}}, 
+           GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> False, 
+           GridBoxBackground -> {"Columns" -> {{Automatic}}}, 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+           GridBoxSpacings -> {"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}, 
+           BaselinePosition -> {1, 1}]}, 
+        Dynamic[
+         CurrentValue[
+          EvaluationCell[], {TaggingRules, "StripeOpen"}, False]], Alignment -> 
+        Automatic, ImageSize -> Automatic, ImageMargins -> 0, BaseStyle -> {},
+         DefaultBaseStyle -> "OpenerView", BaselinePosition -> Baseline], 
+       Deployed -> False, StripOnInput -> False], 
+      OpenerView[{
+        Grid[{{
+           Style[
+            Dynamic[
+             DateString[
+              TimeZoneConvert[
+               DateObject[
+               3.9054186047684651`17.34424257999751*^9, TimeZone -> 0]], {
+              "MonthName", " ", "DayShort", ", ", "Year", " ", "Hour12Short", 
+               ":", "Minute", " ", "AMPMLowerCase"}], SingleEvaluation -> 
+             True, Evaluator -> "System"], FontSlant -> Italic, FontColor -> 
+            GrayLevel[0.5], FontSize -> 0.9 Inherited], "   ", 
+           Item[
+            Style[
+             
+             Grid[{{"Paclet build completed successfully.", ""}}, Spacings -> 
+              0.25, Alignment -> {Automatic, Baseline}], LineBreakWithin -> 
+             Automatic, LineIndent -> 0], ItemSize -> Fit], 
+           Item[
+            Style[
+             RawBoxes[
+              TemplateBox[{
+                ButtonBox[
+                 TagBox[
+                  
+                  PaneSelectorBox[{
+                   False -> 
+                    "\"PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", True -> 
+                    StyleBox[
+                    "\"PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "HyperlinkActive", StripOnInput -> False]}, 
+                   Dynamic[
+                    CurrentValue["MouseOver"]], ImageSize -> Automatic, 
+                   FrameMargins -> 0], 
+                  MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
+                 SystemOpen[
+                   File[
+                   "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+build\\"]], Appearance -> None, BaseStyle -> "Hyperlink", Evaluator -> 
+                 Automatic, Method -> "Preemptive"], 
+                "OEM6eJxFjkELgkAUhNmQCOpXeE/s2i2T6GAQbp16Idv21MXVXfatVP8+\
+laDbzHzMMCWjRS5eiXkjlYzmuRl1GVCQKfI8OCiNnN3KGS0v2FotPI6c/bgO91uAK6EjANto7ABSI/\
+sWOz8k5zoFOH4sukQbWQ+BkBo9wKNX+\
+jla75RsThl2VYVdLSp0RfEvrOMojjaRnVohX41vdq6a5jm7fwFNvUKu"}, 
+               "ClickToCopyTemplate"]], LineBreakWithin -> Automatic, 
+             LineIndent -> 0], ItemSize -> Fit], 
+           Style[
+            ActionMenu[
+             Highlighted[
+              Row[{
+                Grid[{{
+                   RawBoxes[
+                    TemplateBox[{
+                    TemplateBox[{
+                    PaneBox[
+                    TemplateBox[{
+                    RGBColor[
+                    0.49019607843137253`, 0.49019607843137253`, 
+                    0.49019607843137253`]}, "HintPodIconHint"], 
+                    ImageSize -> {12, 12}, ImageSizeAction -> "ShrinkToFit", 
+                    BaselinePosition -> Scaled[0.1]], 
+                    TemplateBox[{1}, "Spacer1"], 
+                    StyleBox[
+                    "1", FontSize -> 14, FontWeight -> Plain, FontColor -> 
+                    GrayLevel[0.25], FontFamily -> "Source Sans Pro", 
+                    StripOnInput -> False]}, "RowDefault"], 
+                    "\"Suggestions found\""}, "PrettyTooltipTemplate"]]}}], 
+                Graphics[{
+                  GrayLevel[0.4], 
+                  AbsoluteThickness[2], 
+                  CapForm["Round"], 
+                  Line[{{-1, 0}, {0, -1}, {1, 0}}]}, {
+                 ImageSize -> {13, 9}, BaselinePosition -> Scaled[0.2], 
+                  ImagePadding -> {{3, 3}, {3, 3}}, AspectRatio -> Full}]}], 
+              ImageSize -> {Automatic, 19}, BaselinePosition -> Baseline, 
+              Background -> GrayLevel[1], Frame -> True, FrameStyle -> Dynamic[
+                If[
+                 CurrentValue["MouseOver"], 
+                 Hue[0.55, 0.82, 0.87], 
+                 GrayLevel[0.8]]], FrameMargins -> {{4, 4}, {1, 1}}, 
+              Alignment -> {Center, Baseline}], {Row[{
+                 Pane[
+                  RawBoxes[
+                   TemplateBox[{
+                    RGBColor[
+                    0.49019607843137253`, 0.49019607843137253`, 
+                    0.49019607843137253`]}, "HintPodIconHint"]], 
+                  ImageSize -> {10, 10}, ImageSizeAction -> "ShrinkToFit", 
+                  BaselinePosition -> Scaled[0.1]], " ", 
+                 Row[{"Suspicious use of session symbol ", 
+                   Style[
+                    RawBoxes["Print"], "Program", FontWeight -> Medium, 
+                    ShowStringCharacters -> True], 
+                   ".\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, \
+0.65`], Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
+List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, \
+False]]\)"}]}] :> DefinitionNotebookClient`WithCurrentNotebook[
+                EvaluationNotebook[], 
+                DefinitionNotebookClient`LoadDefinitionNotebook[
+                 "Paclet", DefinitionNotebookClient`$CurrentNotebook]; 
+                DefinitionNotebookClient`PackageScope`setHint[
+                 "Suggestion", "Paclet", 
+                  DefinitionNotebookClient`$CurrentNotebook, 
+                  "639c6657-7776-4980-ba51-c847c2820a48", 146061984, 
+                  "CodeInspectionFileIssue/SuspiciousSessionSymbol", <|
+                  "File" -> 
+                   "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+Kernel\\HyperBloch.wl", "Editor" -> Automatic, "SourceLineStart" -> 50, 
+                   "SourceColumnStart" -> 1, "SourceLineEnd" -> 50, 
+                   "SourceColumnEnd" -> 6, "Message" -> 
+                   "Suspicious use of session symbol \
+``Print``.\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, 0.65`], \
+Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
+List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, False]]\)", 
+                   "SourceInformation" -> 
+                   CodeInspector`InspectionObject[
+                    "SuspiciousSessionSymbol", 
+                    "Suspicious use of session symbol ``Print``.", 
+                    "Warning", <|
+                    CodeParser`Source -> {{50, 1}, {50, 6}}, ConfidenceLevel -> 
+                    0.55, "File" -> 
+                    "C:\\Users\\pklen\\Documents\\PhD\\HyperBloch\\Paclet\\\
+Kernel\\HyperBloch.wl", "Editor" -> Automatic|>], "Hash" -> 
+                   1991119325374219651, "Position" -> 
+                   "\!\(\*StyleBox[\"\\\" (L50,C1) \\\"\", Rule[FontOpacity, \
+0.65`], Rule[FontSize, Times[0.9`, Inherited]], Rule[PrivateFontOptions, \
+List[Rule[\"OperatorSubstitution\", False]]], Rule[StripOnInput, \
+False]]\)"|>]; DefinitionNotebookClient`PackageScope`seekAfter[146061984]; 
+                Null]}, Appearance -> None], "BoxID" -> "WarningCountButton"], 
+           MouseAppearance[
+            Button[
+             MouseAppearance[
+              Mouseover[
+               Graphics[{
                  GrayLevel[
-                  NCache[
-                   Rational[64, 85], 0.7529411764705882]], 
+                  Rational[64, 85]], 
                  
-                 PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
+                 Polygon[{{-0.282842712474619, -0.42426406871192845`}, \
 {-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
                   0.42426406871192845`}, {0.42426406871192845`, 
                   0.282842712474619}}], 
                  
-                 PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                 Polygon[{{0.42426406871192845`, -0.282842712474619}, {
                   0.282842712474619, -0.42426406871192845`}, \
 {-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
                   0.42426406871192845`}}]}, ImageSize -> 18, PlotRangePadding -> 
-                0, PlotRange -> 0.7, Background -> None], True -> GraphicsBox[{
+                0, PlotRange -> 0.7, Background -> None], 
+               Graphics[{
                  GrayLevel[
-                  NCache[
-                   Rational[128, 255], 0.5019607843137255]], 
+                  Rational[128, 255]], 
                  
-                 PolygonBox[{{-0.282842712474619, -0.42426406871192845`}, \
+                 Polygon[{{-0.282842712474619, -0.42426406871192845`}, \
 {-0.42426406871192845`, -0.282842712474619}, {0.282842712474619, 
                   0.42426406871192845`}, {0.42426406871192845`, 
                   0.282842712474619}}], 
                  
-                 PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                 Polygon[{{0.42426406871192845`, -0.282842712474619}, {
                   0.282842712474619, -0.42426406871192845`}, \
 {-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
                   0.42426406871192845`}}]}, ImageSize -> 18, PlotRangePadding -> 
-                0, PlotRange -> 0.7, Background -> None]}, 
-             Dynamic[
-              CurrentValue["MouseOver"]], ImageSize -> Automatic, 
-             FrameMargins -> 0], 
-            MouseAppearanceTag["LinkHand"]], ButtonFunction :> 
-           With[{DefinitionNotebookClient`Stripes`PackagePrivate`nbo$ = 
-              EvaluationNotebook[]}, 
-             CurrentValue[
-              DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
-               DockedCells] = If[
-               TrueQ[
-                MemberQ[
-                 CurrentValue["ModifierKeys"], "Control"]], 
-               DeleteCases[
-                Flatten[{
-                  CurrentValue[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
-                   DockedCells]}], 
-                Cell[
-                 Blank[], "StripeCell", 
-                 BlankNullSequence[]]], 
-               DeleteCases[
-                Flatten[{
-                  CurrentValue[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
-                   DockedCells]}], 
-                Condition[
-                 Pattern[DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
-                  Blank[Cell]], 
-                 Not[
-                  FreeQ[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
-                   "312c3c8d-0d11-4ea0-8d12-ff53c2436d2e"]]]]]], Appearance -> 
-           None, BoxID -> "312c3c8d-0d11-4ea0-8d12-ff53c2436d2e", Evaluator -> 
-           Automatic, Method -> "Preemptive"], 
-          MouseAppearanceTag["LinkHand"]]}}, 
-       GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
-       AutoDelete -> False, 
-       GridBoxItemSize -> {
-        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Grid"], 
-     "Text", FontSize -> 12, FontColor -> GrayLevel[0.25], StripOnInput -> 
-     False]], "StripeCell", CellFrameMargins -> {{20, 5}, {2, 2}}, 
+                0, PlotRange -> 0.7, Background -> None]], "LinkHand"], 
+             
+             With[{DefinitionNotebookClient`Stripes`PackagePrivate`nbo$ = 
+               EvaluationNotebook[]}, 
+              CurrentValue[
+               DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                DockedCells] = If[
+                TrueQ[
+                 MemberQ[
+                  CurrentValue["ModifierKeys"], "Control"]], 
+                DeleteCases[
+                 Flatten[{
+                   CurrentValue[
+                   DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells]}], 
+                 Cell[
+                  Blank[], "StripeCell", 
+                  BlankNullSequence[]]], 
+                DeleteCases[
+                 Flatten[{
+                   CurrentValue[
+                   DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
+                    DockedCells]}], 
+                 Condition[
+                  Pattern[DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                   Blank[Cell]], 
+                  Not[
+                   FreeQ[
+                   DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                    "a669f16a-0c72-4e77-9f58-654f97b72145"]]]]]], Appearance -> 
+             None, BoxID -> "a669f16a-0c72-4e77-9f58-654f97b72145"], 
+            "LinkHand"]}}, Alignment -> {Left, Baseline}], 
+        Grid[{{"", 
+           Style[
+            Grid[{{"\[FilledVerySmallSquare]", "Build result: ", 
+               RawBoxes[
+                TemplateBox[{
+                  TagBox[
+                   RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{
+                    Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], 
+                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PacletArchive\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"C:\\\\Users\\\\pklen\\\\Documents\\\\PhD\\\\HyperBloch\
+\\\\Paclet\\\\build\\\\PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"6.3548969`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}], True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PacletArchive\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"C:\\\\Users\\\\pklen\\\\Documents\\\\PhD\\\\HyperBloch\
+\\\\Paclet\\\\build\\\\PatrickMLenggenhager__HyperBloch-0.0.1.paclet\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"6.3548969`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"BuildPacletDirectory\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"File", "[", 
+                    
+                    TemplateBox[{
+                    "\"C:\\\\Users\\\\pklen\\\\Documents\\\\PhD\\\\HyperBloch\
+\\\\Paclet\\\\build\\\\PatrickMLenggenhager__HyperBloch\""}, "FileArgument"], 
+                    "]"}], "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PacletManifest\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    
+                    DynamicModuleBox[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+                    "InitialData" -> <|"Files" -> {<|
+                    "File" -> File["Kernel\\HyperBloch.wl"], "Hash" -> 
+                    "3244a27d2ec87efb35502b23ab3ac26203a1739a78cd81b781606966d\
+913636e"|>, <|"File" -> File["Kernel\\L2Primitives.m"], "Hash" -> 
+                    "8c42def110d1e93effb3397424719ff51069a680a3aae706d26e7ae96\
+c0d2d2d"|>}|>, "AllowEmbedding" -> True, "InitialShape" -> 
+                    TypeSystem`PackageScope`HeaderShape[<|{All, All, 
+                    TypeSystem`PackageScope`KeyDummy[0]} -> 
+                    1, {All, All, "File"} -> 1, {All, All, "Hash"} -> 1|>, 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`KeyValueShape[
+                    TypeSystem`PackageScope`AtomShape[56.00000000000001], 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`Limited[
+                    
+                    TypeSystem`PackageScope`RowShape[<|
+                    "File" -> TypeSystem`PackageScope`AtomShape[60], "Hash" -> 
+                    TypeSystem`PackageScope`AtomShape[560.]|>], 
+                    DirectedInfinity[1], 2, {All, All}]], 2, 
+                    DirectedInfinity[1], {All}]]], 1, 
+                    DirectedInfinity[1], {}]], "InitialType" -> 
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"File", "Hash"}, {
+                    TypeSystem`Atom[File], 
+                    TypeSystem`Atom[String]}], 2], 1], "Meta" -> <||>, 
+                    "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+                    TypeSystem`PackageScope`HeaderShape[<|{All, All, 
+                    TypeSystem`PackageScope`KeyDummy[0]} -> 
+                    1, {All, All, "File"} -> 1, {All, All, "Hash"} -> 1|>, 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`KeyValueShape[
+                    TypeSystem`PackageScope`AtomShape[56.00000000000001], 
+                    TypeSystem`PackageScope`Limited[
+                    TypeSystem`PackageScope`ColumnShape[
+                    TypeSystem`PackageScope`Limited[
+                    
+                    TypeSystem`PackageScope`RowShape[<|
+                    "File" -> TypeSystem`PackageScope`AtomShape[60], "Hash" -> 
+                    TypeSystem`PackageScope`AtomShape[560.]|>], 
+                    DirectedInfinity[1], 2, {All, All}]], 2, 
+                    DirectedInfinity[1], {All}]]], 1, 
+                    DirectedInfinity[1], {}]], "Type" -> TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"File", "Hash"}, {
+                    TypeSystem`Atom[File], 
+                    TypeSystem`Atom[String]}], 2], 1], "Path" -> {}, 
+                    "DisplayedRowCount" -> 1, "DisplayedColumnCount" -> 2, 
+                    "DataRowCount" -> 1, "DataColumnCount" -> 2, 
+                    "SortPaths" -> {}, "SortDirections" -> {}, 
+                    "HiddenItemsMap" -> Null, "UpdateType" -> 1|>, 
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+                    DynamicModule[{
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+                    Style[
+                    Grid[{{
+                    Item[
+                    Pane[
+                    Annotation[
+                    Mouseover[
+                    
+                    Graphics[{}, ImageSize -> 6, BaselinePosition -> 
+                    Scaled[-0.15]], 
+                    Graphics[{
+                    GrayLevel[0.6], 
+                    
+                    Polygon[{{2^Rational[-1, 2], -2^Rational[-1, 2]}, {
+                    2^Rational[-1, 2], 2^Rational[-1, 2]}, {-2^
+                    Rational[-1, 2], 2^Rational[-1, 2]}, {-2^
+                    Rational[-1, 2], -2^Rational[-1, 2]}}]}, ImageSize -> 6, 
+                    BaselinePosition -> Scaled[-0.15]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, Keys}, "KeyDummy", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["File", 
+                    Style[
+                    "File", FontColor -> RGBColor[0.27450980392156865`, 
+                    0.5372549019607843, 0.792156862745098]]], "LinkHand"], {
+                    "MouseClicked", 1} :> If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    All, All, "File"}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, "File"}, "ColumnHeader", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["Hash", 
+                    Style[
+                    "Hash", FontColor -> RGBColor[0.27450980392156865`, 
+                    0.5372549019607843, 0.792156862745098]]], "LinkHand"], {
+                    "MouseClicked", 1} :> If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    All, All, "Hash"}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    All, All, "Hash"}, "ColumnHeader", True], "Mouse"], 
+                    ImageSize -> {{1, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    GrayLevel[0.95], Alignment -> {Left, Baseline}]}, {
+                    Item[
+                    Pane[
+                    Annotation[
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover["Files", 
+                    Style[
+                    "Files", FontColor -> RGBColor[0.27450980392156865`, 
+                    0.5372549019607843, 0.792156862745098]]], "LinkHand"], {
+                    "MouseClicked", 1} :> If[
+                    TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Files"]}, 1]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"]}, "RowHeader", False], "Mouse"], 
+                    ImageSize -> {{56.00000000000001, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+                    GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File["Kernel\\HyperBloch.wl"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 1, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "3244a27d2ec87efb35502b23ab3ac26203a1739a78cd81b781606966d\
+913636e", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 1, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}, {SpanFromAbove, 
+                    Item[
+                    Pane[
+                    Annotation[
+                    File["Kernel\\L2Primitives.m"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 2, 
+                    Key["File"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}], 
+                    Item[
+                    Pane[
+                    Annotation[
+                    "8c42def110d1e93effb3397424719ff51069a680a3aae706d26e7ae96\
+c0d2d2d", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                    Key["Files"], 2, 
+                    Key["Hash"]}, "Item", False], "Mouse"], 
+                    ImageSize -> {{560., Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], 
+                    ItemSize -> {Full, Automatic}]}}, 
+                    BaseStyle -> {ContextMenu -> Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger, TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu,
+                     True, TypeSystem`NestedGrid`PackagePrivate`$\
+lastContextMenuTrigger = 
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                    Block[{TypeSystem`NestedGrid`PackagePrivate`$\
+globalScrollPos = {TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                    
+                    With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem["Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+                    "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, 
+                    Dividers -> All, FrameStyle -> 
+                    GrayLevel[0.7490196078431373], Spacings -> {0, 0}, 
+                    Alignment -> Left, BaseStyle -> {
+                    FontFamily -> "Source Sans Pro", FontSize -> 14, 
+                    FontWeight -> Plain}], LineBreakWithin -> False, 
+                    ContextMenu -> {}, NumberMarks -> False, ShowAutoStyles -> 
+                    False]], TypeSystem`NestedGrid`PackagePrivate`initialQ = 
+                    True}, 
+                    Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+                    
+                    Module[{
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`datasetData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+                    FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                    TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+                    Not[
+                    FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+                    TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+                    TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+                    TypeSystem`SparseGrid[
+                    TypeSystem`H["(data no longer present)"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+                    DynamicModuleValues :> {}], 
+                    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+                    TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+                    TypeSystem`PackageScope`SubViewPathbar[
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+                    Framed[
+                    Dynamic[
+                    Replace[
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+                    Blank[]] -> "", 
+                    TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+                    Blank[]], 
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+                    Blank[]], 
+                    Pattern[
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Blank[]]] :> (
+                    Increment[
+                    TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+                    TypeSystem`NestedGrid`PackagePrivate`path$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+                    TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+                    TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+                    TypeSystem`NestedGrid`PackagePrivate`path$, 
+                    TypeSystem`NestedGrid`PackagePrivate`makePathElements]), 
+                    Null :> Spacer[10], Blank[] :> Spacer[10]}], 
+                    TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], 
+                    FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, 
+                    Alignment -> Top, ImageSize -> {Automatic, 15}], FontSize -> 
+                    1], TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$\
+}, 
+                    DynamicWrapperBox[
+                    DynamicBox[
+                    ToBoxes[
+                    Dataset`DatasetContent[
+                    2, "Path" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+                    "Grid" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], 
+                    "State" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    "VPos" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], 
+                    "HPos" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], 
+                    "TopBar" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], 
+                    "BottomBar" -> 
+                    Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], 
+                    "OutputID" -> Hold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], 
+                    StandardForm], TrackedSymbols :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+                    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+                    MouseAnnotation[]], 
+                    Initialization :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+                    CreateUUID[]), DynamicModuleValues :> {}, 
+                    BaseStyle -> {LineBreakWithin -> False}, 
+                    UnsavedVariables :> {
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$}], 
+                    Deploy, DefaultBaseStyle -> "Deploy"], 
+                    Dataset`InterpretDataset[1], Selectable -> False, 
+                    Editable -> False, SelectWithContents -> True], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"DocumentationBuildResults\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{
+                    TagBox["Success", "SummaryHead"], "[", 
+                    
+                    DynamicModuleBox[{Typeset`open$$ = False, 
+                    Typeset`embedState$$ = "Ready"}, 
+                    TemplateBox[{
+                    PaneSelectorBox[{False -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxOpener"]], 
+                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Documentation build completed successfully.\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.0070904`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
+                    True -> GridBox[{{
+                    PaneBox[
+                    ButtonBox[
+                    DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 3.5 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
+                    FrameBox[
+                    StyleBox["\"\[Checkmark]\"", 
+                    Directive[
+                    RGBColor[0.3607843137254902, 0.596078431372549, 
+                    0.3803921568627451], 25], StripOnInput -> False], 
+                    ContentPadding -> False, FrameStyle -> None, 
+                    FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Documentation build completed successfully.\"", 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"0.0070904`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"MaximumFileTime\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"\[LeftAssociation]", "\[RightAssociation]"}], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"ProcessedFiles\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"\[LeftAssociation]", "\[RightAssociation]"}], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"FailedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"PercentSucceeded\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{"Indeterminate", "\"%\"", "percent", 
+                    "\"Percent\""}, "QuantityPostfix", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"ProcessedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"SuccessfulFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"SkippedFilesCount\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["0", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    
+                    TemplateBox[{"\"TargetWolframVersionNumber\"", "\": \""}, 
+                    "RowDefault"], "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["13.2`", "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"DocumentationBuild\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
+                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    "Rows" -> {{Top}}}, AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
+                    "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], "}"}],
+                     "SummaryItem"]}]}, {
+                    RowBox[{
+                    TagBox[
+                    TemplateBox[{"\"Tag\"", "\": \""}, "RowDefault"], 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["\"PacletBuild\"", "SummaryItem"]}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                    BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
+                    False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    BaselinePosition -> {1, 1}]}, 
+                    Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
+                    "SummaryPanel"], DynamicModuleValues :> {}], "]"}], 
+                   Short[#, 0.75]& ], 
+                  "OEM6eJztPU1vG0l2ovghkZYs2aOZ3ZkECJfLDZJNpOjDlqzBADLVkkbalTy\
+ySrYTRItxqbtIdtTsZrqasrnBAgmQaw7J5pjD/pNFkL0FCLB7SXJM9hDkkj0mt8mrj/\
+4kKXe3PizNNA2YVHfVq1f1Xr2velXVzNHJI/xm03pLaLNIH+\
+yZDrG7NnGwo1smPG7maOnIYgWaBVrY16nTHKelY9yCJ2gC9VSVUIruoV6ng+3+LsEayv1pM09nt/\
+om7ujqgaX1DMKqj3vV84g49P5xv0socV5bXWLW67S4gw1K3Ldz7lvSOSUaAnRIvY6KRwC/\
+D2XuHZNO14CHAkMBOE9nDrFJEDGI6lh2uM3CEaDhNlKkE5/\
+buhau7H5PMCDsVYmWN3uO4w5DRfZIwP1kZ/\
+vQ1s8Bhdc7tmU626Z2RKjVs1WCyjvbm7rTwV2KZuXAQKUvoJ/EZsgzVLaIgftEo/\
+dFEzs9U2UjPmp0Csd2j3jdqDS6XYJtbMLgF55Zpv+mvIkpQU7fIM2xSN/L2+\
+fY6GEYGVpu9ByrAyRWvbelA+K0LQ1VDm0CY+vo5wGgDUNvmR1iOu6A0pJCGKe4337RvQ5uEaT/\
+mMCITcgR82qF2i0e6x1C7TH+\
+mXrqPYGKU0rPtgHwS0CYoOkdGF8Fd3eJ3mozFIqH1htoM0fnGqfUMnoOCZan0we4ZepNXeU8rHwF5J\
+7csXGHEzVPJ/nwMPYt1v7zH35aA4DlLd0GnmF9hvdHn28qlmHZ9rf451837A/459cb9h/\
+zz79tKB97PZ5Cjq13vzD3zG7P8blYvLyvAOqA2CHWNN1sRV9XOFocnwgdp/\
+ibA2y3dJMG2Zh9K2PKWPT3aFxKPrO7cHLetzu389G5HZ1ksiqaqR1i1SBOw1bbMF41VKh9Wq2hCsDZ\
+Ik3cMxz0oeT5PYd0GqZpCVmC8r/\
+5m58FZIdRUz49OXlBgYlOTrpnBjFPTrYstcfYDJ4ctrdOTnZhEtibhqW24QFv9uTktKcbGvsTuqqeH\
+ewTs9UiZhu4zv7yS7/C/\
+OLC4sLSQpfXqnkCiuF0me7fqx1DfwzGqKm7Dq2FYEu5iiqrCyuPHz1ZX11/\
+jfI1WkMTlKiWqVFUriHxq4Ymn/ew6ehO32ci1Dcd/HbHsjs0D+\
+I23Fe31KzkgYGp7JZAE8D0vY5JA8MjZm1hnzT9YgXo7mCZIRKlwh6BmCMOifL9jESGYchlRWxcBtuJ\
+j5DbKgKmYJMxdqvKePLGAoK4EBHEc6htvWEz1WwpbZDiKhOk0SG696wHms8GCXA28O4+\
+aB6QKSCydMokXN6nMgfN+UFIlWjVa2aD/\
+LHVvb0MMMtoYugmObSoLrWtIHBOyXmlhKp9LyaCYlg0tYkQ1S2ZjZDZCClshFJmI3zTbIRL9PWj2iY\
+bazHwYoZYdj99twe8TVTY0UHGg0853OtDX14vj9TQFEOgYbc4RJT70ZWN3aycJgcYJBGhTvpRKwbYx\
+v1VGuKCl8Mu+DzTIKhPAfbrZ4AA0ZgQeA1YncEwuLqrToX33Xg4j+\
+7tmaA4sbGFHdzIzaMiGxtP9jTG5wW52Khwss39kNgmMQIEWHhjQKFdTNvo6cryo0d4eU1bJuqTNdI8\
+XXn8eHH5dHkFn65gdXl1eXEFL62trOO1J6r2ZOl07cnS6uLq+uqqtr60srqySgbb+\
+1C2t78M2Hd0Jq3pQsdr8In6aFkjzaWlRW2JrK+QJrS5sr72aPnR2tJ6s/\
+l4CcDj1SeLeAVjsra4qi2vkjVM1lfVRW0Z/s2j+w3DsN5ss6AEF9bcWJhHU3JcUBt3mYD+\
+bmBk5XAiFfT0axYgITYv1sjPu7xC8wCW/wc9qY6q+0PS3wJu6DNrZUhVMRQjXrH+g41ToL8zCvo+\
+Gy+iAQIjkRc2mdvH712Ap1DKvGCOfmdUwQYoel7IznEFv//0ChGMBWnkWMMUFEQKsNi7+\
+6F8JlktXq95p//yr55C6VkhO4m2ZzZ14CVG5HHPJvIICc+\
+GlvUNcFYoN6KQtPb8acxQZLG6AKoNSi0V6s8EnwHGtCQ8FsDpQeDVSy7wIw+hZE/1LBEpwcW4+\
+BGIgQbcYR7VsjIOvI0KYIPixtg8KgOJjsH2IY4yBxNQkF4+qIBkyqZiNhXvwFQs3MU5CEZT2+/\
+Cgy2ddrmrCqRSrB44YlBoznsqWEG8ABpOMeMhWHKGPYgUKiPLdlgz1G/\
+nPnsmvTDLDL7Y1TWNmMxGogfgUhee9QywMiovuhpYLqwrSo4uxjN2rJ4DftHeVr3uWkl/\
+GK9iF5CFSmNhEytm5fNDi9brPAiRpFo7XbUWPARU83Q6ZCEGXEgObSkWNPCpQYyKd8wK3iJdw+\
+qDSVoUIYYJWuCv/OiJ980NaPhm0RT4rvgGLvO3D6weJdY5OPHgb39u425bV+\
+lgxMILJiilCwI9gBhSsUE0e4V//unnIaj+lCjDs/4+\
+OSeGLPnrDRalOLSMfgvgBGJ58lsEGriEmDziyGND+Yr/\
+LWIVylcXl4oDKEbtWG1dHaB4XbssieBhPC6sI0NXWSzkjAd9FmJVAn8EG7uWoaUQDgOKnRZA2VI06Z\
+oGwjVARc7Gw2Jf0YAN82FAbg0LvE3xWqMiPUURAOa/C0rRd/o3Af2WDSJVCzN2k3/+Z+\
+Oi4B2P9tJJl0rvnK5T2+dQfRebmsFDfTO8334MMjSjpR4flzLC+1Niw2N5LLoWirT93d+yzy837CX+\
++Y8N+0/457830OS+bp6xtiOhU0/9TfGmFeCRM9BHTF6O7zVhUNZi0V1tE/\
+WMr4xjFgAEDZ7QdW6Ogzsej8d6XGfxBe+\
+EjSRTVMk0UzKFlFAPJZ6u72eCu0b9nZJK0vCT7pFweTLJdJFkkiayK5lcizmTTJlkur2SScYU7pZk4\
+jHZr7lkiuXqJJNQXsxdiig/Bp/JqExG3RIZ5S+\
+L5cEhkjx6uyXUUJR5mFkKJ7FWHl86eaHUWy2kxi8UThcu5N1mauZHMKD8W8ZDecgwKV2Vz66aoJPRP\
+KihDYwm0+WXUu8yKbkdkY6UXtz/PVDUtYimURebO7bVaZxa53Hn4/\
+CF7rtHxfGv64S8bKrBXSblHZ2QQ/\
+Ijo6m793iu3lvngJi9cPLiQ8XqdJlG3n7btQllebn0SbyRVX2Yx7beagEVS7T4qq2rLPIw8cKkuEOe\
+0+V40AxMnS8krW6EG/wVmSLiiKbuNv0sfheVwdqPU9X2ttYMoWBTroRdDq/\
+0bCCbT9cxRhBmqZ15lm0ycC3DOsUGUm3LMMAx8ebNNbo+\
+rI1XutOOJqrFZGLoP1syrscsX3cruM3Em2FuLVa4nmRWupWSNafTfYKbwgWp00+\
+TNbcXqJys2TavIxbW+VJ4g8cHSgfYUduJhFGg21MNwwG7BXNzJeBahaNAUDA5js+TEj1xEEKM3h/\
+FqoUNwx+6hFVuWU/MfuKeuFVuqicrsWrRYPYIM2LiyWVVJDKFUk+\
+Sypdcwo4F018S142mySSSoW18Tlg6DguH5J9ZzMab3MG60bPJ89gRPw0AUOIEcoVTEjaeMaJTd83dw\
+xpU345NSHIG5Iv4zMD9gaWbgQAuC3jC/1/\
+YsoWUw5l40iUfAjoB7bRZllieTjI7QG4DrIgMLtYvVGTbxKrNSd/KLG7/\
+eQ8s9RQaUBj6aOxyQAK6IA8/\
+LwcspE1QSW4lE2sLY0CJaeE8b78las8hPLy8miC8HMg2y4LM7zHInNQsRCWbdKzAnrVpNj2G7ngTE7\
+5wmQkfV1syWm93uk7/urVlCmkqzL7ENk8aEzOW2IKyJBNbmdj6ZomtPNa0d8ssWt4iBs+\
+mtz3xxWdvcsGVzMkLMfGAkxdmaj87MoXzm9CG8l2wQsiMC4TU0jgOqNygKjG1iKhCBWZ2D5+\
+l8RCWa9cAJZue72+yBaj77ikX0FlXwVmVLTKUtaaOyDmxKalmLPZ1YLEgmW+ax+QRAkHuKgG8jK/\
+uPl9FTod4N0cFLQZ3EafoqUqfQT5RrG6/\
+6u7TqDpWVTH07qmFbW2QaXIxbVLHkudxuHBjco4KuLDm4zpxic2fYM8/4j1nz9/R67gRa6/\
+XKYJiVz5AQxkhRPhD4C3iU143q8/Im6pC+ObYKyN8PAqp0CrH52YoL7rOSX9ht2+E8lc+Qr5W8Y+\
+ZsUxnB3d0o49mED+kqIqwSauHtuUvorNCfCPX/XDFV/zYHVo8NLBu+sW39HOdZc6J/dR+\
+De9Em3D62v/9L/v8l5++Nhk9qit0ko2f3EZDZ1MFF/DzkQX86+jmzL5ukk2b4DO2dqmbA0d5BRdlo/\
+sXLzzni4VpGc2iZ3klOL1DF0H4594ydyBnIR7nUuL0ui918obHnJLthi2OWFUX+\
+cPcm0vWDe6dDt2tGg+O0+myx3U6UWfLGjzJOVl1N5wfT5/LpZA0ayD5izISkvVW2o6BtZyE/\
+U21Fzi2+SiqsTeZ+Xh15mNCjg5OynScIlgt9ebxpDOY7/JPKQyFJL3WVJbBKZdqP/\
+2HgUqgDW1K5IupwItd9O3fY5KmalpVwzJbxK4ygQGa8ffTtBo9f/DYxmznB+\
+p3Ti3jphKBQih8EDqoQBzhFz1qIebqiWN1N7HNm/\
+BUYS6mKuzgM8KNFw1AAIDfDdSSRcXBIqh36mrMU6BZMqWZbXZ5n3LzXdyfS8b9kqaJpGL91HLAUHfZ\
+VB6kUaIlwXthI27iiHQNrJKY7leHby3zEpXr9WiOa3P81iYeS5E/xvIasXnGF+\
+9CG9Zucc70ODs01mELI/T7sdeF615fg/XjIdv1lmSGwUiz/\
+OLBKQ21TMGV2zNVm3CH7NI5r0nXwpMMaqJEyFAOY+Kxl01dIm0zFamS9/BGU8bjup5M3/\
+Kht8GGSkLimDnOLvxtQ3BtVPYLecMOpumChLWVSlTgeFNidJmRCiStvB4SRokeDBzcIRE8+\
+jd4YPDwQEroAO/BbRqBEJIyMyReEjcIOKxXD6ROe2XjLttkyE9KDZ+\
+oPXFsiZtKyvSjLeFZv5bf8hDl4FHtMvWywJk0qbqWMKSxnQiGtFVcGEVuoXlAEmdCSkxeshz8hJice\
+1n1AsZuChjtMIzSMbefPSjJrW4Bp7zp2jgeqFTGkYA2GRBfhRtL5JgCypoatjV2rnJcr+\
+l6LHWP57jcTzsJx9yjB4KnE4R7JZN69R+7rxMk6oZ3DVUUm8DTFy+\
+AasncvYEoby7yanRENtTMLFtJPSfaS2zr+NQgvmxOzgvuuXcuCrPyBGcPSeSWyNFvu7LLu23JFWL+\
+LQQVcY0RRysSFp7c1vShLx6KOqzPUhxSmT52VUdW/1bNPVpb3A/FztA+IhT6Sa/izG+\
+JB8r9RXYXVXYXVXbPxNf5nolxTwqllkbl2gFMeKBx+hsm5sMCrcpvBaiq4N2ya2u0KhVCpQl+QH/\
+hjlwRsbiwuLi2uL74KLtGKrtGKrtGKrtGKrtGKlPvN63e72Xq/Q6p90v09UHtAL/\
+VO70OOwXmcj32W3eB53/z1z9l//\
+39VV66ZFuM5kTjx9bcbmwf1kSWkjhhh12OkH4u5BavEK1DAurHdLjPTTSiXTmbT++\
+ZGkxRu6ObbJE7X/secHpXtlp226+hGZfTQRk7Tf3t9TP8hxEOuj1k+aiGPHl2y1D7oIbOdLAkbtuQ/\
+XZNXBn0yjKaoAZfgp0BDQqjOT2CxaWVheXXV4ZkEZBspcdmbkjQrpa5d5l7l7l3yd0739WIek5DHJM\
+AeDQl5xvz+Yyob3bRggfK/QiKe+Hth4OTuVGZR2XP4oTCnvln/wL9+z/+\
+qvKTDTQhbcN5NBOx19hlavfDKo09mo1aHgp7GNX7wcZoRGdPyMLz6IMhGpOBmxumr9iLBwPagj2dkf\
+6AKyPRHySw7ufRJ6NFvTw59/tPA+bDVa6/\
+5H5yW5TBtLx0NNMCmRbItMCd1QL3ArO4UZxH04fBG7fRqfKpvBJZ3IjsX4jM7kMOXIcsqsnLkBPdlz\
+1S5fzsX/75W3929vHTgMqZG3ZJdNM9y/jF9SALSi10vTILuMp19m/\
+g1cV36opJZn98PDLTIJDukVlFd9gq+n85YBeZ"}, "ClickToCopyTemplate"]]}}, Alignment -> 
+             Left, ItemSize -> {{Automatic, Automatic, Fit}, Automatic}], 
+            FontColor -> GrayLevel[0.5], FontSize -> 12]}}, 
+         ItemSize -> {{Automatic, Fit}, Automatic}, Alignment -> Left, 
+         Dividers -> {None, {-1 -> GrayLevel[
+              Rational[239, 255]]}}, Spacings -> {{1, {}, 1}, {1, {}, 2}}]}, 
+       Dynamic[
+        CurrentValue[
+         EvaluationCell[], {TaggingRules, "StripeOpen"}, False]]]], "Text", 
+     FontSize -> 12, FontColor -> GrayLevel[0.25], StripOnInput -> False]], 
+   "StripeCell", CellFrameMargins -> {{20, 5}, {2, 2}}, 
    CellFrame -> {{0, 0}, {1, 0}}, CellFrameColor -> GrayLevel[0.75]]},
 TaggingRules->{
  "ResourceType" -> "Paclet", "ResourceCreateNotebook" -> True, 
@@ -5457,19 +7707,19 @@ PatrickMLenggenhager__HyperBloch-0.0.1.paclet", "FileHashes" ->
       205, 77, 205, 43, 73, 44, 201, 204, 207, 211, 119, 205, 75, 207, 201, 
       44, 206, 208, 247, 204, 75, 73, 173, 208, 47, 78, 77, 7, 73, 21, 199, 
       27, 58, 50, 233, 6, 179, 5, 231, 151, 22, 37, 167, 22, 179, 248, 229, 
-      231, 165, 2, 185, 33, 137, 69, 233, 169, 37, 62, 59, 47, 207, 253, 125, 
-      115, 139, 61, 175, 110, 176, 6, 49, 102, 233, 165, 167, 230, 225, 49, 
-      173, 51, 238, 225, 217, 234, 217, 79, 21, 117, 131, 181, 177, 155, 22, 
-      92, 144, 154, 147, 67, 130, 243, 178, 18, 149, 21, 148, 119, 127, 174, 
-      212, 13, 214, 37, 218, 64, 162, 221, 40, 226, 157, 90, 148, 151, 154, 
-      163, 239, 81, 89, 144, 90, 228, 148, 147, 159, 156, 161, 87, 158, 131, 
-      164, 211, 231, 229, 73, 231, 124, 147, 107, 234, 65, 8, 205, 8, 17, 81, 
-      168, 102, 31, 163, 128, 162, 204, 220, 204, 146, 204, 178, 212, 98, 189,
-       92, 100, 221, 22, 183, 236, 156, 243, 172, 88, 157, 16, 186, 17, 34, 
-      188, 1, 137, 201, 57, 169, 37, 158, 121, 105, 249, 104, 118, 118, 9, 
-      122, 28, 253, 19, 153, 170, 140, 208, 133, 16, 17, 132, 232, 242, 77, 
-      204, 203, 76, 75, 45, 46, 65, 213, 137, 238, 207, 19, 18, 70, 71, 194, 
-      115, 47, 184, 0, 0, 104, 55, 200, 64}]}},
+      231, 165, 2, 185, 33, 137, 69, 233, 169, 37, 62, 251, 180, 182, 148, 94,
+       105, 18, 21, 213, 13, 214, 32, 198, 44, 189, 244, 212, 60, 60, 166, 
+      117, 198, 61, 60, 91, 61, 251, 169, 162, 110, 176, 54, 118, 211, 130, 
+      11, 82, 115, 114, 72, 112, 158, 211, 244, 121, 209, 161, 34, 12, 166, 
+      186, 193, 186, 68, 27, 72, 180, 27, 69, 188, 83, 139, 242, 82, 115, 244,
+       61, 42, 11, 82, 139, 156, 114, 242, 147, 51, 244, 202, 115, 144, 116, 
+      250, 180, 105, 53, 31, 144, 208, 236, 100, 64, 104, 70, 136, 136, 66, 
+      53, 251, 24, 5, 20, 101, 230, 102, 150, 100, 150, 165, 22, 235, 229, 34,
+       235, 254, 156, 250, 229, 201, 161, 40, 109, 43, 132, 110, 132, 8, 111, 
+      64, 98, 114, 78, 106, 137, 103, 94, 90, 62, 154, 157, 93, 130, 30, 71, 
+      255, 68, 166, 42, 35, 116, 33, 68, 4, 33, 186, 124, 19, 243, 50, 211, 
+      82, 139, 75, 80, 117, 162, 251, 243, 241, 195, 77, 243, 10, 54, 8, 120, 
+      2, 0, 21, 214, 200, 213}]}},
 CreateCellID->True,
 DynamicEvaluationTimeout->60,
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
@@ -6764,7 +9014,6 @@ h/Fh4QMzDxZ+6PEFAOibv7E=
                    FaceForm[{
                     RGBColor[0.6902, 0.58824, 0.81176], 
                     Opacity[1.]}], 
-                   
                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                     0}}}, {{{130.03, 350.12}, {194.8, 312.72}, {194.8, 
                     237.93}, {130.03, 275.32}, {130.03, 350.12}}}]}, {
@@ -7502,7 +9751,8 @@ eU8aPfbS9kxawAvxnrSCx3c3XzbS6JX4RFrAS34B53ckaw==
                     AspectRatio -> 1.15], "\"Submit to Repository\""}}, 
                     GridBoxAlignment -> {
                     "Columns" -> {{Left}}, "Rows" -> {{Center}}}, AutoDelete -> 
-                    False, GridBoxItemSize -> {
+                    False, 
+                    GridBoxItemSize -> {
                     "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
                     GridBoxSpacings -> {
                     "Columns" -> {{0}}, "ColumnsIndexed" -> {2 -> 0.5}, 
@@ -7590,7 +9840,6 @@ h/Fh4QMzDxZ+6PEFAOibv7E=
                 FaceForm[{
                   RGBColor[0.78039, 0.86275, 0.94902], 
                   Opacity[1.]}], 
-                
                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                  0}}}, {{{112.89, 245.}, {177.6, 207.64}, {112.89, 170.27}, {
                  48.174, 207.64}, {112.89, 245.}}}]}, {
@@ -10617,7 +12866,6 @@ Mn8D1T+bLHr4qqKuQ8bv8LBZfwwdhGSmFwY76zqghzcABAZ3MA==
           FaceForm[
            GrayLevel[0.65098]]], 
          StyleBox[{
-           
            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1,
              0}}}, {{{4., 3.}, {4., 18.}, {13., 18.}, {17., 14.}, {17., 3.}, {
             4., 3.}}}]}, 
@@ -10781,7 +13029,6 @@ Mn8D1T+bLHr4qqKuQ8bv8LBZfwwdhGSmFwY76zqghzcABAZ3MA==
           FaceForm[
            GrayLevel[1.]]], 
          StyleBox[{
-           
            FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1,
              0}, {0, 1, 0}}}, {{{13., 18.}, {13., 14.5}, {12.99992, 
             14.367367999999999`}, {13.052580000000003`, 14.240146}, {
@@ -12096,7 +14343,6 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     RGBColor[0.65098, 0.65098, 0.65098, 1.]}, StripOnInput -> 
                     False], 
                     StyleBox[{
-                    
                     JoinedCurveBox[{{{0, 2, 0}}}, {{{12.383, 16.953}, {20.16, 
                     16.953}}}, CurveClosed -> {0}]}, {
                     JoinForm[{"Miter", 10.}], 
@@ -12324,7 +14570,8 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[
                     RSNB`nb$, {TaggingRules, "CompatibilityTest"}]], 
                     "KernelSession"]; Needs["DefinitionNotebookClient`"], 
-                    Annotation[DefinitionNotebookClient`$ButtonCodeID = 
+                    Annotation[
+                    DefinitionNotebookClient`$ButtonCodeID = 
                     341138948110023950; 
                     DefinitionNotebookClient`CheckForUpdates[RSNB`nb$, 
                     ReleaseHold[
@@ -12420,8 +14667,8 @@ AsyncronousResourceInformationUpdates = False,
                     DefinitionNotebookClient`$ButtonCodeID = 
                     341138948110023950; 
                     DefinitionNotebookClient`CheckForUpdates[RSNB`nb$, 
-                    ReleaseHold[DefinitionNotebookClient`$ButtonCode = 
-                    HoldForm[
+                    ReleaseHold[
+                    DefinitionNotebookClient`$ButtonCode = HoldForm[
                     
                     PacletResource`DefinitionNotebook`\
 RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]], 

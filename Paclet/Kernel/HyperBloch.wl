@@ -138,11 +138,11 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Cell Graphs*)
 
 
-ImportCellGraphString[str_, qname_]:=Module[{
+ImportCellGraphString[str_]:=Module[{
 		tg, specs, rels, center, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vlbls, vcoords,
 		vertices, edges, etransls, facesstr, faces,faceedges, boundary
 	},
@@ -193,7 +193,7 @@ ImportCellGraphString[str_, qname_]:=Module[{
 	
 	<|
 		"TriangleGroup" -> tg,
-		"QuotientGroup" -> qname,
+		"QuotientGroup" -> "",
 		"CellCenter" -> center,
 		"Graph"-> Graph[vertices, edges, VertexCoordinates -> vcoords],
 		"VertexLabels" -> vlbls,
@@ -208,11 +208,11 @@ ImportCellGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Model Graphs*)
 
 
-ImportModelGraphString[str_, qname_]:=Module[{
+ImportModelGraphString[str_]:=Module[{
 		tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces,
 		rels, center, vlbls, vcoords, graph
 	},
@@ -261,8 +261,8 @@ ImportModelGraphString[str_, qname_]:=Module[{
 	<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
-		"QuotientGroup" -> qname,
-		"Genus" -> ToExpression@StringReplace[qname,RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
+		"QuotientGroup" -> "",
+		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph" -> graph,
 		"UndirectedGraph"->GetUndirectedGraph@graph,
 		"FullGraph" -> GetFullGraph@graph,
@@ -275,11 +275,11 @@ ImportModelGraphString[str_, qname_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Supercell Model Graphs*)
 
 
-ImportSupercellModelGraphString[str_, qpc_, qsc_]:=Module[{
+ImportSupercellModelGraphString[str_]:=Module[{
 		tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw,
 		model, vertices, vertexpos, edges, etransls, faces,
 		rels0, rels, center, vlbls, vcoords, graph
@@ -335,10 +335,10 @@ ImportSupercellModelGraphString[str_, qpc_, qsc_]:=Module[{
 	<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
-		"PCQuotientGroup" -> qpc,
-		"QuotientGroup" -> qsc,
-		"PCGenus" -> ToExpression@StringReplace[qpc, RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
-		"Genus" -> ToExpression@StringReplace[qsc, RegularExpression["T(\\d+)\\.(\\d+)"]->"$1"],
+		"PCQuotientGroup" -> "",
+		"QuotientGroup" -> "",
+		"PCGenus" -> Length[\[CapitalGamma]0gens]/2,
+		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph" -> graph,
 		"UndirectedGraph"->GetUndirectedGraph@graph,
 		"FullGraph" -> GetFullGraph@graph,
@@ -911,7 +911,7 @@ VisualizeModelGraph[mgraph_, opts:OptionsPattern[{VisualizeModelGraph, ShowTrian
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Construct Bloch Hamiltonians*)
 
 
