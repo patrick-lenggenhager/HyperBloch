@@ -13,7 +13,11 @@ PacletObject[
       {
         "Kernel",
         "Root" -> "Kernel",
-        "Context" -> {"PatrickMLenggenhager`HyperBloch`"}
+        "Context" -> {"PatrickMLenggenhager`HyperBloch`"},
+        "Symbols" -> {
+          "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
+          "PatrickMLenggenhager`HyperBloch`ImportModelGraphString"
+        }
       },
       {
         "Documentation",

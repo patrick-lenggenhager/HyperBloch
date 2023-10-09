@@ -142,13 +142,13 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Cell Graphs*)
 
 
 ImportCellGraphString[str_]:=Module[{
 		version, tg, specs, rels, center, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vlbls, vcoords,
-		vertices, edges, etransls, facesstr, faces,faceedges, boundary
+		vertices, edges, etransls, facesstr, faces, faceedges, boundary
 	},
 	If[StringStartsQ[str, "HyperCells"],
 		{version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vertices, edges, etransls, facesstr, boundary} =
@@ -204,6 +204,7 @@ ImportCellGraphString[str_]:=Module[{
 	<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
+		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph"-> Graph[vertices, edges, VertexCoordinates -> vcoords],
 		"VertexLabels" -> vlbls,
 		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
@@ -217,16 +218,16 @@ ImportCellGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Model Graphs*)
 
 
 ImportModelGraphString[str_]:=Module[{
-		version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces,
-		rels, center, vlbls, vcoords, graph
+		version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, facesstr,
+		rels, center, vlbls, vcoords, graph, faces, faceedges
 	},
 	If[StringStartsQ[str, "HyperCells"],
-		{version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
+		{version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, facesstr} =
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = StringReplace[version, RegularExpression["HyperCells HCM version ([0-9.]+)"] -> "$1"];,
 		{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
@@ -258,8 +259,9 @@ ImportModelGraphString[str_]:=Module[{
 				{e, face}
 			]
 		],
-		{face, ToExpression[faces]}
+		{face, ToExpression[facesstr]}
 	];
+	faceedges = Map[edges[[#[[1]]]]&, ToExpression[facesstr], {2}];
 	
 	(* vertex labels and coordinates *)
 	vlbls = (StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	
@@ -279,29 +281,30 @@ ImportModelGraphString[str_]:=Module[{
 		"CellCenter" -> center,
 		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph" -> graph,
-		"UndirectedGraph"->GetUndirectedGraph@graph,
+		"UndirectedGraph" -> GetUndirectedGraph@graph,
 		"FullGraph" -> GetFullGraph@graph,
 		"VertexLabels" -> vlbls,
 		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
 		"EdgeTranslations" -> etransls,
 		"TranslationGenerators" -> \[CapitalGamma]gens,
-		"Faces" -> faces
+		"Faces" -> faces,
+		"FaceEdges" -> faceedges
 	|>
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Supercell Model Graphs*)
 
 
 ImportSupercellModelGraphString[str_]:=Module[{
 		version, tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw,
-		model, vertices, vertexpos, edges, etransls, faces,
-		rels0, rels, center, vlbls, vcoords, graph
+		model, vertices, vertexpos, edges, etransls, facesstr,
+		rels0, rels, center, vlbls, vcoords, graph, faces, faceedges
 	},
 	
 	If[StringStartsQ[str, "HyperCells"],
-		{version, tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
+		{version, tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, facesstr} =
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = StringReplace[version, RegularExpression["HyperCells HCS version ([0-9.]+)"] -> "$1"];,
 		{tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
@@ -338,8 +341,9 @@ ImportSupercellModelGraphString[str_]:=Module[{
 				{e, face}
 			]
 		],
-		{face, ToExpression[faces]}
+		{face, ToExpression[facesstr]}
 	];
+	faceedges = Map[edges[[#[[1]]]]&, ToExpression[facesstr], {2}];
 	
 	(* vertex labels and coordinates *)
 	vlbls = vertexpos;(*(StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	*)
@@ -369,12 +373,13 @@ ImportSupercellModelGraphString[str_]:=Module[{
 		"TranslationGenerators" -> \[CapitalGamma]gens,
 		"TranslationGroupEmbedding" -> \[CapitalGamma]\[CapitalGamma]0,
 		"InternalSupercellTranslations" -> T\[CapitalGamma]0\[CapitalGamma],
-		"Faces" -> faces
+		"Faces" -> faces,
+		"FaceEdges" -> faceedges
 	|>
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Graphical Visualization*)
 
 
@@ -512,7 +517,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
