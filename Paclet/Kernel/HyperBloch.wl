@@ -18,6 +18,10 @@ ImportSupercellModelGraphString;
 GetTriangleTessellation;
 ShowTriangles;
 
+ResolveVertex;
+ResolveEdge;
+ResolveTranslation;
+
 GetSchwarzTriangle;
 GetVertex;
 GetEdge;
@@ -138,20 +142,26 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Cell Graphs*)
 
 
 ImportCellGraphString[str_]:=Module[{
-		tg, specs, rels, center, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vlbls, vcoords,
+		version, tg, specs, rels, center, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vlbls, vcoords,
 		vertices, edges, etransls, facesstr, faces,faceedges, boundary
 	},
-	{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vertices, edges, etransls, facesstr, boundary} =
-		StringSplit[StringReplace[str,{"["->"{","]"->"}"}],"\n"];
+	If[StringStartsQ[str, "HyperCells"],
+		{version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vertices, edges, etransls, facesstr, boundary} =
+			StringSplit[StringReplace[str,{"["->"{","]"->"}"}], "\n"];
+		version = StringReplace[version, RegularExpression["HyperCells HCC version ([0-9.]+)"] -> "$1"];,
+		{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, vertices, edges, etransls, facesstr, boundary} =
+			StringSplit[StringReplace[str,{"["->"{","]"->"}"}], "\n"];
+		version = "";
+	];
 
 	(* info *)
 	tg = ToExpression@tg; (* triangle group signature *)
-	{rels,center} = StringTrim[#, {"{", "}"}]&/@ StringSplit[specs, "},"];
+	{rels, center} = StringTrim[#, {"{", "}"}]&/@ StringSplit[specs, "},"];
 	rels = StringSplit[rels, ", "]; (* cell relators *)
 	center = ToExpression@center; (* cell center *)
 	
@@ -170,7 +180,7 @@ ImportCellGraphString[str_]:=Module[{
 		],
 		{c, 1, 3}, {face, ToExpression[facesstr][[c]]}
 	];
-	faceedges =Map[edges[[#[[1]]]]&,ToExpression[facesstr][[center]], {2}];
+	faceedges = Map[edges[[#[[1]]]]&,ToExpression[facesstr][[center]], {2}];
 	
 	(* algebra *)
 	\[CapitalGamma]gens = "(" <> # <> ")" &/@(AssociationThread@@(StringTrim[StringSplit[StringTrim[#, {"{", "}"}], ","], " "]&/@StringSplit[\[CapitalGamma]gens, " -> "]));
@@ -193,7 +203,6 @@ ImportCellGraphString[str_]:=Module[{
 	
 	<|
 		"TriangleGroup" -> tg,
-		"QuotientGroup" -> "",
 		"CellCenter" -> center,
 		"Graph"-> Graph[vertices, edges, VertexCoordinates -> vcoords],
 		"VertexLabels" -> vlbls,
@@ -208,16 +217,23 @@ ImportCellGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Model Graphs*)
 
 
 ImportModelGraphString[str_]:=Module[{
-		tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces,
+		version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces,
 		rels, center, vlbls, vcoords, graph
 	},
-	{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
-		StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+	If[StringStartsQ[str, "HyperCells"],
+		{version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
+			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+		version = StringReplace[version, RegularExpression["HyperCells HCM version ([0-9.]+)"] -> "$1"];,
+		{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
+			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+		version = "";
+	];
+	
 	
 	(* info *)
 	tg = ToExpression@tg; (* triangle group signature *)
@@ -261,7 +277,6 @@ ImportModelGraphString[str_]:=Module[{
 	<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
-		"QuotientGroup" -> "",
 		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph" -> graph,
 		"UndirectedGraph"->GetUndirectedGraph@graph,
@@ -275,17 +290,24 @@ ImportModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Supercell Model Graphs*)
 
 
 ImportSupercellModelGraphString[str_]:=Module[{
-		tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw,
+		version, tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw,
 		model, vertices, vertexpos, edges, etransls, faces,
 		rels0, rels, center, vlbls, vcoords, graph
 	},
-	{tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
-		StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+	
+	If[StringStartsQ[str, "HyperCells"],
+		{version, tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
+			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+		version = StringReplace[version, RegularExpression["HyperCells HCS version ([0-9.]+)"] -> "$1"];,
+		{tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
+			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
+		version = "";
+	];
 	
 	(* info *)
 	tg = ToExpression@tg; (* triangle group signature *)
@@ -335,8 +357,6 @@ ImportSupercellModelGraphString[str_]:=Module[{
 	<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
-		"PCQuotientGroup" -> "",
-		"QuotientGroup" -> "",
 		"PCGenus" -> Length[\[CapitalGamma]0gens]/2,
 		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph" -> graph,
@@ -354,7 +374,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
@@ -492,7 +512,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -516,25 +536,23 @@ ResolveVertex[cgraph_, vertex_] := {
 }
 
 
-ResolveTranslation[transl_, gens_] := StringReplace[transl,
-	RegularExpression["g(\\d+)"] :> gens["g$1"]
+ResolveTranslation[cgraph_, transl_] := StringReplace[transl,
+	RegularExpression["g(\\d+)"] :> cgraph["TranslationGenerators"]["g$1"]
 ]
 
 
 ResolveEdge[cgraph_, edge_] := Module[{\[Gamma], v1, v2},
 	If[MemberQ[EdgeList@cgraph["Graph"], edge],
 		(* edge with default orientation *)
-		\[Gamma] = ResolveTranslation[
-			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge][[1, 1]]]],
-			cgraph["TranslationGenerators"]
+		\[Gamma] = ResolveTranslation[cgraph,
+			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge][[1, 1]]]]
 		];
 	
 		v1 = ResolveVertex[cgraph, edge[[1]]];
 		v2 = ResolveVertex[cgraph, edge[[2]]];,
 		(* edge with inverted orientation *)
-		\[Gamma] = "(" <> ResolveTranslation[
-			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge[[{2, 1, 3}]]][[1, 1]]]],
-			cgraph["TranslationGenerators"]
+		\[Gamma] = "(" <> ResolveTranslation[cgraph,
+			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge[[{2, 1, 3}]]][[1, 1]]]]
 		] <> ")^(-1)";
 	
 		v1 = ResolveVertex[cgraph, edge[[1]]];
@@ -560,19 +578,17 @@ GetCellGraphEdge[cgraph_, edge_] := GetEdge[
 ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
 	If[NumericQ@edge[[3]] && edge[[3]] > 0 || ListQ@edge[[3]] && edge[[3, 1]] > 0,
 		(* edge with default orientation *)
-		\[Gamma] = ResolveTranslation[
-			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge][[1, 1]]]],
-			cgraph["TranslationGenerators"]
+		\[Gamma] = ResolveTranslation[cgraph,
+			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge][[1, 1]]]]
 		];
 	
 		v1 = ResolveVertex[cgraph, edge[[1]]];
 		v2 = ResolveVertex[cgraph, edge[[2]]];,
 		(* edge with inverted orientation *)
-		\[Gamma] = "(" <> ResolveTranslation[
+		\[Gamma] = "(" <> ResolveTranslation[cgraph,
 			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"],
 				DirectedEdge[edge[[2]], edge[[1]], -edge[[3]]]	
-			][[1, 1]]]],
-			cgraph["TranslationGenerators"]
+			][[1, 1]]]]
 		] <> ")^(-1)";
 	
 		v1 = ResolveVertex[cgraph, edge[[1]]];
@@ -583,7 +599,7 @@ ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
 ]
 GetTranslatedCellGraphEdge[cgraph_, edge_, \[Gamma]_] := GetEdge[
 	cgraph["TriangleGroup"],
-	ResolveTranslatedEdge[cgraph, edge, ResolveTranslation[\[Gamma], cgraph["TranslationGenerators"]]][[1]],
+	ResolveTranslatedEdge[cgraph, edge, ResolveTranslation[cgraph, \[Gamma]]][[1]],
 	Center -> cgraph["CellCenter"]
 ]
 
@@ -625,7 +641,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Boundary*)
 
 
@@ -636,14 +652,14 @@ GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 		GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[2, 1]], #[[2]], Center -> cgraph["CellCenter"]]
 	}], Model -> PoincareDisk],
 	LToGraphics[GetSitePosition[cgraph["TriangleGroup"], 3,
-		ResolveTranslation[#[[6]], cgraph["TranslationGenerators"]],
+		ResolveTranslation[cgraph, #[[6]]],
 		Center -> cgraph["CellCenter"]
 	], Model -> PoincareDisk],
 	#[[6]]
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph*)
 
 
@@ -810,7 +826,7 @@ FullForm]\),
 				}]&/@cgraph["BoundaryEdges"], Model -> PoincareDisk]
 			}, With[{
 				pt = LToGraphics[GetSitePosition[cgraph["TriangleGroup"], 3,
-					ResolveTranslation[#[[6]], cgraph["TranslationGenerators"]],
+					ResolveTranslation[cgraph, #[[6]]],
 					Center -> cgraph["CellCenter"]],
 					Model->PoincareDisk
 				]},{
@@ -824,12 +840,12 @@ FullForm]\),
 				LToGraphics[Table[LLine[{
 						GetSitePosition[cgraph["TriangleGroup"],
 							EdgeList[cgraph["Graph"]][[#[[3]]]][[1,1]],
-							#[[1]]<>"*"<>ResolveTranslation[\[Gamma], cgraph["TranslationGenerators"]],
+							#[[1]]<>"*"<>ResolveTranslation[cgraph, \[Gamma]],
 							Center -> cgraph["CellCenter"]
 						],
 						GetSitePosition[cgraph["TriangleGroup"],
 							EdgeList[cgraph["Graph"]][[#[[3]]]][[2,1]],
-							#[[2]]<>"*"<>ResolveTranslation[\[Gamma],cgraph["TranslationGenerators"]],
+							#[[2]]<>"*"<>ResolveTranslation[cgraph, \[Gamma]],
 							Center -> cgraph["CellCenter"]
 						]
 					}]&/@cgraph["BoundaryEdges"],
