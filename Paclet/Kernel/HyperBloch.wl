@@ -11,9 +11,9 @@ GetFullGraph;
 GetUndirectedGraph;
 GetSitePosition;
 
-ImportCellGraphString;
-ImportModelGraphString;
-ImportSupercellModelGraphString;
+ImportCellGraphString::usage = "ImportCellGraphString[\"string\"] imports a cell graph from a string";
+ImportModelGraphString::usage = "ImportModelGraphString[\"string\"] imports a model graph from a string";
+ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"string\"] imports a supercell model graph from a string";
 
 GetTriangleTessellation;
 ShowTriangles;
@@ -379,7 +379,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
@@ -646,7 +646,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Boundary*)
 
 
@@ -893,7 +893,7 @@ VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangl
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Model Graph*)
 
 
