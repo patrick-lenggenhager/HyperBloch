@@ -17,7 +17,9 @@ PacletObject[
         "Symbols" -> {
           "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportModelGraphString",
-          "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString"
+          "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString",
+          "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
+          "PatrickMLenggenhager`HyperBloch`ShowTriangles"
         }
       },
       {
