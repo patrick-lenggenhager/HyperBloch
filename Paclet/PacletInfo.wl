@@ -19,6 +19,7 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`ImportModelGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
+          "PatrickMLenggenhager`HyperBloch`ShowCellSchwarzTriangles",
           "PatrickMLenggenhager`HyperBloch`ShowTriangles"
         }
       },

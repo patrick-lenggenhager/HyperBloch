@@ -33,7 +33,7 @@ GetCellGraphFace;
 GetCellBoundary;
 
 ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
-ShowCellSchwarzTriangles;
+ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Schwarz triangles making up the cell underlying the cell, model, or supercell model graph cgraph";
 ShowCellGraphFlattened;
 ShowCellBoundary;
 
@@ -90,7 +90,7 @@ CyclicallyPermuteList[list_, n_] := Permute[list, PermutationPower[Cycles[{Range
 CyclicallyPermuteFaceEdges[face_, n_]:=Graph[VertexList[face], CyclicallyPermuteList[EdgeList[face], n], Sequence@@AbsoluteOptions[face]]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Group Elements and Vertex Positions*)
 
 
@@ -517,7 +517,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -722,15 +722,31 @@ FullForm]\),"$1","$3"],StandardForm],"*"->""}];
 
 
 Options[ShowCellSchwarzTriangles] = {
-	ShowLabels -> False,
+	TriangleStyle -> {FaceForm[Black], EdgeForm[None]},
+	ShowTriangleLabels -> False,
+	TriangleLabelStyle -> White,
 	TriangleRange -> All
 };
-ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := ShowCellSchwarzTriangles[cgraph, opts] = Show[
-	Graphics[{
-			GetSchwarzTriangle[cgraph["TriangleGroup"], #, CellCenter -> cgraph["CellCenter"]]&
-			/@cgraph["SchwarzTriangleLabels"][[OptionValue[TriangleRange]]]
-		},
-		Sequence@@FilterRules[{opts}, Options[Graphics]]
+ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := ShowCellSchwarzTriangles[cgraph, opts] = Module[
+{format},
+	format[expr_] := StringReplace[expr,{RegularExpression["([xyz\\)])(\\^(\\-?\\d+))?"]
+		-> ToString[StringForm[\!\(\*
+TagBox[
+StyleBox["\"\<\\!\\(\\*SuperscriptBox[\\(`1`\\), \\(`2`\\)]\\)\>\"",
+ShowSpecialCharacters->False,
+ShowStringCharacters->True,
+NumberMarks->True],
+FullForm]\), "$1", "$3"],StandardForm], "*"->""}];
+	Show[
+		Graphics[{
+			{Sequence@@OptionValue[TriangleStyle],
+				With[{st = GetSchwarzTriangle[cgraph["TriangleGroup"], #, CellCenter -> cgraph["CellCenter"]]},
+					{st, If[OptionValue[ShowTriangleLabels],
+						Text[Style[format@#, OptionValue[TriangleLabelStyle]], RegionCentroid@st], {}]}
+				]&/@cgraph["SchwarzTriangleLabels"][[OptionValue[TriangleRange]]]}
+			},
+			Sequence@@FilterRules[{opts}, Options[Graphics]]
+		]
 	]
 ]
 
