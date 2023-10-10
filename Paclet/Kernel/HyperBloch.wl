@@ -34,7 +34,7 @@ GetCellBoundary;
 
 ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
 ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Schwarz triangles making up the cell underlying the cell, model, or supercell model graph cgraph";
-ShowCellGraphFlattened;
+ShowCellGraphFlattened::usage = "ShowCellGraphFlattened[cgraph] shows a flattened, i.e., not compactified, version of the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
 ShowCellBoundary;
 
 VisualizeCellGraph;
@@ -517,7 +517,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -669,7 +669,7 @@ GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 
 
 Options[ShowCellGraph] = {
-	CellVertexStyle -> {Black, AbsolutePointSize[5]},
+	CellVertexStyle -> Directive[Black, AbsolutePointSize[5]],
 	ShowVertexLabels -> True,
 	EdgeArrowSize -> .015,
 	ShowIntraCellEdges -> True,
@@ -714,7 +714,7 @@ FullForm]\),"$1","$3"],StandardForm],"*"->""}];
 			EdgeShapeFunction -> GraphElementData[{"FilledArcArrow", "ArrowSize" -> OptionValue[EdgeArrowSize]}],
 			Sequence@@FilterRules[{opts}, Options[Graph]]
 		],
-		Graphics[{Sequence@@OptionValue[CellVertexStyle],
+		Graphics[{OptionValue[CellVertexStyle],
 			Point/@(VertexCoordinates/.AbsoluteOptions[cgraph["Graph"]])
 		}]
 	]
@@ -722,7 +722,7 @@ FullForm]\),"$1","$3"],StandardForm],"*"->""}];
 
 
 Options[ShowCellSchwarzTriangles] = {
-	TriangleStyle -> {FaceForm[Black], EdgeForm[None]},
+	TriangleStyle -> Directive[FaceForm[Black], EdgeForm[None]],
 	ShowTriangleLabels -> False,
 	TriangleLabelStyle -> White,
 	TriangleRange -> All
@@ -739,7 +739,7 @@ NumberMarks->True],
 FullForm]\), "$1", "$3"],StandardForm], "*"->""}];
 	Show[
 		Graphics[{
-			{Sequence@@OptionValue[TriangleStyle],
+			{OptionValue[TriangleStyle],
 				With[{st = GetSchwarzTriangle[cgraph["TriangleGroup"], #, CellCenter -> cgraph["CellCenter"]]},
 					{st, If[OptionValue[ShowTriangleLabels],
 						Text[Style[format@#, OptionValue[TriangleLabelStyle]], RegionCentroid@st], {}]}
@@ -752,10 +752,9 @@ FullForm]\), "$1", "$3"],StandardForm], "*"->""}];
 
 
 Options[ShowCellGraphFlattened] = {	
-	CellVertexStyle -> {Black, AbsolutePointSize[5]},
+	CellVertexStyle -> Directive[Black, AbsolutePointSize[5]],
 	ShowVertexLabels -> True,
-	EdgeArrowSize -> .015,
-	CellEdgeStyle -> {Arrowheads[{{Small,0.5}}]},
+	CellEdgeStyle -> Arrowheads[{{Small,0.5}}],
 	ShowIntraCellEdges -> True,
 	ShowInterCellEdges -> True,
 	IntraCellEdgeStyle -> Blue,
@@ -769,17 +768,19 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 	
 	Show[
 		(* edges *)
-		Graphics[{Sequence@@OptionValue[CellEdgeStyle],
-			{OptionValue[IntraCellEdgeStyle],
-				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph, edge], CellCenter -> cgraph["CellCenter"]],
-					{edge, intracedges}
-				]
-			},
-			{OptionValue[InterCellEdgeStyle],
-				Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph, edge], CellCenter -> cgraph["CellCenter"]],
-					{edge, intercedges}
-				]
-			}
+		Graphics[{OptionValue[CellEdgeStyle],
+			If[OptionValue[ShowIntraCellEdges],
+				{OptionValue[IntraCellEdgeStyle],
+					Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph, edge], CellCenter -> cgraph["CellCenter"]],
+						{edge, intracedges}
+					]
+				}, {}],
+			If[OptionValue[ShowInterCellEdges],
+				{OptionValue[InterCellEdgeStyle],
+					Table[Arrow@GetEdge[cgraph["TriangleGroup"], ResolveEdge[cgraph, edge], CellCenter -> cgraph["CellCenter"]],
+						{edge, intercedges}
+					]
+				},{}]
 		}, Sequence@@FilterRules[{opts}, Options[Graphics]]], 
 		(* vertices *)
 		Graph[cgraph["Graph"],
@@ -789,7 +790,7 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 			VertexLabels -> If[OptionValue[ShowVertexLabels], "Name", None],
 			EdgeStyle -> Opacity[0]
 		],
-		Graphics[{Sequence@@OptionValue[CellVertexStyle],
+		Graphics[{OptionValue[CellVertexStyle],
 			Point/@(VertexCoordinates/.AbsoluteOptions[cgraph["Graph"]])
 		}],
 		Sequence@@FilterRules[{opts}, {ImageSize}]
@@ -798,14 +799,14 @@ ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Gra
 
 
 Options[ShowCellBoundary] = {
-	CellBoundaryStyle -> {Darker@Red, AbsoluteThickness[2]},
+	CellBoundaryStyle -> Directive[Darker@Red, AbsoluteThickness[2]],
 	ShowEdgeIdentification -> False,
 	EdgeColorFunction -> (ColorData[97,"ColorList"][[Mod[#,15,1]]]&),
 	ShowTranslations -> False,
 	ShowTranslationLabels -> True,
 	ShowTranslationIndices -> False,
 	ShowTranslatedCells -> False,
-	TranslatedCellBoundaryStyle -> {Black, AbsoluteThickness[1]}
+	TranslatedCellBoundaryStyle -> Directive[Black, AbsoluteThickness[1]]
 };
 ShowCellBoundary[cgraph_, opts:OptionsPattern[]] := ShowCellBoundary[cgraph, opts] = Module[{format\[Gamma], gcellbd},
 	(* translation label formatting *)
@@ -829,7 +830,7 @@ FullForm]\),
 	(* graphics *)
 	Graphics[{
 		If[OptionValue[ShowEdgeIdentification],
-			{Sequence@@OptionValue[CellBoundaryStyle],
+			{OptionValue[CellBoundaryStyle],
 				{OptionValue[EdgeColorFunction][#[[1]]],
 					#[[2]],
 					With[{
@@ -840,7 +841,7 @@ FullForm]\),
 						If[OptionValue[ShowTranslationIndices], Text[#[[1]],pt[[1]]],{}] 
 					}]}&/@gcellbd
 			},
-			{{Sequence@@OptionValue[CellBoundaryStyle],
+			{{OptionValue[CellBoundaryStyle],
 				LToGraphics[LLine[{
 					GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[1,1]], #[[1]], CellCenter -> cgraph["CellCenter"]],
 					GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[2,1]], #[[2]], CellCenter -> cgraph["CellCenter"]]
@@ -857,7 +858,7 @@ FullForm]\),
 			}
 		],
 		If[OptionValue[ShowTranslatedCells],
-			{Sequence@@OptionValue[TranslatedCellBoundaryStyle],
+			{OptionValue[TranslatedCellBoundaryStyle],
 				LToGraphics[Table[LLine[{
 						GetSitePosition[cgraph["TriangleGroup"],
 							EdgeList[cgraph["Graph"]][[#[[3]]]][[1,1]],
