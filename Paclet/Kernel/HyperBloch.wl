@@ -35,7 +35,7 @@ GetCellBoundary;
 ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
 ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Schwarz triangles making up the cell underlying the cell, model, or supercell model graph cgraph";
 ShowCellGraphFlattened::usage = "ShowCellGraphFlattened[cgraph] shows a flattened, i.e., not compactified, version of the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
-ShowCellBoundary;
+ShowCellBoundary::usage = "ShowCellBoundary[cgraph] shows the boundary and boundary identification of the cell on which the cell graph cgraph is defined";
 
 VisualizeCellGraph;
 VisualizeModelGraph;
