@@ -16,8 +16,7 @@ ImportModelGraphString::usage = "ImportModelGraphString[\"string\"] imports a mo
 ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"string\"] imports a supercell model graph from a string";
 
 GetTriangleTessellation;
-ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature \!\(\*
-StyleBox[\"tg\", \"TI\"]\) in the Poincar\[EAcute] disk representation";
+ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature tg in the Poincar\[EAcute] disk representation";
 
 ResolveVertex;
 ResolveEdge;
@@ -33,7 +32,7 @@ GetCellGraphFace;
 
 GetCellBoundary;
 
-ShowCellGraph;
+ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
 ShowCellSchwarzTriangles;
 ShowCellGraphFlattened;
 ShowCellBoundary;
@@ -384,7 +383,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Triangle Tessellations*)
 
 
@@ -518,7 +517,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -647,7 +646,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Boundary*)
 
 
