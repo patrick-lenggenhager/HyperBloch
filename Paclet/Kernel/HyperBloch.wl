@@ -44,6 +44,43 @@ ModelGraphHamiltonianExpression;
 ModelGraphHamiltonian;
 
 
+RasterizeGraphics;
+NumberOfGenerations;
+DiskCenter;
+ColorFill;
+ColorBoundary;
+LineThickness;
+
+CellBoundaryStyle;
+EdgeColorFunction;
+ShowEdgeIdentification;
+ShowTranslatedCells;
+ShowTranslationIndices;
+ShowTranslationLabels;
+ShowTranslations;
+TranslatedCellBoundaryStyle;
+
+CellVertexStyle;
+EdgeArrowSize;
+EdgeFilter;
+InterCellEdgeStyle;
+IntraCellEdgeStyle;
+ShowEdgeTranslations;
+ShowInterCellEdges;
+ShowIntraCellEdges;
+ShowVertexLabels;
+
+CellEdgeStyle;
+
+ShowTriangleLabels;
+TriangleLabelStyle;
+TriangelRange;
+TriangleStyle;
+
+Elements;
+CellGraph;
+
+
 Begin["`Private`"];
 
 
@@ -379,7 +416,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Graphical Visualization*)
 
 
@@ -664,7 +701,7 @@ GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph*)
 
 
@@ -910,7 +947,7 @@ VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangl
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Model Graph*)
 
 
