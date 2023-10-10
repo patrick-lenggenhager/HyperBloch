@@ -28,7 +28,7 @@ GetEdge;
 GetCellGraphVertex;
 GetCellGraphEdge;
 GetTranslatedCellGraphEdge;
-GetCellGraphFace;
+GetCellGraphFace::usage = "GetCellGraphFace[cgraph, face] constructs a polygon and list of arrows representing the face face of the cell, model, or supercell model graph cgraph and its boundary in the Poincar\[EAcute] disk, respectively";
 
 GetCellBoundary;
 
@@ -50,6 +50,8 @@ DiskCenter;
 ColorFill;
 ColorBoundary;
 LineThickness;
+
+StartingVertex;
 
 CellBoundaryStyle;
 EdgeColorFunction;
@@ -416,7 +418,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
@@ -554,7 +556,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -663,8 +665,8 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 	index = If[ListQ@OptionValue[StartingVertex],
 		Switch[OptionValue[StartingVertex][[1]],
 		"Index", OptionValue[StartingVertex][[2]],
-		"VertexCriterion", FirstPosition[EdgeList[face][[;;,1]], Select[EdgeList[face][[;;,1]], OptionValue[StartingVertex][[2]]]][[1]],
-		"EdgeCriterion", FirstPosition[EdgeList[face], Select[EdgeList[face], OptionValue[StartingVertex][[2]]]][[1]],
+		"VertexCriterion", FirstPosition[EdgeList[face][[;;,1]], Select[EdgeList[face][[;;,1]], OptionValue[StartingVertex][[2]]][[1]]][[1]],
+		"EdgeCriterion", FirstPosition[EdgeList[face], Select[EdgeList[face], OptionValue[StartingVertex][[2]]][[1]]][[1]],
 		"VertexPattern", FirstPosition[EdgeList[face][[;;,1]], OptionValue[StartingVertex][[2]]][[1]],
 		"EdgePattern", FirstPosition[EdgeList[face], OptionValue[StartingVertex][[2]]][[1]],
 		_, 1

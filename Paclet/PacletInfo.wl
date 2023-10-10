@@ -15,6 +15,7 @@ PacletObject[
         "Root" -> "Kernel",
         "Context" -> {"PatrickMLenggenhager`HyperBloch`"},
         "Symbols" -> {
+          "PatrickMLenggenhager`HyperBloch`GetCellGraphFace",
           "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportModelGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString",
