@@ -37,8 +37,8 @@ ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Sc
 ShowCellGraphFlattened::usage = "ShowCellGraphFlattened[cgraph] shows a flattened, i.e., not compactified, version of the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
 ShowCellBoundary::usage = "ShowCellBoundary[cgraph] shows the boundary and boundary identification of the cell on which the cell graph cgraph is defined";
 
-VisualizeCellGraph;
-VisualizeModelGraph;
+VisualizeCellGraph::usage = "VisualizeCellGraph[cgraph] visualizes the cell graph cgraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
+VisualizeModelGraph::usage = "VisualizeModelGraph[mgraph] visualizes the (supercell) model graph mgraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 
 ModelGraphHamiltonianExpression;
 ModelGraphHamiltonian;
@@ -882,8 +882,8 @@ FullForm]\),
 
 Options[VisualizeCellGraph] = {
 	Elements -> <|
-		ShowCellGraph -> {},
-		ShowCellBoundary -> {}
+		ShowCellBoundary -> {},
+		ShowCellGraph -> {}
 	|>
 };
 VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangles, GetTriangleTessellation, Graphics, Rasterize}]] := Module[{

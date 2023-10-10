@@ -22,7 +22,9 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraphFlattened",
           "PatrickMLenggenhager`HyperBloch`ShowCellSchwarzTriangles",
-          "PatrickMLenggenhager`HyperBloch`ShowTriangles"
+          "PatrickMLenggenhager`HyperBloch`ShowTriangles",
+          "PatrickMLenggenhager`HyperBloch`VisualizeCellGraph",
+          "PatrickMLenggenhager`HyperBloch`VisualizeModelGraph"
         }
       },
       {
