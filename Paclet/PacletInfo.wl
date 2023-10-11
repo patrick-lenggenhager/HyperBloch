@@ -15,9 +15,13 @@ PacletObject[
         "Root" -> "Kernel",
         "Context" -> {"PatrickMLenggenhager`HyperBloch`"},
         "Symbols" -> {
+          "PatrickMLenggenhager`HyperBloch`GetCellBoundary",
+          "PatrickMLenggenhager`HyperBloch`GetCellGraphEdge",
           "PatrickMLenggenhager`HyperBloch`GetCellGraphFace",
+          "PatrickMLenggenhager`HyperBloch`GetCellGraphVertex",
           "PatrickMLenggenhager`HyperBloch`GetEdge",
           "PatrickMLenggenhager`HyperBloch`GetSchwarzTriangle",
+          "PatrickMLenggenhager`HyperBloch`GetTranslatedCellGraphEdge",
           "PatrickMLenggenhager`HyperBloch`GetVertex",
           "PatrickMLenggenhager`HyperBloch`GetWyckoffPosition",
           "PatrickMLenggenhager`HyperBloch`HCCellGraph",
