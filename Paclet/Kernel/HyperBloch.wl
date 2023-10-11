@@ -7,13 +7,14 @@
 BeginPackage["PatrickMLenggenhager`HyperBloch`"];
 
 
-GetFullGraph;
-GetUndirectedGraph;
-GetSitePosition;
+HCCellGraph::usage = "HCCellGraph[assoc] represents a cell graph with its properties defined by the Association assoc";
+HCModelGraph::usage = "HCModelGraph[assoc] represents a model graph with its properties defined by the Association assoc";
+HCSupercellModelGraph::usage = "HCSupercellModelGraph[assoc] represents a supercell model graph with its properties defined by the Association assoc";
 
-ImportCellGraphString::usage = "ImportCellGraphString[\"string\"] imports a cell graph from a string";
-ImportModelGraphString::usage = "ImportModelGraphString[\"string\"] imports a model graph from a string";
-ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"string\"] imports a supercell model graph from a string";
+
+ImportCellGraphString::usage = "ImportCellGraphString[\"string\"] imports a cell graph from a string and returns an HCCellGraph";
+ImportModelGraphString::usage = "ImportModelGraphString[\"string\"] imports a model graph from a string and returns an HCModelGraph";
+ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"string\"] imports a supercell model graph from a string and returns an HCSupercellModelGraph";
 
 GetTriangleTessellation;
 ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature tg in the Poincar\[EAcute] disk representation";
@@ -22,23 +23,24 @@ ResolveVertex;
 ResolveEdge;
 ResolveTranslation;
 
+GetWyckoffPosition::usage = "GetWyckoffPosition[tg, {w,\"g\"}] returns the position of the maximally-symmetric Wyckoff position of type w and label g";
 GetSchwarzTriangle;
 GetVertex;
 GetEdge;
 GetCellGraphVertex;
 GetCellGraphEdge;
 GetTranslatedCellGraphEdge;
-GetCellGraphFace::usage = "GetCellGraphFace[cgraph, face] constructs a polygon and list of arrows representing the face face of the cell, model, or supercell model graph cgraph and its boundary in the Poincar\[EAcute] disk, respectively";
+GetCellGraphFace::usage = "GetCellGraphFace[cgraph, face] constructs a polygon and list of arrows representing the face face of the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively, and its boundary in the Poincar\[EAcute] disk, respectively";
 
 GetCellBoundary;
 
-ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
-ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Schwarz triangles making up the cell underlying the cell, model, or supercell model graph cgraph";
-ShowCellGraphFlattened::usage = "ShowCellGraphFlattened[cgraph] shows a flattened, i.e., not compactified, version of the cell, model, or supercell model graph cgraph in the Poincar\[EAcute] disk";
-ShowCellBoundary::usage = "ShowCellBoundary[cgraph] shows the boundary and boundary identification of the cell on which the cell graph cgraph is defined";
+ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively, in the Poincar\[EAcute] disk";
+ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Schwarz triangles making up the cell underlying the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively";
+ShowCellGraphFlattened::usage = "ShowCellGraphFlattened[cgraph] shows a flattened, i.e., not compactified, version of the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively, in the Poincar\[EAcute] disk";
+ShowCellBoundary::usage = "ShowCellBoundary[cgraph] shows the boundary and boundary identification of the cell on which the cell graph cgraph with head HCCellGraph is defined";
 
-VisualizeCellGraph::usage = "VisualizeCellGraph[cgraph] visualizes the cell graph cgraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
-VisualizeModelGraph::usage = "VisualizeModelGraph[mgraph] visualizes the (supercell) model graph mgraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
+VisualizeCellGraph::usage = "VisualizeCellGraph[cgraph] visualizes the cell graph cgraph with head HCCellGraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
+VisualizeModelGraph::usage = "VisualizeModelGraph[mgraph] visualizes the (supercell) model graph mgraph with head HCModelGraph (HCSupercellModelGraph) in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 
 ModelGraphHamiltonianExpression;
 ModelGraphHamiltonian;
@@ -106,6 +108,15 @@ SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 
 
 (* ::Subsection::Closed:: *)
+(*Type Definitions*)
+
+
+HCCellGraph[cgraph_][key_] := cgraph[key]
+HCModelGraph[mgraph_][key_] := mgraph[key]
+HCSupercellModelGraph[scmgraph_][key_] := scmgraph[key]
+
+
+(* ::Subsection::Closed:: *)
 (*Helper Functions*)
 
 
@@ -139,9 +150,8 @@ InterpretGroupElementString[str_, rules_] := NCExpand@ToExpression@StringReplace
 ];
 
 
-(* Author: Tomas Bzdusek *)
 Options[GetSitePosition] = {Orientation -> "Default", CellCenter -> 3};
-GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
+GetSitePosition[tg_, w_, expr_, OptionsPattern[]] := Module[
 	{p, q, r, P, Q, R, ops, triangle, op, i, rules},
 	(* triangle group signature *)
 	{r, q, p} = Sort[tg];
@@ -176,7 +186,7 @@ GetSitePosition[tg_, fs_, expr_, OptionsPattern[]] := Module[
 			Power[a, e_] :> If[Mod[e, 2] == 1, Function[{s}, L2Reflection[LLine[{P,R}]][s]], (#&)],
 			Power[b, e_] :> If[Mod[e, 2] == 1, Function[{s}, L2Reflection[LLine[{Q,R}]][s]], (#&)],
 			Power[c, e_] :> If[Mod[e, 2] == 1, Function[{s}, L2Reflection[LLine[{P,Q}]][s]], (#&)]
-		})[{R, Q, P}[[fs]]]
+		})[{R, Q, P}[[w]]]
 	]
 ]
 
@@ -240,7 +250,7 @@ ImportCellGraphString[str_]:=Module[{
 		{i, Length[vertices]}
 	];
 	
-	<|
+	HCCellGraph[<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
 		"Genus" -> Length[\[CapitalGamma]gens]/2,
@@ -253,7 +263,7 @@ ImportCellGraphString[str_]:=Module[{
 		"Faces" -> faces[[center]],
 		"FaceEdges" -> faceedges,
 		"AllFaces" -> faces
-	|>
+	|>]
 ]
 
 
@@ -315,7 +325,7 @@ ImportModelGraphString[str_]:=Module[{
 	(* graph *)
 	graph = Graph[vertices, edges, VertexCoordinates -> vcoords];
 	
-	<|
+	HCModelGraph[<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
 		"Genus" -> Length[\[CapitalGamma]gens]/2,
@@ -328,7 +338,7 @@ ImportModelGraphString[str_]:=Module[{
 		"TranslationGenerators" -> \[CapitalGamma]gens,
 		"Faces" -> faces,
 		"FaceEdges" -> faceedges
-	|>
+	|>]
 ]
 
 
@@ -397,7 +407,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 	(* graph *)
 	graph = Graph[vertices, edges, VertexCoordinates -> vcoords];
 	
-	<|
+	HCSupercellModelGraph[<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
 		"PCGenus" -> Length[\[CapitalGamma]0gens]/2,
@@ -414,7 +424,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 		"InternalSupercellTranslations" -> T\[CapitalGamma]0\[CapitalGamma],
 		"Faces" -> faces,
 		"FaceEdges" -> faceedges
-	|>
+	|>]
 ]
 
 
@@ -560,6 +570,10 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 (*Cell Graph Elements*)
 
 
+GetWyckoffPosition[tg_, {w_, g_}, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
+	GetSitePosition[tg, w, g, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]],
+	Model -> PoincareDisk
+][[1]]
 GetSchwarzTriangle[tg_, g_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
 	LPolygon[GetSitePosition[tg, #, g, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]&/@{1, 2, 3}],
 	Model -> PoincareDisk
@@ -574,18 +588,18 @@ GetEdge[tg_, e_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
 ]
 
 
-ResolveVertex[cgraph_, vertex_] := {
+ResolveVertex[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, vertex_] := {
 	vertex[[1]],
 	cgraph["VertexLabels"][[Position[VertexList@cgraph["Graph"], vertex][[1, 1]]]]
 }
 
 
-ResolveTranslation[cgraph_, transl_] := StringReplace[transl,
+ResolveTranslation[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, transl_] := StringReplace[transl,
 	RegularExpression["g(\\d+)"] :> cgraph["TranslationGenerators"]["g$1"]
 ]
 
 
-ResolveEdge[cgraph_, edge_] := Module[{\[Gamma], v1, v2},
+ResolveEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_] := Module[{\[Gamma], v1, v2},
 	If[MemberQ[EdgeList@cgraph["Graph"], edge],
 		(* edge with default orientation *)
 		\[Gamma] = ResolveTranslation[cgraph,
@@ -607,19 +621,19 @@ ResolveEdge[cgraph_, edge_] := Module[{\[Gamma], v1, v2},
 ]
 
 
-GetCellGraphVertex[cgraph_, vertex_] := GetVertex[
+GetCellGraphVertex[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, vertex_] := GetVertex[
 	cgraph["TriangleGroup"],
 	ResolveVertex[cgraph, vertex],
 	CellCenter -> cgraph["CellCenter"]
 ]
-GetCellGraphEdge[cgraph_, edge_] := GetEdge[
+GetCellGraphEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_] := GetEdge[
 	cgraph["TriangleGroup"],
 	ResolveEdge[cgraph, edge],
 	CellCenter -> cgraph["CellCenter"]
 ]
 
 
-ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
+ResolveTranslatedEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
 	If[NumericQ@edge[[3]] && edge[[3]] > 0 || ListQ@edge[[3]] && edge[[3, 1]] > 0,
 		(* edge with default orientation *)
 		\[Gamma] = ResolveTranslation[cgraph,
@@ -641,14 +655,14 @@ ResolveTranslatedEdge[cgraph_, edge_, \[Gamma]0_] := Module[{\[Gamma], v1, v2},
 	
 	{{{v1[[1]], v1[[2]]<>"*"<>\[Gamma]0}, {v2[[1]], v2[[2]]<>"*"<>\[Gamma]<>"*"<>\[Gamma]0}}, \[Gamma]<>"*"<>\[Gamma]0}
 ]
-GetTranslatedCellGraphEdge[cgraph_, edge_, \[Gamma]_] := GetEdge[
+GetTranslatedCellGraphEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_, \[Gamma]_] := GetEdge[
 	cgraph["TriangleGroup"],
 	ResolveTranslatedEdge[cgraph, edge, ResolveTranslation[cgraph, \[Gamma]]][[1]],
 	CellCenter -> cgraph["CellCenter"]
 ]
 
 
-ResolveFace[cgraph_, face_] := Module[{\[Gamma] = "1", re},
+ResolveFace[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, face_] := Module[{\[Gamma] = "1", re},
 	Table[
 		re = ResolveTranslatedEdge[cgraph, e, \[Gamma]];
 		\[Gamma] = re[[2]];
@@ -659,7 +673,7 @@ ResolveFace[cgraph_, face_] := Module[{\[Gamma] = "1", re},
 Options[GetCellGraphFace] = {
 	StartingVertex -> "LowestSchwarzTriangleIndex"
 };
-GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgraph, face, opts] = Module[{
+GetCellGraphFace[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgraph, face, opts] = Module[{
 		pos, index
 	},
 	index = If[ListQ@OptionValue[StartingVertex],
@@ -689,7 +703,7 @@ GetCellGraphFace[cgraph_, face_, opts:OptionsPattern[]] := GetCellGraphFace[cgra
 (*Cell Boundary*)
 
 
-GetCellBoundary[cgraph_] := GetCellBoundary[cgraph] = {
+GetCellBoundary[cgraph_HCCellGraph] := GetCellBoundary[cgraph] = {
 	#[[4]],
 	LToGraphics[LLine[{
 		GetSitePosition[cgraph["TriangleGroup"], EdgeList[cgraph["Graph"]][[#[[3]]]][[1, 1]], #[[1]], CellCenter -> cgraph["CellCenter"]],
@@ -718,7 +732,8 @@ Options[ShowCellGraph] = {
 	ShowEdgeTranslations -> False,
 	EdgeFilter -> (True&)
 };
-ShowCellGraph[cgraph_, opts:OptionsPattern[{ShowCellGraph, Graph}]] := ShowCellGraph[cgraph, opts] = Module[
+ShowCellGraph[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph,
+	opts:OptionsPattern[{ShowCellGraph, Graph}]] := ShowCellGraph[cgraph, opts] = Module[
 	{format\[Gamma]},
 	format\[Gamma][expr_]:=StringReplace[expr,{RegularExpression["g(\\d+)(\\^(\\-?\\d+))?"]->ToString[StringForm[\!\(\*
 TagBox[
@@ -766,7 +781,8 @@ Options[ShowCellSchwarzTriangles] = {
 	TriangleLabelStyle -> White,
 	TriangleRange -> All
 };
-ShowCellSchwarzTriangles[cgraph_, opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := ShowCellSchwarzTriangles[cgraph, opts] = Module[
+ShowCellSchwarzTriangles[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph,
+	opts:OptionsPattern[{ShowCellSchwarzTriangles, Graphics}]] := ShowCellSchwarzTriangles[cgraph, opts] = Module[
 {format},
 	format[expr_] := StringReplace[expr,{RegularExpression["([xyz\\)])(\\^(\\-?\\d+))?"]
 		-> ToString[StringForm[\!\(\*
@@ -800,7 +816,8 @@ Options[ShowCellGraphFlattened] = {
 	InterCellEdgeStyle -> Red,
 	EdgeFilter -> (True&)
 };
-ShowCellGraphFlattened[cgraph_, opts:OptionsPattern[{ShowCellGraphFlattened, Graphics, Graph}]] := ShowCellGraphFlattened[cgraph, opts] = Module[
+ShowCellGraphFlattened[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph,
+	opts:OptionsPattern[{ShowCellGraphFlattened, Graphics, Graph}]] := ShowCellGraphFlattened[cgraph, opts] = Module[
 	{intracedges, intercedges},
 	intracedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], OptionValue[EdgeFilter][#[[1]]]&&#[[2]]=="1"&][[;;,1]];
 	intercedges = Select[Transpose[{EdgeList@cgraph["Graph"], cgraph["EdgeTranslations"]}], OptionValue[EdgeFilter][#[[1]]]&&#[[2]]!="1"&][[;;,1]];
@@ -847,7 +864,7 @@ Options[ShowCellBoundary] = {
 	ShowTranslatedCells -> False,
 	TranslatedCellBoundaryStyle -> Directive[Black, AbsoluteThickness[1]]
 };
-ShowCellBoundary[cgraph_, opts:OptionsPattern[]] := ShowCellBoundary[cgraph, opts] = Module[{format\[Gamma], gcellbd},
+ShowCellBoundary[cgraph_HCCellGraph, opts:OptionsPattern[]] := ShowCellBoundary[cgraph, opts] = Module[{format\[Gamma], gcellbd},
 	(* translation label formatting *)
 	format\[Gamma][expr_] := StringReplace[expr, {
 		RegularExpression["g(\\d+)(\\^(\\-?\\d+))?"] -> ToString[StringForm[\!\(\*
@@ -925,7 +942,7 @@ Options[VisualizeCellGraph] = {
 		ShowCellGraph -> {}
 	|>
 };
-VisualizeCellGraph[cgraph_, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangles, GetTriangleTessellation, Graphics, Rasterize}]] := Module[{
+VisualizeCellGraph[cgraph_HCCellGraph, opts:OptionsPattern[{VisualizeCellGraph, ShowTriangles, GetTriangleTessellation, Graphics, Rasterize}]] := Module[{
 		sel = KeySelect[MemberQ[{
 			ShowCellSchwarzTriangles,
 			ShowCellBoundary,
@@ -959,7 +976,9 @@ Options[VisualizeModelGraph] = {
 	|>,
 	CellGraph -> None
 };
-VisualizeModelGraph[mgraph_, opts:OptionsPattern[{VisualizeModelGraph, ShowTriangles, GetTriangleTessellation, Graphics, Rasterize}]] := Module[{
+VisualizeModelGraph[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph,
+	opts:OptionsPattern[{VisualizeModelGraph, ShowTriangles, GetTriangleTessellation, Graphics, Rasterize}]] :=
+Module[{
 		sel = KeySelect[MemberQ[{
 			ShowCellSchwarzTriangles,
 			ShowCellGraph,
@@ -1001,7 +1020,7 @@ ZeroMatrix[n_] := ConstantArray[0, {n, n}]
 Options[ModelGraphHamiltonianExpression] = {
 	PCModel -> None
 };
-ModelGraphHamiltonianExpression[model_, Norb_, onsite_, hoppings_, k_Symbol,
+ModelGraphHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_, k_Symbol,
 	OptionsPattern[ModelGraphHamiltonianExpression]] :=
 Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 	(* dimension of Abelian Brillouin zone *)
@@ -1051,7 +1070,7 @@ Options[ModelGraphHamiltonian] = {
 	Parameters -> {},
 	PBCCluster -> False
 };
-ModelGraphHamiltonian[model_, Norb_, onsite_, hoppings_,
+ModelGraphHamiltonian[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_,
 	opts:OptionsPattern[{ModelGraphHamiltonianExpression, ModelGraphHamiltonian, Compile}]] :=
 If[OptionValue[PBCCluster],
 	Evaluate[

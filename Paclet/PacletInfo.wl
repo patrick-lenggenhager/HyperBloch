@@ -16,6 +16,10 @@ PacletObject[
         "Context" -> {"PatrickMLenggenhager`HyperBloch`"},
         "Symbols" -> {
           "PatrickMLenggenhager`HyperBloch`GetCellGraphFace",
+          "PatrickMLenggenhager`HyperBloch`GetWyckoffPosition",
+          "PatrickMLenggenhager`HyperBloch`HCCellGraph",
+          "PatrickMLenggenhager`HyperBloch`HCModelGraph",
+          "PatrickMLenggenhager`HyperBloch`HCSupercellModelGraph",
           "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportModelGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString",
