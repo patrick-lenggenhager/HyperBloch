@@ -41,7 +41,7 @@ ShowCellBoundary::usage = "ShowCellBoundary[cgraph] shows the boundary and bound
 VisualizeCellGraph::usage = "VisualizeCellGraph[cgraph] visualizes the cell graph cgraph with head HCCellGraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 VisualizeModelGraph::usage = "VisualizeModelGraph[mgraph] visualizes the (supercell) model graph mgraph with head HCModelGraph (HCSupercellModelGraph) in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 
-AbelianBlochHamiltonianExpression;
+AbelianBlochHamiltonianExpression::usage = "AbelianBlochHamiltonianExpression[mgraph, norb, onsite, hoppings, k] constructs the Abelian Bloch Hamiltonian \[ScriptCapitalH](k) of the HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge by hoppings in terms of momenta k[i]";
 AbelianBlochHamiltonian;
 
 
@@ -429,11 +429,11 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Triangle Tessellations*)
 
 
@@ -1008,7 +1008,7 @@ Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Construct Bloch Hamiltonians*)
 
 
@@ -1021,7 +1021,7 @@ ZeroMatrix[n_] := ConstantArray[0, {n, n}]
 Options[AbelianBlochHamiltonianExpression] = {
 	PCModel -> None
 };
-AbelianBlochHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_, k_Symbol,
+AbelianBlochHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, norb_, onsite_, hoppings_, k_Symbol,
 	OptionsPattern[AbelianBlochHamiltonianExpression]] :=
 Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 	(* dimension of Abelian Brillouin zone *)
@@ -1042,15 +1042,15 @@ Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 	If[OptionValue[PCModel] === None,
 		PCVertex[pcvertex_] := pcvertex;
 		PCEdge[pcedge_] := pcedge;,
-		PCVertex[scvertex_] := scvertex[[{1,2}]];
+		PCVertex[scvertex_] := scvertex[[{1, 2}]];
 		PCEdge[scedge_] := scedge[[0]][
-			VertexList[OptionValue[PCModel]["Graph"]][[scedge[[3,1]]]],
-			VertexList[OptionValue[PCModel]["Graph"]][[scedge[[3,2]]]],
+			VertexList[OptionValue[PCModel]["Graph"]][[scedge[[3, 1]]]],
+			VertexList[OptionValue[PCModel]["Graph"]][[scedge[[3, 2]]]],
 			scedge[[3,3]]
 		];
 	];
 	
-	Simplify[If[Norb === 1,
+	Simplify[If[norb === 1,
 		MakeHermitian@Total[Normal@SparseArray[{
 			{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1, 1]]} -> hoppings[PCEdge@#1]#2
 		}, Nverts]&@@@edges] + Total[Normal@SparseArray[{
@@ -1058,7 +1058,7 @@ Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 		}, Nverts]&/@verts],
 		MakeHermitian@Total[Normal@SparseArray`SparseBlockMatrix[Join[
 			{{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1,1]]} -> hoppings[PCEdge@#1]#2},
-			Table[{i, i} -> ZeroMatrix[Norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
+			Table[{i, i} -> ZeroMatrix[norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
 		]]&@@@edges] + Normal@SparseArray`SparseBlockMatrix[
 			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]&/@verts
 		]
@@ -1071,11 +1071,11 @@ Options[AbelianBlochHamiltonian] = {
 	Parameters -> {},
 	PBCCluster -> False
 };
-AbelianBlochHamiltonian[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_,
+AbelianBlochHamiltonian[model_HCModelGraph|model_HCSupercellModelGraph, norb_, onsite_, hoppings_,
 	opts:OptionsPattern[{AbelianBlochHamiltonianExpression, AbelianBlochHamiltonian, Compile}]] :=
 If[OptionValue[PBCCluster],
 	Evaluate[
-		AbelianBlochHamiltonianExpression[model, Norb, onsite, hoppings, k,
+		AbelianBlochHamiltonianExpression[model, norb, onsite, hoppings, k,
 			Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 		Join[Table[k[i] -> 0, {i, 1, 2*model["Genus"]}], OptionValue[Parameters]]
 	],
@@ -1083,7 +1083,7 @@ If[OptionValue[PBCCluster],
 		Block[{k},
 			Compile[Evaluate@Table[{k[i], _Real}, {i, 1, 2*model["Genus"]}],
 				Evaluate[
-					AbelianBlochHamiltonianExpression[model, Norb, onsite, hoppings, k,
+					AbelianBlochHamiltonianExpression[model, norb, onsite, hoppings, k,
 						Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]
 					]/. OptionValue[Parameters]
 				],
@@ -1093,7 +1093,7 @@ If[OptionValue[PBCCluster],
 		Block[{k},
 			Function[Evaluate@Table[Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
 				Evaluate[
-					AbelianBlochHamiltonianExpression[model, Norb, onsite, hoppings, k,
+					AbelianBlochHamiltonianExpression[model, norb, onsite, hoppings, k,
 						Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 					Join[
 						Table[k[i] -> Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
