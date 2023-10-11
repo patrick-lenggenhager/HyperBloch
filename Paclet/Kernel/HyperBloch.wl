@@ -16,7 +16,6 @@ ImportCellGraphString::usage = "ImportCellGraphString[\"string\"] imports a cell
 ImportModelGraphString::usage = "ImportModelGraphString[\"string\"] imports a model graph from a string and returns an HCModelGraph";
 ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"string\"] imports a supercell model graph from a string and returns an HCSupercellModelGraph";
 
-GetTriangleTessellation;
 ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature tg in the Poincar\[EAcute] disk representation";
 
 ResolveVertex;
@@ -27,12 +26,12 @@ GetWyckoffPosition::usage = "GetWyckoffPosition[tg, {w,\"g\"}] returns the Carte
 GetSchwarzTriangle::usage = "GetSchwarzTriangle[tg, \"g\"] returns a Polygon representing the Schwarz triangle labeled by g of the triangle group tg";
 GetVertex::usage = "GetVertex[tg, {w,\"g\"}] returns a Point representing a vertex at the position of the maximally-symmetric Wyckoff position of type w and label g of the triangle group tg";
 GetEdge::usage = "GetEdge[tg,{{w1, g1},{w2, g2},...}] returns a Line representing the edge (or succession of edges) specified by vertices {wi, gi} of the triangle group tg";
-GetCellGraphVertex;
-GetCellGraphEdge;
-GetTranslatedCellGraphEdge;
+GetCellGraphVertex::usage = "GetCellGraphVertex[cgraph, vertex] returns a Point representing the position of vertex of the HCCellGraph, HCModelGraph, or HCSupercellModelGraph cgraph in the Poincar\[EAcute] disk";
+GetCellGraphEdge::usage = "GetCellGraphEdge[cgraph, edge] returns a Line representing edge of the HCCellGraph, HCModelGraph, or HCSupercellModelGraph cgraph in the Poincar\[EAcute] disk";
+GetTranslatedCellGraphEdge::usage = "GetTranslatedCellGraphEdge[cgraph, edge, \"\[Gamma]\"] returns a Line representing edge of the HCCellGraph, HCModelGraph, or HCSupercellModelGraph cgraph in the Poincar\[EAcute] disk, translated by the translation \[Gamma]";
 GetCellGraphFace::usage = "GetCellGraphFace[cgraph, face] constructs a polygon and list of arrows representing the face face of the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively, and its boundary in the Poincar\[EAcute] disk, respectively";
 
-GetCellBoundary;
+GetCellBoundary::usage = "GetCellBoundary[cgraph] constructs the cell boundary of the HCCellGraph cgraph";
 
 ShowCellGraph::usage = "ShowCellGraph[cgraph] shows the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively, in the Poincar\[EAcute] disk";
 ShowCellSchwarzTriangles::usage = "ShowCellSchwarzTriangles[cgraph] shows the Schwarz triangles making up the cell underlying the cell, model, or supercell model graph cgraph with head HCCellGraph, HCModelGraph, or HCSupercellModelGraph, respectively";
@@ -42,8 +41,8 @@ ShowCellBoundary::usage = "ShowCellBoundary[cgraph] shows the boundary and bound
 VisualizeCellGraph::usage = "VisualizeCellGraph[cgraph] visualizes the cell graph cgraph with head HCCellGraph in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 VisualizeModelGraph::usage = "VisualizeModelGraph[mgraph] visualizes the (supercell) model graph mgraph with head HCModelGraph (HCSupercellModelGraph) in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 
-ModelGraphHamiltonianExpression;
-ModelGraphHamiltonian;
+AbelianBlochHamiltonianExpression;
+AbelianBlochHamiltonian;
 
 
 RasterizeGraphics;
@@ -434,7 +433,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 (*Graphical Visualization*)
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Triangle Tessellations*)
 
 
@@ -568,7 +567,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -701,7 +700,7 @@ GetCellGraphFace[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelG
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Boundary*)
 
 
@@ -719,7 +718,7 @@ GetCellBoundary[cgraph_HCCellGraph] := GetCellBoundary[cgraph] = {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph*)
 
 
@@ -968,7 +967,7 @@ VisualizeCellGraph[cgraph_HCCellGraph, opts:OptionsPattern[{VisualizeCellGraph, 
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Model Graph*)
 
 
@@ -1009,7 +1008,7 @@ Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Construct Bloch Hamiltonians*)
 
 
@@ -1019,11 +1018,11 @@ MakeHermitian[H_] := H + ConjugateTranspose@H
 ZeroMatrix[n_] := ConstantArray[0, {n, n}]
 
 
-Options[ModelGraphHamiltonianExpression] = {
+Options[AbelianBlochHamiltonianExpression] = {
 	PCModel -> None
 };
-ModelGraphHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_, k_Symbol,
-	OptionsPattern[ModelGraphHamiltonianExpression]] :=
+AbelianBlochHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_, k_Symbol,
+	OptionsPattern[AbelianBlochHamiltonianExpression]] :=
 Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 	(* dimension of Abelian Brillouin zone *)
 	dimk = 2*model["Genus"];
@@ -1067,25 +1066,25 @@ Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 ]
 
 
-Options[ModelGraphHamiltonian] = {
+Options[AbelianBlochHamiltonian] = {
 	Compile -> False,
 	Parameters -> {},
 	PBCCluster -> False
 };
-ModelGraphHamiltonian[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_,
-	opts:OptionsPattern[{ModelGraphHamiltonianExpression, ModelGraphHamiltonian, Compile}]] :=
+AbelianBlochHamiltonian[model_HCModelGraph|model_HCSupercellModelGraph, Norb_, onsite_, hoppings_,
+	opts:OptionsPattern[{AbelianBlochHamiltonianExpression, AbelianBlochHamiltonian, Compile}]] :=
 If[OptionValue[PBCCluster],
 	Evaluate[
-		ModelGraphHamiltonianExpression[model, Norb, onsite, hoppings, k,
-			Evaluate@FilterRules[{opts}, Options[ModelGraphHamiltonianExpression]]]/.
+		AbelianBlochHamiltonianExpression[model, Norb, onsite, hoppings, k,
+			Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 		Join[Table[k[i] -> 0, {i, 1, 2*model["Genus"]}], OptionValue[Parameters]]
 	],
 	If[OptionValue[Compile],
 		Block[{k},
 			Compile[Evaluate@Table[{k[i], _Real}, {i, 1, 2*model["Genus"]}],
 				Evaluate[
-					ModelGraphHamiltonianExpression[model, Norb, onsite, hoppings, k,
-						Evaluate@FilterRules[{opts}, Options[ModelGraphHamiltonianExpression]]
+					AbelianBlochHamiltonianExpression[model, Norb, onsite, hoppings, k,
+						Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]
 					]/. OptionValue[Parameters]
 				],
 				Evaluate@FilterRules[{opts}, Options[Compile]]
@@ -1094,8 +1093,8 @@ If[OptionValue[PBCCluster],
 		Block[{k},
 			Function[Evaluate@Table[Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
 				Evaluate[
-					ModelGraphHamiltonianExpression[model, Norb, onsite, hoppings, k,
-						Evaluate@FilterRules[{opts}, Options[ModelGraphHamiltonianExpression]]]/.
+					AbelianBlochHamiltonianExpression[model, Norb, onsite, hoppings, k,
+						Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 					Join[
 						Table[k[i] -> Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
 						OptionValue[Parameters]
