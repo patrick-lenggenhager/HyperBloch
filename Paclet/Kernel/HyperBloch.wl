@@ -285,7 +285,7 @@ ImportModelGraphString[str_]:=Module[{
 		{version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, facesstr} =
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = StringReplace[version, RegularExpression["HyperCells HCM version ([0-9.]+)"] -> "$1"];,
-		{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, faces} =
+		{tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, facesstr} =
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = "";
 	];
@@ -348,7 +348,7 @@ ImportModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Supercell Model Graphs*)
 
 
@@ -362,7 +362,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 		{version, tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, facesstr} =
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = StringReplace[version, RegularExpression["HyperCells HCS version ([0-9.]+)"] -> "$1"];,
-		{tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, faces} =
+		{tg, specs, \[CapitalGamma]0gens, TD\[CapitalGamma]0, TG0Gw, \[CapitalGamma]gens, \[CapitalGamma]\[CapitalGamma]0, T\[CapitalGamma]0\[CapitalGamma], TD\[CapitalGamma], TGGw, model, vertices, vertexpos, edges, etransls, facesstr} =
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = "";
 	];
