@@ -15,6 +15,7 @@ PacletObject[
         "Root" -> "Kernel",
         "Context" -> {"PatrickMLenggenhager`HyperBloch`"},
         "Symbols" -> {
+          "PatrickMLenggenhager`HyperBloch`AbelianBlochHamiltonian",
           "PatrickMLenggenhager`HyperBloch`AbelianBlochHamiltonianExpression",
           "PatrickMLenggenhager`HyperBloch`GetCellBoundary",
           "PatrickMLenggenhager`HyperBloch`GetCellGraphEdge",

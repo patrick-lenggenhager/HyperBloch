@@ -42,7 +42,7 @@ VisualizeCellGraph::usage = "VisualizeCellGraph[cgraph] visualizes the cell grap
 VisualizeModelGraph::usage = "VisualizeModelGraph[mgraph] visualizes the (supercell) model graph mgraph with head HCModelGraph (HCSupercellModelGraph) in the Poincar\[EAcute] disk with the Schwarz triangles in the background";
 
 AbelianBlochHamiltonianExpression::usage = "AbelianBlochHamiltonianExpression[mgraph, norb, onsite, hoppings, k] constructs the Abelian Bloch Hamiltonian \[ScriptCapitalH](k) of the HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge by hoppings in terms of momenta k[i]";
-AbelianBlochHamiltonian;
+AbelianBlochHamiltonian::usage = "AbelianBlochHamiltonian[mgraph, norb, onsite, hoppings] returns the Abelian Bloch Hamiltonian \[ScriptCapitalH](k) of the HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge by hoppings as a function k :> \[ScriptCapitalH](k)";
 
 
 RasterizeGraphics;
@@ -84,6 +84,11 @@ TriangleStyle;
 
 Elements;
 CellGraph;
+
+PCModel;
+CompileFunction;
+Parameters;
+PBCCluster;
 
 
 Begin["`Private`"];
@@ -1067,7 +1072,7 @@ Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 
 
 Options[AbelianBlochHamiltonian] = {
-	Compile -> False,
+	CompileFunction -> False,
 	Parameters -> {},
 	PBCCluster -> False
 };
@@ -1079,7 +1084,7 @@ If[OptionValue[PBCCluster],
 			Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 		Join[Table[k[i] -> 0, {i, 1, 2*model["Genus"]}], OptionValue[Parameters]]
 	],
-	If[OptionValue[Compile],
+	If[OptionValue[CompileFunction],
 		Block[{k},
 			Compile[Evaluate@Table[{k[i], _Real}, {i, 1, 2*model["Genus"]}],
 				Evaluate[
