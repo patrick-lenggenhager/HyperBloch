@@ -122,21 +122,21 @@ HCModelGraph[mgraph_][key_] := mgraph[key]
 HCSupercellModelGraph[scmgraph_][key_] := scmgraph[key]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Helper Functions*)
 
 
 GetFullGraph[graph_] := Graph[
 	VertexList@graph,
 	EdgeList@DirectedGraph[EdgeList@graph /. DirectedEdge -> UndirectedEdge],
-	Sequence@@AbsoluteOptions[graph]
+	VertexCoordinates -> AbsoluteOptions[graph, VertexCoordinates]
 ]
 
 
 GetUndirectedGraph[graph_] := Graph[
 	VertexList@graph,
 	EdgeList@Graph[EdgeList@graph /. DirectedEdge -> UndirectedEdge],
-	Sequence@@DeleteCases[AbsoluteOptions[graph],EdgeShapeFunction->_]
+	VertexCoordinates -> AbsoluteOptions[graph, VertexCoordinates]
 ]
 
 
@@ -348,7 +348,7 @@ ImportModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import of Supercell Model Graphs*)
 
 
