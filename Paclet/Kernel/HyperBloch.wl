@@ -122,21 +122,21 @@ HCModelGraph[mgraph_][key_] := mgraph[key]
 HCSupercellModelGraph[scmgraph_][key_] := scmgraph[key]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Helper Functions*)
 
 
 GetFullGraph[graph_] := Graph[
 	VertexList@graph,
 	EdgeList@DirectedGraph[EdgeList@graph /. DirectedEdge -> UndirectedEdge],
-	VertexCoordinates -> AbsoluteOptions[graph, VertexCoordinates]
+	Evaluate@Sequence@@AbsoluteOptions[graph, VertexCoordinates] 
 ]
 
 
 GetUndirectedGraph[graph_] := Graph[
 	VertexList@graph,
 	EdgeList@Graph[EdgeList@graph /. DirectedEdge -> UndirectedEdge],
-	VertexCoordinates -> AbsoluteOptions[graph, VertexCoordinates]
+	Evaluate@Sequence@@AbsoluteOptions[graph, VertexCoordinates]
 ]
 
 
