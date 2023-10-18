@@ -44,7 +44,8 @@ PacletObject[
       {
         "Documentation",
         "Root" -> "Documentation",
-        "Language" -> "English"
+        "Language" -> "English",
+        "MainPage" -> "Documentation/English/Guides/HyperBlochPackage.nb"
       },
       {
         "Path",
