@@ -45,6 +45,10 @@ PacletObject[
         "Documentation",
         "Root" -> "Documentation",
         "Language" -> "English"
+      },
+      {
+        "Path",
+        "Root" -> "Resources"
       }
     }
   |>
