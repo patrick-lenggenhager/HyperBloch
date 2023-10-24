@@ -54,6 +54,8 @@ LineThickness;
 
 SchwarzTriangleOrientation;
 
+ShowEquivalentEdge;
+
 StartingVertex;
 
 CellBoundaryStyle;
@@ -434,7 +436,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
@@ -572,7 +574,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -614,6 +616,7 @@ ResolveEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph,
 	
 		v1 = ResolveVertex[cgraph, edge[[1]]];
 		v2 = ResolveVertex[cgraph, edge[[2]]];,
+		
 		(* edge with inverted orientation *)
 		\[Gamma] = "(" <> ResolveTranslation[cgraph,
 			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge[[{2, 1, 3}]]][[1, 1]]]]
@@ -627,15 +630,47 @@ ResolveEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph,
 ]
 
 
+ResolveEquivalentEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_] := Module[{\[Gamma]inv, v1, v2},
+	If[MemberQ[EdgeList@cgraph["Graph"], edge],
+		(* edge with default orientation *)
+		\[Gamma]inv = "(" <> ResolveTranslation[cgraph,
+			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge][[1, 1]]]]
+		] <> ")^(-1)";
+	
+		v1 = ResolveVertex[cgraph, edge[[1]]];
+		v2 = ResolveVertex[cgraph, edge[[2]]];,
+		
+		(* edge with inverted orientation *)
+		\[Gamma]inv = ResolveTranslation[cgraph,
+			cgraph["EdgeTranslations"][[Position[EdgeList@cgraph["Graph"], edge[[{2, 1, 3}]]][[1, 1]]]]
+		];
+	
+		v1 = ResolveVertex[cgraph, edge[[1]]];
+		v2 = ResolveVertex[cgraph, edge[[2]]];
+	];
+	
+	{{v1[[1]], v1[[2]] <> "*" <> \[Gamma]inv}, v2}
+]
+
+
 GetCellGraphVertex[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, vertex_] := GetVertex[
 	cgraph["TriangleGroup"],
 	ResolveVertex[cgraph, vertex],
 	DiskCenter -> cgraph["CellCenter"]
 ]
-GetCellGraphEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_] := GetEdge[
-	cgraph["TriangleGroup"],
-	ResolveEdge[cgraph, edge],
-	DiskCenter -> cgraph["CellCenter"]
+Options[GetCellGraphEdge] = { ShowEquivalentEdge -> False };
+GetCellGraphEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_, OptionsPattern[]] :=
+If[OptionValue[ShowEquivalentEdge],
+	GetEdge[
+		cgraph["TriangleGroup"],
+		ResolveEquivalentEdge[cgraph, edge],
+		DiskCenter -> cgraph["CellCenter"]
+	],
+	GetEdge[
+		cgraph["TriangleGroup"],
+		ResolveEdge[cgraph, edge],
+		DiskCenter -> cgraph["CellCenter"]
+	]
 ]
 
 
