@@ -8,7 +8,7 @@ PacletObject[
     "License" -> "3-Clause BSD License",
     "PublisherID" -> "PatrickMLenggenhager",
     "Version" -> "0.5.0",
-    "WolframVersion" -> "13.2+",
+    "WolframVersion" -> "13.1+",
     "Extensions" -> {
       {
         "Kernel",
@@ -47,10 +47,7 @@ PacletObject[
         "Language" -> "English",
         "MainPage" -> "Documentation/English/Guides/HyperBlochPackage.nb"
       },
-      {
-        "Path",
-        "Root" -> "Resources"
-      }
+      {"Path", "Root" -> "Resources"}
     }
   |>
 ]
