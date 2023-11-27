@@ -1655,7 +1655,7 @@ Cell[BoxData[
  CellTags->"MainGuidePagePanel",
  CellID->614786987,ExpressionUUID->"dddbe359-4bfa-43fa-86bc-c4012f9e6603"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -3955,7 +3955,7 @@ False]]\\)\"\>", {-0.8408964152563142, 0.3483106997496378}], {}}}}, {}}, {{
  CellID->296437493,ExpressionUUID->"1e0df943-e917-4a9b-8fc8-c7b222a70eb2"]
 }, Open  ]]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -4226,7 +4226,7 @@ GSLT58k1bQlvkDYqmK7IcWEctphv5Ab62NTqdFhG5dGk11szp6VmYndUJGJ0kIJGjwXWXFt9nTm2Y5\
 jYfkVrRonXCLMaxoAef+xnQdS/k7/UWnJdZVRSdcl8k/\
 RB5BwJ8uGlnpXe3tDOmt8IZXtFi1Ytc0PWi1dqtCvd4bKgiFL2kIMttlXOXNXCH4gT7P9QXGPUfmR/\
 SvDB1PzHwi2RtOxM6apxJrlpOmwevHbWrA9/gKDZjDH", "RadioButtonValue" -> "Other", 
-   "SpecifiedLicenseID" -> "3-Clause BSD License"},
+   "SpecifiedLicenseID" -> "CC BY-SA 4.0 International"},
  CellTags->{"LicensingInformation-RadioButtons", "RadioButtonsCell"},
  CellID->42282576,ExpressionUUID->"d629a831-7e64-432a-86e2-8d31737c4a5e"]
 }, Open  ]],
@@ -4824,11 +4824,12 @@ Cell[TextData[{
    "Wolfram Language Version"},
  CellID->267876551,ExpressionUUID->"e892db6e-db67-4d1b-935b-5453a1177629"],
 
-Cell["13.1+", "Text",
+Cell["12+", "Text",
  TaggingRules->{},
  CellChangeTimes->{{3.9061068387485785`*^9, 3.906106839240323*^9}, {
-  3.90610874882765*^9, 3.906108749191041*^9}, {3.906628472511512*^9, 
-  3.9066284775788794`*^9}, {3.9070831030918455`*^9, 3.9070831032248745`*^9}},
+   3.90610874882765*^9, 3.906108749191041*^9}, {3.906628472511512*^9, 
+   3.9066284775788794`*^9}, {3.9070831030918455`*^9, 3.9070831032248745`*^9}, 
+   3.9100724866016207`*^9},
  CellID->53418160,ExpressionUUID->"a10f381c-fb56-4812-9790-f1f24bb2da6c"]
 }, Open  ]],
 
@@ -5414,8 +5415,8 @@ WolframAlpha calls", "MoreInfoText"], Background -> GrayLevel[0.95],
                    FrameMargins -> 20, FrameStyle -> GrayLevel[0.9], 
                    RoundingRadius -> 5, ImageSize -> {
                     Scaled[0.65], Automatic}]], "MoreInfoText", Deletable -> 
-                 True, 
-                 CellTags -> {"SectionMoreInfoDisclosuresWolframAccount"}, 
+                 True, CellTags -> {
+                  "SectionMoreInfoDisclosuresWolframAccount"}, 
                  CellMargins -> {{66, 66}, {15, 15}}], 
                 HoldComplete[
                  EvaluationCell[]], "Click for more information"}, 
@@ -6077,8 +6078,8 @@ Cell["Additional information about limitations, issues, etc.", "Text",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{821.1428571428571, 852},
-WindowMargins->{{-1649.9999999999998`, Automatic}, {Automatic, 0}},
+WindowSize->{821.5, 848},
+WindowMargins->{{386.5, Automatic}, {Automatic, 66}},
 DockedCells->{
   Cell[
    BoxData[
@@ -6178,7 +6179,6 @@ stwJXQEYBtNHYAqZF9i50fknOdAhw/Fl2ijayHQEiNHuDRK/\
                     0.282842712474619}}], 
                     
                     PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
-                    
                     0.282842712474619, -0.42426406871192845`}, \
 {-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
                     0.42426406871192845`}}]}, ImageSize -> 18, 
@@ -6902,9 +6902,8 @@ AbelianBlochHamiltonianExpression.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 4, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, 
-                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
-                    Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
+                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -18254,10 +18253,7 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
           Scaled[1], Automatic}, StripOnInput -> False]& )}], 
    Cell[
     StyleData["AttachedMessage"], Deletable -> True, 
-    CellMargins -> {{60, 40}, {15, 5}}]}, 
-  WindowSize -> {582.8571428571428, 656.1428571428571}, 
-  WindowMargins -> {{526.2857142857142, Automatic}, {
-    Automatic, 95.57142857142857}}, Visible -> False, FrontEndVersion -> 
+    CellMargins -> {{60, 40}, {15, 5}}]}, Visible -> False, FrontEndVersion -> 
   "13.3 for Microsoft Windows (64-bit) (July 24, 2023)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"2c7c274f-fa21-442a-a8a3-a86aa7faa44b"

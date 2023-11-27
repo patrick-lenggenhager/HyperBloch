@@ -5,10 +5,10 @@ PacletObject[
     "Name" -> "PatrickMLenggenhager/HyperBloch",
     "Description" -> "Import HyperCells output and define hyperbolic Bloch Hamiltonians",
     "Creator" -> "Patrick M. Lenggenhager",
-    "License" -> "3-Clause BSD License",
+    "License" -> "CC BY-SA 4.0 International",
     "PublisherID" -> "PatrickMLenggenhager",
     "Version" -> "0.5.0",
-    "WolframVersion" -> "13.1+",
+    "WolframVersion" -> "12+",
     "Extensions" -> {
       {
         "Kernel",
