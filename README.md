@@ -1,1 +1,170 @@
 # HyperBloch
+
+HyperBloch is a Mathematica package for constructing tight-binding models on
+hyperbolic lattices and calculating their band structures using the supercell
+method. It is based on
+> P. M. Lenggenhager, J. Maciejko, and T. Bzdušek,
+  *Non-Abelian hyperbolic band theory from supercells*, Phys. Rev. Lett. (accepted), 
+  [arXiv:2305.04945](https://doi.org/10.48550/arXiv.2305.04945) (2023)
+  
+and the doctoral thesis
+
+> P. M. Lenggenhager,
+  *Emerging avenues in band theory: multigap topology and hyperbolic lattices*,
+  PhD thesis, ETH Zurich (2023)
+
+If you use this package, please cite at least one of the above references in
+addition to the package itself:
+> P. M. Lenggenhager, J. Maciejko, and T. Bzdušek,
+  *HyperBloch: A Mathematica package for hyperbolic tight-binding models and the
+  supercell method*, https://github.com/patrick-lenggenhager/HyperBloch (2023)
+
+  #### Table of Contents  
+- [Authors and developers](#authors-and-developers)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Limitations](#limitations)
+- [HyperCells package](#hypercells-package)
+- [How to cite](#how-to-cite)
+- [Contact](#contact)
+- [License and copyright](#license-and-copyright)
+
+## Authors and developers
+
+Main developer:\
+&ensp;&ensp;**Patrick M. Lenggenhager**\
+&ensp;&ensp;Email: plengg@pks.mpg.de\
+&ensp;&ensp;Website: https://patrick-lenggenhager.github.io
+
+Coauthors:\
+&ensp;&ensp;**Joseph Maciejko** (maciejko@ualberta.ca)\
+&ensp;&ensp;**Tomáš Bzdušek** (tomas.bzdusek@uzh.ch)
+
+## Installation
+
+In the future, HyperBloch will be submitted to the
+[Wolfram Language Paclet Repository](https://resources.wolframcloud.com/PacletRepository/).
+Until then, it can be installed manually by downloading the latest release from
+https://github.com/patrick-lenggenhager/HyperBloch/releases/latest
+
+The paclet is distributed as a `.paclet` file. To install it, open Mathematica
+and evaluate
+```Mathematica
+PacletInstall["path/to/PatrickMLenggenhager__HyperBloch-x.x.x.paclet"]
+```
+where `path/to/PatrickMLenggenhager__HyperBloch-x.x.x.paclet` is the path to the
+downloaded `.paclet` file.
+
+Then, load the package by evaluating
+```Mathematica
+<< PatrickMLenggenhager`HyperBloch`
+```
+
+## Documentation
+
+The documentation is distributed as part of the paclet and integrates into the
+Wolfram Language documentation center. To access it, open Mathematica and press
+`F1` or click on the `Help` menu and select `Wolfram Documentation`. Then, search
+for "HyperBloch" in the search bar.
+A good place to start is the Tech Note "Basic Usage", which is usually among the
+first few results. Alternatively, you can access the documentation pages directly:
+`PatrickMLenggenhager/HyperBloch/tutorial/BasicUsage`.
+
+The Guide page (`PatrickMLenggenhager/HyperBloch/guide/HyperBlochPackage`) contains
+an overview over the package and its functionality. The reference pages
+contain detailed information about the package's functions and options.
+
+
+## Limitations
+Note that at this point *HyperBloch* is still under development and, because the
+limitations have not yet been fully determined, released only as a beta version.
+Further testing will be required before an official release. However, the package
+is already fully functional and documented and can be used to reproduce the results
+of the publication mentioned above.
+
+In newer versions of Mathematica, the visualization functions may lead to warnings
+about badly conditioned warnings. These warnings can, in most cases, be safely
+ignored. For very large cells, the visualization of objects close to the boundary of
+the Poincaré disk may be inaccurate. However, the deviations will most likely not
+be visible. If you do encounter visible inaccuracies, please report them using the
+issue tracker at
+> https://github.com/patrick-lenggenhager/HyperBloch/issues
+
+## HyperCells package
+
+The HyperCells [GAP](https://www.gap-system.org/) package is a companion package to
+HyperBloch. The input HyperBloch requires, i.e., the graphs representing primitive
+and supercells of hyperbolic lattices and models defined on them, can be generated
+using HyperCells. It is available on Github at
+> https://github.com/patrick-lenggenhager/HyperCells
+
+
+## How to cite
+
+If you use this package, please cite the package repository
+```BibTeX
+@misc{HyperBloch,
+  title           = {{\textsc{HyperBloch}}: {A} {M}athematica package for hyperbolic tight-binding models and the
+  supercell method},
+  author          = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
+  year            = {2023},
+  howpublished    = {\url{https://github.com/patrick-lenggenhager/HyperBloch}}
+}
+```
+and at least one of the following references:
+```BibTeX
+@article{Lenggenhager:2023,
+  title           = {Non-{A}belian hyperbolic band theory from supercells}, 
+  author          = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
+  year            = {2023},
+  journal         = {Phys. Rev. Lett. (accepted)},
+  eprint          = {2305.04945},
+  eprintType      = {arXiv},
+  archivePrefix   = {arXiv},
+  doi             = {10.48550/arXiv.2305.04945}
+}
+
+@phdthesis{Lenggenhager:PhDThesis,
+  title           = {Emerging avenues in band theory: multigap topology and hyperbolic lattices},
+  author          = {Lenggenhager, Patrick M.}, 
+  year            = {2023},
+  school          = {ETH Zurich}
+}
+```
+
+## Contact
+
+To report issues, please use the issue tracker at
+https://github.com/patrick-lenggenhager/HyperBloch/issues.
+
+Maintainer:\
+&ensp;&ensp;**Patrick M. Lenggenhager**\
+&ensp;&ensp;Email: plengg@pks.mpg.de\
+&ensp;&ensp;Homepage: https://patrick-lenggenhager.github.io
+
+## License and copyright
+
+HyperBloch is free software; you can redistribute and/or modify it under the
+terms of the CC BY-SA 4.0 license as described below. HyperBloch is distributed
+in the hope that it will be useful, but WITHOUT ANY WARRANTY, see the CC BY-SA
+4.0 license for more details.
+
+This is a human-readable summary of (and not a substitute for) the license, see
+the attached [LICENSE](LICENSE.txt) for the full legal text.
+
+You are free to:
+  Share — copy and redistribute the material in any medium or format for any purpose.
+  Adapt — remix, transform, and build upon the material for any purpose.
+  The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+  Attribution - You must give appropriate credit (see [AUTHORS](AUTHORS.md) and
+    [How to cite](#how-to-cite) above), provide a link to the license, and
+    indicate if changes were made. You may do so in any reasonable manner, but
+    not in any way that suggests the licensor endorses you or your use.
+  ShareAlike - If you remix, transform, or build upon the material, you must
+    distribute your contributions under the same license as the original.
+  No additional restrictions - You may not apply legal terms or technological
+    measures that legally restrict others from doing anything the license permits.
+
+Copyright 2023 Patrick M. Lenggenhager
