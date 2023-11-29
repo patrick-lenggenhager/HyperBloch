@@ -19,6 +19,10 @@ addition to the package itself:
   *HyperBloch: A Mathematica package for hyperbolic tight-binding models and the
   supercell method*, https://github.com/patrick-lenggenhager/HyperBloch (2023)
 
+
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) on how you can contribute to
+the development of this package.
+
   #### Table of Contents  
 - [Authors and developers](#authors-and-developers)
 - [Installation](#installation)
@@ -59,6 +63,10 @@ Then, load the package by evaluating
 ```Mathematica
 << PatrickMLenggenhager`HyperBloch`
 ```
+
+Note that while most of the functionality of HyperBloch is available with Wolfram
+Language 12.0, some of the visualization functions require Wolfram Language 13 or
+later, such that updating to Wolfram Language 13 is recommended.
 
 ## Documentation
 
@@ -104,7 +112,7 @@ using HyperCells. It is available on Github at
 If you use this package, please cite the package repository
 ```BibTeX
 @misc{HyperBloch,
-  title           = {{\textsc{HyperBloch}}: {A} {M}athematica package for hyperbolic tight-binding models and the
+  title           = {{HyperBloch}: {A} {M}athematica package for hyperbolic tight-binding models and the
   supercell method},
   author          = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
   year            = {2023},
