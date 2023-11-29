@@ -1,6 +1,6 @@
 # Contributing to HyperBloch
 
-Thank you for considering contributing to the development of the HyperBloch GAP package!
+Thank you for considering contributing to the development of the HyperBloch Mathematica package!
 This document describes how to contribute to HyperBloch. If you have any questions,
 please contact the maintainer.
 
