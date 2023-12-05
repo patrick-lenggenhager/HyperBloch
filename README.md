@@ -46,13 +46,25 @@ Coauthors:\
 
 ## Installation
 
+### Dependencies
+
+HyperBloch requires the `NCAlgebra` package, which is available from GitHub at
+[https://github.com/NCAlgebra/NC](https://github.com/NCAlgebra/NC)
+Please check the installation instructions there.
+
+### HyperBloch
+
 In the future, HyperBloch will be submitted to the
 [Wolfram Language Paclet Repository](https://resources.wolframcloud.com/PacletRepository/).
-Until then, it can be installed manually by downloading the latest release from
-https://github.com/patrick-lenggenhager/HyperBloch/releases/latest
+Until then, it can be installed manually. For version 0.9.0, the following command
+can be used:
+```Mathematica
+PacletInstall["https://github.com/patrick-lenggenhager/HyperBloch/releases/download/v0.9.0/PatrickMLenggenhager__HyperBloch-0.9.0.paclet"]
+```
 
-The paclet is distributed as a `.paclet` file. To install it, open Mathematica
-and evaluate
+Alternatively, you can download the latest release (as a `.paclet` file) from
+https://github.com/patrick-lenggenhager/HyperBloch/releases/latest,
+open Mathematica and evaluate
 ```Mathematica
 PacletInstall["path/to/PatrickMLenggenhager__HyperBloch-x.x.x.paclet"]
 ```
