@@ -100,15 +100,30 @@ Begin["`Private`"];
 (*Initialization*)
 
 
+(* print banner *)
 Print["HyperBloch - Version 0.9.0\nMain author: Patrick M. Lenggenhager\n\nThis package loads the following dependencies:\n\t- L2Primitives by Srdjan Vukmirovic\n\t- NCAlgebra by J. William Helton and Mauricio de Oliveira"];
 
 
 Get["PatrickMLenggenhager`HyperBloch`L2Primitives`"];
 
 
-Quiet@Get["NCAlgebra`"];
+(* check NCAlgebra *)
+HyperBloch::NCAlgebra = "`1`";
+If[Not[Or@@((Count[ToExpression/@StringCases[#["Version"],
+		RegularExpression["(\\d)\\.\\d\\.\\d"]:>"$1"],m_/;m>=6]>0)&/@
+		PacletFind["NCAlgebra"])
+	],
+	Message[HyperBloch::NCAlgebra,
+		"No paclet version of NCAlgebra with version >= 6 was found. Version 6 or later is required. Custom installations should work but might lead to problems."
+	];
+];
+
+
+(* load NCAlgebra *)
+Quiet[Get["NCAlgebra`"], {NCAlgebra`NCAlgebra::SmallCapSymbolsNonCommutative}];
 SetOptions[inv, Distribute->True];
 SetCommutative[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+ClearAll[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 
 
 (* ::Section:: *)
@@ -436,7 +451,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Graphical Visualization*)
 
 
@@ -574,7 +589,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Cell Graph Elements*)
 
 
@@ -1048,7 +1063,7 @@ Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Construct Bloch Hamiltonians*)
 
 
@@ -1059,11 +1074,12 @@ ZeroMatrix[n_] := ConstantArray[0, {n, n}]
 
 
 Options[AbelianBlochHamiltonianExpression] = {
-	PCModel -> None
+	PCModel -> None,
+	ReturnSparseArray -> False
 };
 AbelianBlochHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, norb_, onsite_, hoppings_, k_Symbol,
 	OptionsPattern[AbelianBlochHamiltonianExpression]] :=
-Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
+Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge, H},
 	(* dimension of Abelian Brillouin zone *)
 	dimk = 2*model["Genus"];
 	
@@ -1090,19 +1106,21 @@ Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge},
 		];
 	];
 	
-	Simplify[If[norb === 1,
-		MakeHermitian@Total[Normal@SparseArray[{
-			{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1, 1]]} -> hoppings[PCEdge@#1]#2
-		}, Nverts]&@@@edges] + Total[Normal@SparseArray[{
-			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]
-		}, Nverts]&/@verts],
-		MakeHermitian@Total[Normal@SparseArray`SparseBlockMatrix[Join[
-			{{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1,1]]} -> hoppings[PCEdge@#1]#2},
-			Table[{i, i} -> ZeroMatrix[norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
-		]]&@@@edges] + Normal@SparseArray`SparseBlockMatrix[
+	H = Simplify[If[norb === 1,
+		MakeHermitian@SparseArray[
+			({Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1, 1]]} -> hoppings[PCEdge@#1]#2)&@@@edges,
+		Nverts] + SparseArray[
+			({Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#])&/@verts,
+		Nverts],
+		MakeHermitian@SparseArray`SparseBlockMatrix[Join[
+			({Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1,1]]} -> hoppings[PCEdge@#1]#2)&@@@edges,
+			Table[{i, i} -> PatrickMLenggenhager`HyperBloch`Private`ZeroMatrix[norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
+		]] + SparseArray`SparseBlockMatrix[
 			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]&/@verts
 		]
-	], And@@Table[k[i]\[Element]Reals, {i, 1, dimk}]]
+	], And@@Table[k[i]\[Element]Reals, {i, 1, dimk}]];
+	
+	If[OptionValue[ReturnSparseArray], H, Normal@H]
 ]
 
 
@@ -1116,6 +1134,7 @@ AbelianBlochHamiltonian[model_HCModelGraph|model_HCSupercellModelGraph, norb_, o
 If[OptionValue[PBCCluster],
 	Evaluate[
 		AbelianBlochHamiltonianExpression[model, norb, onsite, hoppings, k,
+			ReturnSparseArray -> False,
 			Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 		Join[Table[k[i] -> 0, {i, 1, 2*model["Genus"]}], OptionValue[Parameters]]
 	],
@@ -1124,6 +1143,7 @@ If[OptionValue[PBCCluster],
 			Compile[Evaluate@Table[{k[i], _Real}, {i, 1, 2*model["Genus"]}],
 				Evaluate[
 					AbelianBlochHamiltonianExpression[model, norb, onsite, hoppings, k,
+						ReturnSparseArray -> False,
 						Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]
 					]/. OptionValue[Parameters]
 				],
@@ -1134,6 +1154,7 @@ If[OptionValue[PBCCluster],
 			Function[Evaluate@Table[Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
 				Evaluate[
 					AbelianBlochHamiltonianExpression[model, norb, onsite, hoppings, k,
+						ReturnSparseArray -> False,
 						Evaluate@FilterRules[{opts}, Options[AbelianBlochHamiltonianExpression]]]/.
 					Join[
 						Table[k[i] -> Symbol["k" <> ToString@i], {i, 1, 2*model["Genus"]}],
