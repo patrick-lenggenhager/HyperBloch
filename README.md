@@ -20,6 +20,13 @@ addition to the package itself:
   supercell method*, https://github.com/patrick-lenggenhager/HyperBloch (2023)
 
 
+A getting-started guide for this and its sister package
+([HyperCells](https://github.com/patrick-lenggenhager/HyperCells)) can be found
+[here](https://patrick-lenggenhager.github.io/software/2024/01/10/HyperGuide.html) and
+[this post](https://community.wolfram.com/groups/-/m/t/3131734) in the Wolfram
+Community forum demonstrates some of the core functionality of the package.
+
+
 Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) on how you can contribute to
 the development of this package.
 
