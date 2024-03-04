@@ -230,13 +230,14 @@ LToGraphics[x_LPoint, opts___] := Point[coords[x, opts]]
    (* makeArc-returns list of vertices of a polygonal line 
       approximating LLine ab in the model given in opts *)
    (* to be used ONLY when model is PoincareDisk and HalfPlane !!! *)
+Det22[{{a_,b_},{c_,d_}}] := a d - b c (* added by Patrick M. Lenggenhager, 04.03.2024 *)
 makeArc[a_LPoint, b_LPoint, opts___] :=                             
   Module[{c, a1, b1, angle, r, e1, e2, model, plotPoints},
     model = Model /. {opts} /. Options[LToGraphics];
     plotPoints = PlotPoints /. {opts} /. Options[LToGraphics];
     a1 = coords[a, opts];
     b1 = coords[b, opts];
-    If[((model === PoincareDisk) && (Abs[Det[{a1, b1}]] < err)) || 
+    If[((model === PoincareDisk) && (Abs[Det22[{a1, b1}]] < err)) || 
        ((model === HalfPlane) && (Abs[a1[[1]] - b1[[1]]] < err)),  
     (* arc is almost straight or straight-return line segment *)
        {a1, b1},
