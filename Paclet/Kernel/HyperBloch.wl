@@ -88,6 +88,7 @@ Elements;
 CellGraph;
 
 PCModel;
+ReturnSparseArray;
 CompileFunction;
 Parameters;
 PBCCluster;
