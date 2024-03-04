@@ -8,7 +8,7 @@ PacletObject[
     "License" -> "CC BY-SA 4.0 International",
     "PublisherID" -> "PatrickMLenggenhager",
     "Version" -> "0.9.0",
-    "WolframVersion" -> "12+",
+    "WolframVersion" -> "12.1+",
     "Extensions" -> {
       {
         "Kernel",
