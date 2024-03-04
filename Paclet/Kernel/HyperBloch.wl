@@ -130,7 +130,7 @@ ClearAll[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 (*Definitions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Type Definitions*)
 
 
@@ -290,11 +290,18 @@ ImportCellGraphString[str_]:=Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import of Model Graphs*)
 
 
-ImportModelGraphString[str_]:=Module[{
+Options[ImportModelGraphString] = {
+	ImportFaces -> True,
+	ImportVertexLabels -> True,
+	ComputeVertexCoordinates -> True,
+	IncludeUndirectedGraph -> True,
+	IncludeFullGraph -> True
+};
+ImportModelGraphString[str_, OptionsPattern[]] := Module[{
 		version, tg, specs, \[CapitalGamma]gens, TD\[CapitalGamma], TGGw, model, vertices, edges, etransls, facesstr,
 		rels, center, vlbls, vcoords, graph, faces, faceedges
 	},
@@ -306,7 +313,6 @@ ImportModelGraphString[str_]:=Module[{
 			StringSplit[StringReplace[str, {"["->"{", "]"->"}"}], "\n"];
 		version = "";
 	];
-	
 	
 	(* info *)
 	tg = ToExpression@tg; (* triangle group signature *)
@@ -321,40 +327,56 @@ ImportModelGraphString[str_]:=Module[{
 	(* graph *)
 	vertices = ToExpression@vertices;
 	edges = DirectedEdge[vertices[[#1]], vertices[[#2]], #3]&@@@ToExpression[edges];
-	faces = Table[
-		Graph[
-			Table[
-				If[e[[2]] == 1,
-					edges[[e[[1]]]],
-					DirectedEdge[edges[[e[[1]], 2]], edges[[e[[1]], 1]], -edges[[e[[1]], 3]]]
-				],
-				{e, face}
-			]
-		],
-		{face, ToExpression[facesstr]}
+	
+	(* faces *)
+	If[OptionValue[ImportFaces],
+		faces = Table[
+			Graph[
+				Table[
+					If[e[[2]] == 1,
+						edges[[e[[1]]]],
+						DirectedEdge[edges[[e[[1]], 2]], edges[[e[[1]], 1]], -edges[[e[[1]], 3]]]
+					],
+					{e, face}
+				]
+			],
+			{face, ToExpression[facesstr]}
+		];
+		faceedges = Map[edges[[#[[1]]]]&, ToExpression[facesstr], {2}];,
+		faces = {};
+		faceedges = {};
 	];
-	faceedges = Map[edges[[#[[1]]]]&, ToExpression[facesstr], {2}];
 	
 	(* vertex labels and coordinates *)
-	vlbls = (StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	
-	vcoords = Table[
-		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center], Model->PoincareDisk][[1]],
-		{i, Length[vertices]}
+	If[OptionValue[ImportVertexLabels],
+		vlbls = (StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	
+		vcoords = If[OptionValue[ComputeVertexCoordinates],
+			Table[
+				LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center], Model->PoincareDisk][[1]],
+				{i, Length[vertices]}
+			];,
+			None
+		];,
+		vlbls = None;
+		vcoords = None;
 	];
 	
 	(* edge translations *)
 	etransls = StringTrim[StringSplit[StringTrim[etransls,{"{", "}"}], ","], " "];
 	
 	(* graph *)
-	graph = Graph[vertices, edges, VertexCoordinates -> vcoords];
+	graph = If[vcoords === None,
+		Graph[vertices, edges],
+		Graph[vertices, edges, VertexCoordinates -> vcoords]
+	];
 	
 	HCModelGraph[<|
 		"TriangleGroup" -> tg,
 		"CellCenter" -> center,
 		"Genus" -> Length[\[CapitalGamma]gens]/2,
 		"Graph" -> graph,
-		"UndirectedGraph" -> GetUndirectedGraph@graph,
-		"FullGraph" -> GetFullGraph@graph,
+		"UndirectedGraph" -> If[OptionValue[IncludeUndirectedGraph], GetUndirectedGraph@graph, None],
+		"FullGraph" -> If[OptionValue[IncludeFullGraph], GetFullGraph@graph, None],
 		"VertexLabels" -> vlbls,
 		"SchwarzTriangleLabels" -> TD\[CapitalGamma],
 		"EdgeTranslations" -> etransls,
@@ -1063,7 +1085,7 @@ Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Construct Bloch Hamiltonians*)
 
 
