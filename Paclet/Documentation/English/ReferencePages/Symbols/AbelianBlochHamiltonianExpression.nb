@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    148348,       3330]
-NotebookOptionsPosition[    137364,       3093]
-NotebookOutlinePosition[    138142,       3118]
-CellTagsIndexPosition[    138061,       3113]
+NotebookDataLength[     79156,       2067]
+NotebookOptionsPosition[     68216,       1830]
+NotebookOutlinePosition[     68990,       1855]
+CellTagsIndexPosition[     68910,       1850]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -340,10 +340,10 @@ Cell[TextData[{
     "dc85d5f4-7a98-45de-8522-589a7ed082b5"], 
    DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
     "d13007c1-f945-4caf-9c39-96e1de350f63", 
-     "db1582c3-3c0f-4676-8e73-4f958366bc40"], $CellContext`cellobj$$ = 
+     "16e68fc5-5a62-4301-a1f1-5207370b5f7f"], $CellContext`cellobj$$ = 
     CellObject[
     "e4b2c6e8-2a34-43c4-ab33-420ee3451b24", 
-     "c4c241e6-0cc1-48d5-a400-ff782125f555"]}, 
+     "e0afc488-c817-4cd3-a739-9d09ac8b943c"]}, 
     TemplateBox[{
       GraphicsBox[{{
          Thickness[0.06], 
@@ -450,133 +450,18 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"AbelianBlochHamiltonianExpression", "[", 
   RowBox[{
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCModelGraph of {8,8} on T2.6\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["28904", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}}, 
-         Null, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {VertexCoordinates -> {{0., 0.}}}], 
-      "UndirectedGraph" -> 
-      Graph[{{3, 1}}, {
-        Null, {{1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, Null, {{1, {1, 1, 5}}, {1, {1, 1, 5}}, {1, {2, 4, 8}}, {
-          1, {2, 4, 8}}, {1, {3, 2, 6}}, {1, {3, 2, 6}}, {1, {4, 3, 7}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-         EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-        "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7"}, 
-      "EdgeTranslations" -> {"g1", "g4", "g2", "g3"}, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, "Faces" -> {
-        Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, Null, {{-1, {-1, -1, -5}}, {-1, {-2, -4, -8}}, {
-           1, {4, 3, 7}}, {-1, {-3, -2, -6}}, {1, {1, 1, 5}}, {
-           1, {2, 4, 8}}, {-1, {-4, -3, -7}}, {1, {3, 2, 6}}}}]}, 
-      "FaceEdges" -> {{
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}]}}|>],
-    SelectWithContents->True,
-    Selectable->False], ",", "1", ",", 
+   RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}], ",", 
+   "1", ",", 
    RowBox[{"0", "&"}], ",", 
    RowBox[{
     RowBox[{"-", "1"}], "&"}], ",", "k"}], "]"}]], "Input",
  CellChangeTimes->{{3.906027063408805*^9, 3.906027088319622*^9}, {
    3.9060271833899145`*^9, 3.906027223799124*^9}, 3.906028315145218*^9, {
    3.9060285609568925`*^9, 3.9060285739654026`*^9}, {3.906435147759333*^9, 
-   3.906435149703444*^9}},
- CellLabel->"In[1]:=",
+   3.906435149703444*^9}, {3.918640886172224*^9, 3.918640888223679*^9}, {
+   3.9186409229543333`*^9, 3.918640955268015*^9}, {3.918641504598575*^9, 
+   3.918641506777465*^9}, {3.918641549095924*^9, 3.918641552911776*^9}},
+ CellLabel->"In[3]:=",
  CellID->2282893,ExpressionUUID->"ac881db1-505d-44dd-8c11-29c4ababfcca"],
 
 Cell[BoxData[
@@ -613,11 +498,12 @@ Cell[BoxData[
      RowBox[{"\[ImaginaryI]", " ", 
       RowBox[{"k", "[", "4", "]"}]}]]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
-  3.906027225540017*^9, 3.9060282721502304`*^9, 3.9060283167387686`*^9, {
-   3.9060285630037103`*^9, 3.9060285752904997`*^9}, 3.906435150761493*^9, 
-   3.910265043755226*^9, 3.918561012434431*^9},
- CellLabel->"Out[1]=",
- CellID->495821595,ExpressionUUID->"fc8a1451-8cdb-4b89-9625-62b3a569453a"]
+  3.906027225540017*^9, 3.9060282721502304`*^9, 3.9060283167387676`*^9, {
+   3.90602856300371*^9, 3.9060285752904997`*^9}, 3.906435150761493*^9, 
+   3.910265043755226*^9, 3.918561012434431*^9, 3.9186409582241983`*^9, 
+   3.918641508621064*^9, 3.9186415556389837`*^9},
+ CellLabel->"Out[3]=",
+ CellID->596936726,ExpressionUUID->"f6de1f59-7e7d-430b-aa27-7d239cdd518b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -641,126 +527,8 @@ Cell[BoxData[
  RowBox[{"H", "=", 
   RowBox[{"AbelianBlochHamiltonianExpression", "[", 
    RowBox[{
-    InterpretationBox[
-     DynamicModuleBox[{Typeset`open = False}, 
-      TemplateBox[{"Expression", 
-        StyleBox[
-        "\"HCModelGraph of {8,8} on T2.6\"", "IconizedCustomName", 
-         StripOnInput -> False], 
-        GridBox[{{
-           RowBox[{
-             TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-             TagBox["HCModelGraph", "IconizedItem"]}]}, {
-           RowBox[{
-             TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-             TagBox["28904", "IconizedItem"]}]}}, 
-         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-         "Column", 
-         GridBoxItemSize -> {
-          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-        Dynamic[Typeset`open]},
-       "IconizedObject"]],
-     PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-      "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-       Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}}, 
-          Null, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-           1, {4, 3, 7}}}}, {VertexCoordinates -> {{0., 0.}}}], 
-       "UndirectedGraph" -> 
-       Graph[{{3, 1}}, {
-         Null, {{1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-           1, {4, 3, 7}}}}, {
-         AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, 
-          AxesLabel -> None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, 
-          Background -> None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-          ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-          EdgeStyle -> {
-            Directive[
-             Opacity[0.7], 
-             Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, 
-          FormatType -> TraditionalForm, Frame -> False, FrameLabel -> None, 
-          FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-          FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-          GraphStyle -> Automatic, GridLines -> None, 
-          GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-          ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-          LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-          PlotRange -> {{-0.0809172992817743, 
-           0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-          PlotRangeClipping -> False, 
-          PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-          PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-          Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-          TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-          VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-          VertexStyle -> {
-            Directive[
-             Hue[0.6, 0.2, 0.8], 
-             EdgeForm[
-              Directive[
-               GrayLevel[0], 
-               Opacity[0.7]]]]}}], "FullGraph" -> 
-       Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, Null, {{1, {1, 1, 5}}, {1, {1, 1, 5}}, {1, {2, 4, 8}}, {
-           1, {2, 4, 8}}, {1, {3, 2, 6}}, {1, {3, 2, 6}}, {1, {4, 3, 7}}, {
-           1, {4, 3, 7}}}}, {
-         AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, 
-          AxesLabel -> None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, 
-          Background -> None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-          ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-          EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-            Directive[
-             Opacity[0.7], 
-             Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, 
-          FormatType -> TraditionalForm, Frame -> False, FrameLabel -> None, 
-          FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-          FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-          GraphStyle -> Automatic, GridLines -> None, 
-          GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-          ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-          LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-          PlotRange -> {{-0.0809172992817743, 
-           0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-          PlotRangeClipping -> False, 
-          PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-          PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-          Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-          TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-          VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-          VertexStyle -> {
-            Directive[
-             Hue[0.6, 0.2, 0.8], 
-             EdgeForm[
-              Directive[
-               GrayLevel[0], 
-               Opacity[0.7]]]]}}], "VertexLabels" -> {"1"}, 
-       "SchwarzTriangleLabels" -> {
-        "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-         "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7"}, 
-       "EdgeTranslations" -> {"g1", "g4", "g2", "g3"}, 
-       "TranslationGenerators" -> <|
-        "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-         "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-         "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, 
-       "Faces" -> {
-         Graph[{{3, 
-          1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-           1}}, Null, {{-1, {-1, -1, -5}}, {-1, {-2, -4, -8}}, {
-            1, {4, 3, 7}}, {-1, {-3, -2, -6}}, {1, {1, 1, 5}}, {
-            1, {2, 4, 8}}, {-1, {-4, -3, -7}}, {1, {3, 2, 6}}}}]}, 
-       "FaceEdges" -> {{
-          DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-          DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}]}}|>],
-     SelectWithContents->True,
-     Selectable->False], ",", "1", ",", 
+    RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}], ",",
+     "1", ",", 
     RowBox[{"0", "&"}], ",", 
     RowBox[{
      RowBox[{"-", "t"}], "&"}], ",", "k"}], "]"}]}]], "Input",
@@ -768,8 +536,10 @@ Cell[BoxData[
    3.9060271833899145`*^9, 3.906027223799124*^9}, 3.906028315145218*^9, {
    3.9060285609568925`*^9, 3.9060285739654026`*^9}, {3.90608163820194*^9, 
    3.906081642511557*^9}, {3.906083042088171*^9, 3.906083079041067*^9}, {
-   3.90643515304309*^9, 3.906435154569159*^9}},
- CellLabel->"In[1]:=",
+   3.90643515304309*^9, 3.906435154569159*^9}, {3.9186409618756237`*^9, 
+   3.9186409755481377`*^9}, 3.918641515870906*^9, {3.9186415577337837`*^9, 
+   3.918641559834978*^9}},
+ CellLabel->"In[3]:=",
  CellID->633400500,ExpressionUUID->"95fcf837-6c1b-4329-8d21-6642a74e79a8"],
 
 Cell[BoxData[
@@ -816,9 +586,10 @@ Cell[BoxData[
      RowBox[{"Conjugate", "[", "t", "]"}]}]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
   3.906083043897336*^9, {3.9060830759021597`*^9, 3.9060830797294226`*^9}, 
-   3.9064351561413198`*^9, 3.910265046630401*^9},
- CellLabel->"Out[1]=",
- CellID->53468336,ExpressionUUID->"c9ce5632-5b6c-4eb1-a20a-31056d13d150"]
+   3.9064351561413198`*^9, 3.910265046630401*^9, 3.918640976159519*^9, 
+   3.91864151682917*^9, 3.918641560207921*^9},
+ CellLabel->"Out[3]=",
+ CellID->384403571,ExpressionUUID->"21e14cea-9a0e-45cf-9db1-bbe834c721d1"]
 }, Open  ]],
 
 Cell["Simplify the resulting expression", "ExampleText",
@@ -833,7 +604,7 @@ Cell[BoxData[
    RowBox[{"Assumptions", "\[Rule]", 
     RowBox[{"t", "\[Element]", "Reals"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.9060830854395533`*^9, 3.9060830985402603`*^9}},
- CellLabel->"In[2]:=",
+ CellLabel->"In[6]:=",
  CellID->411271165,ExpressionUUID->"dbe6a2af-e310-4eb6-9919-89a3fa5e7865"],
 
 Cell[BoxData[
@@ -852,9 +623,10 @@ Cell[BoxData[
       RowBox[{"Cos", "[", 
        RowBox[{"k", "[", "4", "]"}], "]"}]}], ")"}]}], "}"}], "}"}]], "Output",\
 
- CellChangeTimes->{3.906083099068523*^9, 3.910265049541614*^9},
- CellLabel->"Out[2]=",
- CellID->48714703,ExpressionUUID->"bd22ffa2-e5b6-4750-89a1-3d19465fe150"]
+ CellChangeTimes->{3.906083099068523*^9, 3.910265049541614*^9, 
+  3.918640978183663*^9},
+ CellLabel->"Out[6]=",
+ CellID->1171614931,ExpressionUUID->"b590c0cc-0fff-45a0-806c-b38093ebf850"]
 }, Open  ]]
 }, Open  ]],
 
@@ -892,125 +664,8 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"modelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCModelGraph of {8,8} on T2.6\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["28904", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}}, 
-         Null, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {VertexCoordinates -> {{0., 0.}}}], 
-      "UndirectedGraph" -> 
-      Graph[{{3, 1}}, {
-        Null, {{1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, Null, {{1, {1, 1, 5}}, {1, {1, 1, 5}}, {1, {2, 4, 8}}, {
-          1, {2, 4, 8}}, {1, {3, 2, 6}}, {1, {3, 2, 6}}, {1, {4, 3, 7}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-         EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-        "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7"}, 
-      "EdgeTranslations" -> {"g1", "g4", "g2", "g3"}, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, "Faces" -> {
-        Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, Null, {{-1, {-1, -1, -5}}, {-1, {-2, -4, -8}}, {
-           1, {4, 3, 7}}, {-1, {-3, -2, -6}}, {1, {1, 1, 5}}, {
-           1, {2, 4, 8}}, {-1, {-4, -3, -7}}, {1, {3, 2, 6}}}}]}, 
-      "FaceEdges" -> {{
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}]}}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}], "\n", 
+   RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}]}], 
+  ";"}], "\n", 
  RowBox[{
   RowBox[{"hoppings", "=", 
    RowBox[{"<|", "\[IndentingNewLine]", 
@@ -1024,7 +679,10 @@ Cell[BoxData[{
         RowBox[{"{", 
           RowBox[{"1", ",", 
             RowBox[{"{", 
-              RowBox[{"1", ",", "1", ",", "5"}], "}"}]}], "}"}]},
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "1"}], "}"}], ",", "1", ",", "5"}], 
+              "}"}]}], "}"}]},
        "DirectedEdge"], "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
      RowBox[{
       TemplateBox[{
@@ -1035,7 +693,10 @@ Cell[BoxData[{
         RowBox[{"{", 
           RowBox[{"1", ",", 
             RowBox[{"{", 
-              RowBox[{"2", ",", "4", ",", "8"}], "}"}]}], "}"}]},
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], ",", "4", ",", "8"}], 
+              "}"}]}], "}"}]},
        "DirectedEdge"], "\[Rule]", "4"}], ",", "\[IndentingNewLine]", 
      RowBox[{
       TemplateBox[{
@@ -1046,7 +707,10 @@ Cell[BoxData[{
         RowBox[{"{", 
           RowBox[{"1", ",", 
             RowBox[{"{", 
-              RowBox[{"3", ",", "2", ",", "6"}], "}"}]}], "}"}]},
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "3"}], "}"}], ",", "2", ",", "6"}], 
+              "}"}]}], "}"}]},
        "DirectedEdge"], "\[Rule]", "2"}], ",", "\[IndentingNewLine]", 
      RowBox[{
       TemplateBox[{
@@ -1057,7 +721,10 @@ Cell[BoxData[{
         RowBox[{"{", 
           RowBox[{"1", ",", 
             RowBox[{"{", 
-              RowBox[{"4", ",", "3", ",", "7"}], "}"}]}], "}"}]},
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{"1", ",", "4"}], "}"}], ",", "3", ",", "7"}], 
+              "}"}]}], "}"}]},
        "DirectedEdge"], "\[Rule]", "3"}]}], "\[IndentingNewLine]", "|>"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"AbelianBlochHamiltonianExpression", "[", 
@@ -1067,7 +734,8 @@ Cell[BoxData[{
    3.9060271833899145`*^9, 3.906027223799124*^9}, 3.906028315145218*^9, {
    3.906028607996865*^9, 3.906028613837571*^9}, {3.9060286781196327`*^9, 
    3.906028694807095*^9}, {3.906028732857873*^9, 3.906028753463425*^9}, {
-   3.906028853588249*^9, 3.906028970614804*^9}, 3.906435159290379*^9},
+   3.906028853588249*^9, 3.906028970614804*^9}, 3.906435159290379*^9, {
+   3.918640987132607*^9, 3.918641010485545*^9}, 3.9186415217340612`*^9},
  CellLabel->"In[1]:=",
  CellID->262417576,ExpressionUUID->"a3ba0bbe-867d-49f6-930b-2f9ce301407e"],
 
@@ -1111,10 +779,11 @@ Cell[BoxData[
        RowBox[{"k", "[", "4", "]"}]}]]}]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
   3.906028696321188*^9, {3.906028736127388*^9, 3.9060287560387554`*^9}, 
-   3.9060289243885202`*^9, 3.906028972487702*^9, 3.906435163883956*^9, 
-   3.910265050963742*^9},
+   3.9060289243885193`*^9, 3.906028972487702*^9, 3.906435163883956*^9, 
+   3.910265050963742*^9, 3.918641011015155*^9, 3.918641096683626*^9, 
+   3.9186415224536552`*^9},
  CellLabel->"Out[3]=",
- CellID->689960851,ExpressionUUID->"6f307364-4143-4d4a-b37c-c63fee9d03fb"]
+ CellID->1840780417,ExpressionUUID->"efc29266-40ba-49be-a1cf-b84decb63afa"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1147,125 +816,8 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"modelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCModelGraph of {8,8} on T2.6\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["28904", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}}, 
-         Null, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {VertexCoordinates -> {{0., 0.}}}], 
-      "UndirectedGraph" -> 
-      Graph[{{3, 1}}, {
-        Null, {{1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, Null, {{1, {1, 1, 5}}, {1, {1, 1, 5}}, {1, {2, 4, 8}}, {
-          1, {2, 4, 8}}, {1, {3, 2, 6}}, {1, {3, 2, 6}}, {1, {4, 3, 7}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-         EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-        "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7"}, 
-      "EdgeTranslations" -> {"g1", "g4", "g2", "g3"}, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, "Faces" -> {
-        Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, Null, {{-1, {-1, -1, -5}}, {-1, {-2, -4, -8}}, {
-           1, {4, 3, 7}}, {-1, {-3, -2, -6}}, {1, {1, 1, 5}}, {
-           1, {2, 4, 8}}, {-1, {-4, -3, -7}}, {1, {3, 2, 6}}}}]}, 
-      "FaceEdges" -> {{
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}]}}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"onsite", "=", 
    RowBox[{
@@ -1289,7 +841,8 @@ Cell[BoxData[{
    3.906028607996865*^9, 3.906028613837571*^9}, {3.9060286781196327`*^9, 
    3.906028694807095*^9}, {3.906028732857873*^9, 3.906028753463425*^9}, {
    3.906028853588249*^9, 3.906028970614804*^9}, {3.906029009568014*^9, 
-   3.9060291359216547`*^9}, 3.906435166479804*^9},
+   3.9060291359216547`*^9}, 3.906435166479804*^9, 3.918641100224955*^9, 
+   3.918641526860538*^9},
  CellLabel->"In[1]:=",
  CellID->78835713,ExpressionUUID->"af5ddb53-5b80-49af-96c3-756fe4ccaec9"],
 
@@ -1360,10 +913,11 @@ Cell[BoxData[
         RowBox[{"k", "[", "4", "]"}]}]]}], ",", "1"}], "}"}]}], 
   "}"}]], "Output",
  CellChangeTimes->{
-  3.9060290947630405`*^9, {3.906029128691162*^9, 3.9060291372095366`*^9}, 
-   3.906435167962395*^9, 3.9102650530498176`*^9},
+  3.90602909476304*^9, {3.906029128691162*^9, 3.9060291372095366`*^9}, 
+   3.906435167962395*^9, 3.910265053049817*^9, 3.918641101765967*^9, 
+   3.918641527233802*^9},
  CellLabel->"Out[4]=",
- CellID->63999339,ExpressionUUID->"2b98ce5b-76f9-4004-b5a3-bfdde109676f"]
+ CellID->166628881,ExpressionUUID->"18ff5542-f76a-4ee3-ab97-6bd0aef4a220"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1411,267 +965,16 @@ symmetry:\
 Cell[BoxData[{
  RowBox[{
   RowBox[{"modelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCModelGraph of {8,8} on T2.6\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["28904", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}}, 
-         Null, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {VertexCoordinates -> {{0., 0.}}}], 
-      "UndirectedGraph" -> 
-      Graph[{{3, 1}}, {
-        Null, {{1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, Null, {{1, {1, 1, 5}}, {1, {1, 1, 5}}, {1, {2, 4, 8}}, {
-          1, {2, 4, 8}}, {1, {3, 2, 6}}, {1, {3, 2, 6}}, {1, {4, 3, 7}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-         EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-        "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7"}, 
-      "EdgeTranslations" -> {"g1", "g4", "g2", "g3"}, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, "Faces" -> {
-        Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, Null, {{-1, {-1, -1, -5}}, {-1, {-2, -4, -8}}, {
-           1, {4, 3, 7}}, {-1, {-3, -2, -6}}, {1, {1, 1, 5}}, {
-           1, {2, 4, 8}}, {-1, {-4, -3, -7}}, {1, {3, 2, 6}}}}]}, 
-      "FaceEdges" -> {{
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}]}}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"scmodelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCSupercellModelGraph of {8,8} on T3.11\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCSupercellModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["35088", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCSupercellModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "PCGenus" -> 2, "Genus" -> 
-      3, "Graph" -> 
-      Graph[{{3, 1, 1}, {3, 1, 
-        2}}, {{{1, 2}, {1, 2}, {1, 2}, {1, 2}, {2, 1}, {2, 1}, {2, 1}, {2, 
-         1}}, Null, {{1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}, {
-          1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}}}, {
-        VertexCoordinates -> {{0., 0.}, {0.8408964152537162, 
-          0.348310699749007}}}], "UndirectedGraph" -> 
-      Graph[{{3, 1, 1}, {3, 1, 2}}, {
-        Null, {{1, 2}, {1, 2}, {1, 2}, {1, 2}, {2, 1}, {2, 1}, {2, 1}, {2, 
-         1}}, {{1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}, {
-          1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 0.45000710303490243`, Axes -> 
-         False, AxesLabel -> None, AxesOrigin -> {0., 0.}, 
-         AxesStyle -> {{}, {}}, Background -> None, BaselinePosition -> 
-         Automatic, BaseStyle -> {}, ContentSelectable -> Automatic, 
-         EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, 
-         ImageSize -> {360., 162.00255709256487`}, LabelStyle -> {}, 
-         PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.010704611366179808`, 
-          0.851601026619896}, {-0.010704611366179805`, 0.3590153111151868}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.01796470079137658, 0.017964700791376575`}, {
-          0.017246112759721516`, 0.017246112759721544`}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, 
-         VertexCoordinates -> {{0., 0.}, {0.8408964152537162, 
-          0.348310699749007}}, VertexLabels -> {None}, 
-         VertexShapeFunction -> {"Circle"}, VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 1, 1}, {3, 1, 
-        2}}, {{{1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 
-         1}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}}, 
-         Null, {{1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {1, 1, 5}}}, {
-          1, 1, {1, {2, 4, 8}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {3, 2, 6}}}, {
-          1, 1, {1, {4, 3, 7}}}, {1, 1, {1, {4, 3, 7}}}, {
-          1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {1, 1, 5}}}, {
-          1, 1, {1, {2, 4, 8}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {3, 2, 6}}}, {
-          1, 1, {1, {4, 3, 7}}}, {1, 1, {1, {4, 3, 7}}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 0.45000710303490243`, Axes -> 
-         False, AxesLabel -> None, AxesOrigin -> {0., 0.}, 
-         AxesStyle -> {{}, {}}, Background -> None, BaselinePosition -> 
-         Automatic, BaseStyle -> {}, ContentSelectable -> Automatic, 
-         EdgeLabels -> {None}, EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, 
-         ImageSize -> {360., 162.00255709256487`}, LabelStyle -> {}, 
-         PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.010704611366179808`, 
-          0.851601026619896}, {-0.010704611366179805`, 0.3590153111151868}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.01796470079137658, 0.017964700791376575`}, {
-          0.017246112759721516`, 0.017246112759721544`}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, 
-         VertexCoordinates -> {{0., 0.}, {0.8408964152537162, 
-          0.348310699749007}}, VertexLabels -> {None}, 
-         VertexShapeFunction -> {"Circle"}, VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1", "x"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "x", "y", "y^-1", "z", "z^-1", "y^2", "y*z^-1", "y^-2", "y^-1*z", 
-        "y^3", "y^2*z^-1", "y^-3", "y^-2*z", "y^4", "y^3*z^-1"}, 
-      "EdgeTranslations" -> {
-       "1", "g4^-1*g6*g2", "g2", "g4^-1*g2", 
-        "g3*g5^-1*g3^-1*g1^-1*g2^-1*g4^-1*g6^-1*g4", "g1^-1", 
-        "g3*g5^-1*g1^-1", "g3*g1^-1"}, 
-      "PCTranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(x*y^-1*z^-1)", "g2" -> "(y*x*z)", "g3" -> "(z*y^-1*z^-1*y)", 
-        "g4" -> "(y^2*x*z*y^-1)", "g5" -> "(y^-1*z*y^-1*z^-1*y^2)", "g6" -> 
-        "(y^3*x*z*y^-2)"|>, 
-      "TranslationGroupEmbedding" -> <|
-       "g1" -> "(g1^-1*g4^-1)", "g2" -> "(g1^-1*g2)", "g3" -> "(g3*g4^-1)", 
-        "g4" -> "(g1^-1*g2*g4^-1*g1^-1*g2*g3^-1*g4*g1*g2^-1*g1)", "g5" -> 
-        "(g4*g1^-1*g4^-1*g3*g2^-1*g1)", "g6" -> 
-        "(g1^-1*g2*g3^-1*g4*g2^-1*g1)"|>, 
-      "InternalSupercellTranslations" -> {"1", "y^3*z^-1"}, "Faces" -> {}, 
-      "FaceEdges" -> {}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}]}], "Input",
+   RowBox[{
+   "HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3_sc-T3.11.hcs\>\"", "]"}]}], 
+  ";"}]}], "Input",
  CellChangeTimes->{{3.906030628181756*^9, 3.906030642009819*^9}, {
-  3.906435170617509*^9, 3.9064351749819717`*^9}},
+  3.906435170617509*^9, 3.9064351749819717`*^9}, {3.918641106433186*^9, 
+  3.9186411344867573`*^9}, {3.918641530741171*^9, 3.9186415329915123`*^9}},
  CellLabel->"In[1]:=",
  CellID->407621152,ExpressionUUID->"b1a3429b-0a07-4f33-ae72-2428e5482c38"],
 
@@ -1696,9 +999,10 @@ Cell[BoxData[
     RowBox[{"3", ",", "1"}], "}"}], "\[Rule]", "0"}], 
   "\[RightAssociation]"}]], "Output",
  CellChangeTimes->{3.9060306552364893`*^9, 3.9060306852791348`*^9, 
-  3.906030764708082*^9, 3.9064351769622107`*^9, 3.910265057202314*^9},
+  3.906030764708082*^9, 3.9064351769622107`*^9, 3.910265057202314*^9, 
+  3.91864113664837*^9, 3.918641534568945*^9},
  CellLabel->"Out[3]=",
- CellID->60025511,ExpressionUUID->"aafe553f-aec8-4c78-94cc-5af452b47a83"]
+ CellID->1295901354,ExpressionUUID->"043e71d8-dd3f-42f2-8453-5be428587ba1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1711,8 +1015,8 @@ Cell[BoxData[
      RowBox[{"modelgraph", "[", "\"\<Graph\>\"", "]"}]}], "\[Rule]", 
     RowBox[{"{", 
      RowBox[{"1", ",", "4", ",", "2", ",", "3"}], "}"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.906030686800554*^9, 3.9060307117871947`*^9}, {
-  3.9060307671401577`*^9, 3.906030768110246*^9}},
+ CellChangeTimes->{{3.906030686800554*^9, 3.906030711787195*^9}, {
+  3.906030767140158*^9, 3.906030768110246*^9}},
  CellLabel->"In[4]:=",
  CellID->197552022,ExpressionUUID->"5054b8d3-7ced-4db3-89db-802af5143dbb"],
 
@@ -1728,7 +1032,10 @@ Cell[BoxData[
       RowBox[{"{", 
         RowBox[{"1", ",", 
           RowBox[{"{", 
-            RowBox[{"1", ",", "1", ",", "5"}], "}"}]}], "}"}]},
+            RowBox[{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "1"}], "}"}], ",", "1", ",", "5"}], "}"}]}],
+         "}"}]},
      "DirectedEdge"], "\[Rule]", "1"}], ",", 
    RowBox[{
     TemplateBox[{
@@ -1739,7 +1046,10 @@ Cell[BoxData[
       RowBox[{"{", 
         RowBox[{"1", ",", 
           RowBox[{"{", 
-            RowBox[{"2", ",", "4", ",", "8"}], "}"}]}], "}"}]},
+            RowBox[{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "2"}], "}"}], ",", "4", ",", "8"}], "}"}]}],
+         "}"}]},
      "DirectedEdge"], "\[Rule]", "4"}], ",", 
    RowBox[{
     TemplateBox[{
@@ -1750,7 +1060,10 @@ Cell[BoxData[
       RowBox[{"{", 
         RowBox[{"1", ",", 
           RowBox[{"{", 
-            RowBox[{"3", ",", "2", ",", "6"}], "}"}]}], "}"}]},
+            RowBox[{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "3"}], "}"}], ",", "2", ",", "6"}], "}"}]}],
+         "}"}]},
      "DirectedEdge"], "\[Rule]", "2"}], ",", 
    RowBox[{
     TemplateBox[{
@@ -1761,12 +1074,16 @@ Cell[BoxData[
       RowBox[{"{", 
         RowBox[{"1", ",", 
           RowBox[{"{", 
-            RowBox[{"4", ",", "3", ",", "7"}], "}"}]}], "}"}]},
+            RowBox[{
+              RowBox[{"{", 
+                RowBox[{"1", ",", "4"}], "}"}], ",", "3", ",", "7"}], "}"}]}],
+         "}"}]},
      "DirectedEdge"], "\[Rule]", "3"}]}], "\[RightAssociation]"}]], "Output",
  CellChangeTimes->{3.906030713059851*^9, 3.906030768634976*^9, 
-  3.9064351779484224`*^9, 3.910265058945308*^9},
+  3.9064351779484224`*^9, 3.910265058945308*^9, 3.9186411386853123`*^9, 
+  3.9186415353391027`*^9},
  CellLabel->"Out[4]=",
- CellID->155101157,ExpressionUUID->"7f3a7045-3e61-4216-8354-05ecc08d359a"]
+ CellID->707100972,ExpressionUUID->"b467e175-493e-40fb-993c-0b3104a66cbf"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1908,9 +1225,10 @@ Cell[BoxData[
                 RowBox[{"k", "[", "6", "]"}]}], ")"}]}]]}]}], ")"}]}]}], 
        ")"}]}], ",", "0"}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.906030744562024*^9, 3.906030769652645*^9}, 
-   3.906031316975277*^9, 3.906435180099371*^9, 3.91026506173894*^9},
+   3.906031316975277*^9, 3.906435180099371*^9, 3.91026506173894*^9, 
+   3.918641142478849*^9, 3.918641536207055*^9},
  CellLabel->"Out[5]=",
- CellID->237529919,ExpressionUUID->"fcd91d98-7770-42a3-8681-b90c65725718"]
+ CellID->910317503,ExpressionUUID->"cef3af70-ac39-4d57-aaf6-3782f5ef2934"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1953,265 +1271,13 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"modelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCModelGraph of {8,8} on T2.6\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["28904", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}}, 
-         Null, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {VertexCoordinates -> {{0., 0.}}}], 
-      "UndirectedGraph" -> 
-      Graph[{{3, 1}}, {
-        Null, {{1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, {{1, {1, 1, 5}}, {1, {2, 4, 8}}, {1, {3, 2, 6}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 
-        1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-         1}}, Null, {{1, {1, 1, 5}}, {1, {1, 1, 5}}, {1, {2, 4, 8}}, {
-          1, {2, 4, 8}}, {1, {3, 2, 6}}, {1, {3, 2, 6}}, {1, {4, 3, 7}}, {
-          1, {4, 3, 7}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 1., Axes -> False, AxesLabel -> 
-         None, AxesOrigin -> {0., 0.}, AxesStyle -> {{}, {}}, Background -> 
-         None, BaselinePosition -> Automatic, BaseStyle -> {}, 
-         ContentSelectable -> Automatic, EdgeLabels -> {None}, 
-         EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, ImageSize -> {360., 360.}, 
-         LabelStyle -> {}, PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.0809172992817743, 
-          0.08091729928177427}, {-0.08091729928177427, 0.0809172992817743}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.1, 0.1}, {0.1, 0.1}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, VertexCoordinates -> {{0., 0.}}, 
-         VertexLabels -> {None}, VertexShapeFunction -> {"Circle"}, 
-         VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-        "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7"}, 
-      "EdgeTranslations" -> {"g1", "g4", "g2", "g3"}, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, "Faces" -> {
-        Graph[{{3, 
-         1}}, {{{1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 
-          1}}, Null, {{-1, {-1, -1, -5}}, {-1, {-2, -4, -8}}, {
-           1, {4, 3, 7}}, {-1, {-3, -2, -6}}, {1, {1, 1, 5}}, {
-           1, {2, 4, 8}}, {-1, {-4, -3, -7}}, {1, {3, 2, 6}}}}]}, 
-      "FaceEdges" -> {{
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {1, 1, 5}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {2, 4, 8}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {4, 3, 7}}], 
-         DirectedEdge[{3, 1}, {3, 1}, {1, {3, 2, 6}}]}}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"scmodelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCSupercellModelGraph of {8,8} on T3.11\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCSupercellModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["35088", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCSupercellModelGraph[<|
-     "TriangleGroup" -> {2, 8, 8}, "CellCenter" -> 3, "PCGenus" -> 2, "Genus" -> 
-      3, "Graph" -> 
-      Graph[{{3, 1, 1}, {3, 1, 
-        2}}, {{{1, 2}, {1, 2}, {1, 2}, {1, 2}, {2, 1}, {2, 1}, {2, 1}, {2, 
-         1}}, Null, {{1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}, {
-          1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}}}, {
-        VertexCoordinates -> {{0., 0.}, {0.8408964152537162, 
-          0.348310699749007}}}], "UndirectedGraph" -> 
-      Graph[{{3, 1, 1}, {3, 1, 2}}, {
-        Null, {{1, 2}, {1, 2}, {1, 2}, {1, 2}, {2, 1}, {2, 1}, {2, 1}, {2, 
-         1}}, {{1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}, {
-          1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {4, 3, 7}}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 0.45000710303490243`, Axes -> 
-         False, AxesLabel -> None, AxesOrigin -> {0., 0.}, 
-         AxesStyle -> {{}, {}}, Background -> None, BaselinePosition -> 
-         Automatic, BaseStyle -> {}, ContentSelectable -> Automatic, 
-         EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, 
-         ImageSize -> {360., 162.00255709256487`}, LabelStyle -> {}, 
-         PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.010704611366179808`, 
-          0.851601026619896}, {-0.010704611366179805`, 0.3590153111151868}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.01796470079137658, 0.017964700791376575`}, {
-          0.017246112759721516`, 0.017246112759721544`}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, 
-         VertexCoordinates -> {{0., 0.}, {0.8408964152537162, 
-          0.348310699749007}}, VertexLabels -> {None}, 
-         VertexShapeFunction -> {"Circle"}, VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{3, 1, 1}, {3, 1, 
-        2}}, {{{1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 
-         1}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}, {2, 1}, {1, 2}}, 
-         Null, {{1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {1, 1, 5}}}, {
-          1, 1, {1, {2, 4, 8}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {3, 2, 6}}}, {
-          1, 1, {1, {4, 3, 7}}}, {1, 1, {1, {4, 3, 7}}}, {
-          1, 1, {1, {1, 1, 5}}}, {1, 1, {1, {1, 1, 5}}}, {
-          1, 1, {1, {2, 4, 8}}}, {1, 1, {1, {2, 4, 8}}}, {
-          1, 1, {1, {3, 2, 6}}}, {1, 1, {1, {3, 2, 6}}}, {
-          1, 1, {1, {4, 3, 7}}}, {1, 1, {1, {4, 3, 7}}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 0.45000710303490243`, Axes -> 
-         False, AxesLabel -> None, AxesOrigin -> {0., 0.}, 
-         AxesStyle -> {{}, {}}, Background -> None, BaselinePosition -> 
-         Automatic, BaseStyle -> {}, ContentSelectable -> Automatic, 
-         EdgeLabels -> {None}, EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, 
-         ImageSize -> {360., 162.00255709256487`}, LabelStyle -> {}, 
-         PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.010704611366179808`, 
-          0.851601026619896}, {-0.010704611366179805`, 0.3590153111151868}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.01796470079137658, 0.017964700791376575`}, {
-          0.017246112759721516`, 0.017246112759721544`}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, 
-         VertexCoordinates -> {{0., 0.}, {0.8408964152537162, 
-          0.348310699749007}}, VertexLabels -> {None}, 
-         VertexShapeFunction -> {"Circle"}, VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "VertexLabels" -> {"1", "x"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "x", "y", "y^-1", "z", "z^-1", "y^2", "y*z^-1", "y^-2", "y^-1*z", 
-        "y^3", "y^2*z^-1", "y^-3", "y^-2*z", "y^4", "y^3*z^-1"}, 
-      "EdgeTranslations" -> {
-       "1", "g4^-1*g6*g2", "g2", "g4^-1*g2", 
-        "g3*g5^-1*g3^-1*g1^-1*g2^-1*g4^-1*g6^-1*g4", "g1^-1", 
-        "g3*g5^-1*g1^-1", "g3*g1^-1"}, 
-      "PCTranslationGenerators" -> <|
-       "g1" -> "(z^-1*x^-1*y*z^-1*y*z*y*x^-1)", "g2" -> 
-        "(z^-1*x^-1*y*z^-1*y*z*y*x^-1*y*x*z)", "g3" -> 
-        "(z*y*(x^-1*z^-1)^2*y^3*x*z)", "g4" -> "(y^-1*z*y^-1*x*z)"|>, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(x*y^-1*z^-1)", "g2" -> "(y*x*z)", "g3" -> "(z*y^-1*z^-1*y)", 
-        "g4" -> "(y^2*x*z*y^-1)", "g5" -> "(y^-1*z*y^-1*z^-1*y^2)", "g6" -> 
-        "(y^3*x*z*y^-2)"|>, 
-      "TranslationGroupEmbedding" -> <|
-       "g1" -> "(g1^-1*g4^-1)", "g2" -> "(g1^-1*g2)", "g3" -> "(g3*g4^-1)", 
-        "g4" -> "(g1^-1*g2*g4^-1*g1^-1*g2*g3^-1*g4*g1*g2^-1*g1)", "g5" -> 
-        "(g4*g1^-1*g4^-1*g3*g2^-1*g1)", "g6" -> 
-        "(g1^-1*g2*g3^-1*g4*g2^-1*g1)"|>, 
-      "InternalSupercellTranslations" -> {"1", "y^3*z^-1"}, "Faces" -> {}, 
-      "FaceEdges" -> {}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}], "\n", 
+   RowBox[{
+   "HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3_sc-T3.11.hcs\>\"", "]"}]}], 
+  ";"}], "\n", 
  RowBox[{
   RowBox[{"onsitePC", "=", 
    RowBox[{"AssociationThread", "[", 
@@ -2233,7 +1299,8 @@ Cell[BoxData[{
   "scmodelgraph", ",", "1", ",", "onsitePC", ",", "hoppingsPC", ",", "k", ",", 
    RowBox[{"PCModel", "\[Rule]", "modelgraph"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.906030628181756*^9, 3.906030642009819*^9}, 
-   3.906031427899649*^9, {3.906435184950228*^9, 3.90643518830028*^9}},
+   3.906031427899649*^9, {3.906435184950228*^9, 3.90643518830028*^9}, 
+   3.918641150178178*^9, {3.918641539446198*^9, 3.918641542507965*^9}},
  CellLabel->"In[1]:=",
  CellID->1148403,ExpressionUUID->"652c6ed7-2873-45b5-aae8-c1889a884d72"],
 
@@ -2364,9 +1431,9 @@ Cell[BoxData[
                 RowBox[{"k", "[", "6", "]"}]}], ")"}]}]]}]}], ")"}]}]}], 
        ")"}]}], ",", "0"}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{3.906031429695656*^9, 3.906435188988504*^9, 
-  3.9102650638311205`*^9},
+  3.91026506383112*^9, 3.918641152656929*^9, 3.918641543268957*^9},
  CellLabel->"Out[5]=",
- CellID->10386077,ExpressionUUID->"07ae4f76-3677-4728-b403-d4a7e0302055"]
+ CellID->330912469,ExpressionUUID->"06a6fc43-2d14-4cea-ac36-012fda4fb808"]
 }, Open  ]]
 }, Open  ]],
 
@@ -2397,298 +1464,8 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"modelgraph", "=", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", 
-       StyleBox[
-       "\"HCModelGraph of {8,3} on T2.1\"", "IconizedCustomName", 
-        StripOnInput -> False], 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["HCModelGraph", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            
-            TagBox["120904", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    PatrickMLenggenhager`HyperBloch`HCModelGraph[<|
-     "TriangleGroup" -> {2, 3, 8}, "CellCenter" -> 3, "Genus" -> 2, "Graph" -> 
-      Graph[{{2, 1}, {2, 2}, {2, 3}, {2, 4}, {2, 5}, {2, 6}, {2, 7}, {2, 8}, {
-        2, 9}, {2, 10}, {2, 11}, {2, 12}, {2, 13}, {2, 14}, {2, 15}, {2, 
-        16}}, {{{1, 2}, {3, 1}, {1, 4}, {2, 5}, {2, 6}, {7, 3}, {3, 8}, {4, 
-         9}, {5, 10}, {11, 4}, {5, 12}, {13, 6}, {14, 7}, {6, 15}, {7, 15}, {
-         8, 13}, {14, 9}, {10, 16}, {12, 8}, {9, 12}, {10, 11}, {16, 13}, {16,
-          14}, {15, 11}}, 
-         Null, {{1, {1, 1, 9}}, {1, {2, 8, 16}}, {1, {3, 17, 32}}, {
-          1, {4, 2, 10}}, {1, {5, 18, 25}}, {1, {6, 7, 15}}, {
-          1, {7, 24, 31}}, {1, {8, 33, 45}}, {1, {9, 3, 11}}, {
-          1, {10, 36, 48}}, {1, {11, 19, 26}}, {1, {12, 37, 41}}, {
-          1, {13, 6, 14}}, {1, {14, 34, 46}}, {1, {15, 23, 30}}, {
-          1, {16, 40, 44}}, {1, {17, 22, 29}}, {1, {18, 4, 12}}, {
-          1, {19, 35, 47}}, {1, {20, 38, 42}}, {1, {21, 20, 27}}, {
-          1, {22, 21, 28}}, {1, {23, 5, 13}}, {1, {24, 39, 43}}}}, {
-        VertexCoordinates -> {{0.4056164008015161, 0.}, {0.2868141075672326, 
-          0.28681410756723275`}, {
-          0.28681410756722675`, -0.2868141075672285}, {0.6605975298376587, 
-          5.664226070673724*^-16}, {6.99702747969524*^-17, 
-          0.405616400801516}, {0.4671129929832897, 
-          0.4671129929832898}, {-6.92670381065753*^-16, -0.4056164008015093}, \
-{0.46711299298329145`, -0.467112992983291}, {-0.4671129929832925, \
--0.46711299298329434`}, {-0.28681410756723236`, 
-          0.2868141075672325}, {-0.46711299298329184`, 
-          0.46711299298329}, {-4.834719367710373*^-16, 
-          0.660597529837657}, {-0.6605975298376634, \
--1.6921517786986424`*^-15}, {-0.28681410756723114`, -0.2868141075672295}, {
-          1.0222443204062977`*^-15, -0.660597529837658}, {-0.4056164008015143,
-           7.166803835241803*^-16}}}], "UndirectedGraph" -> 
-      Graph[{{2, 1}, {2, 2}, {2, 3}, {2, 4}, {2, 5}, {2, 6}, {2, 7}, {2, 8}, {
-        2, 9}, {2, 10}, {2, 11}, {2, 12}, {2, 13}, {2, 14}, {2, 15}, {2, 
-        16}}, {Null, {{1, 2}, {3, 1}, {1, 4}, {2, 5}, {2, 6}, {7, 3}, {3, 
-         8}, {4, 9}, {5, 10}, {11, 4}, {5, 12}, {13, 6}, {14, 7}, {6, 15}, {7,
-          15}, {8, 13}, {14, 9}, {10, 16}, {12, 8}, {9, 12}, {10, 11}, {16, 
-         13}, {16, 14}, {15, 
-         11}}, {{1, {1, 1, 9}}, {1, {2, 8, 16}}, {1, {3, 17, 32}}, {
-          1, {4, 2, 10}}, {1, {5, 18, 25}}, {1, {6, 7, 15}}, {
-          1, {7, 24, 31}}, {1, {8, 33, 45}}, {1, {9, 3, 11}}, {
-          1, {10, 36, 48}}, {1, {11, 19, 26}}, {1, {12, 37, 41}}, {
-          1, {13, 6, 14}}, {1, {14, 34, 46}}, {1, {15, 23, 30}}, {
-          1, {16, 40, 44}}, {1, {17, 22, 29}}, {1, {18, 4, 12}}, {
-          1, {19, 35, 47}}, {1, {20, 38, 42}}, {1, {21, 20, 27}}, {
-          1, {22, 21, 28}}, {1, {23, 5, 13}}, {1, {24, 39, 43}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 0.9983999999999948, Axes -> 
-         False, AxesLabel -> None, AxesOrigin -> {0., 0.}, 
-         AxesStyle -> {{}, {}}, Background -> None, BaselinePosition -> 
-         Automatic, BaseStyle -> {}, ContentSelectable -> Automatic, 
-         EdgeLabels -> {None}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, 
-         ImageSize -> {240., 239.6159999999988}, LabelStyle -> {}, 
-         PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.6774523311997043, 
-          0.6774523311996996}, {-0.6774523311996989, 0.6774523311996978}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.02822718046665429, 0.02822718046665429}, {
-          0.027098093247988064`, 0.027098093247988064`}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, 
-         VertexCoordinates -> {{0.4056164008015161, 0.}, {0.2868141075672326, 
-          0.28681410756723275`}, {
-          0.28681410756722675`, -0.2868141075672285}, {0.6605975298376587, 
-          5.664226070673724*^-16}, {6.99702747969524*^-17, 
-          0.405616400801516}, {0.4671129929832897, 
-          0.4671129929832898}, {-6.92670381065753*^-16, -0.4056164008015093}, \
-{0.46711299298329145`, -0.467112992983291}, {-0.4671129929832925, \
--0.46711299298329434`}, {-0.28681410756723236`, 
-          0.2868141075672325}, {-0.46711299298329184`, 
-          0.46711299298329}, {-4.834719367710373*^-16, 
-          0.660597529837657}, {-0.6605975298376634, \
--1.6921517786986424`*^-15}, {-0.28681410756723114`, -0.2868141075672295}, {
-          1.0222443204062977`*^-15, -0.660597529837658}, {-0.4056164008015143,
-           7.166803835241803*^-16}}, VertexLabels -> {None}, 
-         VertexShapeFunction -> {"Circle"}, VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], "FullGraph" -> 
-      Graph[{{2, 1}, {2, 2}, {2, 3}, {2, 4}, {2, 5}, {2, 6}, {2, 7}, {2, 8}, {
-        2, 9}, {2, 10}, {2, 11}, {2, 12}, {2, 13}, {2, 14}, {2, 15}, {2, 
-        16}}, {{{1, 2}, {2, 1}, {3, 1}, {1, 3}, {1, 4}, {4, 1}, {2, 5}, {5, 
-         2}, {2, 6}, {6, 2}, {7, 3}, {3, 7}, {3, 8}, {8, 3}, {4, 9}, {9, 4}, {
-         5, 10}, {10, 5}, {11, 4}, {4, 11}, {5, 12}, {12, 5}, {13, 6}, {6, 
-         13}, {14, 7}, {7, 14}, {6, 15}, {15, 6}, {7, 15}, {15, 7}, {8, 13}, {
-         13, 8}, {14, 9}, {9, 14}, {10, 16}, {16, 10}, {12, 8}, {8, 12}, {9, 
-         12}, {12, 9}, {10, 11}, {11, 10}, {16, 13}, {13, 16}, {16, 14}, {14, 
-         16}, {15, 11}, {11, 15}}, 
-         Null, {{1, {1, 1, 9}}, {1, {1, 1, 9}}, {1, {2, 8, 16}}, {
-          1, {2, 8, 16}}, {1, {3, 17, 32}}, {1, {3, 17, 32}}, {
-          1, {4, 2, 10}}, {1, {4, 2, 10}}, {1, {5, 18, 25}}, {
-          1, {5, 18, 25}}, {1, {6, 7, 15}}, {1, {6, 7, 15}}, {
-          1, {7, 24, 31}}, {1, {7, 24, 31}}, {1, {8, 33, 45}}, {
-          1, {8, 33, 45}}, {1, {9, 3, 11}}, {1, {9, 3, 11}}, {
-          1, {10, 36, 48}}, {1, {10, 36, 48}}, {1, {11, 19, 26}}, {
-          1, {11, 19, 26}}, {1, {12, 37, 41}}, {1, {12, 37, 41}}, {
-          1, {13, 6, 14}}, {1, {13, 6, 14}}, {1, {14, 34, 46}}, {
-          1, {14, 34, 46}}, {1, {15, 23, 30}}, {1, {15, 23, 30}}, {
-          1, {16, 40, 44}}, {1, {16, 40, 44}}, {1, {17, 22, 29}}, {
-          1, {17, 22, 29}}, {1, {18, 4, 12}}, {1, {18, 4, 12}}, {
-          1, {19, 35, 47}}, {1, {19, 35, 47}}, {1, {20, 38, 42}}, {
-          1, {20, 38, 42}}, {1, {21, 20, 27}}, {1, {21, 20, 27}}, {
-          1, {22, 21, 28}}, {1, {22, 21, 28}}, {1, {23, 5, 13}}, {
-          1, {23, 5, 13}}, {1, {24, 39, 43}}, {1, {24, 39, 43}}}}, {
-        AlignmentPoint -> Center, AspectRatio -> 0.9983999999999948, Axes -> 
-         False, AxesLabel -> None, AxesOrigin -> {0., 0.}, 
-         AxesStyle -> {{}, {}}, Background -> None, BaselinePosition -> 
-         Automatic, BaseStyle -> {}, ContentSelectable -> Automatic, 
-         EdgeLabels -> {None}, EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
-           Directive[
-            Opacity[0.7], 
-            Hue[0.6, 0.7, 0.5]]}, Editable -> False, Epilog -> {}, FormatType -> 
-         TraditionalForm, Frame -> False, FrameLabel -> None, 
-         FrameStyle -> {{{}, {}}, {{}, {}}}, FrameTicks -> None, 
-         FrameTicksStyle -> {{{}, {}}, {{}, {}}}, GraphLayout -> Automatic, 
-         GraphStyle -> Automatic, GridLines -> None, 
-         GridLinesStyle -> {{}, {}}, ImageMargins -> 0., 
-         ImagePadding -> {{0., 0.}, {0., 0.}}, 
-         ImageSize -> {240., 239.6159999999988}, LabelStyle -> {}, 
-         PerformanceGoal -> Automatic, PlotLabel -> None, 
-         PlotRange -> {{-0.6774523311997043, 
-          0.6774523311996996}, {-0.6774523311996989, 0.6774523311996978}}, 
-         PlotRangeClipping -> False, 
-         PlotRangePadding -> {{0.02822718046665429, 0.02822718046665429}, {
-          0.027098093247988064`, 0.027098093247988064`}}, 
-         PlotRegion -> {{0., 1.}, {0., 1.}}, PlotTheme -> Automatic, 
-         Prolog -> {}, RotateLabel -> True, Ticks -> {None, None}, 
-         TicksStyle -> {{}, {}}, 
-         VertexCoordinates -> {{0.4056164008015161, 0.}, {0.2868141075672326, 
-          0.28681410756723275`}, {
-          0.28681410756722675`, -0.2868141075672285}, {0.6605975298376587, 
-          5.664226070673724*^-16}, {6.99702747969524*^-17, 
-          0.405616400801516}, {0.4671129929832897, 
-          0.4671129929832898}, {-6.92670381065753*^-16, -0.4056164008015093}, \
-{0.46711299298329145`, -0.467112992983291}, {-0.4671129929832925, \
--0.46711299298329434`}, {-0.28681410756723236`, 
-          0.2868141075672325}, {-0.46711299298329184`, 
-          0.46711299298329}, {-4.834719367710373*^-16, 
-          0.660597529837657}, {-0.6605975298376634, \
--1.6921517786986424`*^-15}, {-0.28681410756723114`, -0.2868141075672295}, {
-          1.0222443204062977`*^-15, -0.660597529837658}, {-0.4056164008015143,
-           7.166803835241803*^-16}}, VertexLabels -> {None}, 
-         VertexShapeFunction -> {"Circle"}, VertexStyle -> {
-           Directive[
-            Hue[0.6, 0.2, 0.8], 
-            EdgeForm[
-             Directive[
-              GrayLevel[0], 
-              Opacity[0.7]]]]}}], 
-      "VertexLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^7", "x*y*(x^-1*y^-1)^7*x^-1", 
-        "(y^-1*x^-1)^2", "x*y*x^-1", "(y^-1*x^-1)^6", 
-        "x*y*(x^-1*y^-1)^6*x^-1", "x*y*(x^-1*y^-1)^4*x^-1", "(y^-1*x^-1)^3", 
-        "x*y*(x^-1*y^-1)^2*x^-1", "x*y*x^-1*y^-1*x^-1", 
-        "x*y*(x^-1*y^-1)^3*x^-1", "(y^-1*x^-1)^5", "x*y*(x^-1*y^-1)^5*x^-1", 
-        "(y^-1*x^-1)^4"}, 
-      "SchwarzTriangleLabels" -> {
-       "1", "y^-1*x^-1", "(y^-1*x^-1)^2", "(y^-1*x^-1)^3", "(y^-1*x^-1)^4", 
-        "(y^-1*x^-1)^5", "(y^-1*x^-1)^6", "(y^-1*x^-1)^7", "x^-1", 
-        "x^-1*y^-1*x^-1", "(x^-1*y^-1)^2*x^-1", "(x^-1*y^-1)^3*x^-1", 
-        "(x^-1*y^-1)^4*x^-1", "(x^-1*y^-1)^5*x^-1", "(x^-1*y^-1)^6*x^-1", 
-        "(x^-1*y^-1)^7*x^-1", "y^-1", "y^-2*x^-1", "y^-1*(y^-1*x^-1)^2", 
-        "y^-1*(y^-1*x^-1)^3", "y^-1*(y^-1*x^-1)^4", "y^-1*(y^-1*x^-1)^5", 
-        "y^-1*(y^-1*x^-1)^6", "y^-1*(y^-1*x^-1)^7", "x*y*x^-1", 
-        "x*y*x^-1*y^-1*x^-1", "x*y*(x^-1*y^-1)^2*x^-1", 
-        "x*y*(x^-1*y^-1)^3*x^-1", "x*y*(x^-1*y^-1)^4*x^-1", 
-        "x*y*(x^-1*y^-1)^5*x^-1", "x*y*(x^-1*y^-1)^6*x^-1", 
-        "x*y*(x^-1*y^-1)^7*x^-1", "y^-1*x^-1*y^-1", "y^-1*x^-1*y^-2*x^-1", 
-        "(y^-1*x^-1*y^-1)^2*x^-1", "(y^-1*x^-1*y^-1)^2*x^-1*y^-1*x^-1", 
-        "y^-1*x^-1*y^-1*(y^-1*x^-1)^4", "y^-1*x^-1*y^-1*(y^-1*x^-1)^5", 
-        "y^-1*x^-1*y^-1*(y^-1*x^-1)^6", "y^-1*x^-1*y^-1*(y^-1*x^-1)^7", 
-        "y*x*y*x^-1", "y*x*y*x^-1*y^-1*x^-1", "y*x*y*(x^-1*y^-1)^2*x^-1", 
-        "y*x*y*(x^-1*y^-1)^3*x^-1", "y*x*y*(x^-1*y^-1)^4*x^-1", 
-        "y*x*y*(x^-1*y^-1)^5*x^-1", "y*x*y*(x^-1*y^-1)^6*x^-1", 
-        "y*x*y*(x^-1*y^-1)^7*x^-1"}, 
-      "EdgeTranslations" -> {
-       "1", "1", "1", "1", "1", "1", "1", "g1", "1", "g4", "1", "g1^-1", "1", 
-        "g2", "1", "g4^-1", "1", "1", "g3", "g2^-1", "1", "1", "1", "g3^-1"}, 
-      "TranslationGenerators" -> <|
-       "g1" -> "(z^2*y^-1*z^-1*x^-1*z^2*y^-1)", "g2" -> 
-        "(z*y^-1*z^-1*x*z^2*y*x^-1)", "g3" -> "(y^-1*z^-1*x*z^2*y*x^-1*z)", 
-        "g4" -> "(y^-1*z^-2*x*z*y*z^-1*x^-1*y*z^-2*x*z*y*z^-2)"|>, "Faces" -> {
-        Graph[{{2, 1}, {2, 2}, {2, 5}, {2, 10}, {2, 16}, {2, 14}, {2, 7}, {2, 
-         3}}, {{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 
-          1}}, Null, {{1, {1, 1, 9}}, {1, {4, 2, 10}}, {1, {9, 3, 11}}, {
-           1, {18, 4, 12}}, {1, {23, 5, 13}}, {1, {13, 6, 14}}, {
-           1, {6, 7, 15}}, {1, {2, 8, 16}}}}], 
-        Graph[{{2, 2}, {2, 1}, {2, 4}, {2, 9}, {2, 14}, {2, 16}, {2, 13}, {2, 
-         6}}, {{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 
-          1}}, Null, {{-1, {-1, -1, -9}}, {1, {3, 17, 32}}, {
-           1, {8, 33, 45}}, {-1, {-17, -22, -29}}, {-1, {-23, -5, -13}}, {
-           1, {22, 21, 28}}, {1, {12, 37, 41}}, {-1, {-5, -18, -25}}}}], 
-        Graph[{{2, 16}, {2, 10}, {2, 11}, {2, 4}, {2, 1}, {2, 3}, {2, 8}, {2, 
-         13}}, {{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 
-          1}}, Null, {{-1, {-18, -4, -12}}, {1, {21, 20, 27}}, {
-           1, {10, 36, 48}}, {-1, {-3, -17, -32}}, {-1, {-2, -8, -16}}, {
-           1, {7, 24, 31}}, {1, {16, 40, 44}}, {-1, {-22, -21, -28}}}}], 
-        Graph[{{2, 5}, {2, 2}, {2, 6}, {2, 15}, {2, 7}, {2, 14}, {2, 9}, {2, 
-         12}}, {{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 
-          1}}, Null, {{-1, {-4, -2, -10}}, {1, {5, 18, 25}}, {
-           1, {14, 34, 46}}, {-1, {-15, -23, -30}}, {-1, {-13, -6, -14}}, {
-           1, {17, 22, 29}}, {1, {20, 38, 42}}, {-1, {-11, -19, -26}}}}], 
-        Graph[{{2, 10}, {2, 5}, {2, 12}, {2, 8}, {2, 3}, {2, 7}, {2, 15}, {2, 
-         11}}, {{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 
-          1}}, Null, {{-1, {-9, -3, -11}}, {1, {11, 19, 26}}, {
-           1, {19, 35, 47}}, {-1, {-7, -24, -31}}, {-1, {-6, -7, -15}}, {
-           1, {15, 23, 30}}, {1, {24, 39, 43}}, {-1, {-21, -20, -27}}}}], 
-        Graph[{{2, 6}, {2, 13}, {2, 8}, {2, 12}, {2, 9}, {2, 4}, {2, 11}, {2, 
-         15}}, {{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 
-          1}}, Null, {{-1, {-12, -37, -41}}, {-1, {-16, -40, -44}}, {-1, \
-{-19, -35, -47}}, {-1, {-20, -38, -42}}, {-1, {-8, -33, -45}}, {-1, {-10, \
--36, -48}}, {-1, {-24, -39, -43}}, {-1, {-14, -34, -46}}}}]}, "FaceEdges" -> {{
-         DirectedEdge[{2, 1}, {2, 2}, {1, {1, 1, 9}}], 
-         DirectedEdge[{2, 2}, {2, 5}, {1, {4, 2, 10}}], 
-         DirectedEdge[{2, 5}, {2, 10}, {1, {9, 3, 11}}], 
-         DirectedEdge[{2, 10}, {2, 16}, {1, {18, 4, 12}}], 
-         DirectedEdge[{2, 16}, {2, 14}, {1, {23, 5, 13}}], 
-         DirectedEdge[{2, 14}, {2, 7}, {1, {13, 6, 14}}], 
-         DirectedEdge[{2, 7}, {2, 3}, {1, {6, 7, 15}}], 
-         DirectedEdge[{2, 3}, {2, 1}, {1, {2, 8, 16}}]}, {
-         DirectedEdge[{2, 1}, {2, 2}, {1, {1, 1, 9}}], 
-         DirectedEdge[{2, 1}, {2, 4}, {1, {3, 17, 32}}], 
-         DirectedEdge[{2, 4}, {2, 9}, {1, {8, 33, 45}}], 
-         DirectedEdge[{2, 14}, {2, 9}, {1, {17, 22, 29}}], 
-         DirectedEdge[{2, 16}, {2, 14}, {1, {23, 5, 13}}], 
-         DirectedEdge[{2, 16}, {2, 13}, {1, {22, 21, 28}}], 
-         DirectedEdge[{2, 13}, {2, 6}, {1, {12, 37, 41}}], 
-         DirectedEdge[{2, 2}, {2, 6}, {1, {5, 18, 25}}]}, {
-         DirectedEdge[{2, 10}, {2, 16}, {1, {18, 4, 12}}], 
-         DirectedEdge[{2, 10}, {2, 11}, {1, {21, 20, 27}}], 
-         DirectedEdge[{2, 11}, {2, 4}, {1, {10, 36, 48}}], 
-         DirectedEdge[{2, 1}, {2, 4}, {1, {3, 17, 32}}], 
-         DirectedEdge[{2, 3}, {2, 1}, {1, {2, 8, 16}}], 
-         DirectedEdge[{2, 3}, {2, 8}, {1, {7, 24, 31}}], 
-         DirectedEdge[{2, 8}, {2, 13}, {1, {16, 40, 44}}], 
-         DirectedEdge[{2, 16}, {2, 13}, {1, {22, 21, 28}}]}, {
-         DirectedEdge[{2, 2}, {2, 5}, {1, {4, 2, 10}}], 
-         DirectedEdge[{2, 2}, {2, 6}, {1, {5, 18, 25}}], 
-         DirectedEdge[{2, 6}, {2, 15}, {1, {14, 34, 46}}], 
-         DirectedEdge[{2, 7}, {2, 15}, {1, {15, 23, 30}}], 
-         DirectedEdge[{2, 14}, {2, 7}, {1, {13, 6, 14}}], 
-         DirectedEdge[{2, 14}, {2, 9}, {1, {17, 22, 29}}], 
-         DirectedEdge[{2, 9}, {2, 12}, {1, {20, 38, 42}}], 
-         DirectedEdge[{2, 5}, {2, 12}, {1, {11, 19, 26}}]}, {
-         DirectedEdge[{2, 5}, {2, 10}, {1, {9, 3, 11}}], 
-         DirectedEdge[{2, 5}, {2, 12}, {1, {11, 19, 26}}], 
-         DirectedEdge[{2, 12}, {2, 8}, {1, {19, 35, 47}}], 
-         DirectedEdge[{2, 3}, {2, 8}, {1, {7, 24, 31}}], 
-         DirectedEdge[{2, 7}, {2, 3}, {1, {6, 7, 15}}], 
-         DirectedEdge[{2, 7}, {2, 15}, {1, {15, 23, 30}}], 
-         DirectedEdge[{2, 15}, {2, 11}, {1, {24, 39, 43}}], 
-         DirectedEdge[{2, 10}, {2, 11}, {1, {21, 20, 27}}]}, {
-         DirectedEdge[{2, 13}, {2, 6}, {1, {12, 37, 41}}], 
-         DirectedEdge[{2, 8}, {2, 13}, {1, {16, 40, 44}}], 
-         DirectedEdge[{2, 12}, {2, 8}, {1, {19, 35, 47}}], 
-         DirectedEdge[{2, 9}, {2, 12}, {1, {20, 38, 42}}], 
-         DirectedEdge[{2, 4}, {2, 9}, {1, {8, 33, 45}}], 
-         DirectedEdge[{2, 11}, {2, 4}, {1, {10, 36, 48}}], 
-         DirectedEdge[{2, 15}, {2, 11}, {1, {24, 39, 43}}], 
-         DirectedEdge[{2, 6}, {2, 15}, {1, {14, 34, 46}}]}}|>],
-    SelectWithContents->True,
-    Selectable->False]}], ";"}], "\n", 
+   RowBox[{"HCExampleData", "[", "\"\<{8,8}-tess_T2.6_3.hcm\>\"", "]"}]}], 
+  ";"}], "\n", 
  RowBox[{"AbelianBlochHamiltonianExpression", "[", 
   RowBox[{"modelgraph", ",", "1", ",", 
    RowBox[{"v", "&"}], ",", 
@@ -2697,7 +1474,8 @@ Cell[BoxData[{
    RowBox[{"ReturnSparseArray", "->", "True"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.906030628181756*^9, 3.906030642009819*^9}, 
    3.906031427899649*^9, {3.906435184950228*^9, 3.90643518830028*^9}, {
-   3.918561152383904*^9, 3.9185612259644547`*^9}, 3.9185612577694187`*^9},
+   3.918561152383904*^9, 3.918561225964455*^9}, 3.9185612577694197`*^9, 
+   3.918641158506071*^9, 3.91864157366921*^9},
  CellLabel->"In[1]:=",
  CellID->88541343,ExpressionUUID->"f384a361-0a20-4bcc-ac15-506b4cbc0d3b"],
 
@@ -2722,14 +1500,9 @@ Cell[BoxData[
                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                  Magnification])}]], 
             GraphicsBox[
-             RasterBox[CompressedData["
-1:eJxTTMoPSmVmYGAQgGIQ26p8d9wspXP2c4wXbTH/ccX+xSLFx4GrXtkPdXEG
-MHgApRGAWuaQaj613EPr8KG1O4e6+YMt3Q6Uf4eKO4e6+6ll73B1/1APn8EW
-zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
-2MwZKuE2Gs6DM5yHivtxmT/Ywm2o+HekhSetw2c0PKkrDgB0+csX
-              "], {{0, 0}, {16, 16}}, {0, 1}], AspectRatio -> 1, Axes -> 
-             False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
-             Directive[
+             RasterBox[{{{0.5, 0., 0.}}}, {{0, 0}, {1, 1}}, {0, 1}], 
+             AspectRatio -> 1, Axes -> False, Frame -> False, 
+             FrameLabel -> {None, None}, FrameStyle -> Directive[
                Opacity[0.5], 
                Thickness[Tiny], 
                RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2757,13 +1530,13 @@ zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
                RowBox[{
                  TagBox["\"Specified elements: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["64", "SummaryItem"]}]}, {
+                 TagBox["1", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Dimensions: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
                  TagBox[
                   RowBox[{"{", 
-                    RowBox[{"16", ",", "16"}], "}"}], "SummaryItem"]}]}}, 
+                    RowBox[{"1", ",", "1"}], "}"}], "SummaryItem"]}]}}, 
              GridBoxAlignment -> {
               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
              False, GridBoxItemSize -> {
@@ -2789,14 +1562,9 @@ zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
                 3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                  Magnification])}]], 
             GraphicsBox[
-             RasterBox[CompressedData["
-1:eJxTTMoPSmVmYGAQgGIQ26p8d9wspXP2c4wXbTH/ccX+xSLFx4GrXtkPdXEG
-MHgApRGAWuaQaj613EPr8KG1O4e6+YMt3Q6Uf4eKO4e6+6ll73B1/1APn8EW
-zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
-2MwZKuE2Gs6DM5yHivtxmT/Ywm2o+HekhSetw2c0PKkrDgB0+csX
-              "], {{0, 0}, {16, 16}}, {0, 1}], AspectRatio -> 1, Axes -> 
-             False, Frame -> False, FrameLabel -> {None, None}, FrameStyle -> 
-             Directive[
+             RasterBox[{{{0.5, 0., 0.}}}, {{0, 0}, {1, 1}}, {0, 1}], 
+             AspectRatio -> 1, Axes -> False, Frame -> False, 
+             FrameLabel -> {None, None}, FrameStyle -> Directive[
                Opacity[0.5], 
                Thickness[Tiny], 
                RGBColor[0.368417, 0.506779, 0.709798]], 
@@ -2824,13 +1592,13 @@ zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
                RowBox[{
                  TagBox["\"Specified elements: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["64", "SummaryItem"]}]}, {
+                 TagBox["1", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Dimensions: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
                  TagBox[
                   RowBox[{"{", 
-                    RowBox[{"16", ",", "16"}], "}"}], "SummaryItem"]}]}, {
+                    RowBox[{"1", ",", "1"}], "}"}], "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Default: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -2838,7 +1606,7 @@ zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
                RowBox[{
                  TagBox["\"Density: \"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
-                 TagBox["0.25`", "SummaryItem"]}]}, {
+                 TagBox["1.`", "SummaryItem"]}]}, {
                RowBox[{
                  TagBox["\"Elements:\"", "SummaryItemAnnotation"], 
                  "\[InvisibleSpace]", 
@@ -2851,45 +1619,49 @@ zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
                     RowBox[{"1", ",", "1"}], "}"}], "\[Rule]", 
                     StyleBox[
                     PaneBox[
-                    "v", ContentPadding -> False, FrameMargins -> 0, 
-                    StripOnInput -> True, BaselinePosition -> Baseline, 
-                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
-                    False]}]}, {
                     RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "3"}], "}"}], "\[Rule]", 
-                    StyleBox[
-                    PaneBox[
-                    RowBox[{"-", "t"}], ContentPadding -> False, FrameMargins -> 
-                    0, StripOnInput -> True, BaselinePosition -> Baseline, 
-                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
-                    False]}]}, {
                     RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", 
-                    StyleBox[
-                    PaneBox[
                     RowBox[{"-", 
-                    RowBox[{"Conjugate", "[", "t", "]"}]}], ContentPadding -> 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[ImaginaryI]", " ", 
+                    RowBox[{"k", "[", "1", "]"}]}]]}], " ", "t"}], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[ImaginaryI]", " ", 
+                    RowBox[{"k", "[", "2", "]"}]}]], " ", "t"}], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[ImaginaryI]", " ", 
+                    RowBox[{"k", "[", "3", "]"}]}]], " ", "t"}], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[ImaginaryI]", " ", 
+                    RowBox[{"k", "[", "4", "]"}]}]], " ", "t"}], "+", "v", 
+                    "-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+                    RowBox[{"k", "[", "1", "]"}]}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+                    RowBox[{"k", "[", "2", "]"}]}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+                    RowBox[{"k", "[", "3", "]"}]}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+                    RowBox[{"k", "[", "4", "]"}]}]]}], ")"}], " ", 
+                    RowBox[{"Conjugate", "[", "t", "]"}]}]}], ContentPadding -> 
                     False, FrameMargins -> 0, StripOnInput -> True, 
                     BaselinePosition -> Baseline, 
                     ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
-                    False]}]}, {
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "4"}], "}"}], "\[Rule]", 
-                    StyleBox[
-                    PaneBox[
-                    RowBox[{"-", 
-                    RowBox[{"Conjugate", "[", "t", "]"}]}], ContentPadding -> 
-                    False, FrameMargins -> 0, StripOnInput -> True, 
-                    BaselinePosition -> Baseline, 
-                    ImageSize -> {{1, 300}, Automatic}], LineBreakWithin -> 
-                    False]}]}, {
-                    ItemBox[
-                    "\"\[VerticalEllipsis]\"", Alignment -> Center, 
-                    StripOnInput -> False]}}, 
-                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    False]}]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
@@ -2911,59 +1683,24 @@ zqP1y/CIl4EK/5FW71PLXlLNGer+HWz24jJ/oPw72MJhqNR31HL/aDgPbLk0
      "SummaryPanel"],
     DynamicModuleValues:>{}], "]"}],
   SparseArray[
-  Automatic, {16, 16}, 0, {
-   1, {{0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64}, {{
-     1}, {3}, {2}, {4}, {2}, {1}, {5}, {6}, {3}, {7}, {1}, {8}, {4}, {1}, {
-     11}, {9}, {5}, {2}, {10}, {12}, {6}, {2}, {13}, {15}, {7}, {14}, {3}, {
-     15}, {8}, {3}, {12}, {13}, {9}, {4}, {14}, {12}, {10}, {5}, {11}, {16}, {
-     11}, {10}, {15}, {4}, {12}, {5}, {9}, {8}, {13}, {8}, {16}, {6}, {14}, {
-     16}, {7}, {9}, {15}, {6}, {7}, {11}, {16}, {10}, {13}, {
-     14}}}, {$CellContext`v, -$CellContext`t, -Conjugate[$CellContext`t], -
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     E^(Complex[0, 1] $CellContext`k[4]) $CellContext`t, -
-     E^(Complex[0, -1] Conjugate[$CellContext`k[1]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     E^(Complex[0, -1] $CellContext`k[1]) $CellContext`t, -
-     E^(Complex[0, -1] Conjugate[$CellContext`k[2]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     E^(Complex[0, 1] $CellContext`k[3]) $CellContext`t, -
-     E^(Complex[0, 1] Conjugate[$CellContext`k[4]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -
-     E^(Complex[0, 1] $CellContext`k[1]) $CellContext`t, -$CellContext`t, -
-     E^(Complex[0, 1] Conjugate[$CellContext`k[2]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     E^(Complex[0, -1] $CellContext`k[3]) $CellContext`t, -
-     E^(Complex[0, -1] Conjugate[$CellContext`k[4]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     E^(Complex[0, -1] $CellContext`k[2]) $CellContext`t, -
-     E^(Complex[0, -1] Conjugate[$CellContext`k[3]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -
-     E^(Complex[0, -1] $CellContext`k[4]) $CellContext`t, -$CellContext`t, -
-     E^(Complex[0, 1] Conjugate[$CellContext`k[1]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -Conjugate[$CellContext`t], $CellContext`v, -
-     E^(Complex[0, 1] $CellContext`k[2]) $CellContext`t, -$CellContext`t, -
-     E^(Complex[0, 1] Conjugate[$CellContext`k[3]]) 
-     Conjugate[$CellContext`t], $CellContext`v, -$CellContext`t, -
-     Conjugate[$CellContext`t], -Conjugate[$CellContext`t]}}],
+  Automatic, {1, 1}, 0, {
+   1, {{0, 1}, {{1}}}, {-E^(Complex[0, 1] $CellContext`k[1]) $CellContext`t - 
+     E^(Complex[0, 1] $CellContext`k[2]) $CellContext`t - 
+     E^(Complex[0, 1] $CellContext`k[3]) $CellContext`t - 
+     E^(Complex[0, 1] $CellContext`k[4]) $CellContext`t + $CellContext`v - (
+      E^(Complex[0, -1] $CellContext`k[1]) + 
+      E^(Complex[0, -1] $CellContext`k[2]) + 
+      E^(Complex[0, -1] $CellContext`k[3]) + 
+      E^(Complex[0, -1] $CellContext`k[4])) Conjugate[$CellContext`t]}}],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
  CellChangeTimes->{
-  3.906031429695656*^9, 3.906435188988504*^9, 3.9102650638311205`*^9, {
-   3.918561221552326*^9, 3.918561226322371*^9}, 3.918561562977437*^9},
+  3.906031429695656*^9, 3.906435188988504*^9, 3.91026506383112*^9, {
+   3.918561221552326*^9, 3.918561226322371*^9}, 3.918561562977437*^9, 
+   3.91864115924339*^9, 3.918641574193976*^9},
  CellLabel->"Out[2]=",
- CellID->806940960,ExpressionUUID->"187d52e2-5395-4621-9e7b-61d660285658"]
+ CellID->254211235,ExpressionUUID->"3e6cc0ba-a89f-431d-8426-c1b7e5ad5225"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -3092,7 +1829,7 @@ Cell[BoxData[""], "Template",
 }, Open  ]]
 },
 WindowSize->{818, 820},
-WindowMargins->{{Automatic, 292}, {-203, Automatic}},
+WindowMargins->{{Automatic, 343}, {Automatic, 34}},
 TaggingRules-><|"Paclet" -> "PatrickMLenggenhager/HyperBloch"|>,
 FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
@@ -3105,14 +1842,14 @@ ExpressionUUID->"d13007c1-f945-4caf-9c39-96e1de350f63"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[56866, 1372, 487, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"f66a8592-336f-436f-a669-374caa490be8",
+  Cell[33695, 926, 487, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"f66a8592-336f-436f-a669-374caa490be8",
    CellTags->"ExtendedExamples",
    CellID->326378688]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 137866, 3106}
+ {"ExtendedExamples", 68716, 1843}
  }
 *)
 (*NotebookFileOutline
@@ -3171,164 +1908,164 @@ Cell[15004, 418, 441, 12, 73, "PrimaryExamplesSection",ExpressionUUID->"cb04f553
 Cell[15448, 432, 690, 13, 60, "ExampleText",ExpressionUUID->"fe456159-779a-40e4-b90c-50fbbbdafc5f",
  CellID->82755364],
 Cell[CellGroupData[{
-Cell[16163, 449, 6645, 130, 61, "Input",ExpressionUUID->"ac881db1-505d-44dd-8c11-29c4ababfcca",
+Cell[16163, 449, 804, 15, 47, "Input",ExpressionUUID->"ac881db1-505d-44dd-8c11-29c4ababfcca",
  CellID->2282893],
-Cell[22811, 581, 1464, 38, 29, "Output",ExpressionUUID->"fc8a1451-8cdb-4b89-9625-62b3a569453a",
- CellID->495821595]
+Cell[16970, 466, 1535, 39, 29, "Output",ExpressionUUID->"f6de1f59-7e7d-430b-aa27-7d239cdd518b",
+ CellID->596936726]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24312, 624, 242, 5, 20, "ExampleDelimiter",ExpressionUUID->"0d27364f-6a4a-41cd-8346-79a61252b6a1",
+Cell[18542, 510, 242, 5, 20, "ExampleDelimiter",ExpressionUUID->"0d27364f-6a4a-41cd-8346-79a61252b6a1",
  CellID->359821871],
-Cell[24557, 631, 286, 4, 24, "ExampleText",ExpressionUUID->"fac98d31-9663-47af-a4e5-08d1ebcb9f63",
+Cell[18787, 517, 286, 4, 24, "ExampleText",ExpressionUUID->"fac98d31-9663-47af-a4e5-08d1ebcb9f63",
  CellID->36408547],
 Cell[CellGroupData[{
-Cell[24868, 639, 6892, 133, 61, "Input",ExpressionUUID->"95fcf837-6c1b-4329-8d21-6642a74e79a8",
+Cell[19098, 525, 863, 17, 47, "Input",ExpressionUUID->"95fcf837-6c1b-4329-8d21-6642a74e79a8",
  CellID->633400500],
-Cell[31763, 774, 1729, 46, 51, "Output",ExpressionUUID->"c9ce5632-5b6c-4eb1-a20a-31056d13d150",
- CellID->53468336]
+Cell[19964, 544, 1799, 47, 51, "Output",ExpressionUUID->"21e14cea-9a0e-45cf-9db1-bbe834c721d1",
+ CellID->384403571]
 }, Open  ]],
-Cell[33507, 823, 197, 2, 24, "ExampleText",ExpressionUUID->"f31a65ac-3a7d-4cd2-b223-b0df1fafbbdc",
+Cell[21778, 594, 197, 2, 24, "ExampleText",ExpressionUUID->"f31a65ac-3a7d-4cd2-b223-b0df1fafbbdc",
  CellID->314609107],
 Cell[CellGroupData[{
-Cell[33729, 829, 334, 7, 27, "Input",ExpressionUUID->"dbe6a2af-e310-4eb6-9919-89a3fa5e7865",
+Cell[22000, 600, 334, 7, 27, "Input",ExpressionUUID->"dbe6a2af-e310-4eb6-9919-89a3fa5e7865",
  CellID->411271165],
-Cell[34066, 838, 629, 18, 26, "Output",ExpressionUUID->"bd22ffa2-e5b6-4750-89a1-3d19465fe150",
- CellID->48714703]
+Cell[22337, 609, 656, 19, 26, "Output",ExpressionUUID->"b590c0cc-0fff-45a0-806c-b38093ebf850",
+ CellID->1171614931]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34744, 862, 242, 5, 20, "ExampleDelimiter",ExpressionUUID->"6f664ba6-6c53-42b9-896f-a2581d917c9a",
+Cell[23042, 634, 242, 5, 20, "ExampleDelimiter",ExpressionUUID->"6f664ba6-6c53-42b9-896f-a2581d917c9a",
  CellID->677196106],
-Cell[34989, 869, 891, 18, 62, "ExampleText",ExpressionUUID->"e3b8ece6-3cc9-4858-8f68-4b8698f8e5fe",
+Cell[23287, 641, 891, 18, 62, "ExampleText",ExpressionUUID->"e3b8ece6-3cc9-4858-8f68-4b8698f8e5fe",
  CellID->680708440],
 Cell[CellGroupData[{
-Cell[35905, 891, 8446, 180, 211, "Input",ExpressionUUID->"a3ba0bbe-867d-49f6-930b-2f9ce301407e",
+Cell[24203, 663, 2848, 76, 204, "Input",ExpressionUUID->"a3ba0bbe-867d-49f6-930b-2f9ce301407e",
  CellID->262417576],
-Cell[44354, 1073, 1585, 43, 29, "Output",ExpressionUUID->"6f307364-4143-4d4a-b37c-c63fee9d03fb",
- CellID->689960851]
+Cell[27054, 741, 1658, 44, 29, "Output",ExpressionUUID->"efc29266-40ba-49be-a1cf-b84decb63afa",
+ CellID->1840780417]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45988, 1122, 242, 5, 20, "ExampleDelimiter",ExpressionUUID->"0acee9e9-b06e-44f6-8e0d-3416aee46a15",
+Cell[28761, 791, 242, 5, 20, "ExampleDelimiter",ExpressionUUID->"0acee9e9-b06e-44f6-8e0d-3416aee46a15",
  CellID->228953716],
-Cell[46233, 1129, 707, 13, 43, "ExampleText",ExpressionUUID->"2b77b004-ee91-4f85-a423-e0925f110a86",
+Cell[29006, 798, 707, 13, 43, "ExampleText",ExpressionUUID->"2b77b004-ee91-4f85-a423-e0925f110a86",
  CellID->16699796],
 Cell[CellGroupData[{
-Cell[46965, 1146, 7201, 147, 141, "Input",ExpressionUUID->"af5ddb53-5b80-49af-96c3-756fe4ccaec9",
+Cell[29738, 815, 1213, 31, 134, "Input",ExpressionUUID->"af5ddb53-5b80-49af-96c3-756fe4ccaec9",
  CellID->78835713],
-Cell[54169, 1295, 2636, 70, 51, "Output",ExpressionUUID->"2b98ce5b-76f9-4004-b5a3-bfdde109676f",
- CellID->63999339]
+Cell[30954, 848, 2680, 71, 51, "Output",ExpressionUUID->"18ff5542-f76a-4ee3-ab97-6bd0aef4a220",
+ CellID->166628881]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[56866, 1372, 487, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"f66a8592-336f-436f-a669-374caa490be8",
+Cell[33695, 926, 487, 13, 58, "ExtendedExamplesSection",ExpressionUUID->"f66a8592-336f-436f-a669-374caa490be8",
  CellTags->"ExtendedExamples",
  CellID->326378688],
 Cell[CellGroupData[{
-Cell[57378, 1389, 241, 5, 35, "ExampleSection",ExpressionUUID->"da147fcf-b8f0-4218-9c13-c664b65b2c3a",
+Cell[34207, 943, 241, 5, 35, "ExampleSection",ExpressionUUID->"da147fcf-b8f0-4218-9c13-c664b65b2c3a",
  CellID->452520281],
 Cell[CellGroupData[{
-Cell[57644, 1398, 182, 2, 24, "ExampleSubsection",ExpressionUUID->"d4a00df3-6032-46aa-8c43-08d318b86920",
+Cell[34473, 952, 182, 2, 24, "ExampleSubsection",ExpressionUUID->"d4a00df3-6032-46aa-8c43-08d318b86920",
  CellID->198501545],
-Cell[57829, 1402, 327, 6, 41, "ExampleText",ExpressionUUID->"4e1748c6-5972-4e9d-a5d7-a6bba5e0c15b",
+Cell[34658, 956, 327, 6, 41, "ExampleText",ExpressionUUID->"4e1748c6-5972-4e9d-a5d7-a6bba5e0c15b",
  CellID->293180495],
-Cell[58159, 1410, 13819, 265, 58, "Input",ExpressionUUID->"b1a3429b-0a07-4f33-ae72-2428e5482c38",
+Cell[34988, 964, 628, 14, 47, "Input",ExpressionUUID->"b1a3429b-0a07-4f33-ae72-2428e5482c38",
  CellID->407621152],
 Cell[CellGroupData[{
-Cell[72003, 1679, 454, 10, 27, "Input",ExpressionUUID->"e839607d-07d1-4235-ad2f-67cd3e6762a4",
+Cell[35641, 982, 454, 10, 27, "Input",ExpressionUUID->"e839607d-07d1-4235-ad2f-67cd3e6762a4",
  CellID->244028921],
-Cell[72460, 1691, 402, 9, 26, "Output",ExpressionUUID->"aafe553f-aec8-4c78-94cc-5af452b47a83",
- CellID->60025511]
+Cell[36098, 994, 450, 10, 26, "Output",ExpressionUUID->"043e71d8-dd3f-42f2-8453-5be428587ba1",
+ CellID->1295901354]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[72899, 1705, 504, 11, 27, "Input",ExpressionUUID->"5054b8d3-7ced-4db3-89db-802af5143dbb",
+Cell[36585, 1009, 500, 11, 27, "Input",ExpressionUUID->"5054b8d3-7ced-4db3-89db-802af5143dbb",
  CellID->197552022],
-Cell[73406, 1718, 1631, 50, 68, "Output",ExpressionUUID->"7f3a7045-3e61-4216-8354-05ecc08d359a",
- CellID->155101157]
+Cell[37088, 1022, 2006, 63, 68, "Output",ExpressionUUID->"b467e175-493e-40fb-993c-0b3104a66cbf",
+ CellID->707100972]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75074, 1773, 441, 8, 47, "Input",ExpressionUUID->"318ea1e2-7afc-4899-b199-20edf5898540",
+Cell[39131, 1090, 441, 8, 47, "Input",ExpressionUUID->"318ea1e2-7afc-4899-b199-20edf5898540",
  CellID->233229007],
-Cell[75518, 1783, 4854, 129, 95, "Output",ExpressionUUID->"fcd91d98-7770-42a3-8681-b90c65725718",
- CellID->237529919]
+Cell[39575, 1100, 4902, 130, 95, "Output",ExpressionUUID->"cef3af70-ac39-4d57-aaf6-3782f5ef2934",
+ CellID->910317503]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
-Cell[80411, 1917, 264, 5, 35, "ExampleSection",ExpressionUUID->"b38c68de-babb-4527-9b5b-919b90448d9a",
+Cell[44516, 1235, 264, 5, 35, "ExampleSection",ExpressionUUID->"b38c68de-babb-4527-9b5b-919b90448d9a",
  CellID->112538656],
 Cell[CellGroupData[{
-Cell[80700, 1926, 243, 5, 23, "ExampleSection",ExpressionUUID->"d9560930-ab18-4795-8acc-798ab4243332",
+Cell[44805, 1244, 243, 5, 23, "ExampleSection",ExpressionUUID->"d9560930-ab18-4795-8acc-798ab4243332",
  CellID->476698288],
 Cell[CellGroupData[{
-Cell[80968, 1935, 317, 6, 26, "ExampleSubsection",ExpressionUUID->"7cec6767-bb80-4457-8716-b1658dd1e46a",
+Cell[45073, 1253, 317, 6, 26, "ExampleSubsection",ExpressionUUID->"7cec6767-bb80-4457-8716-b1658dd1e46a",
  CellID->200887691],
-Cell[81288, 1943, 276, 5, 24, "ExampleText",ExpressionUUID->"4f95c364-93f1-4778-af4e-1ca1ee6be804",
+Cell[45393, 1261, 276, 5, 24, "ExampleText",ExpressionUUID->"4f95c364-93f1-4778-af4e-1ca1ee6be804",
  CellID->654805157],
 Cell[CellGroupData[{
-Cell[81589, 1952, 14591, 285, 155, "Input",ExpressionUUID->"652c6ed7-2873-45b5-aae8-c1889a884d72",
+Cell[45694, 1270, 1373, 34, 142, "Input",ExpressionUUID->"652c6ed7-2873-45b5-aae8-c1889a884d72",
  CellID->1148403],
-Cell[96183, 2239, 4809, 129, 95, "Output",ExpressionUUID->"07ae4f76-3677-4728-b403-d4a7e0302055",
- CellID->10386077]
+Cell[47070, 1306, 4851, 129, 95, "Output",ExpressionUUID->"06a6fc43-2d14-4cea-ac36-012fda4fb808",
+ CellID->330912469]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[101041, 2374, 318, 6, 26, "ExampleSubsection",ExpressionUUID->"70c5f4f4-489a-465c-a365-a3a6bb3afe2d",
+Cell[51970, 1441, 318, 6, 26, "ExampleSubsection",ExpressionUUID->"70c5f4f4-489a-465c-a365-a3a6bb3afe2d",
  CellID->1036996805],
-Cell[101362, 2382, 411, 10, 26, "ExampleText",ExpressionUUID->"041cec4a-5956-4da6-8304-a081527c2538",
+Cell[52291, 1449, 411, 10, 26, "ExampleText",ExpressionUUID->"041cec4a-5956-4da6-8304-a081527c2538",
  CellID->1975506230],
 Cell[CellGroupData[{
-Cell[101798, 2396, 18346, 305, 73, "Input",ExpressionUUID->"f384a361-0a20-4bcc-ac15-506b4cbc0d3b",
+Cell[52727, 1463, 749, 16, 66, "Input",ExpressionUUID->"f384a361-0a20-4bcc-ac15-506b4cbc0d3b",
  CellID->88541343],
-Cell[120147, 2703, 13119, 262, 53, "Output",ExpressionUUID->"187d52e2-5395-4621-9e7b-61d660285658",
- CellID->806940960]
+Cell[53479, 1481, 10639, 221, 53, "Output",ExpressionUUID->"3e6cc0ba-a89f-431d-8426-c1b7e5ad5225",
+ CellID->254211235]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
-Cell[133305, 2970, 248, 5, 35, "ExampleSection",ExpressionUUID->"0d54ec61-ab7c-4802-a22b-16908247134f",
+Cell[64157, 1707, 248, 5, 35, "ExampleSection",ExpressionUUID->"0d54ec61-ab7c-4802-a22b-16908247134f",
  CellID->466091341],
-Cell[133556, 2977, 258, 5, 23, "ExampleSection",ExpressionUUID->"ae535a9b-e8d7-4579-92e7-f72773096d65",
+Cell[64408, 1714, 258, 5, 23, "ExampleSection",ExpressionUUID->"ae535a9b-e8d7-4579-92e7-f72773096d65",
  CellID->113613961],
-Cell[133817, 2984, 251, 5, 23, "ExampleSection",ExpressionUUID->"0eceeb89-7d50-4592-9afe-7c312252d0fb",
+Cell[64669, 1721, 251, 5, 23, "ExampleSection",ExpressionUUID->"0eceeb89-7d50-4592-9afe-7c312252d0fb",
  CellID->594336563],
-Cell[134071, 2991, 256, 5, 23, "ExampleSection",ExpressionUUID->"3232c9e5-853c-43cf-a0c3-cece249b6374",
+Cell[64923, 1728, 256, 5, 23, "ExampleSection",ExpressionUUID->"3232c9e5-853c-43cf-a0c3-cece249b6374",
  CellID->763924802],
-Cell[134330, 2998, 248, 5, 23, "ExampleSection",ExpressionUUID->"335741ac-c3bf-4f98-b769-2a015f5bbb0e",
+Cell[65182, 1735, 248, 5, 23, "ExampleSection",ExpressionUUID->"335741ac-c3bf-4f98-b769-2a015f5bbb0e",
  CellID->76990128]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[134615, 3008, 109, 1, 72, "MetadataSection",ExpressionUUID->"04cac98b-4434-4558-bb5c-a50bffbaf3c6",
+Cell[65467, 1745, 109, 1, 72, "MetadataSection",ExpressionUUID->"04cac98b-4434-4558-bb5c-a50bffbaf3c6",
  CellID->42901253],
-Cell[134727, 3011, 473, 12, 26, "History",ExpressionUUID->"a9449086-5e97-4202-a957-8ef347936728",
+Cell[65579, 1748, 473, 12, 26, "History",ExpressionUUID->"a9449086-5e97-4202-a957-8ef347936728",
  CellID->969934],
 Cell[CellGroupData[{
-Cell[135225, 3027, 484, 13, 21, "CategorizationSection",ExpressionUUID->"df9aef4c-2850-49c2-a631-981bc53613de",
+Cell[66077, 1764, 484, 13, 21, "CategorizationSection",ExpressionUUID->"df9aef4c-2850-49c2-a631-981bc53613de",
  CellID->155892578],
-Cell[135712, 3042, 134, 2, 70, "Categorization",ExpressionUUID->"37577286-8a2e-4690-95d1-258cd136aac3",
+Cell[66564, 1779, 134, 2, 70, "Categorization",ExpressionUUID->"37577286-8a2e-4690-95d1-258cd136aac3",
  CellID->379313778],
-Cell[135849, 3046, 159, 2, 70, "Categorization",ExpressionUUID->"15fdabe5-69c0-4859-8ec5-136948b0dc35",
+Cell[66701, 1783, 159, 2, 70, "Categorization",ExpressionUUID->"15fdabe5-69c0-4859-8ec5-136948b0dc35",
  CellID->123752965],
-Cell[136011, 3050, 156, 2, 70, "Categorization",ExpressionUUID->"c4965993-9dd5-4758-bf37-c7cd4d83d488",
+Cell[66863, 1787, 156, 2, 70, "Categorization",ExpressionUUID->"c4965993-9dd5-4758-bf37-c7cd4d83d488",
  CellID->207073079],
-Cell[136170, 3054, 197, 4, 70, "Categorization",ExpressionUUID->"bb49b832-e02e-40af-9542-ed5332d2229c",
+Cell[67022, 1791, 197, 4, 70, "Categorization",ExpressionUUID->"bb49b832-e02e-40af-9542-ed5332d2229c",
  CellID->485781109]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[136404, 3063, 109, 1, 21, "KeywordsSection",ExpressionUUID->"b9218ebb-8180-446d-816f-0ae498757f49",
+Cell[67256, 1800, 109, 1, 21, "KeywordsSection",ExpressionUUID->"b9218ebb-8180-446d-816f-0ae498757f49",
  CellID->55111812],
-Cell[136516, 3066, 98, 1, 70, "Keywords",ExpressionUUID->"ef98b38b-9a15-4564-a72a-1ac60a848bb4",
+Cell[67368, 1803, 98, 1, 70, "Keywords",ExpressionUUID->"ef98b38b-9a15-4564-a72a-1ac60a848bb4",
  CellID->78694749]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[136651, 3072, 119, 1, 21, "TemplatesSection",ExpressionUUID->"fc1f065b-1492-425c-99fa-0fbdcd783aa2",
+Cell[67503, 1809, 119, 1, 21, "TemplatesSection",ExpressionUUID->"fc1f065b-1492-425c-99fa-0fbdcd783aa2",
  CellID->272215535],
-Cell[136773, 3075, 148, 2, 70, "Template",ExpressionUUID->"78c4c51d-f3aa-458d-8e24-a157e274b180",
+Cell[67625, 1812, 148, 2, 70, "Template",ExpressionUUID->"78c4c51d-f3aa-458d-8e24-a157e274b180",
  CellID->476199561],
-Cell[136924, 3079, 136, 2, 70, "Template",ExpressionUUID->"b58c10d5-6253-4796-b2f6-1caf21f791fc",
+Cell[67776, 1816, 136, 2, 70, "Template",ExpressionUUID->"b58c10d5-6253-4796-b2f6-1caf21f791fc",
  CellID->39443153],
-Cell[137063, 3083, 135, 2, 70, "Template",ExpressionUUID->"ebf094e1-882d-4d8c-804a-0d7e4eed420a",
+Cell[67915, 1820, 135, 2, 70, "Template",ExpressionUUID->"ebf094e1-882d-4d8c-804a-0d7e4eed420a",
  CellID->140411135],
-Cell[137201, 3087, 135, 2, 70, "Template",ExpressionUUID->"6d40d3de-5ebb-47e0-bd08-01bdad3c6d3a",
+Cell[68053, 1824, 135, 2, 70, "Template",ExpressionUUID->"6d40d3de-5ebb-47e0-bd08-01bdad3c6d3a",
  CellID->8216975]
 }, Closed]]
 }, Open  ]]
