@@ -16,6 +16,8 @@ ImportCellGraphString::usage = "ImportCellGraphString[\"string\"] imports a cell
 ImportModelGraphString::usage = "ImportModelGraphString[\"string\"] imports a model graph from a string and returns an HCModelGraph";
 ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"string\"] imports a supercell model graph from a string and returns an HCSupercellModelGraph";
 
+HCExampleData::usage = "HCExampleData[\"name\"] imports and returns the specified HCC/HCM/HCS example file from \"PatrickMLenggenhager/HyperBloch/ExampleData/\".";
+
 ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature tg in the Poincar\[EAcute] disk representation";
 
 ResolveVertex;
@@ -105,7 +107,7 @@ Begin["`Private`"];
 Print["HyperBloch - Version 0.9.0\nMain author: Patrick M. Lenggenhager\n\nThis package loads the following dependencies:\n\t- L2Primitives by Srdjan Vukmirovic\n\t- NCAlgebra by J. William Helton and Mauricio de Oliveira"];
 
 
-Get["PatrickMLenggenhager`HyperBloch`L2Primitives`"];
+Needs["PatrickMLenggenhager`HyperBloch`L2Primitives`"];
 
 
 (* check NCAlgebra *)
@@ -449,6 +451,21 @@ ImportSupercellModelGraphString[str_]:=Module[{
 		"Faces" -> faces,
 		"FaceEdges" -> faceedges
 	|>]
+]
+
+
+(* ::Subsection::Closed:: *)
+(*Example Data*)
+
+
+HCExampleData[filename_] := Module[{
+	content = Import["PatrickMLenggenhager/HyperBloch/ExampleData/"<>filename]
+},
+	Switch[StringSplit[filename, "."][[-1]],
+		"hcc", ImportCellGraphString[content],
+		"hcm", ImportModelGraphString[content],
+		"hcs", ImportSupercellModelGraphString[content]
+	]
 ]
 
 
@@ -1064,7 +1081,7 @@ Module[{
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Construct Bloch Hamiltonians*)
 
 
@@ -1080,7 +1097,7 @@ Options[AbelianBlochHamiltonianExpression] = {
 };
 AbelianBlochHamiltonianExpression[model_HCModelGraph|model_HCSupercellModelGraph, norb_, onsite_, hoppings_, k_Symbol,
 	OptionsPattern[AbelianBlochHamiltonianExpression]] :=
-Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge, H},
+Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge, H, assumptions},
 	(* dimension of Abelian Brillouin zone *)
 	dimk = 2*model["Genus"];
 	
@@ -1107,21 +1124,23 @@ Module[{dimk, verts, Nverts, edges, htest, Hexpr, PCVertex, PCEdge, H},
 		];
 	];
 	
-	H = Simplify[If[norb === 1,
-		MakeHermitian@SparseArray[
-			({Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1, 1]]} -> hoppings[PCEdge@#1]#2)&@@@edges,
-		Nverts] + SparseArray[
-			({Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#])&/@verts,
-		Nverts],
-		MakeHermitian@SparseArray`SparseBlockMatrix[Join[
-			({Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1,1]]} -> hoppings[PCEdge@#1]#2)&@@@edges,
-			Table[{i, i} -> PatrickMLenggenhager`HyperBloch`Private`ZeroMatrix[norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
-		]] + SparseArray`SparseBlockMatrix[
+	H = If[norb === 1,
+		MakeHermitian@Total[SparseArray[{
+			{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1, 1]]} -> hoppings[PCEdge@#1]#2
+		}, Nverts]&@@@edges] + Total[SparseArray[{
+			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]
+		}, Nverts]&/@verts],
+		MakeHermitian@Total[SparseArray`SparseBlockMatrix[Join[
+			{{Position[verts, #1[[2]]][[1, 1]], Position[verts, #1[[1]]][[1,1]]} -> hoppings[PCEdge@#1]#2},
+			Table[{i, i} -> ZeroMatrix[norb[PCVertex@verts[[i]]]], {i, 1, Length@verts}]
+		]]&@@@edges] + SparseArray`SparseBlockMatrix[
 			{Position[verts, #][[1, 1]], Position[verts, #][[1, 1]]} -> onsite[PCVertex@#]&/@verts
 		]
-	], And@@Table[k[i]\[Element]Reals, {i, 1, dimk}]];
+	];
+	assumptions = And@@Table[k[i]\[Element]Reals, {i, 1, dimk}];
+	H = Map[Simplify[#, assumptions]&, H, {2}];
 	
-	If[OptionValue[ReturnSparseArray], H, Normal@H]
+	If[OptionValue[ReturnSparseArray], SparseArray@H, Normal@H]
 ]
 
 
