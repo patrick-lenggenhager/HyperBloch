@@ -1,23 +1,26 @@
 # HyperBloch
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10222866.svg)](https://doi.org/10.5281/zenodo.10222866)
+
 HyperBloch is a Mathematica package for constructing tight-binding models on
 hyperbolic lattices and calculating their band structures using the supercell
 method. It is based on
 > P. M. Lenggenhager, J. Maciejko, and T. Bzdušek,
-  *Non-Abelian hyperbolic band theory from supercells*, Phys. Rev. Lett. (accepted), 
-  [arXiv:2305.04945](https://doi.org/10.48550/arXiv.2305.04945) (2023)
+  *Non-Abelian hyperbolic band theory from supercells*,
+  [Phys. Rev. Lett. 131, 226401](https://doi.org/10.1103/PhysRevLett.131.226401) (2023)
   
 and the doctoral thesis
 
 > P. M. Lenggenhager,
   *Emerging avenues in band theory: multigap topology and hyperbolic lattices*,
-  PhD thesis, ETH Zurich (2023)
+  [PhD thesis](https://doi.org/10.3929/ethz-b-000645370), ETH Zurich (2023)
 
 If you use this package, please cite at least one of the above references in
 addition to the package itself:
 > P. M. Lenggenhager, J. Maciejko, and T. Bzdušek,
   *HyperBloch: A Mathematica package for hyperbolic tight-binding models and the
-  supercell method*, https://github.com/patrick-lenggenhager/HyperBloch (2023)
+  supercell method*, [https://github.com/patrick-lenggenhager/HyperBloch](https://github.com/patrick-lenggenhager/HyperBloch),
+  [10.5281/zenodo.10222865](https://doi.org/10.5281/zenodo.10222865) (2023)
 
 
 A getting-started guide for this and its sister package
@@ -135,27 +138,32 @@ If you use this package, please cite the package repository
   supercell method},
   author          = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
   year            = {2023},
-  howpublished    = {\url{https://github.com/patrick-lenggenhager/HyperBloch}}
+  doi             = {10.5281/zenodo.10222865},
+  note            = {\url{https://github.com/patrick-lenggenhager/HyperBloch}}
 }
 ```
 and at least one of the following references:
 ```BibTeX
 @article{Lenggenhager:2023,
-  title           = {Non-{A}belian hyperbolic band theory from supercells}, 
-  author          = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
-  year            = {2023},
-  journal         = {Phys. Rev. Lett. (accepted)},
-  eprint          = {2305.04945},
-  eprintType      = {arXiv},
-  archivePrefix   = {arXiv},
-  doi             = {10.48550/arXiv.2305.04945}
+  title               = {Non-{A}belian hyperbolic band theory from supercells}, 
+  author              = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
+  journal             = {Phys. Rev. Lett.},
+  volume              = {131},
+  issue               = {22},
+  pages               = {226401},
+  numpages            = {7},
+  year                = {2023},
+  month               = {Dec},
+  publisher           = {American Physical Society},
+  doi                 = {10.1103/PhysRevLett.131.226401}
 }
 
 @phdthesis{Lenggenhager:PhDThesis,
   title           = {Emerging avenues in band theory: multigap topology and hyperbolic lattices},
   author          = {Lenggenhager, Patrick M.}, 
   year            = {2023},
-  school          = {ETH Zurich}
+  school          = {ETH Zurich},
+  doi             = {10.3929/ethz-b-000645370}
 }
 ```
 

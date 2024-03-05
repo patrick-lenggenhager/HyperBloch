@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Changed
 - Improve performance of `AbelianBlochHamiltonianExpression`.
+- Update references in readme.
 
 ## Fixed
 - Fixed `Det::luc` error message being raised by an unnecessary check in `Det` for
