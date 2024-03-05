@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Patrick M. Lenggenhager",
     "License" -> "CC BY-SA 4.0 International",
     "PublisherID" -> "PatrickMLenggenhager",
-    "Version" -> "0.9.0",
+    "Version" -> "0.9.1",
     "WolframVersion" -> "12.1+",
     "Extensions" -> {
       {

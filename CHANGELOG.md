@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.9.1] - 2024-03-05
 
 ## Added
 - Add a change log (this file).
@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Changed
 - Improve performance of `AbelianBlochHamiltonianExpression`.
 - Update references in readme.
+- Load example data from files in example data directory instead of embedding the data
+in the documentation notebooks.
 
 ## Fixed
 - Fixed `Det::luc` error message being raised by an unnecessary check in `Det` for
