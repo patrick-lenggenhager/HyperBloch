@@ -1,6 +1,6 @@
 # HyperBloch
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10222866.svg)](https://doi.org/10.5281/zenodo.10222866)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10783024.svg)](https://doi.org/10.5281/zenodo.10783024)
 
 HyperBloch is a Mathematica package for constructing tight-binding models on
 hyperbolic lattices and calculating their band structures using the supercell
