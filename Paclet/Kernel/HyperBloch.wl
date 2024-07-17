@@ -68,6 +68,7 @@ ShowTranslationIndices;
 ShowTranslationLabels;
 ShowTranslations;
 TranslatedCellBoundaryStyle;
+TranslationLabelStyle;
 
 CellVertexStyle;
 EdgeArrowSize;
@@ -469,7 +470,7 @@ HCExampleData[filename_] := Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
@@ -791,7 +792,7 @@ GetCellBoundary[cgraph_HCCellGraph] := GetCellBoundary[cgraph] = {
 }&/@cgraph["BoundaryEdges"]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph*)
 
 
@@ -936,7 +937,8 @@ Options[ShowCellBoundary] = {
 	ShowTranslationLabels -> True,
 	ShowTranslationIndices -> False,
 	ShowTranslatedCells -> False,
-	TranslatedCellBoundaryStyle -> Directive[Black, AbsoluteThickness[1]]
+	TranslatedCellBoundaryStyle -> Directive[Black, AbsoluteThickness[1]],
+	TranslationLabelStyle -> {}
 };
 ShowCellBoundary[cgraph_HCCellGraph, opts:OptionsPattern[]] := ShowCellBoundary[cgraph, opts] = Module[{format\[Gamma], gcellbd},
 	(* translation label formatting *)
@@ -967,7 +969,7 @@ FullForm]\),
 						pt = #[[3]]
 					},{
 						If[OptionValue[ShowTranslations], pt, {}],
-						If[OptionValue[ShowTranslationLabels], Text[format\[Gamma]@#[[4]],pt[[1]]], {}],
+						If[OptionValue[ShowTranslationLabels], Text[Style[format\[Gamma]@#[[4]],OptionValue[TranslationLabelStyle]],pt[[1]]], {}],
 						If[OptionValue[ShowTranslationIndices], Text[#[[1]],pt[[1]]],{}] 
 					}]}&/@gcellbd
 			},
@@ -983,7 +985,7 @@ FullForm]\),
 					Model->PoincareDisk
 				]},{
 					If[OptionValue[ShowTranslations], pt, {}],
-					If[OptionValue[ShowTranslationLabels], Text[format\[Gamma]@#[[6]],pt[[1]]], {}]
+					If[OptionValue[ShowTranslationLabels], Text[Style[format\[Gamma]@#[[6]],OptionValue[TranslationLabelStyle]],pt[[1]]], {}]
 				}]&/@cgraph["BoundaryEdges"]
 			}
 		],
