@@ -21,6 +21,7 @@ HCExampleData::usage = "HCExampleData[\"name\"] imports and returns the specifie
 ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature tg in the Poincar\[EAcute] disk representation";
 
 ResolveVertex;
+ResolveSupercellVertex;
 ResolveEdge;
 ResolveTranslation;
 
@@ -166,6 +167,24 @@ CyclicallyPermuteList[list_, n_] := Permute[list, PermutationPower[Cycles[{Range
 CyclicallyPermuteFaceEdges[face_, n_]:=Graph[VertexList[face], CyclicallyPermuteList[EdgeList[face], n], Sequence@@AbsoluteOptions[face]]
 
 
+(* ::Input::Initialization:: *)
+ClearAll[GetPDGeodesic2Pts]
+Options[GetPDGeodesic2Pts]={Tolerance->10^-6,ConvertToBSplineCurves->False}
+GetPDGeodesic2Pts[P_,Q_,OptionsPattern[]]:=Module[{
+tol=OptionValue[Tolerance]
+},
+If[Norm[P]<tol||Norm[Q]<tol||Norm[Normalize[P-Q]-Normalize[P]]<tol||Norm[Normalize[P-Q]+Normalize[P]]<tol,Line[{P,Q}],
+Module[{M,m,Pp,N,n,C,\[Theta]s},
+M=Mean[{P,Q}];
+m=RotationMatrix[Pi/2] . Normalize[Q-P];
+C=M+(P . Q-1)/(-2P . m )m;
+\[Theta]s=Mod[{ArcTan@@(P-C),ArcTan@@(Q-C)},2Pi];
+Circle[C,Norm[P-C],If[Abs@Differences[\[Theta]s][[1]]<=Pi,\[Theta]s,Mod[\[Theta]s,2Pi,Pi]]]
+]
+]/.If[OptionValue[ConvertToBSplineCurves],{Line[{a_,b_}]:>BSplineCurve[{a,b}],Circle[c_,r_,\[Theta]s_]:>ResourceFunction["SplineCircle"][c,r,{1,0},\[Theta]s]},{}]
+]
+
+
 (* ::Subsection::Closed:: *)
 (*Group Elements and Vertex Positions*)
 
@@ -272,7 +291,7 @@ ImportCellGraphString[str_]:=Module[{
 	
 	(* coordinates *)
 	vcoords = Table[
-		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center], Model->PoincareDisk][[1]],
+		GetWyckoffPosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center],
 		{i, Length[vertices]}
 	];
 	
@@ -288,7 +307,8 @@ ImportCellGraphString[str_]:=Module[{
 		"TranslationGenerators" -> \[CapitalGamma]gens,
 		"Faces" -> faces[[center]],
 		"FaceEdges" -> faceedges,
-		"AllFaces" -> faces
+		"AllFaces" -> faces,
+		"VertexCoordinates" -> vcoords
 	|>]
 ]
 
@@ -341,7 +361,7 @@ ImportModelGraphString[str_]:=Module[{
 	(* vertex labels and coordinates *)
 	vlbls = (StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	
 	vcoords = Table[
-		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center], Model->PoincareDisk][[1]],
+		GetWyckoffPosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center],
 		{i, Length[vertices]}
 	];
 	
@@ -363,7 +383,8 @@ ImportModelGraphString[str_]:=Module[{
 		"EdgeTranslations" -> etransls,
 		"TranslationGenerators" -> \[CapitalGamma]gens,
 		"Faces" -> faces,
-		"FaceEdges" -> faceedges
+		"FaceEdges" -> faceedges,
+		"VertexCoordinates" -> vcoords
 	|>]
 ]
 
@@ -423,7 +444,7 @@ ImportSupercellModelGraphString[str_]:=Module[{
 	(* vertex labels and coordinates *)
 	vlbls = vertexpos;(*(StringSplit[StringTrim[#, {"{ ", " }"}], ", "]&/@StringSplit[StringTrim[TGGw, {"{ ", " }"}], " }, { "])[[#[[1]], #[[2]]]]&/@vertices;	*)
 	vcoords = Table[
-		LToGraphics[GetSitePosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center], Model->PoincareDisk][[1]],
+		GetWyckoffPosition[tg, vertices[[i,1]], vlbls[[i]], DiskCenter -> center],
 		{i, Length[vertices]}
 	];
 	
@@ -449,7 +470,8 @@ ImportSupercellModelGraphString[str_]:=Module[{
 		"TranslationGroupEmbedding" -> \[CapitalGamma]\[CapitalGamma]0,
 		"InternalSupercellTranslations" -> T\[CapitalGamma]0\[CapitalGamma],
 		"Faces" -> faces,
-		"FaceEdges" -> faceedges
+		"FaceEdges" -> faceedges,
+		"VertexCoordinates" -> vcoords
 	|>]
 ]
 
@@ -469,7 +491,7 @@ HCExampleData[filename_] := Module[{
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Graphical Visualization*)
 
 
@@ -607,7 +629,7 @@ ShowTriangles[tg_, opts:OptionsPattern[{ShowTriangles, Graphics, Rasterize, GetT
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Cell Graph Elements*)
 
 
@@ -615,17 +637,26 @@ GetWyckoffPosition[tg_, {w_, g_}, opts:OptionsPattern[{GetSitePosition}]] := LTo
 	GetSitePosition[tg, w, g, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]],
 	Model -> PoincareDisk
 ][[1]]
-GetSchwarzTriangle[tg_, g_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
-	LPolygon[GetSitePosition[tg, #, g, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]&/@{1, 2, 3}],
-	Model -> PoincareDisk
+
+GetSchwarzTriangle[tg_, g_, opts:OptionsPattern[{GetSitePosition}]] := Module[{
+	verts = Table[
+		GetWyckoffPosition[tg, {w, g}, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]],
+		{w, 1, 3}
+	]
+},
+	FilledCurve[Table[
+		GetPDGeodesic2Pts[verts[[w]], verts[[Mod[w+1, 3, 1]]],
+			ConvertToBSplineCurves -> True, Tolerance -> 10^-13
+		], {w, 1, 3}
+	]]
 ]
-GetVertex[tg_, v_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
-	GetSitePosition[tg, v[[1]], v[[2]], Sequence@@FilterRules[{opts}, Options[GetSitePosition]]],
-	Model -> PoincareDisk
-]
-GetEdge[tg_, e_, opts:OptionsPattern[{GetSitePosition}]] := LToGraphics[
-	LLine[GetSitePosition[tg, #[[1]], #[[2]], Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]&/@e],
-	Model -> PoincareDisk
+
+GetVertex[tg_, v_, opts:OptionsPattern[{GetSitePosition}]] :=
+	Point@GetWyckoffPosition[tg, v, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]
+
+GetEdge[tg_, e_, opts:OptionsPattern[{GetSitePosition, GetPDGeodesic2Pts}]] := GetPDGeodesic2Pts[
+	Sequence@@(GetWyckoffPosition[tg, #, Sequence@@FilterRules[{opts}, Options[GetSitePosition]]]&/@e),
+	Sequence@@FilterRules[{opts}, Options[GetPDGeodesic2Pts]]
 ]
 
 
@@ -633,6 +664,18 @@ ResolveVertex[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGrap
 	vertex[[1]],
 	cgraph["VertexLabels"][[Position[VertexList@cgraph["Graph"], vertex][[1, 1]]]]
 }
+
+ResolveSupercellVertex[pcmodel_HCModelGraph, scedge_] := scedge[[0]][
+	VertexList[pcmodel["Graph"]][[scedge[[3, 1]]]],
+	VertexList[pcmodel["Graph"]][[scedge[[3, 2]]]],
+	scedge[[3,3]]
+]
+
+
+ResolveVertexCoordinate[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, vertex_] := 
+	(VertexCoordinates /. AbsoluteOptions[cgraph["Graph"], VertexCoordinates])[[
+		FirstPosition[VertexList@cgraph["Graph"], vertex][[1]]
+	]]
 
 
 ResolveTranslation[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, transl_] := StringReplace[transl,
@@ -686,11 +729,8 @@ ResolveEquivalentEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellM
 ]
 
 
-GetCellGraphVertex[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, vertex_] := GetVertex[
-	cgraph["TriangleGroup"],
-	ResolveVertex[cgraph, vertex],
-	DiskCenter -> cgraph["CellCenter"]
-]
+GetCellGraphVertex[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, vertex_] := ResolveVertexCoordinate[cgraph, vertex]
+
 Options[GetCellGraphEdge] = { ShowEquivalentEdge -> False };
 GetCellGraphEdge[cgraph_HCCellGraph|cgraph_HCModelGraph|cgraph_HCSupercellModelGraph, edge_, OptionsPattern[]] :=
 If[OptionValue[ShowEquivalentEdge],
