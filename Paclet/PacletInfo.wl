@@ -17,8 +17,6 @@ PacletObject[
         "Symbols" -> {
           "PatrickMLenggenhager`HyperBloch`AbelianBlochHamiltonian",
           "PatrickMLenggenhager`HyperBloch`AbelianBlochHamiltonianExpression",
-          "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonian",
-          "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonianExpression",
           "PatrickMLenggenhager`HyperBloch`GetCellBoundary",
           "PatrickMLenggenhager`HyperBloch`GetCellGraphEdge",
           "PatrickMLenggenhager`HyperBloch`GetCellGraphFace",
@@ -34,6 +32,8 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportModelGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString",
+          "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonian",
+          "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonianExpression",          
           "PatrickMLenggenhager`HyperBloch`ShowCellBoundary",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraphFlattened",
