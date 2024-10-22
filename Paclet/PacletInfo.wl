@@ -32,6 +32,8 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportModelGraphString",
           "PatrickMLenggenhager`HyperBloch`ImportSupercellModelGraphString",
+          "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonian",
+          "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonianExpression",          
           "PatrickMLenggenhager`HyperBloch`ShowCellBoundary",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraphFlattened",
