@@ -11,8 +11,8 @@ HCCellGraph::usage = "HCCellGraph[assoc] represents a cell graph with its proper
 HCModelGraph::usage = "HCModelGraph[assoc] represents a model graph with its properties defined by the Association assoc";
 HCSupercellModelGraph::usage = "HCSupercellModelGraph[assoc] represents a supercell model graph with its properties defined by the Association assoc";
 
-HBDisclinationModelGraph::usage = "HBDisclinationModelGraph[assoc] represents a model graph with its properties defined by the Association assoc";
-HBDisclinationSupercellModelGraph::usage = "HBDisclinationSupercellModelGraph[assoc] represents a supercell model graph with its properties defined by the Association assoc";
+HBDisclinationModelGraph::usage = "HBDisclinationModelGraph[assoc] represents a model graph with disclinations with its properties defined by the Association assoc";
+HBDisclinationSupercellModelGraph::usage = "HBDisclinationSupercellModelGraph[assoc] represents a supercell model graph with disclinations with its properties defined by the Association assoc";
 
 
 ImportCellGraphString::usage = "ImportCellGraphString[\"string\"] imports a cell graph from a string and returns an HCCellGraph";
@@ -21,7 +21,7 @@ ImportSupercellModelGraphString::usage = "ImportSupercellModelGraphString[\"stri
 
 HCExampleData::usage = "HCExampleData[\"name\"] imports and returns the specified HCC/HCM/HCS example file from \"PatrickMLenggenhager/HyperBloch/ExampleData/\".";
 
-IntroduceDisclinationInModelGraph::usage = "IntroduceDisclinationInModelGraph[mgraph, FrankAngleIncrement, ReferenceAngleIncrement] introduces a disclination defect in a finite (supercell) model graph mgraph where FrankAngleIncrement denotes a negative integer between -1 and -m, with m given by the choosen cell center \!\(\*SubscriptBox[\(C\), \(m\)]\) symmetry m \[Element] {r, q, p}, which specifies a negative Frank angle FrankAngleIncrement*\[Pi]/m. The positive integer ReferenceAngleIncrement \[Element] {0, 1, ..., 2*m}, specifies the relative rotation of the reference vector {1, 0} by ReferenceAngleIncrement*\[Pi]/m in counter-clockwise direction, i.e., normal vector of the disclination.";
+IntroduceDisclination::usage = "IntroduceDisclination[mgraph, FrankAngleIncrement, ReferenceAngleIncrement] introduces a disclination defect in a finite (supercell) model graph mgraph where FrankAngleIncrement denotes a negative integer between -1 and -m, with m given by the choosen cell center \!\(\*SubscriptBox[\(C\), \(m\)]\) symmetry m \[Element] {r, q, p}, which specifies a negative Frank angle FrankAngleIncrement*\[Pi]/m. The positive integer ReferenceAngleIncrement \[Element] {0, 1, ..., 2*m}, specifies the relative rotation of the reference vector {1, 0} by ReferenceAngleIncrement*\[Pi]/m in counter-clockwise direction, i.e., normal vector of the disclination.";
 
 ShowTriangles::usage = "ShowTriangles[tg] constructs the Schwarz triangles of the triangle group with signature tg in the Poincar\[EAcute] disk representation";
 
@@ -54,11 +54,8 @@ AbelianBlochHamiltonian::usage = "AbelianBlochHamiltonian[mgraph, norb, onsite, 
 NonReciprocalAbelianBlochHamiltonianExpression::usage = "NonReciprocalAbelianBlochHamiltonianExpression[mgraph, norb, onsite, hoppingsCanonical, hoppingsOpposite, k] constructs the non-reciprocal Abelian Bloch Hamiltonian \[ScriptCapitalH](k) of the HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge in the canonical direction by hoppingsCanonical and opposite direction by hoppingsOpposite in terms of momenta k[i]";
 NonReciprocalAbelianBlochHamiltonian::usage = "NonReciprocalAbelianBlochHamiltonian[mgraph, norb, onsite, hoppingsCanonical, hoppingsOpposite] returns the non-reciprocal Abelian Bloch Hamiltonian \[ScriptCapitalH](k) of the HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge in the canonical direction by hoppingsCanonical and opposite direction by hoppingsOpposite as a function k :> \[ScriptCapitalH](k)";
 
-TBClusterHamiltonian::usage = "TBClusterHamiltonian[mgraph, norb, onsite, hoppings] constructs the tight-binding Hamiltonian H of the finite HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge by hoppings";
-TBDisclinationClusterHamiltonian::usage = "TBDisclinationClusterHamiltonian[mgraph, HCPCmgraph, norb, onsite, hoppingsPC, hoppingsGluedEdges] constructs the tight-binding Hamiltonian H of the HBDisclinationModelGraph or HBDisclinationSupercellModelGraph mgraph with properties inherited by the HCModelGraph HCPCmgraph, where the number of orbitals at each site are specified by norb, the onsite terms in HCPCmgraph by onsitePC, the hopping along an edge in HCPCmgraph by hoppingsPC and the hopping along an edge in mgraph by hoppingsGluedEdges";
-
-NonReciprocalTBClusterHamiltonian::usage = "NonReciprocalTBClusterHamiltonian[mgraph, norb, onsite, hoppingsCanonical, hoppingsOpposite] constructs the tight-binding Hamiltonian H of the HBDisclinationModelGraph or HBDisclinationSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge in the canonical direction by hoppingsCanonical and opposite direction by hoppingsOpposite";
-NonReciprocalTBDisclinationClusterHamiltonian::usage = "NonReciprocalTBClusterHamiltonian[mgraph, HCPCmgraph, norb, onsite, hoppingsCanonicalPC, hoppingsOppositePC, hoppingsCanonicalGluedEdges, hoppingsOppositeGluedEdges] constructs the tight-binding Hamiltonian H of the HBDisclinationModelGraph or HBDisclinationSupercellModelGraph mgraph with properties inherited by the HCModelGraph HCPCmgraph, where the number of orbitals at each site are specified by norb, the onsite terms in HCPCmgraph by onsitePC, the hopping along an edge in HCPCmgraph in the canonical direction by hoppingsCanonicalPC and opposite direction by hoppingsOppositePC, and the hopping along an edge in mgraph in the canonical direction by hoppingsCanonicalGluedEdges and opposite direction by hoppingsOppositeGluedEdges";
+TBHamiltonian::usage = "TBHamiltonian[mgraph, norb, onsite, hoppings] or TBHamiltonian[mgraph, HCPCmgraph, norb, onsite, hoppingsPC, hoppingsGluedEdges], the former constructs the tight-binding Hamiltonian H of the finite HCModelGraph or HCSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge by hoppings, the latter constructs the tight-binding Hamiltonian H of the HBDisclinationModelGraph or HBDisclinationSupercellModelGraph mgraph with properties inherited by the HCModelGraph HCPCmgraph, where the number of orbitals at each site are specified by norb, the onsite terms in HCPCmgraph by onsitePC, the hopping along an edge in HCPCmgraph by hoppingsPC and the hopping along an edge in mgraph by hoppingsGluedEdges";
+NonReciprocalTBHamiltonian::usage = "NonReciprocalTBHamiltonian[mgraph, norb, onsite, hoppingsCanonical, hoppingsOpposite] or NonReciprocalTBHamiltonian[mgraph, HCPCmgraph, norb, onsite, hoppingsCanonicalPC, hoppingsOppositePC, hoppingsCanonicalGluedEdges, hoppingsOppositeGluedEdges], the former constructs the tight-binding Hamiltonian H of the HBDisclinationModelGraph or HBDisclinationSupercellModelGraph mgraph with the number of orbitals at each site specified by norb, the onsite term by onsite, and the hopping along an edge in the canonical direction by hoppingsCanonical and opposite direction by hoppingsOpposite, the latter constructs the tight-binding Hamiltonian H of the HBDisclinationModelGraph or HBDisclinationSupercellModelGraph mgraph with properties inherited by the HCModelGraph HCPCmgraph, where the number of orbitals at each site are specified by norb, the onsite terms in HCPCmgraph by onsitePC, the hopping along an edge in HCPCmgraph in the canonical direction by hoppingsCanonicalPC and opposite direction by hoppingsOppositePC, and the hopping along an edge in mgraph in the canonical direction by hoppingsCanonicalGluedEdges and opposite direction by hoppingsOppositeGluedEdges";
 
 
 RasterizeGraphics;
@@ -500,9 +497,9 @@ NegativeIntegerQ[x_]:= x \[Element] NonPositiveIntegers;
 PositiveIntegerQ[x_]:= x \[Element] NonNegativeIntegers;
 
 
-IntroduceDisclinationInModelGraph::InvalidFrankAngle="The absolute Frank angle increment can neither be 0, `2` or larger then `2`, but `1` was provided.";
-IntroduceDisclinationInModelGraph::InvalidReferenceAngle="The reference angle increment must be smaller than `2`, but `1` was provided.";
-IntroduceDisclinationInModelGraph::NotImplemented="Unfortunately, the current implementation does not support the introduction of disclination defects in next-nearest neighbor model graphs.";
+IntroduceDisclination::InvalidFrankAngle="The absolute Frank angle increment can neither be 0, `2` or larger then `2`, but `1` was provided.";
+IntroduceDisclination::InvalidReferenceAngle="The reference angle increment must be smaller than `2`, but `1` was provided.";
+IntroduceDisclination::NotImplemented="Unfortunately, the current implementation does not support the introduction of disclination defects in next-nearest neighbor model graphs.";
 
 
 syntacticSign = (-1)^Boole[Internal`SyntacticNegativeQ@#]&; (* get the sign of an expression regardless if it is a symbol or a numerical value *)
@@ -516,12 +513,12 @@ VertexCoordinatesInSymmetrizedFlake[angles_, vcoords_, wedgeAngle_, referenceAng
 
 
 (* TODO: finish PBCClusters, implement positive Frank angles, NNN-graphs and multiple disclinations by repeated function calls *)
-Options[IntroduceDisclinationInModelGraph] = {
+Options[IntroduceDisclination] = {
 	SymmetrizeFlake -> False
 }; 
 
-IntroduceDisclinationInModelGraph[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, FrankAngleIncrement_?NegativeIntegerQ, referenceAngleIncrement_?PositiveIntegerQ, 
-	opts : OptionsPattern[{IntroduceDisclinationInModelGraph}]]:= 		
+IntroduceDisclination[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, FrankAngleIncrement_?NegativeIntegerQ, referenceAngleIncrement_?PositiveIntegerQ, 
+	opts : OptionsPattern[{IntroduceDisclination}]]:= 		
 	Catch[Module[
 		{tg, center, vertices, edges, edgesOld, etransls, vlbls, vcoords, graph, faces, facesstr, faceedges, angles,
 		 edgesRemoved, idxInterCellRemove, glueByRadius, reattachByRadius, idxgluedEdges, gluedEdges, anglesTilde, 
@@ -537,9 +534,9 @@ IntroduceDisclinationInModelGraph[mgraph_HCModelGraph|mgraph_HCSupercellModelGra
 	center = mgraph["CellCenter"];
 	
 	If[0 < Abs[FrankAngleIncrement] < tg[[center]], 0, 
-		Throw@Message[IntroduceDisclinationInModelGraph::InvalidFrankAngle, Abs[FrankAngleIncrement], tg[[center]]]];
+		Throw@Message[IntroduceDisclination::InvalidFrankAngle, Abs[FrankAngleIncrement], tg[[center]]]];
 	If[referenceAngleIncrement < 2*tg[[center]], 0,
-		Throw@Message[IntroduceDisclinationInModelGraph::InvalidReferenceAngle, referenceAngleIncrement, 2*tg[[center]]]]; 	
+		Throw@Message[IntroduceDisclination::InvalidReferenceAngle, referenceAngleIncrement, 2*tg[[center]]]]; 	
 	
 	wedgeAngle = Abs[FrankAngleIncrement]*\[Pi]/tg[[center]]; 
 	referenceAngle = referenceAngleIncrement*\[Pi]/tg[[center]];
@@ -574,7 +571,7 @@ IntroduceDisclinationInModelGraph[mgraph_HCModelGraph|mgraph_HCSupercellModelGra
 	(* throw error for NNN-graphs *)
 	NNOrNNN = PositionIndex[edges[[;;, 3, Sequence@@cellIdx, 1]]]; 
 	If[KeyExistsQ[NNOrNNN, 2],
-		Throw@Message[IntroduceDisclinationInModelGraph::NotImplemented], 0]; 	
+		Throw@Message[IntroduceDisclination::NotImplemented], 0]; 	
 	
 	faces = mgraph["Faces"];
 	facesstr = Table[
@@ -1937,8 +1934,9 @@ If[OptionValue[PBCCluster],
 (*Reciprocal*)
 
 
+(* for (supercell) model graphs *)
 (* Note: not PBCCluster compatible, handled in the main function *)
-TBClusterHamiltonian[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, norb_, onsite_, hoppings_, opts:OptionsPattern[AbelianBlochHamiltonianExpression]]:=Module[
+TBHamiltonian[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, norb_, onsite_, hoppings_, opts:OptionsPattern[AbelianBlochHamiltonianExpression]]:=Module[
 	{mg = mgraph, idxInterCell, cellIdx},
 	
 	(* inter-cell edges positions *)
@@ -1953,8 +1951,9 @@ TBClusterHamiltonian[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, norb_, on
 	]
 
 
+(* for (supercell) model graphs with disclination defects *)
 (* Note: PBCCluster compatible *)
-TBDisclinationClusterHamiltonian[mgraph_HBDisclinationModelGraph|mgraph_HBDisclinationSupercellModelGraph, HCPCmgraph_HCModelGraph, norb_, onsitePC_, hoppingsPC_, hoppingsGluedEdges_, opts:OptionsPattern[AbelianBlochHamiltonianExpression]]:= Module[
+TBHamiltonian[mgraph_HBDisclinationModelGraph|mgraph_HBDisclinationSupercellModelGraph, HCPCmgraph_HCModelGraph, norb_, onsitePC_, hoppingsPC_, hoppingsGluedEdges_, opts:OptionsPattern[AbelianBlochHamiltonianExpression]]:= Module[
 	{pcmodel, os, hoppingsRE, hoppingsGE, hoppings, mgraphBeheaded},
 	
 	(* adjust option PCModel for AbelianBlochHamiltonianExpression *)	
@@ -1982,8 +1981,9 @@ TBDisclinationClusterHamiltonian[mgraph_HBDisclinationModelGraph|mgraph_HBDiscli
 (*Non-reciprocal*)
 
 
+(* for (supercell) model graphs *)
 (* Note: not PBCCluster compatible, handled in the main function *)
-NonReciprocalTBClusterHamiltonian[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, norb_, onsite_, hoppingsCanonical_,  hoppingsOpposite_, opts:OptionsPattern[NonReciprocalAbelianBlochHamiltonianExpression]]:=Module[
+NonReciprocalTBHamiltonian[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, norb_, onsite_, hoppingsCanonical_,  hoppingsOpposite_, opts:OptionsPattern[NonReciprocalAbelianBlochHamiltonianExpression]]:=Module[
 	{mg = mgraph, idxInterCell, cellIdx},
 	
 	(* inter-cell edges positions *)
@@ -1997,8 +1997,9 @@ NonReciprocalTBClusterHamiltonian[mgraph_HCModelGraph|mgraph_HCSupercellModelGra
 ]
 
 
+(* for (supercell) model graphs with disclination defects *)
 (* Note: PBCCluster compatible *)
-NonReciprocalTBDisclinationClusterHamiltonian[mgraph_HBDisclinationModelGraph|mgraph_HBDisclinationSupercellModelGraph, HCPCmgraph_HCModelGraph, norb_, onsitePC_, hoppingsCanonicalPC_,  hoppingsOppositePC_, hoppingsCanonicalGluedEdges_, hoppingsOppositeGluedEdges_, opts:OptionsPattern[NonReciprocalAbelianBlochHamiltonianExpression]]:= Module[
+NonReciprocalTBHamiltonian[mgraph_HBDisclinationModelGraph|mgraph_HBDisclinationSupercellModelGraph, HCPCmgraph_HCModelGraph, norb_, onsitePC_, hoppingsCanonicalPC_,  hoppingsOppositePC_, hoppingsCanonicalGluedEdges_, hoppingsOppositeGluedEdges_, opts:OptionsPattern[NonReciprocalAbelianBlochHamiltonianExpression]]:= Module[
 	{pcmodel, os, hoppings1PC, hoppings2PC, hoppings1GE, hoppings2GE, hoppings1, hoppings2, mgraphBeheaded},
 	
 	(* adjust option PCModel for NonReciprocalAbelianBlochHamiltonianExpression *)
