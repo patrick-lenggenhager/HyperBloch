@@ -579,7 +579,7 @@ IntroduceDisclination[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, FrankAng
 			{Position[edgesOld, (mgraph["FaceEdges"])[[i, j]]][[1, 1]], (* index in cell graph edge list *)
 			 Sign[(EdgeList/@faces)[[i, j, 3, 1]]]}, (* orientation *)
 		 {j, Length[EdgeList@faces[[i]]]}],
-	 {i, Length[faces]}]; (* facesstr is a missnomer ("inherited") *)
+	 {i, Length[faces]}]; (* facesstr is a misnomer ("inherited") *)
 	
 	(* Check if the model graph describes a Lieb lattice: *)
 	IsLieb = Length[edgesOld[[1, 3, Sequence@@cellIdx, 2]]] == 0;
@@ -622,7 +622,7 @@ IntroduceDisclination[mgraph_HCModelGraph|mgraph_HCSupercellModelGraph, FrankAng
 	   respectively, and signAngle1, signAngle2 are the signs of the angles in list of angles. *)
 	(* Elements in edgesRemoved are of the reduced form: 
 	   {edge, idxEdge, {boolVertex1Removed, boolVertex2Removed}}. *)
-	(* Note: boolVertex1Removed, boolVertex2Removed are somewhat missleading names. If anyone of 
+	(* Note: boolVertex1Removed, boolVertex2Removed are somewhat misleading names. If anyone of 
 			 them is True the corresponding vertex will not necessarily be removed (see the 
 			 conditions in the glueing procedure). *)
 	{edgesReattached, edgesRemoved, edges} = Module[
