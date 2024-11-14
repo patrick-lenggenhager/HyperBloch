@@ -31,8 +31,8 @@ cell graphs such as those produced by the ",
  ButtonBox["HyperCells GAP package",
   BaseStyle->"Hyperlink",
   ButtonData->{
-    URL["https://github.com/patrick-lenggenhager/HyperCells"], None},
-  ButtonNote->"https://github.com/patrick-lenggenhager/HyperCells"],
+    URL["https://github.com/HyperCells/HyperCells"], None},
+  ButtonNote->"https://github.com/HyperCells/HyperCells"],
  ", visualizing the graphs and their properties, defining tight-binding \
 models on hyperbolic lattices, and constructing (Abelian) Bloch \
 Hamiltonians."
@@ -918,7 +918,7 @@ Cell["Related Links", "GuideRelatedLinksSection",
 Cell[TextData[ButtonBox["HyperCells GAP package",
  BaseStyle->"Hyperlink",
  ButtonData->{
-   URL["https://github.com/patrick-lenggenhager/HyperCells"], 
+   URL["https://github.com/HyperCells/HyperCells"], 
    None}]], "GuideRelatedLinks",
  CellChangeTimes->{{3.906110504314417*^9, 3.906110518822152*^9}},
  CellID->9388376,ExpressionUUID->"553c6c28-2e37-4ed4-9a65-6fc432740c99"]

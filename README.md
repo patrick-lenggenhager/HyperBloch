@@ -19,12 +19,12 @@ If you use this package, please cite at least one of the above references in
 addition to the package itself:
 > P. M. Lenggenhager, J. Maciejko, and T. Bzdušek,
   *HyperBloch: A Mathematica package for hyperbolic tight-binding models and the
-  supercell method*, [https://github.com/patrick-lenggenhager/HyperBloch](https://github.com/patrick-lenggenhager/HyperBloch),
+  supercell method*, [https://github.com/HyperCells/HyperBloch](https://github.com/HyperCells/HyperBloch),
   [10.5281/zenodo.10222865](https://doi.org/10.5281/zenodo.10222865) (2023)
 
 
 A getting-started guide for this and its sister package
-([HyperCells](https://github.com/patrick-lenggenhager/HyperCells)) can be found
+([HyperCells](https://github.com/HyperCells/HyperCells)) can be found
 [here](https://patrick-lenggenhager.github.io/software/2024/01/10/HyperGuide.html) and
 [this post](https://community.wolfram.com/groups/-/m/t/3131734) in the Wolfram
 Community forum demonstrates some of the core functionality of the package.
@@ -69,11 +69,11 @@ In the future, HyperBloch will be submitted to the
 Until then, it can be installed manually. For version 0.9.0, the following command
 can be used:
 ```Mathematica
-PacletInstall["https://github.com/patrick-lenggenhager/HyperBloch/releases/download/v0.9.0/PatrickMLenggenhager__HyperBloch-0.9.0.paclet"]
+PacletInstall["https://github.com/HyperCells/HyperBloch/releases/download/v0.9.0/PatrickMLenggenhager__HyperBloch-0.9.0.paclet"]
 ```
 
 Alternatively, you can download the latest release (as a `.paclet` file) from
-https://github.com/patrick-lenggenhager/HyperBloch/releases/latest,
+https://github.com/HyperCells/HyperBloch/releases/latest,
 open Mathematica and evaluate
 ```Mathematica
 PacletInstall["path/to/PatrickMLenggenhager__HyperBloch-x.x.x.paclet"]
@@ -118,7 +118,7 @@ ignored. For very large cells, the visualization of objects close to the boundar
 the Poincaré disk may be inaccurate. However, the deviations will most likely not
 be visible. If you do encounter visible inaccuracies, please report them using the
 issue tracker at
-> https://github.com/patrick-lenggenhager/HyperBloch/issues
+> https://github.com/HyperCells/HyperBloch/issues
 
 ## HyperCells package
 
@@ -126,7 +126,7 @@ The HyperCells [GAP](https://www.gap-system.org/) package is a companion package
 HyperBloch. The input HyperBloch requires, i.e., the graphs representing primitive
 and supercells of hyperbolic lattices and models defined on them, can be generated
 using HyperCells. It is available on Github at
-> https://github.com/patrick-lenggenhager/HyperCells
+> https://github.com/HyperCells/HyperCells
 
 
 ## How to cite
@@ -139,7 +139,7 @@ If you use this package, please cite the package repository
   author          = {Lenggenhager, Patrick M. and Maciejko, Joseph and Bzdu\v{s}ek, Tom\'{a}\v{s}},
   year            = {2023},
   doi             = {10.5281/zenodo.10222865},
-  note            = {\url{https://github.com/patrick-lenggenhager/HyperBloch}}
+  note            = {\url{https://github.com/HyperCells/HyperBloch}}
 }
 ```
 and at least one of the following references:
@@ -170,7 +170,7 @@ and at least one of the following references:
 ## Contact
 
 To report issues, please use the issue tracker at
-https://github.com/patrick-lenggenhager/HyperBloch/issues.
+https://github.com/HyperCells/HyperBloch/issues.
 
 Maintainer:\
 &ensp;&ensp;**Patrick M. Lenggenhager**\

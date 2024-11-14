@@ -3,7 +3,7 @@
 PacletObject[
   <|
     "Name" -> "PatrickMLenggenhager/HyperBloch",
-    "Description" -> "Import HyperCells output and define hyperbolic Bloch Hamiltonians",
+    "Description" -> "Import HyperCells output, define tight-binding models, construct hyperbolic Bloch Hamiltonians, and apply the supercell method",
     "Creator" -> "Patrick M. Lenggenhager",
     "License" -> "CC BY-SA 4.0 International",
     "PublisherID" -> "PatrickMLenggenhager",
@@ -27,7 +27,7 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`GetVertex",
           "PatrickMLenggenhager`HyperBloch`GetWyckoffPosition",
           "PatrickMLenggenhager`HyperBloch`HBDisclinationModelGraph",
-          "PatrickMLenggenhager`HyperBloch`HBDisclinationSupercellModelGraph",          
+          "PatrickMLenggenhager`HyperBloch`HBDisclinationSupercellModelGraph",
           "PatrickMLenggenhager`HyperBloch`HCCellGraph",
           "PatrickMLenggenhager`HyperBloch`HCModelGraph",
           "PatrickMLenggenhager`HyperBloch`HCSupercellModelGraph",
@@ -37,7 +37,7 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`IntroduceDisclination",
           "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonian",
           "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonianExpression",
-          "PatrickMLenggenhager`HyperBloch`NonReciprocalTBHamiltonian",          
+          "PatrickMLenggenhager`HyperBloch`NonReciprocalTBHamiltonian",
           "PatrickMLenggenhager`HyperBloch`ShowCellBoundary",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraphFlattened",

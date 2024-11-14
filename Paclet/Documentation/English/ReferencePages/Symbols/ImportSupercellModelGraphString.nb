@@ -58,7 +58,7 @@ Cell[TextData[{
 ImportSupercellModelGraphString"]], "InlineFormula",ExpressionUUID->
   "37919428-8b9c-4116-b4e6-e43787ce91af"],
  " expects a string in the .hcs format of the HyperCells package, see \
-https://github.com/patrick-lenggenhager/HyperCells."
+https://github.com/HyperCells/HyperCells."
 }], "Notes",
  CellChangeTimes->{{3.905840927590752*^9, 3.905840955207515*^9}},
  CellID->57553734,ExpressionUUID->"675c09ab-689d-4d1b-9dfe-25fc3e42e4fc"],
