@@ -31,8 +31,8 @@ those produced by the ",
  ButtonBox["HyperCells GAP package",
   BaseStyle->"Hyperlink",
   ButtonData->{
-    URL["https://github.com/patrick-lenggenhager/HyperCells"], None},
-  ButtonNote->"https://github.com/patrick-lenggenhager/HyperCells"],
+    URL["https://github.com/HyperCells/HyperCells"], None},
+  ButtonNote->"https://github.com/HyperCells/HyperCells"],
  ", visualizing the graphs and their properties, defining tight-binding \
 models on hyperbolic lattices, and constructing (Abelian) Bloch \
 Hamiltonians."
@@ -68,8 +68,8 @@ Cell[TextData[{
  ButtonBox["HyperCells GAP package",
   BaseStyle->"Hyperlink",
   ButtonData->{
-    URL["https://github.com/patrick-lenggenhager/HyperCells"], None},
-  ButtonNote->"https://github.com/patrick-lenggenhager/HyperCells"],
+    URL["https://github.com/HyperCells/HyperCells"], None},
+  ButtonNote->"https://github.com/HyperCells/HyperCells"],
  " produces three different types of output: cell graph, model graphs, and \
 supercell model graphs. The corresponding text files, typically with \
 extensions *.hcc, *.hcm, and *.hcs, respectively, can be imported using the \

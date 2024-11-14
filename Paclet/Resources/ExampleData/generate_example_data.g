@@ -1,4 +1,4 @@
-# load the HyperCells package (https://github.com/patrick-lenggenhager/HyperCells)
+# load the HyperCells package (https://github.com/HyperCells/HyperCells)
 LoadPackage( "HyperCells" );
 
 # {8,8} lattice

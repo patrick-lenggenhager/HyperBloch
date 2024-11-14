@@ -55,7 +55,7 @@ Cell[TextData[{
     "paclet:PatrickMLenggenhager/HyperBloch/ref/ImportModelGraphString"]], 
   "InlineFormula",ExpressionUUID->"8d496a27-452e-4c90-9cfb-e80707a121ce"],
  " expects a string in the .hcm format of the HyperCells package, see \
-https://github.com/patrick-lenggenhager/HyperCells."
+https://github.com/HyperCells/HyperCells."
 }], "Notes",
  CellChangeTimes->{{3.905829605213539*^9, 3.905829622122229*^9}},
  CellID->226388290,ExpressionUUID->"b284e219-5a31-4f4e-b1a8-ec74bf0551f6"],
