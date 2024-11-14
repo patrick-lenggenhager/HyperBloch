@@ -3,7 +3,7 @@
 PacletObject[
   <|
     "Name" -> "PatrickMLenggenhager/HyperBloch",
-    "Description" -> "Import HyperCells output, define tight-binding models, construct hyperbolic Bloch Hamiltonians, and apply the supercell method",
+    "Description" -> "Import HyperCells output and define hyperbolic Bloch Hamiltonians",
     "Creator" -> "Patrick M. Lenggenhager",
     "License" -> "CC BY-SA 4.0 International",
     "PublisherID" -> "PatrickMLenggenhager",
@@ -27,8 +27,9 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`GetVertex",
           "PatrickMLenggenhager`HyperBloch`GetWyckoffPosition",
           "PatrickMLenggenhager`HyperBloch`HBDisclinationModelGraph",
-          "PatrickMLenggenhager`HyperBloch`HBDisclinationSupercellModelGraph",
+          "PatrickMLenggenhager`HyperBloch`HBDisclinationSupercellModelGraph",          
           "PatrickMLenggenhager`HyperBloch`HCCellGraph",
+          "PatrickMLenggenhager`HyperBloch`HCQuotientSequencesAdjMat",
           "PatrickMLenggenhager`HyperBloch`HCModelGraph",
           "PatrickMLenggenhager`HyperBloch`HCSupercellModelGraph",
           "PatrickMLenggenhager`HyperBloch`ImportCellGraphString",
@@ -37,7 +38,7 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`IntroduceDisclination",
           "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonian",
           "PatrickMLenggenhager`HyperBloch`NonReciprocalAbelianBlochHamiltonianExpression",
-          "PatrickMLenggenhager`HyperBloch`NonReciprocalTBHamiltonian",
+          "PatrickMLenggenhager`HyperBloch`NonReciprocalTBHamiltonian",          
           "PatrickMLenggenhager`HyperBloch`ShowCellBoundary",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraph",
           "PatrickMLenggenhager`HyperBloch`ShowCellGraphFlattened",
@@ -45,7 +46,8 @@ PacletObject[
           "PatrickMLenggenhager`HyperBloch`ShowTriangles",
           "PatrickMLenggenhager`HyperBloch`TBHamiltonian",
           "PatrickMLenggenhager`HyperBloch`VisualizeCellGraph",
-          "PatrickMLenggenhager`HyperBloch`VisualizeModelGraph"
+          "PatrickMLenggenhager`HyperBloch`VisualizeModelGraph",
+          "PatrickMLenggenhager`HyperBloch`VisualizeQuotientSequences"
         }
       },
       {
