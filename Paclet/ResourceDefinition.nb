@@ -41,9 +41,8 @@ Cell[CellGroupData[{
 
 Cell["", "FileManagerTopSpacer",
  CellGroupingRules->{"SectionGrouping", 99},
- TaggingRules->{},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->578595387,ExpressionUUID->"abbc1e64-8a48-4e0c-881f-9ba81f65cd21"],
+ CellID->578595387,ExpressionUUID->"e3fda144-9ad1-e840-85e1-82947a95d854"],
 
 Cell[CellGroupData[{
 
@@ -68,18 +67,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Documentation"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"890ebb76-2c29-4824-bfd7-5bf56791a829"]], \
+   "Text"}]],ExpressionUUID->"e68271c4-d3cd-d14c-82c8-88a9355b602a"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDocumentationIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->178445695,ExpressionUUID->"f48f0a29-6204-4758-9ca5-83aa1b578896"],
+ CellID->178445695,ExpressionUUID->"a15a327e-a1a6-3d4c-806c-5fb90bfbad44"],
 
 Cell[CellGroupData[{
 
@@ -104,18 +102,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Documentation", "English"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"aa9383cb-fab6-4298-ba5b-f1d601014d3d"]], \
+   "Text"}]],ExpressionUUID->"4764dc28-4359-b24a-94ef-8e3c07266b38"]], \
 "FileManagerDirectory",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->446029362,ExpressionUUID->"70466872-5b8f-476e-9f55-ec8597556b9f"],
+ CellID->446029362,ExpressionUUID->"afbe7d76-f575-1745-bc39-582b920c6bb2"],
 
 Cell[CellGroupData[{
 
@@ -140,18 +137,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Documentation", "English", "Guides"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"fa213710-1bfb-4d8c-952b-1e6fdda83349"]], \
+   "Text"}]],ExpressionUUID->"a27dd849-0124-9143-aa45-aba5ae71d375"]], \
 "FileManagerDirectory",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->6649987,ExpressionUUID->"9535b3de-e9ed-4ae2-b609-4e12e01bf443"],
+ CellID->6649987,ExpressionUUID->"683ee7d0-47ff-724a-80d8-8f52b46732b2"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -170,15 +166,121 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 130},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->622344259,ExpressionUUID->"56c633ac-1cbd-4c22-b101-132df1f0580e"]
+ CellID->622344259,ExpressionUUID->"13bed265-1934-5f48-87b5-4ac423c669ed"]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   ActionMenuBox["\<\"Index\"\>",{
+    "\"Open/Close Group\"" :> (
+      SelectionMove[ParentCell[EvaluationCell[]], All, Cell]; 
+      FrontEndTokenExecute[EvaluationNotebook[], "OpenCloseGroup"]), 
+     "\"Open Directory\"" :> 
+     DefinitionNotebookClient`FileTreeOpen[ParentCell[EvaluationCell[]]], 
+     "\"Un/Mark as Excluded\"" :> 
+     DefinitionNotebookClient`FileTreeExclusionToggle[
+      ParentCell[EvaluationCell[]]], "\"Copy Path to Clipboard\"" :> 
+     DefinitionNotebookClient`FileTreeCopy[ParentCell[EvaluationCell[]]]},
+    Appearance->None,
+    BaseStyle->{"Text"}],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "Index"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{
+   "Text"}]],ExpressionUUID->"a60a6b79-ba48-2143-bc50-5e5e72c1628e"]], \
+"FileManagerDirectory",
+ CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 120},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
+     None], Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->82040286,ExpressionUUID->"c120095b-f6e1-c942-ab13-0de4d575cf0f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"_0.cfs\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "Index", "_0.cfs"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "Index", "_0.cfs"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->860653227,ExpressionUUID->"3a5a9752-3258-2c41-b21b-dc6b1af878ef"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"segments_3\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "Index", 
+       "segments_3"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "Index", "segments_3"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->71620870,ExpressionUUID->"7cdc51b3-eda4-d34c-8494-8984c5a010e3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"segments.gen\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "Index", 
+       "segments.gen"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "Index", "segments.gen"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->102431912,ExpressionUUID->"293f3822-5ec9-1048-a975-27fc2e4d3d1a"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -203,18 +305,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Documentation", "English", "ReferencePages"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"54829cd7-8a81-40db-9f70-f60008d92932"]], \
+   "Text"}]],ExpressionUUID->"2bc25f51-7464-434a-8bf3-7815d38c2990"]], \
 "FileManagerDirectory",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->486379451,ExpressionUUID->"b28f7ab8-2f04-4145-b618-666dfe5609e7"],
+ CellID->486379451,ExpressionUUID->"aad27438-05f1-694c-a244-3744da6c1b5b"],
 
 Cell[CellGroupData[{
 
@@ -240,18 +341,17 @@ Cell[TextData[Cell[BoxData[
     "Symbols"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"8945c20e-544e-4562-9bd9-30e9dcf420cf"]], \
+   "Text"}]],ExpressionUUID->"3f3655ca-6891-8448-90f9-a64ac8d7953e"]], \
 "FileManagerDirectory",
  CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 130},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->35637609,ExpressionUUID->"e9565e04-9d56-45d3-9439-c8f924eceacd"],
+ CellID->35637609,ExpressionUUID->"30526e7f-3038-7541-8f1c-417acb18a130"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -270,14 +370,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->21427092,ExpressionUUID->"10051ae4-9196-4e2e-b713-27da558c082f"],
+ CellID->21427092,ExpressionUUID->"c6f15091-67ab-5843-acbd-b1e006097533"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -296,14 +395,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->178982199,ExpressionUUID->"9684ab6b-affe-4b18-9c1a-f346a247fd8a"],
+ CellID->178982199,ExpressionUUID->"d3361323-996e-0c4b-8326-24e53527c7e7"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -322,14 +420,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->30381600,ExpressionUUID->"2bbff074-e0c4-466a-a97e-245625593ed2"],
+ CellID->30381600,ExpressionUUID->"f29bfc0a-2c23-f646-a66e-e1cb768e64c4"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -348,14 +445,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->20660427,ExpressionUUID->"1ef31011-78db-471f-99c6-755ced396401"],
+ CellID->20660427,ExpressionUUID->"9bec0012-5da8-a246-8378-81300af191c7"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -374,14 +470,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->382265305,ExpressionUUID->"dc8da400-61fc-42d8-a82c-b203471201c1"],
+ CellID->382265305,ExpressionUUID->"bd10ad9f-666d-584e-a346-b07dee08fea7"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -400,14 +495,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->209636970,ExpressionUUID->"b8cf5a9b-7bf5-4588-bbf2-345b3b9508f0"],
+ CellID->209636970,ExpressionUUID->"866f7b55-36ba-f14e-a5cc-0f47314844a4"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -426,14 +520,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->264705350,ExpressionUUID->"99a7023e-ba5b-4c44-9f12-fc8d31f1789d"],
+ CellID->264705350,ExpressionUUID->"392bd5d8-4058-e649-afef-2358a713fc4d"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -452,14 +545,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->1007860019,ExpressionUUID->"f248a03b-2548-4a19-bc37-6401ac3954e2"],
+ CellID->1007860019,ExpressionUUID->"370b39e8-d4f3-4546-90f6-368d6e3962a2"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -478,14 +570,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->335144061,ExpressionUUID->"3643da14-ea14-4cc3-bebe-3ea452973e8e"],
+ CellID->335144061,ExpressionUUID->"4e4d43e6-5235-b347-b286-d80d4dd4cfdd"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -504,14 +595,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->98560654,ExpressionUUID->"80cf6b86-f6bd-4aed-b9bd-213d4f0873b1"],
+ CellID->98560654,ExpressionUUID->"2e5e14bc-b0ff-5c4c-b9ec-3d1698516492"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -530,14 +620,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->201174298,ExpressionUUID->"7d7bec4a-588a-426b-833f-cfb825b60c2b"],
+ CellID->201174298,ExpressionUUID->"ab50fac1-8322-a948-aaa1-df100361663d"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -556,14 +645,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->100553160,ExpressionUUID->"35766e9a-0a7e-4e61-a733-fd7a6c5f8aa4"],
+ CellID->100553160,ExpressionUUID->"f98424fb-e8b2-2448-b97f-94fa9dbe26fe"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -582,14 +670,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->274937934,ExpressionUUID->"17ef0dd8-38ae-45b5-81a6-027ac7c63f79"],
+ CellID->274937934,ExpressionUUID->"4bb7e683-6989-8a48-8eca-6bbbbd939a03"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -608,14 +695,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->250966863,ExpressionUUID->"3f33652f-3a17-4c77-868d-ee0479f863aa"],
+ CellID->250966863,ExpressionUUID->"4f8c2a0c-f3cb-8d47-a4e4-3c6d89bca6f8"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -634,14 +720,38 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->183321551,ExpressionUUID->"f0867fd4-580c-41f7-ad81-028302ee4c1e"],
+ CellID->183321551,ExpressionUUID->"7f9a3ffd-97dc-e94f-bb4d-cb7e29c5b81f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"HCQuotientSequencesAdjMat.nb\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "ReferencePages", 
+       "Symbols", "HCQuotientSequencesAdjMat.nb"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "ReferencePages", 
+    "Symbols", "HCQuotientSequencesAdjMat.nb"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->5949132,ExpressionUUID->"536ecf74-d231-494a-9a73-aab96a280453"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -660,14 +770,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->764528861,ExpressionUUID->"a44e4a2a-4d5e-4c56-887b-5e13a7666176"],
+ CellID->764528861,ExpressionUUID->"9211485f-78cd-ae43-81aa-9685515f807d"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -686,14 +795,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->132223557,ExpressionUUID->"0ed46020-7c9f-44ac-b749-018877cad7db"],
+ CellID->132223557,ExpressionUUID->"d71db6bc-fa1f-b04b-9f78-6227a55822fa"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -712,14 +820,38 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->196594241,ExpressionUUID->"1e964039-f9f3-4443-a91f-c202ec43fc72"],
+ CellID->196594241,ExpressionUUID->"6a90935f-c767-d94d-a599-959f66d73fa0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"ImportQuotientSequencesAdjMatString.nb\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "ReferencePages", 
+       "Symbols", "ImportQuotientSequencesAdjMatString.nb"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "ReferencePages", 
+    "Symbols", "ImportQuotientSequencesAdjMatString.nb"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->47013414,ExpressionUUID->"16c0d47f-02ce-4540-a500-1f213ab837f5"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -738,14 +870,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->22324312,ExpressionUUID->"d990d650-1c79-405a-a9d5-6ba4a489e328"],
+ CellID->22324312,ExpressionUUID->"86929755-af35-5f45-ba55-bdc33ea5b144"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -764,14 +895,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->16470276,ExpressionUUID->"66e71d94-d7ba-4944-a211-a8b52e7f4926"],
+ CellID->16470276,ExpressionUUID->"c34f11c2-07be-d545-95ba-95fd152ecc10"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -790,14 +920,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->54022958,ExpressionUUID->"fa5ced7a-7836-4ede-a516-e9df91392e68"],
+ CellID->54022958,ExpressionUUID->"9122eb75-8b62-7f46-abee-7c23fbc4087c"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -816,14 +945,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->151085922,ExpressionUUID->"bf791475-eef5-4911-a6c6-8dc4be7bfe8d"],
+ CellID->151085922,ExpressionUUID->"3304dfa0-a602-9347-81b2-3c517634977a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -842,14 +970,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->119286480,ExpressionUUID->"a4b0c478-6be1-40ac-9470-4d49cf1965a2"],
+ CellID->119286480,ExpressionUUID->"50ab6ffe-a6b1-f949-b6ae-a9a641a0f45c"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -868,14 +995,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->132421592,ExpressionUUID->"91cb6c2c-d5cc-43b2-9ffb-feb49411543e"],
+ CellID->132421592,ExpressionUUID->"d3528a8e-36b9-1842-8336-788972fc7341"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -894,14 +1020,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->746689652,ExpressionUUID->"fd88d137-d636-4999-8b51-a22015dd4b04"],
+ CellID->746689652,ExpressionUUID->"4f20acf5-1a33-8b4e-9489-dcfe754665cc"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -920,14 +1045,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->117581433,ExpressionUUID->"1ec9488d-7363-4fe5-a1d4-1263e266f536"],
+ CellID->117581433,ExpressionUUID->"09429484-86c9-9a4e-b1a9-4b93f81afcbd"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -946,14 +1070,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->721149501,ExpressionUUID->"74527632-a7ca-41a0-82a2-639705fa425f"],
+ CellID->721149501,ExpressionUUID->"303aeffe-6a6e-d84a-86f0-33adbf0e283a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -972,14 +1095,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->58700440,ExpressionUUID->"c55fc2e9-dd5a-47f8-ac23-3dd161cf348a"],
+ CellID->58700440,ExpressionUUID->"90f0bba4-60bf-1d42-90f4-c38457ee15a8"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -998,14 +1120,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->123725713,ExpressionUUID->"c684a293-85cb-4f13-8bb3-6e38eb314817"],
+ CellID->123725713,ExpressionUUID->"45c51032-a8b0-f748-bebd-2249586d9017"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1024,14 +1145,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->161844371,ExpressionUUID->"35c9ba4f-8084-45d0-8524-7b844385b17c"],
+ CellID->161844371,ExpressionUUID->"cf06837a-32f5-0a41-9f91-b9e5535883d4"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1050,16 +1170,397 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 140},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->107105493,ExpressionUUID->"d4e35392-732a-4948-a5af-391c8b28ebd8"]
+ CellID->107105493,ExpressionUUID->"60e7b6db-830e-7f4e-a411-1085c5ec8a82"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"VisualizeQuotientSequences.nb\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "ReferencePages", 
+       "Symbols", "VisualizeQuotientSequences.nb"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "ReferencePages", 
+    "Symbols", "VisualizeQuotientSequences.nb"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->32430056,ExpressionUUID->"e881d2f3-1225-294d-8c6f-03798b9c5363"]
 }, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   ActionMenuBox["\<\"SearchIndex\"\>",{
+    "\"Open/Close Group\"" :> (
+      SelectionMove[ParentCell[EvaluationCell[]], All, Cell]; 
+      FrontEndTokenExecute[EvaluationNotebook[], "OpenCloseGroup"]), 
+     "\"Open Directory\"" :> 
+     DefinitionNotebookClient`FileTreeOpen[ParentCell[EvaluationCell[]]], 
+     "\"Un/Mark as Excluded\"" :> 
+     DefinitionNotebookClient`FileTreeExclusionToggle[
+      ParentCell[EvaluationCell[]]], "\"Copy Path to Clipboard\"" :> 
+     DefinitionNotebookClient`FileTreeCopy[ParentCell[EvaluationCell[]]]},
+    Appearance->None,
+    BaseStyle->{"Text"}],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{
+   "Text"}]],ExpressionUUID->"95a4baea-522f-644b-8335-20096dacd237"]], \
+"FileManagerDirectory",
+ CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 120},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
+     None], Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->365521975,ExpressionUUID->"ab511121-7f6c-e64e-9bee-13674cc7b564"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   ActionMenuBox["\<\"5\"\>",{
+    "\"Open/Close Group\"" :> (
+      SelectionMove[ParentCell[EvaluationCell[]], All, Cell]; 
+      FrontEndTokenExecute[EvaluationNotebook[], "OpenCloseGroup"]), 
+     "\"Open Directory\"" :> 
+     DefinitionNotebookClient`FileTreeOpen[ParentCell[EvaluationCell[]]], 
+     "\"Un/Mark as Excluded\"" :> 
+     DefinitionNotebookClient`FileTreeExclusionToggle[
+      ParentCell[EvaluationCell[]]], "\"Copy Path to Clipboard\"" :> 
+     DefinitionNotebookClient`FileTreeCopy[ParentCell[EvaluationCell[]]]},
+    Appearance->None,
+    BaseStyle->{"Text"}],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{
+   "Text"}]],ExpressionUUID->"dc9ad7ee-827e-d446-a5a5-0262c4c21d77"]], \
+"FileManagerDirectory",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
+     None], Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->418743249,ExpressionUUID->"f778b8f6-017e-d648-b796-457b55508ee2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"_0.cfe\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "_0.cfe"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "_0.cfe"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->188857398,ExpressionUUID->"e78dd2b3-3281-a145-ab57-37d8c9c98b27"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"_0.cfs\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "_0.cfs"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "_0.cfs"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->146783964,ExpressionUUID->"9fa78ccb-3134-7c4e-a529-a04e5fd940c9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"_0.si\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "_0.si"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "_0.si"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->366060740,ExpressionUUID->"d4ff9dfc-36b3-eb44-b355-4a12cdb5eec5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"fields.wl\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "fields.wl"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "fields.wl"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->830230155,ExpressionUUID->"96e3b157-a3f1-e340-9459-d9e1abf09f2a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"indexMetadata.wl\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "indexMetadata.wl"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "indexMetadata.wl"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
+    Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->133870684,ExpressionUUID->"8822fe1f-9308-7346-aaec-ffd9566720e3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"segments_2\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "segments_2"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "segments_2"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->356579299,ExpressionUUID->"5053fa2b-709e-8d4e-9181-6e45acdfbacd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"write.lock\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+       "write.lock"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[4]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SearchIndex", "5", 
+    "write.lock"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{92 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 140},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->8640479,ExpressionUUID->"1c8b396d-665c-e841-af72-5c7ff00434c6"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   ActionMenuBox["\<\"SpellIndex\"\>",{
+    "\"Open/Close Group\"" :> (
+      SelectionMove[ParentCell[EvaluationCell[]], All, Cell]; 
+      FrontEndTokenExecute[EvaluationNotebook[], "OpenCloseGroup"]), 
+     "\"Open Directory\"" :> 
+     DefinitionNotebookClient`FileTreeOpen[ParentCell[EvaluationCell[]]], 
+     "\"Un/Mark as Excluded\"" :> 
+     DefinitionNotebookClient`FileTreeExclusionToggle[
+      ParentCell[EvaluationCell[]]], "\"Copy Path to Clipboard\"" :> 
+     DefinitionNotebookClient`FileTreeCopy[ParentCell[EvaluationCell[]]]},
+    Appearance->None,
+    BaseStyle->{"Text"}],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SpellIndex"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{
+   "Text"}]],ExpressionUUID->"bf3e6c80-220b-764b-af17-65e38adc4e97"]], \
+"FileManagerDirectory",
+ CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 120},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
+     None], Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->935804088,ExpressionUUID->"b80b3e91-6e7f-8244-b550-b45eea4708ab"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"_7.cfs\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SpellIndex", 
+       "_7.cfs"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SpellIndex", "_7.cfs"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->260467735,ExpressionUUID->"553545f6-5448-4147-bbf3-4a5dbe93f8e8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"segments.gen\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SpellIndex", 
+       "segments.gen"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SpellIndex", 
+    "segments.gen"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->91135025,ExpressionUUID->"cd121c4c-e8d6-8145-bba4-b64862162678"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"segments_h\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Documentation", "English", "SpellIndex", 
+       "segments_h"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[3]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Documentation", "English", "SpellIndex", 
+    "segments_h"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 130},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->19613767,ExpressionUUID->"94adaaaf-2807-3342-87e2-e5d709300cf9"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1084,18 +1585,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Documentation", "English", "Tutorials"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"3d9c5c7c-05da-4ce7-b1fb-1b5b9b36d184"]], \
+   "Text"}]],ExpressionUUID->"2c06c686-5ae8-5b48-ac97-2d0f66913b8e"]], \
 "FileManagerDirectory",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->270626448,ExpressionUUID->"4d73b779-adbf-418d-96c5-a02841d79d24"],
+ CellID->270626448,ExpressionUUID->"263f4cfb-dd01-154d-bbc1-1abf6bf2fd38"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1114,14 +1614,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{69 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 130},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->565637431,ExpressionUUID->"38b3bcf6-9c8f-42ee-9343-2a893a6fb611"]
+ CellID->565637431,ExpressionUUID->"b99bc89c-579a-ca48-9e90-376d440eac1e"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1149,18 +1648,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Kernel"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"5e3dfedf-596e-40c0-8c6f-583f48348449"]], \
+   "Text"}]],ExpressionUUID->"1e49f32b-c87c-d544-868b-f48e4f88c9bb"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerKernelIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->7072344,ExpressionUUID->"76031231-1008-4400-89f7-d97eedee7d18"],
+ CellID->7072344,ExpressionUUID->"bc319dfc-776e-7743-ac9a-58ca5e43335c"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1177,14 +1675,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->146061984,ExpressionUUID->"dedbddb7-1152-4ef5-bba0-2853cd6d0bd1"],
+ CellID->146061984,ExpressionUUID->"24a779cf-dcc4-9e4e-b42f-0ac29b2f716a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1201,14 +1698,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerWLIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->209391763,ExpressionUUID->"10639986-a0ca-4a13-8b5f-89943b37ee75"]
+ CellID->209391763,ExpressionUUID->"3d77786e-d68c-cc41-bda7-d4c9615b9653"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1226,14 +1722,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerPacletInfoIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->459546126,ExpressionUUID->"fec4ea2b-e110-46e9-9f09-34c5affa0b26"],
+ CellID->459546126,ExpressionUUID->"0bbd3515-a693-a54b-98c5-be065904378b"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1250,14 +1745,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerNBIconTemplate"]], Background -> None], 
     Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->337259689,ExpressionUUID->"2aa90293-3c3c-4e0b-9592-dc56bc2627c6"],
+ CellID->337259689,ExpressionUUID->"0904eddc-7fe9-ad45-bb46-12a307701ee6"],
 
 Cell[CellGroupData[{
 
@@ -1282,18 +1776,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Resources"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"02aa9d9c-ba03-4cfa-895e-0cccbb6820a3"]], \
+   "Text"}]],ExpressionUUID->"8e49cbb4-2e9f-d943-9acb-50b3b664a520"]], \
 "FileManagerDirectory",
  CellMargins->{{Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 100},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->466318685,ExpressionUUID->"7acaf382-3819-4671-a7cb-3137071e8ec6"],
+ CellID->466318685,ExpressionUUID->"f5a6c58f-4408-e342-9034-9b294eb9804c"],
 
 Cell[CellGroupData[{
 
@@ -1318,18 +1811,17 @@ Cell[TextData[Cell[BoxData[
     NotebookDirectory[], "Resources", "ExampleData"}],
   BoxID -> "FileTreePath",
   BaseStyle->{
-   "Text"}]],ExpressionUUID->"7100e666-43f2-4f17-ac68-15ab18bbb4ae"]], \
+   "Text"}]],ExpressionUUID->"93602299-c55d-d242-b83a-c4a17f371058"]], \
 "FileManagerDirectory",
  CellMargins->{{23 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 110},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerDirectoryIconTemplate"]], Background -> 
      None], Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->933435232,ExpressionUUID->"424f9729-4f33-40e6-8159-5e641d5601f7"],
+ CellID->933435232,ExpressionUUID->"93e68fe8-a1ae-4943-8118-b0d918fcaa83"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1347,14 +1839,63 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->340707616,ExpressionUUID->"98b29b54-5542-4171-ab7f-362efd20e702"],
+ CellID->340707616,ExpressionUUID->"2b0faab4-615c-0c45-9d7e-d8b83c9a4c91"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"(2,4,6)-adjMat-BBG_102_sparse.hcqs\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Resources", "ExampleData", 
+       "(2,4,6)-adjMat-BBG_102_sparse.hcqs"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Resources", "ExampleData", 
+    "(2,4,6)-adjMat-BBG_102_sparse.hcqs"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 120},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->608049100,ExpressionUUID->"6804697a-bde5-3c45-a3db-9e3eaf39ec0e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   TemplateBox[{"\"(2,4,6)-adjMat-BBG_35_sparse.hcqs\"", 
+     FileNameJoin[{
+       NotebookDirectory[], "Resources", "ExampleData", 
+       "(2,4,6)-adjMat-BBG_35_sparse.hcqs"}]},
+    "FileManagerFileOpenerTemplate"],
+   Annotation[#, 
+    DefinitionNotebookClient`TemplateCells`PackagePrivate`fileDepth[2]]& ],
+  FileNameJoin[{
+    NotebookDirectory[], "Resources", "ExampleData", 
+    "(2,4,6)-adjMat-BBG_35_sparse.hcqs"}],
+  BoxID -> "FileTreePath",
+  BaseStyle->{"Text"}]], "FileManagerFile",
+ CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
+ CellGroupingRules->{"SectionGrouping", 120},
+ CellFrameLabels->{{
+    Cell[
+     BoxData[
+      TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
+     Inherited}, {Inherited, Inherited}},
+ CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
+ CellID->636299934,ExpressionUUID->"7fd02ed4-3425-344e-9d1c-84c54305c1cd"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1372,14 +1913,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->773024181,ExpressionUUID->"956830c4-3faf-463b-ba03-2ca8b316d3d2"],
+ CellID->773024181,ExpressionUUID->"2cb78246-cf5b-d647-8f4d-f8de098ff279"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1397,14 +1937,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->370492080,ExpressionUUID->"cb7e09ae-5201-4290-8429-2304b8f6183c"],
+ CellID->370492080,ExpressionUUID->"d5e094f0-e213-e74f-9474-1f69c0e28dff"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1423,14 +1962,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->189208814,ExpressionUUID->"f7827ce0-b188-411f-8015-88d35038233e"],
+ CellID->189208814,ExpressionUUID->"70523d3b-5ce0-9a40-b324-58947ed5229d"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1448,14 +1986,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->322189732,ExpressionUUID->"0df94c82-9b6a-4206-a159-ff8bb79209bb"],
+ CellID->322189732,ExpressionUUID->"a5a83253-42a2-7140-82c9-42b737e26c7a"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1474,14 +2011,13 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->125167819,ExpressionUUID->"48b6c6b4-4aca-44f7-8f09-c4a9865eb6d3"],
+ CellID->125167819,ExpressionUUID->"3407d9ba-d835-cd45-b6d8-75d115357439"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1500,22 +2036,20 @@ Cell[BoxData[
   BaseStyle->{"Text"}]], "FileManagerFile",
  CellMargins->{{46 + Inherited, Inherited}, {Inherited, Inherited}},
  CellGroupingRules->{"SectionGrouping", 120},
- TaggingRules->{},
  CellFrameLabels->{{
     Cell[
      BoxData[
       TemplateBox[{}, "FileManagerUnknownIconTemplate"]], Background -> None],
      Inherited}, {Inherited, Inherited}},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->963885359,ExpressionUUID->"82fcfac4-ede2-42d8-a062-b2b164dd0a7e"]
+ CellID->963885359,ExpressionUUID->"efd53b71-35fe-6045-aeca-5f56d3975dde"]
 }, Closed]]
 }, Closed]],
 
 Cell["", "FileManagerBottomSpacer",
  CellGroupingRules->{"SectionGrouping", 100},
- TaggingRules->{},
  CellTags->{"FileManagerCell", "FileManager-PacletFiles"},
- CellID->769472820,ExpressionUUID->"d4024e06-3f42-46a6-b332-3cfa8062bfdd"]
+ CellID->769472820,ExpressionUUID->"f31021a1-697b-864e-975e-d5f9bc174c4e"]
 }, Open  ]]
 }, Open  ]],
 
@@ -11246,7 +11780,6 @@ False]]\\)\"\>", {-0.8408964152563142, 0.3483106997496378}], {}}}}, {}}, {{
              
              FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
               3}}}, {{{0., 0.}, {0., 
-              
               0.}, {-0.42233177292624635`, -0.2761782454396067}, {-1., \
 -0.3073863871742821}, {-1., -0.3073863871742821}, {-0.8561525608627805, \
 -0.14844580692378884`}, {-0.8561525608627805, 0.}, {-0.8561525608627805, 
@@ -12434,7 +12967,6 @@ publicly credited with contributing this paclet.", "MoreInfoText"],
  DefaultNewCellStyle->"Text",
  CellTags->{
   "Contributed By", "ContributorInformation", "Creator", "TemplateCellGroup"},
- 
  CellID->57534933,ExpressionUUID->"94da2678-eabb-4858-9cd5-ae3fcc72ae26"],
 
 Cell["Patrick M. Lenggenhager", "Text",
@@ -12554,7 +13086,6 @@ Cell[BoxData[
               
               TemplateBox[{
                "\"\[RightGuillemet]\"", 
-                
                 "https://resources.wolframcloud.com/PacletRepository/licenses/\
 MIT"}, "HyperlinkURL"]}, "RowDefault"]},
            "RowDefault"],
@@ -12896,7 +13427,6 @@ Cell[BoxData[
         {
          TemplateBox[{
            CheckboxBox[False, {False, "Core Language & Structure"}], "\" \"", 
-           
            StyleBox[
            "\"Core Language & Structure\"", FontSize -> 12, Editable -> False,
              StripOnInput -> False]},
@@ -13001,7 +13531,6 @@ Zqc2NJuEzARZv95xEUSP896b995Mt25hCTIFgtNtlVylhcYeyB1p2J/w4tGzwNVDwXxgc2M2JB+\
 pHBluwXmK4vfeGYyDeaLBOwzmDgVVZ9OoVig+Rbh+9Vwx+\
 M95VHJ28441uRcamVddlTQq7Vo425WUqcgEa4tC76l4UmWzzd/bf7WNTaGO/\
 8DLPgqVXOgnftXFCeobk152biursI9ajpf3GJh+wbnKYpOiYhfPxKkWRy9T1s/s0AWSLxMKadM="},
- 
  CellTags->{"Categories", "Categories-Checkboxes", "CheckboxCell"},
  CellID->154720833,ExpressionUUID->"06ddfb4a-1940-49c5-b8a5-7e275c1f190d"]
 }, Open  ]],
@@ -14100,7 +14629,6 @@ OyRMPQrxB5zEJbYqnP8cXCqoXQ+\
 CGeUscAu6raavjib78w2j7vUM3QcONKvttIjWbE0zA3YTWy/a+8SB+\
 9ACsdJI1lnWn71uaK8mNqe0GK9ZfyApFundQq8febMb8kw2367otMY6Ms+\
 rwX6j635CBQ2D3UJS8uaD7r892oQDIcaxqW166vN/2cjK3PjKa9vaoFnJU5jdfT0Bv+BeV+FzU="},
- 
  CellTags->{
   "CheckboxCell", "Disclosures", "Disclosures-Checkboxes", 
    "Disclosures-WLSystemConfiguration"},
@@ -14630,6 +15158,7 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                     0.282842712474619}}], 
                     
                     PolygonBox[{{0.42426406871192845`, -0.282842712474619}, {
+                    
                     0.282842712474619, -0.42426406871192845`}, \
 {-0.42426406871192845`, 0.282842712474619}, {-0.282842712474619, 
                     0.42426406871192845`}}]}, ImageSize -> 18, 
@@ -14872,7 +15401,6 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -14920,12 +15448,10 @@ paclet\"", "SummaryItem"]}]}, {
                     FrameBox[
                     StyleBox["\"\[Checkmark]\"", 
                     Directive[
-                    RGBColor[
-                    0.3607843137254902, 0.596078431372549, 
+                    RGBColor[0.3607843137254902, 0.596078431372549, 
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -15019,6 +15545,7 @@ GetTranslatedCellGraphEdge.nb"], "Hash" ->
 abede4a"|>, <|"File" -> 
                     File["Documentation/English/ReferencePages/Symbols/\
 GetVertex.nb"], "Hash" -> 
+                    
                     "b1d95594c759233ccec48a7b89a8835de6b9f14fb5c5bdd6a9987646c\
 e29f758"|>, <|"File" -> 
                     File["Documentation/English/ReferencePages/Symbols/\
@@ -15284,8 +15811,9 @@ c411f0d"|>}|>, "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 1, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15308,8 +15836,9 @@ c411f0d"|>}|>, "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 2, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15332,8 +15861,9 @@ e228993",
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 3, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15358,8 +15888,9 @@ AbelianBlochHamiltonianExpression.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 4, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15384,8 +15915,9 @@ AbelianBlochHamiltonian.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 5, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15410,8 +15942,9 @@ GetCellBoundary.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 6, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15436,8 +15969,9 @@ GetCellGraphEdge.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 7, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15462,8 +15996,9 @@ GetCellGraphFace.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 8, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15488,8 +16023,9 @@ GetCellGraphVertex.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 9, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15514,8 +16050,9 @@ d17a1cc",
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 10, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15540,8 +16077,9 @@ GetSchwarzTriangle.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 11, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15566,8 +16104,9 @@ GetTranslatedCellGraphEdge.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 12, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15592,8 +16131,9 @@ nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 13, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15618,8 +16158,9 @@ GetWyckoffPosition.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 14, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15644,8 +16185,9 @@ nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 15, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15670,8 +16212,9 @@ HCModelGraph.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 16, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15696,8 +16239,9 @@ HCSupercellModelGraph.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 17, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15722,8 +16266,9 @@ ImportCellGraphString.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 18, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15748,8 +16293,9 @@ ImportModelGraphString.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 19, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15774,8 +16320,9 @@ ImportSupercellModelGraphString.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 20, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -15865,7 +16412,6 @@ ImportSupercellModelGraphString.nb"],
 , {All}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show 5 Fewer Rows at This Level", 
                     KernelExecute[
-                    
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -15878,8 +16424,7 @@ ImportSupercellModelGraphString.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
                     Background -> GrayLevel[0.98]], SpanFromLeft}}, 
-                    BaseStyle -> {ContextMenu -> 
-                    Dynamic[
+                    BaseStyle -> {ContextMenu -> Dynamic[
                     TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
                     Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
@@ -15936,8 +16481,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
                     Nothing, 
-                    MenuItem["Show " <> Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    MenuItem["Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
@@ -15966,8 +16511,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
-                    MenuItem["Hide " <> Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    MenuItem["Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
@@ -16120,8 +16665,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
                     TrackedSymbols :> {
                     TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
-                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = 
-                    Style[
+                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
                     Framed[
                     Dynamic[
                     Replace[
@@ -16229,7 +16773,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -16277,14 +16820,12 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
                     TemplateBox[{"\"Message\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                    TagBox[
-                    "\"Documentation build completed successfully.\"", 
+                    TagBox["\"Documentation build completed successfully.\"", 
                     "SummaryItem"]}]}, {
                     RowBox[{
                     TagBox[
@@ -16745,8 +17286,7 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
                     DockedCells]}], 
                  Condition[
-                  Pattern[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                  Pattern[DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
                    Blank[Cell]], 
                   Not[
                    FreeQ[
@@ -16786,7 +17326,6 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -16841,7 +17380,6 @@ paclet\"", "SummaryItem"]}]}, {
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -16877,6 +17415,7 @@ Projects/HyperBloch/Paclet/build/PatrickMLenggenhager__HyperBloch\""},
                     "FileArgument"], "]"}], "SummaryItem"]}]}, {
                     RowBox[{
                     TagBox[
+                    
                     TemplateBox[{"\"PacletManifest\"", "\": \""}, 
                     "RowDefault"], "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
@@ -16970,7 +17509,6 @@ ShowCellBoundary.nb"], "Hash" ->
 bf39a54"|>, <|"File" -> 
                     File["Documentation/English/ReferencePages/Symbols/\
 ShowCellGraphFlattened.nb"], "Hash" -> 
-                    
                     "90782b659baca12ac8ab894fbda5e38352d61f90efbcaa860aec81c8c\
 81b2264"|>, <|"File" -> 
                     File["Documentation/English/ReferencePages/Symbols/\
@@ -17759,6 +18297,7 @@ ImportSupercellModelGraphString.nb"],
                     0.5098039215686274], 8}, ContextMenu -> {
                     MenuItem["Show 1 More Row at This Level", 
                     KernelExecute[
+                    
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -17870,7 +18409,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
                     Nothing, 
-                    MenuItem["Show " <> 
+                    MenuItem[
+                    "Show " <> 
                     Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
@@ -17900,7 +18440,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
-                    MenuItem["Hide " <> 
+                    MenuItem[
+                    "Hide " <> 
                     Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
@@ -18055,8 +18596,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
                     TrackedSymbols :> {
                     TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
-                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = 
-                    Style[
+                    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
                     Framed[
                     Dynamic[
                     Replace[
@@ -18081,7 +18621,6 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`path$; 
                     TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
                     TypeSystem`NestedGrid`PackagePrivate`pathType$; 
-                    
                     TypeSystem`NestedGrid`PackagePrivate`$\
 lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
                     TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
@@ -18166,7 +18705,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -18180,17 +18718,18 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
-                    TemplateBox[{
-                    "0.001987`", "\"s\"", "seconds", "\"Seconds\""}, 
-                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}}, 
+                    
+                    TemplateBox[{"0.001987`", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                    "SummaryItem"]}]}}, GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                    AutoDelete -> False, GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {"Columns" -> {{2}}, 
+                    "Rows" -> {{Automatic}}}, BaseStyle -> {
+                    ShowStringCharacters -> False, NumberMarks -> False, 
+                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
-                    "Rows" -> {{Automatic}}}, AutoDelete -> False, 
-                    GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
-                    "Rows" -> {{Automatic}}}, GridBoxSpacings -> {
-                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                    BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
-                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
-                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
                     "Rows" -> {{Top}}}, AutoDelete -> False, 
                     GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
                     "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}], 
@@ -18213,7 +18752,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -18227,10 +18765,9 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     TemplateBox[{"\"TotalTime\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
-                    
-                    TemplateBox[{"0.001987`", "\"s\"", "seconds", 
-                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
-                    "SummaryItem"]}]}, {
+                    TemplateBox[{
+                    "0.001987`", "\"s\"", "seconds", "\"Seconds\""}, 
+                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}]}, {
                     RowBox[{
                     TagBox[
                     
@@ -18930,8 +19467,7 @@ Jlw=="}, "ClickToCopyTemplate"]]}}, Alignment -> Left,
                     TimeZoneConvert[
                     DateObject[
                     3.940560972550489`16.348133040919826*^9, TimeZone -> 
-                    0]], {
-                    "MonthName", " ", "DayShort", ", ", "Year", " ", 
+                    0]], {"MonthName", " ", "DayShort", ", ", "Year", " ", 
                     "Hour12Short", ":", "Minute", " ", "AMPMLowerCase"}], 
                     StandardForm], SingleEvaluation -> True, Evaluator -> 
                    "System"], FontSlant -> Italic, FontColor -> 
@@ -19237,7 +19773,6 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -19290,7 +19825,6 @@ paclet\"", "SummaryItem"]}]}, {
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -19677,8 +20211,9 @@ c411f0d"|>}|>, "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 1, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19701,8 +20236,9 @@ a0c6919",
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 2, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19725,8 +20261,9 @@ e228993",
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 3, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19751,8 +20288,9 @@ AbelianBlochHamiltonianExpression.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 4, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19777,8 +20315,9 @@ AbelianBlochHamiltonian.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 5, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19803,8 +20342,9 @@ GetCellBoundary.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 6, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19829,8 +20369,9 @@ GetCellGraphEdge.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 7, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19855,8 +20396,9 @@ GetCellGraphFace.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 8, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19881,8 +20423,9 @@ GetCellGraphVertex.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 9, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19907,8 +20450,9 @@ e9f2591",
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 10, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19933,8 +20477,9 @@ GetSchwarzTriangle.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 11, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19959,8 +20504,9 @@ GetTranslatedCellGraphEdge.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 12, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -19985,8 +20531,9 @@ nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 13, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20011,8 +20558,9 @@ GetWyckoffPosition.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 14, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20037,8 +20585,9 @@ HBDisclinationModelGraph.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 15, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20063,8 +20612,9 @@ HBDisclinationSupercellModelGraph.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 16, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20089,8 +20639,9 @@ nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 17, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20115,8 +20666,9 @@ HCModelGraph.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 18, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20141,8 +20693,9 @@ HCSupercellModelGraph.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 19, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20167,8 +20720,9 @@ ImportCellGraphString.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                     Key["Files"], 20, 
                     Key["File"]}, "Item", False], "Mouse"], 
-                    ImageSize -> {{60, Full}, Automatic}, ImageMargins -> {{5,
-                     3}, {4, 5}}], ItemSize -> {Full, Automatic}], 
+                    ImageSize -> {{60, Full}, Automatic}, 
+                    ImageMargins -> {{5, 3}, {4, 5}}], ItemSize -> {
+                    Full, Automatic}], 
                     Item[
                     Pane[
                     Annotation[
@@ -20216,7 +20770,6 @@ ImportCellGraphString.nb"],
                     0.5098039215686274], 8}, ContextMenu -> {
                     MenuItem["Show 1 More Row at This Level", 
                     KernelExecute[
-                    
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -20271,8 +20824,7 @@ ImportCellGraphString.nb"],
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
                     Background -> GrayLevel[0.98]], SpanFromLeft}}, 
-                    BaseStyle -> {ContextMenu -> 
-                    Dynamic[
+                    BaseStyle -> {ContextMenu -> Dynamic[
                     TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
                     Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
@@ -20329,8 +20881,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
                     Nothing, 
-                    MenuItem["Show " <> Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    MenuItem["Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
@@ -20359,8 +20911,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
-                    MenuItem["Hide " <> Which[
-                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    MenuItem["Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "RowHeader", "Row", 
@@ -20624,7 +21176,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -20672,7 +21223,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -20745,7 +21295,6 @@ Projects/HyperBloch/Paclet/Documentation/English/Guides/HyperBlochPackage.nb\"\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -20793,7 +21342,6 @@ Projects/HyperBloch/Paclet/Documentation/English/Guides/HyperBlochPackage.nb\"\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -20821,8 +21369,8 @@ Projects/HyperBloch/Paclet/Documentation/English/Guides/HyperBlochPackage.nb\"\
                     GridBoxSpacings -> {"Columns" -> {{2}}, 
                     "Rows" -> {{Automatic}}}, 
                     BaseStyle -> {ShowStringCharacters -> False, NumberMarks -> 
-                    False, PrintPrecision -> 3, ShowSyntaxStyles -> False}]}},
-                     GridBoxAlignment -> {"Columns" -> {{Left}}, 
+                    False, PrintPrecision -> 3, ShowSyntaxStyles -> 
+                    False}]}}, GridBoxAlignment -> {"Columns" -> {{Left}}, 
                     "Rows" -> {{Top}}}, AutoDelete -> False, 
                     GridBoxItemSize -> {"Columns" -> {{Automatic}}, 
                     "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
@@ -20859,7 +21407,6 @@ AbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -20891,11 +21438,12 @@ AbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     PaneBox[
                     ButtonBox[
                     DynamicBox[
-                    FEPrivate`FrontEndResource["FEBitmaps", 
-                    "SummaryBoxCloser"]], ButtonFunction :> (Typeset`open$$ = 
-                    False), Appearance -> None, BaseStyle -> {}, Evaluator -> 
-                    Automatic, Method -> "Preemptive"], Alignment -> {Center, 
-                    Center}, ImageSize -> Dynamic[{Automatic, 
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "SummaryBoxCloser"]], 
+                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                    Dynamic[{Automatic, 
                     3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                     Magnification])}]], 
                     FrameBox[
@@ -20906,7 +21454,6 @@ AbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -20972,7 +21519,6 @@ AbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21004,12 +21550,11 @@ AbelianBlochHamiltonian.nb\"", "\[Rule]",
                     PaneBox[
                     ButtonBox[
                     DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "SummaryBoxCloser"]], 
-                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
-                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
-                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
-                    Dynamic[{Automatic, 
+                    FEPrivate`FrontEndResource["FEBitmaps", 
+                    "SummaryBoxCloser"]], ButtonFunction :> (Typeset`open$$ = 
+                    False), Appearance -> None, BaseStyle -> {}, Evaluator -> 
+                    Automatic, Method -> "Preemptive"], Alignment -> {Center, 
+                    Center}, ImageSize -> Dynamic[{Automatic, 
                     3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
                     Magnification])}]], 
                     FrameBox[
@@ -21020,7 +21565,6 @@ AbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21086,7 +21630,6 @@ GetCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21134,7 +21677,6 @@ GetCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21200,7 +21742,6 @@ GetCellGraphFace.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21248,7 +21789,6 @@ GetCellGraphFace.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21314,7 +21854,6 @@ GetCellGraphVertex.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21357,11 +21896,11 @@ GetCellGraphVertex.nb\"", "\[Rule]",
                     FrameBox[
                     StyleBox["\"\[Checkmark]\"", 
                     Directive[
-                    RGBColor[0.3607843137254902, 0.596078431372549, 
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21373,7 +21912,6 @@ GetCellGraphVertex.nb\"", "\[Rule]",
                     TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
-                    
                     TemplateBox[{"1.607635`", "\"s\"", "seconds", 
                     "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
                     "SummaryItem"]}]}, {
@@ -21427,7 +21965,6 @@ GetTranslatedCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21475,7 +22012,6 @@ GetTranslatedCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21541,7 +22077,6 @@ HBDisclinationModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21589,7 +22124,6 @@ HBDisclinationModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21655,7 +22189,6 @@ HBDisclinationSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21703,7 +22236,6 @@ HBDisclinationSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21738,7 +22270,6 @@ HBDisclinationSupercellModelGraph.nb\"", "\[Rule]",
                     "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
                     Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
                     "SummaryPanel"], DynamicModuleValues :> {}], "]"}]}], ",", 
-                    
                     RowBox[{
                     "\"/Users/plengg/Documents/Research/HyperbolicLattices/\
 Projects/HyperBloch/Paclet/Documentation/English/ReferencePages/Symbols/\
@@ -21769,7 +22300,6 @@ HCCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21817,7 +22347,6 @@ HCCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21883,7 +22412,6 @@ HCModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21926,12 +22454,10 @@ HCModelGraph.nb\"", "\[Rule]",
                     FrameBox[
                     StyleBox["\"\[Checkmark]\"", 
                     Directive[
-                    RGBColor[
-                    0.3607843137254902, 0.596078431372549, 
+                    RGBColor[0.3607843137254902, 0.596078431372549, 
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -21997,7 +22523,6 @@ HCSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22009,6 +22534,7 @@ HCSupercellModelGraph.nb\"", "\[Rule]",
                     TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
+                    
                     TemplateBox[{"2.513888`", "\"s\"", "seconds", 
                     "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
                     "SummaryItem"]}]}}, 
@@ -22044,7 +22570,6 @@ HCSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22110,7 +22635,6 @@ IntroduceDisclination.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22158,7 +22682,6 @@ IntroduceDisclination.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22193,6 +22716,7 @@ IntroduceDisclination.nb\"", "\[Rule]",
                     "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
                     Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
                     "SummaryPanel"], DynamicModuleValues :> {}], "]"}]}], ",", 
+                    
                     RowBox[{
                     "\"/Users/plengg/Documents/Research/HyperbolicLattices/\
 Projects/HyperBloch/Paclet/Documentation/English/ReferencePages/Symbols/\
@@ -22223,7 +22747,6 @@ NonReciprocalAbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22271,7 +22794,6 @@ NonReciprocalAbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22337,7 +22859,6 @@ NonReciprocalAbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22380,11 +22901,11 @@ NonReciprocalAbelianBlochHamiltonian.nb\"", "\[Rule]",
                     FrameBox[
                     StyleBox["\"\[Checkmark]\"", 
                     Directive[
-                    RGBColor[0.3607843137254902, 0.596078431372549, 
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22450,7 +22971,6 @@ NonReciprocalTBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22498,7 +23018,6 @@ NonReciprocalTBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22564,7 +23083,6 @@ ShowCellBoundary.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22612,7 +23130,6 @@ ShowCellBoundary.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22678,7 +23195,6 @@ ShowCellGraphFlattened.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22726,7 +23242,6 @@ ShowCellGraphFlattened.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22792,7 +23307,6 @@ ShowCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22840,7 +23354,6 @@ ShowCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22906,7 +23419,6 @@ TBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -22954,7 +23466,6 @@ TBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -23020,7 +23531,6 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -23032,6 +23542,7 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
+                    
                     TemplateBox[{"2.381363`", "\"s\"", "seconds", 
                     "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
                     "SummaryItem"]}]}}, 
@@ -23067,7 +23578,6 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -23122,7 +23632,6 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     "QuantityPostfix", SyntaxForm -> Mod], "SummaryItem"]}]}, {
                     RowBox[{
                     TagBox[
-                    
                     TemplateBox[{"\"ProcessedFilesCount\"", "\": \""}, 
                     "RowDefault"], "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
@@ -23610,8 +24119,7 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                    DefinitionNotebookClient`Stripes`PackagePrivate`nbo$, 
                     DockedCells]}], 
                  Condition[
-                  Pattern[
-                  DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
+                  Pattern[DefinitionNotebookClient`Stripes`PackagePrivate`c$, 
                    Blank[Cell]], 
                   Not[
                    FreeQ[
@@ -23651,7 +24159,6 @@ vrNEi4yFoAUhzb+8gemlkqbG9lnNhINCq0+bWh+C1eByzoRTamivwZfm3l6tkk6wTN+\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -23706,7 +24213,6 @@ paclet\"", "SummaryItem"]}]}, {
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -23848,7 +24354,6 @@ NonReciprocalAbelianBlochHamiltonianExpression.nb"], "Hash" ->
 22478bf"|>, <|"File" -> 
                     File["Documentation/English/ReferencePages/Symbols/\
 NonReciprocalAbelianBlochHamiltonian.nb"], "Hash" -> 
-                    
                     "d4c2fac9c36833783e0a826119bcb61f0d978d4cc60721baad1474364\
 8caf45b"|>, <|"File" -> 
                     File["Documentation/English/ReferencePages/Symbols/\
@@ -24720,9 +25225,8 @@ lastContextMenuTrigger, TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu,
 lastContextMenuTrigger = 
                     TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
                     TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
-                    Block[{
-                    TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = {
-                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    Block[{TypeSystem`NestedGrid`PackagePrivate`$\
+globalScrollPos = {TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
                     
                     With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
@@ -24766,7 +25270,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
                     Nothing, 
-                    MenuItem["Show " <> 
+                    MenuItem[
+                    "Show " <> 
                     Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
@@ -24796,7 +25301,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
-                    MenuItem["Hide " <> 
+                    MenuItem[
+                    "Hide " <> 
                     Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
                     "Item", "", 
                     TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
@@ -25063,7 +25569,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25111,7 +25616,6 @@ lastPathIsLeafHeader = TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$;
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25184,7 +25688,6 @@ Projects/HyperBloch/Paclet/Documentation/English/Guides/HyperBlochPackage.nb\"\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25232,7 +25735,6 @@ Projects/HyperBloch/Paclet/Documentation/English/Guides/HyperBlochPackage.nb\"\
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25298,7 +25800,6 @@ AbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25346,7 +25847,6 @@ AbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25412,7 +25912,6 @@ AbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25460,7 +25959,6 @@ AbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25495,7 +25993,6 @@ AbelianBlochHamiltonian.nb\"", "\[Rule]",
                     "Rows" -> {{Automatic}}}, BaselinePosition -> {1, 1}]}, 
                     Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
                     "SummaryPanel"], DynamicModuleValues :> {}], "]"}]}], ",", 
-                    
                     RowBox[{
                     "\"/Users/plengg/Documents/Research/HyperbolicLattices/\
 Projects/HyperBloch/Paclet/Documentation/English/ReferencePages/Symbols/\
@@ -25526,7 +26023,6 @@ GetCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25574,7 +26070,6 @@ GetCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25616,6 +26111,7 @@ Projects/HyperBloch/Paclet/Documentation/English/ReferencePages/Symbols/\
 GetCellGraphFace.nb\"", "\[Rule]", 
                     RowBox[{
                     TagBox["Success", "SummaryHead"], "[", 
+                    
                     DynamicModuleBox[{Typeset`open$$ = False, 
                     Typeset`embedState$$ = "Ready"}, 
                     TemplateBox[{
@@ -25639,7 +26135,6 @@ GetCellGraphFace.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25682,12 +26177,10 @@ GetCellGraphFace.nb\"", "\[Rule]",
                     FrameBox[
                     StyleBox["\"\[Checkmark]\"", 
                     Directive[
-                    RGBColor[
-                    0.3607843137254902, 0.596078431372549, 
+                    RGBColor[0.3607843137254902, 0.596078431372549, 
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25753,7 +26246,6 @@ GetCellGraphVertex.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25801,7 +26293,6 @@ GetCellGraphVertex.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25867,7 +26358,6 @@ GetTranslatedCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25915,7 +26405,6 @@ GetTranslatedCellGraphEdge.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -25981,7 +26470,6 @@ HBDisclinationModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26029,7 +26517,6 @@ HBDisclinationModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26095,7 +26582,6 @@ HBDisclinationSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26143,7 +26629,6 @@ HBDisclinationSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26209,7 +26694,6 @@ HCCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26257,7 +26741,6 @@ HCCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26269,6 +26752,7 @@ HCCellGraph.nb\"", "\[Rule]",
                     TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
+                    
                     TemplateBox[{"1.544617`", "\"s\"", "seconds", 
                     "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
                     "SummaryItem"]}]}, {
@@ -26322,7 +26806,6 @@ HCModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26370,7 +26853,6 @@ HCModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26436,7 +26918,6 @@ HCSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26484,7 +26965,6 @@ HCSupercellModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26545,11 +27025,11 @@ IntroduceDisclination.nb\"", "\[Rule]",
                     FrameBox[
                     StyleBox["\"\[Checkmark]\"", 
                     Directive[
-                    RGBColor[0.3607843137254902, 0.596078431372549, 
+                    RGBColor[
+                    0.3607843137254902, 0.596078431372549, 
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26597,7 +27077,6 @@ IntroduceDisclination.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26663,7 +27142,6 @@ NonReciprocalAbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26711,7 +27189,6 @@ NonReciprocalAbelianBlochHamiltonianExpression.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26777,7 +27254,6 @@ NonReciprocalAbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26825,7 +27301,6 @@ NonReciprocalAbelianBlochHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26891,7 +27366,6 @@ NonReciprocalTBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -26939,7 +27413,6 @@ NonReciprocalTBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27005,7 +27478,6 @@ ShowCellBoundary.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27053,7 +27525,6 @@ ShowCellBoundary.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27119,7 +27590,6 @@ ShowCellGraphFlattened.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27167,7 +27637,6 @@ ShowCellGraphFlattened.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27233,7 +27702,6 @@ ShowCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27245,7 +27713,6 @@ ShowCellGraph.nb\"", "\[Rule]",
                     TemplateBox[{"\"Time\"", "\": \""}, "RowDefault"], 
                     "SummaryItemAnnotation"], "\[InvisibleSpace]", 
                     TagBox[
-                    
                     TemplateBox[{"2.513317`", "\"s\"", "seconds", 
                     "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
                     "SummaryItem"]}]}}, 
@@ -27281,7 +27748,6 @@ ShowCellGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27347,7 +27813,6 @@ TBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27395,7 +27860,6 @@ TBHamiltonian.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27461,7 +27925,6 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27509,7 +27972,6 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     0.3803921568627451], 25], StripOnInput -> False], 
                     ContentPadding -> False, FrameStyle -> None, 
                     FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
-                    
                     GridBox[{{
                     RowBox[{
                     TagBox[
@@ -27571,6 +28033,7 @@ VisualizeModelGraph.nb\"", "\[Rule]",
                     TagBox["21", "SummaryItem"]}]}, {
                     RowBox[{
                     TagBox[
+                    
                     TemplateBox[{"\"SuccessfulFilesCount\"", "\": \""}, 
                     "RowDefault"], "SummaryItemAnnotation"], 
                     "\[InvisibleSpace]", 
@@ -28032,7 +28495,7 @@ gAoXXm4hA7Z2iq6rKDLJPtzuUDrVMvVU9gfLRPsyimD2OcIqBVmchzrYH9Td
       "]]}},
 CreateCellID->True,
 DynamicEvaluationTimeout->60,
-FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
 StyleDefinitions->Notebook[{
    Cell[
     StyleData[StyleDefinitions -> "Default.nb"]], 
@@ -28298,6 +28761,7 @@ VX/aMEEQzrerjFhhelYAzofFB3r8AgApYdcE
                  GrayLevel[0.85], 
                  Thickness[
                   NCache[2/45, 0.044444]], 
+                 
                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                    0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
                    0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
@@ -28450,8 +28914,7 @@ VX/aMEEQzrerjFhhelYAzofFB3r8AgApYdcE
           Background -> RGBColor[0.96078, 0.96078, 0.96078], FrameStyle -> 
           RGBColor[0.89804, 0.89804, 0.89804], FrameMargins -> 8, 
           StripOnInput -> False], TooltipDelay -> 0.1, 
-         TooltipStyle -> {Background -> None, CellFrame -> 0}], 
-        Annotation[#, 
+         TooltipStyle -> {Background -> None, CellFrame -> 0}], Annotation[#, 
          Framed[
           Style[
           RSNB`$$tooltip, "Text", FontColor -> 
@@ -28471,7 +28934,6 @@ VX/aMEEQzrerjFhhelYAzofFB3r8AgApYdcE
                 StyleBox[
                 "\"Template Input\"", "Text", FontFamily -> "Source Sans Pro",
                   FontSize -> 11, StripOnInput -> False], 
-                
                 "\"Format selection automatically using appropriate \
 documentation styles\""}, "PrettyTooltipTemplate"], ButtonFunction :> 
               With[{RSNB`nb$ = ButtonNotebook[], RSNB`$cp$ = $ContextPath}, 
@@ -28750,7 +29212,6 @@ AsyncronousResourceInformationUpdates = False,
                   FontColor -> RGBColor[0.83333, 0.83333, 0.83333], 
                    TaggingRules -> {"ButtonHovering" -> False}}], Evaluator -> 
                  "System"], Appearance -> {"Default" -> Image[CompressedData["
-
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlAJchNy8+3Lv6/OKOvT2Z6yAIyAaKAMWJMeTN67cb
 Zx9riFyGCwFlgWrwGHL32pNJhZuAKtsSV+1ZfuH66ccf336FICAbKAIUB8oC
@@ -28969,7 +29430,6 @@ AsyncronousResourceInformationUpdates = False,
                   FontColor -> RGBColor[0.83333, 0.83333, 0.83333], 
                    TaggingRules -> {"ButtonHovering" -> False}}], Evaluator -> 
                  "System"], Appearance -> {"Default" -> Image[CompressedData["
-
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlAJchNy8+3Lv6/OKOvT2Z6yAIyAaKAMWJMeTN67cb
 Zx9riFyGCwFlgWrwGHL32pNJhZuAKtsSV+1ZfuH66ccf336FICAbKAIUB8oC
@@ -29132,7 +29592,6 @@ AsyncronousResourceInformationUpdates = False,
                   FontColor -> RGBColor[0.83333, 0.83333, 0.83333], 
                    TaggingRules -> {"ButtonHovering" -> False}}], Evaluator -> 
                  "System"], Appearance -> {"Default" -> Image[CompressedData["
-
 1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
 UFAcikHs/4QAMWqA4ANlAJchNy8+3Lv6/OKOvT2Z6yAIyAaKAMWJMeTN67cb
 Zx9riFyGCwFlgWrwGHL32pNJhZuAKtsSV+1ZfuH66ccf336FICAbKAIUB8oC
@@ -29574,7 +30033,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             TemplateBox[{
               
               TemplateBox[{
@@ -29776,7 +30234,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             ActionMenuBox[
              TemplateBox[{
                TemplateBox[{"\"Build\"", 
@@ -29851,7 +30308,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             ActionMenuBox[
              TemplateBox[{
                TemplateBox[{"\"Deploy\"", 
@@ -29967,7 +30423,6 @@ AsyncronousResourceInformationUpdates = False,
                     CurrentValue[RSNB`nb$, {TaggingRules, "StatusMessage"}] = 
                     ""; DefinitionNotebookClient`$ButtonsDisabled = False; 
                     Null]; Null]]]}, Appearance -> None, Method -> "Queued"], 
-            
             ItemBox[
              StyleBox[
               DynamicBox[
@@ -30201,6 +30656,7 @@ h/Fh4QMzDxZ+6PEFAOibv7E=
                 FaceForm[{
                   RGBColor[0.46275, 0.36078, 0.61176], 
                   Opacity[1.]}], 
+                
                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                  0}}}, {{{269.93, 350.12}, {269.93, 275.32}, {205.16, 
                  237.93}, {205.16, 312.72}, {269.93, 350.12}}}]}, {
@@ -30221,7 +30677,6 @@ h/Fh4QMzDxZ+6PEFAOibv7E=
                 FaceForm[{
                   RGBColor[0.43137, 0.60392, 0.3451], 
                   Opacity[1.]}], 
-                
                 FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
                  0}}}, {{{356.47, 199.14}, {356.47, 124.91}, {292.18, 
                  87.791}, {292.18, 162.02}, {356.47, 199.14}}}]}, {
@@ -31012,7 +31467,6 @@ Lgc=
              0}, {1, 3, 3}}}, {{{16.75, 4.}, {3.25, 4.}, {3.111929, 4.}, {3., 
             4.111930000000001}, {3., 4.25}, {3., 13.}, {17., 13.}, {17., 
             4.25}, {17., 4.111930000000001}, {16.88807, 4.}, {16.75, 4.}}}]}, 
-          
           FaceForm[
            GrayLevel[1.]]], 
          StyleBox[{
@@ -31022,7 +31476,6 @@ Lgc=
             3., 15.75}, {3., 15.888071}, {3.111929, 16.}, {3.25, 16.}, {6.75, 
             16.}, {6.888071, 16.}, {7., 15.888071}, {7., 15.75}, {7., 15.}, {
             16.75, 15.}, {16.88807, 15.}, {17., 14.888071}, {17., 14.75}}}]}, 
-          
           FaceForm[
            GrayLevel[0.89804]]]}, ImageSize -> {20., 20.}, 
         PlotRange -> {{0., 20.}, {0., 20.}}, AspectRatio -> Automatic]& )}], 
@@ -31994,7 +32447,6 @@ Mn8D1T+bLHr4qqKuQ8bv8LBZfwwdhGSmFwY76zqghzcABAZ3MA==
           FaceForm[
            GrayLevel[1.]]], 
          StyleBox[{
-           
            FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1,
              0}, {0, 1, 0}}}, {{{13., 18.}, {13., 14.5}, {12.99992, 
             14.367367999999999`}, {13.052580000000003`, 14.240146}, {
@@ -32624,7 +33076,6 @@ IlTcEEqj81ng/IKp6gJlpxjR5Bng5sH4qPZB+Qw8cH4D/3SZ8lOcaOZxoNkH
             3., 15.75}, {3., 15.888071}, {3.111929, 16.}, {3.25, 16.}, {7.75, 
             16.}, {7.888071, 16.}, {8., 15.888071}, {8., 15.75}, {8., 15.}, {
             17.75, 15.}, {17.88807, 15.}, {18., 14.888071}, {18., 14.75}}}]}, 
-          
           FaceForm[
            GrayLevel[0.89804]]], 
          StyleBox[{
@@ -32878,7 +33329,6 @@ IlTcEEqj81ng/IKp6gJlpxjR5Bng5sH4qPZB+Qw8cH4D/3SZ8lOcaOZxoNkH
             3., 15.75}, {3., 15.888071}, {3.111929, 16.}, {3.25, 16.}, {7.75, 
             16.}, {7.888071, 16.}, {8., 15.888071}, {8., 15.75}, {8., 15.}, {
             17.75, 15.}, {17.88807, 15.}, {18., 14.888071}, {18., 14.75}}}]}, 
-          
           FaceForm[
            GrayLevel[0.89804]]], 
          StyleBox[{
@@ -33326,7 +33776,6 @@ Mn8D1T+bLHr4qqKuQ8bv8LBZfwwdhGSmFwY76zqghzcABAZ3MA==
           FaceForm[
            GrayLevel[0.65098]]], 
          StyleBox[{
-           
            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{14., 
             17.293}, {16.293, 15.}, {14., 15.}, {14., 17.293}}}]}, 
           FaceForm[
@@ -33534,7 +33983,6 @@ FpG1n6WfSeLb27c2Volz+/dhBxtxrIPL2Ar/oQtZg16JsQ879Gyxx3vEuygx
                TemplateBox[{5}, "Spacer1"], FontColor -> GrayLevel[0.4], 
                FontFamily -> "Source Sans Pro", FontWeight -> Plain, FontSize -> 
                12, StripOnInput -> False]}, "RowDefault"], TraditionalForm]], 
-          
           Offset[{5, 2.5}, {-1, 0}], {-1, 0}]}, AspectRatio -> Full, 
         ImageSize -> {Full, 21}, PlotRange -> {{-1, 1}, {-1, 1}}, 
         ImageMargins -> {{0, 0}, {0, 3}}, 
@@ -33699,7 +34147,6 @@ b+bZ6FxBqAPpOprL7YAefgCtVISU
            3.3914, 13.}, {0.62, 10.229}, {0.62, 6.81}, {0.62, 3.3914}, {
            3.3914, 0.62}, {6.81, 0.62}, {10.229, 0.62}, {13., 3.3914}, {13., 
            6.81}, {13., 10.229}, {10.229, 13.}, {6.81, 13.}}, CompressedData["
-
 1:eJxTTMoPSmViYGCQB2IQbct1fXGBrbRD6+vAHXKtvA7r3B9WiayTdoCI8zgc
 /qoR039IHkoLOjCAgYKDB0iZu4CDPFijgsOsmSDAC1UnCzWPE0rLQMXZHV6x
 mAia1Ug56E1Y8MMwjdXh685bXX9VJRx4Jq9sCvRkcTh7BgREHfoPgTSwOAQB
@@ -34021,11 +34468,9 @@ mgM4XiO0HK5WvFQz9FBzuAzi7tR0cNv2+e8VCzUHJ5AF0poO6PEPAFdvzZk=
    Cell[
     StyleData["Subsection"], Evaluatable -> True, 
     CellEvaluationFunction -> (($Line = 0; Null)& ), ShowCellLabel -> False], 
-   
    Cell[
     StyleData["Subsubsection"], Evaluatable -> True, 
     CellEvaluationFunction -> (($Line = 0; Null)& ), ShowCellLabel -> False], 
-   
    Cell[
     StyleData["ExampleImage"], PageWidth :> First[{650}], 
     CellMargins -> {{66, 66}, {16, 5}}, Evaluatable -> False, ShowCellLabel -> 
@@ -34293,6 +34738,7 @@ later."]]]]],
                     With[{RSNB`nb$ = EvaluationNotebook[], 
                     RSNB`$cp$ = $ContextPath}, 
                     Quiet[
+                    
                     Block[{$ContextPath = RSNB`$cp$, 
                     ResourceSystemClient`$\
 AsyncronousResourceInformationUpdates = False, 
@@ -34326,7 +34772,6 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}]; Null], "Custom", 
-                    
                     If[
                     Quiet[
                     PacletObjectQ[
@@ -34352,8 +34797,7 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     Not[
                     CurrentValue[
                     EvaluationCell[], {TaggingRules, "Refreshing"}]]]], 
-                    StyleBox[
-                    "\"Same as Notebook\"", "RadioButtonBarLabel", 
+                    StyleBox["\"Same as Notebook\"", "RadioButtonBarLabel", 
                     StripOnInput -> False]}}, AutoDelete -> False, 
                     GridBoxItemSize -> {
                     "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
@@ -34420,7 +34864,6 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}]; Null], "Custom", 
-                    
                     If[
                     Quiet[
                     PacletObjectQ[
@@ -34513,14 +34956,14 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}]; Null], "Custom", 
-                    
                     If[
                     Quiet[
                     PacletObjectQ[
                     PacletObject[
                     File[RSNB`nbDir]]]], 
-                    CurrentValue[RSNB`cell, {
-                    TaggingRules, "PacletDirectory"}] = RSNB`nbDir, If[
+                    CurrentValue[
+                    RSNB`cell, {TaggingRules, "PacletDirectory"}] = 
+                    RSNB`nbDir, If[
                     StringQ[RSNB`nbDir], NotebookDelete[
                     Cells[RSNB`nbo, CellTags -> "FileManager-PacletFiles"]]; 
                     AttachCell[RSNB`cell, 
@@ -34745,8 +35188,7 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     Dynamic[
                     CurrentValue[
                     EvaluationCell[], {TaggingRules, "Refreshing"}]], 
-                    ContentPadding -> False], 
-                    Initialization :> (CurrentValue[
+                    ContentPadding -> False], Initialization :> (CurrentValue[
                     EvaluationCell[], {TaggingRules, "Refreshing"}] = False), 
                     DynamicModuleValues :> {}], ButtonFunction :> 
                     With[{RSNB`nbo = EvaluationNotebook[], RSNB`cell = 
@@ -34773,6 +35215,7 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}], 
+                    
                     With[{RSNB`nb$ = EvaluationNotebook[], 
                     RSNB`$cp$ = $ContextPath}, 
                     Quiet[
@@ -34872,6 +35315,7 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     If[
                     And[RSNB`nbDir =!= RSNB`oldDir, 
                     MemberQ[$Packages, "PacletResource`DefinitionNotebook`"]], 
+                    
                     With[{RSNB`nb$ = EvaluationNotebook[], 
                     RSNB`$cp$ = $ContextPath}, 
                     Quiet[
@@ -34909,7 +35353,6 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}]; Null], "Custom", 
-                    
                     If[
                     Quiet[
                     PacletObjectQ[
@@ -34971,7 +35414,6 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     Quiet[
                     
                     Block[{$ContextPath = RSNB`$cp$, 
-                    
                     ResourceSystemClient`$\
 AsyncronousResourceInformationUpdates = False, 
                     DefinitionNotebookClient`$ButtonCodeID = None}, 
@@ -35004,7 +35446,6 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}]; Null], "Custom", 
-                    
                     If[
                     Quiet[
                     PacletObjectQ[
@@ -35097,14 +35538,14 @@ RefreshNotebookPacletFiles[RSNB`nbo, RSNB`cell]]]],
                     "PacletDirectoryChooserErrorTemplate"]], 
                     "AttachedMessage"], "Inline", 
                     RemovalConditions -> {"EvaluatorQuit"}]; Null], "Custom", 
-                    
                     If[
                     Quiet[
                     PacletObjectQ[
                     PacletObject[
                     File[RSNB`nbDir]]]], 
-                    CurrentValue[RSNB`cell, {
-                    TaggingRules, "PacletDirectory"}] = RSNB`nbDir, If[
+                    CurrentValue[
+                    RSNB`cell, {TaggingRules, "PacletDirectory"}] = 
+                    RSNB`nbDir, If[
                     StringQ[RSNB`nbDir], NotebookDelete[
                     Cells[RSNB`nbo, CellTags -> "FileManager-PacletFiles"]]; 
                     AttachCell[RSNB`cell, 
@@ -35329,8 +35770,7 @@ directory.\""}, "PacletDirectoryChooserErrorTemplate"]], "AttachedMessage"],
                     Dynamic[
                     CurrentValue[
                     EvaluationCell[], {TaggingRules, "Refreshing"}]], 
-                    ContentPadding -> False], 
-                    Initialization :> (CurrentValue[
+                    ContentPadding -> False], Initialization :> (CurrentValue[
                     EvaluationCell[], {TaggingRules, "Refreshing"}] = False), 
                     DynamicModuleValues :> {}], ButtonFunction :> 
                     With[{RSNB`nbo = EvaluationNotebook[], RSNB`cell = 
@@ -35755,7 +36195,6 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
                   Cells[RSNB`cell, AttachedCell -> True]]; 
                 CurrentValue[RSNB`cell, {TaggingRules, "Refreshing"}] = True, 
                 
-                
                 Module[{RSNB`initial$, RSNB`res$}, 
                  RSNB`initial$ = SelectFirst[{
                     FileNameJoin[{
@@ -35791,8 +36230,7 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
                     Quiet[
                     NotebookDirectory[RSNB`nbo]]}, DirectoryQ, 
                     Directory[]]; 
-                 RSNB`res$ = SystemDialogInput["FileOpen", RSNB`initial$]; 
-                 If[
+                 RSNB`res$ = SystemDialogInput["FileOpen", RSNB`initial$]; If[
                    And[
                     StringQ[
                     With[{RSNB`cell$ = First[
@@ -35868,7 +36306,7 @@ GRPf1sw3cDj8VSOm/5G9w5vAHXKt3IZQ/0HDoQHBFwFFwBcEHxR9zQlGcP3o
    Cell[
     StyleData["AttachedMessage"], Deletable -> True, 
     CellMargins -> {{60, 40}, {15, 5}}]}, Visible -> False, FrontEndVersion -> 
-  "14.1 for Mac OS X ARM (64-bit) (July 16, 2024)", StyleDefinitions -> 
+  "14.0 for Microsoft Windows (64-bit) (December 12, 2023)", StyleDefinitions -> 
   "PrivateStylesheetFormatting.nb"],
 ExpressionUUID->"2c7c274f-fa21-442a-a8a3-a86aa7faa44b"
 ]
